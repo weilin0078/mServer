@@ -1,0 +1,645 @@
+[Mon Jun 30 23:36:04.085170 2014] [mpm_winnt:notice] [pid 3868:tid 408] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1e PHP/5.3.27 configured -- resuming normal operations
+[Mon Jun 30 23:36:04.085170 2014] [mpm_winnt:notice] [pid 3868:tid 408] AH00456: Server built: Jul 15 2013 11:49:28
+[Mon Jun 30 23:36:04.085170 2014] [core:notice] [pid 3868:tid 408] AH00094: Command line: 'H:\\PinkBMS\\PinkBMS\\Mysql\\Apache\\bin\\httpd.exe -d H:/PinkBMS/PinkBMS/Mysql/Apache'
+[Mon Jun 30 23:36:04.635201 2014] [mpm_winnt:notice] [pid 3868:tid 408] AH00418: Parent: Created child process 6352
+[Mon Jun 30 23:36:11.612600 2014] [mpm_winnt:notice] [pid 6352:tid 424] AH00354: Child: Starting 150 worker threads.
+[Mon Jun 30 23:39:01.215301 2014] [core:warn] [pid 4224:tid 408] AH00098: pid file H:/PinkBMS/PinkBMS/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Jun 30 23:39:02.628382 2014] [mpm_winnt:notice] [pid 4224:tid 408] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1e PHP/5.3.27 configured -- resuming normal operations
+[Mon Jun 30 23:39:02.628382 2014] [mpm_winnt:notice] [pid 4224:tid 408] AH00456: Server built: Jul 15 2013 11:49:28
+[Mon Jun 30 23:39:02.628382 2014] [core:notice] [pid 4224:tid 408] AH00094: Command line: 'H:\\PinkBMS\\PinkBMS\\Mysql\\Apache\\bin\\httpd.exe -d H:/PinkBMS/PinkBMS/Mysql/Apache'
+[Mon Jun 30 23:39:03.134411 2014] [mpm_winnt:notice] [pid 4224:tid 408] AH00418: Parent: Created child process 5688
+[Mon Jun 30 23:39:06.260590 2014] [mpm_winnt:notice] [pid 5688:tid 424] AH00354: Child: Starting 150 worker threads.
+[Mon Jun 30 23:42:13.401293 2014] [core:warn] [pid 2000:tid 408] AH00098: pid file H:/PinkBMS/PinkBMS/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Jun 30 23:42:14.481355 2014] [mpm_winnt:notice] [pid 2000:tid 408] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1e PHP/5.3.27 configured -- resuming normal operations
+[Mon Jun 30 23:42:14.481355 2014] [mpm_winnt:notice] [pid 2000:tid 408] AH00456: Server built: Jul 15 2013 11:49:28
+[Mon Jun 30 23:42:14.481355 2014] [core:notice] [pid 2000:tid 408] AH00094: Command line: 'H:\\PinkBMS\\PinkBMS\\Mysql\\Apache\\bin\\httpd.exe -d H:/PinkBMS/PinkBMS/Mysql/Apache'
+[Mon Jun 30 23:42:14.995385 2014] [mpm_winnt:notice] [pid 2000:tid 408] AH00418: Parent: Created child process 4344
+[Mon Jun 30 23:42:18.201568 2014] [mpm_winnt:notice] [pid 4344:tid 424] AH00354: Child: Starting 150 worker threads.
+[Mon Jun 30 23:49:12.137244 2014] [core:warn] [pid 4764:tid 408] AH00098: pid file H:/PinkBMS/PinkBMS/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Jun 30 23:49:12.932289 2014] [mpm_winnt:notice] [pid 4764:tid 408] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1e PHP/5.3.27 configured -- resuming normal operations
+[Mon Jun 30 23:49:12.932289 2014] [mpm_winnt:notice] [pid 4764:tid 408] AH00456: Server built: Jul 15 2013 11:49:28
+[Mon Jun 30 23:49:12.932289 2014] [core:notice] [pid 4764:tid 408] AH00094: Command line: 'H:\\PinkBMS\\PinkBMS\\Mysql\\Apache\\bin\\httpd.exe -d H:/PinkBMS/PinkBMS/Mysql/Apache'
+[Mon Jun 30 23:49:13.448319 2014] [mpm_winnt:notice] [pid 4764:tid 408] AH00418: Parent: Created child process 8132
+[Mon Jun 30 23:49:16.918517 2014] [mpm_winnt:notice] [pid 8132:tid 424] AH00354: Child: Starting 150 worker threads.
+[Mon Jun 30 00:22:09.431406 2014] [mpm_winnt:notice] [pid 4764:tid 408] AH00428: Parent: child process 8132 exited with status 1073807364 -- Restarting.
+[Mon Jul 25 15:44:48.755778 2016] [core:warn] [pid 4620:tid 364] AH00098: pid file D:/113Mplewing/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Jul 25 15:44:49.315810 2016] [mpm_winnt:notice] [pid 4620:tid 364] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1e PHP/5.3.27 configured -- resuming normal operations
+[Mon Jul 25 15:44:49.315810 2016] [mpm_winnt:notice] [pid 4620:tid 364] AH00456: Server built: Jul 15 2013 11:49:28
+[Mon Jul 25 15:44:49.315810 2016] [core:notice] [pid 4620:tid 364] AH00094: Command line: 'D:\\113Mplewing\\Mysql\\Apache\\bin\\httpd.exe -d D:/113Mplewing/Mysql/Apache'
+[Mon Jul 25 15:44:49.335811 2016] [mpm_winnt:notice] [pid 4620:tid 364] AH00418: Parent: Created child process 8888
+[Mon Jul 25 15:44:51.159916 2016] [mpm_winnt:notice] [pid 8888:tid 380] AH00354: Child: Starting 150 worker threads.
+[Wed Jul 27 17:37:12.476317 2016] [core:warn] [pid 4964:tid 360] AH00098: pid file D:/113Mplewing/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Jul 27 17:37:13.173357 2016] [mpm_winnt:notice] [pid 4964:tid 360] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1e PHP/5.3.27 configured -- resuming normal operations
+[Wed Jul 27 17:37:13.182358 2016] [mpm_winnt:notice] [pid 4964:tid 360] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Jul 27 17:37:13.182358 2016] [core:notice] [pid 4964:tid 360] AH00094: Command line: 'D:\\113Mplewing\\Mysql\\Apache\\bin\\httpd.exe -d D:/113Mplewing/Mysql/Apache'
+[Wed Jul 27 17:37:13.185358 2016] [mpm_winnt:notice] [pid 4964:tid 360] AH00418: Parent: Created child process 6436
+[Wed Jul 27 17:37:15.030463 2016] [mpm_winnt:notice] [pid 6436:tid 376] AH00354: Child: Starting 150 worker threads.
+[Sat Jul 30 23:16:12.771028 2016] [core:warn] [pid 5716:tid 364] AH00098: pid file E:/113Mplewing/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jul 30 23:16:13.594075 2016] [mpm_winnt:notice] [pid 5716:tid 364] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1e PHP/5.3.27 configured -- resuming normal operations
+[Sat Jul 30 23:16:13.600076 2016] [mpm_winnt:notice] [pid 5716:tid 364] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Jul 30 23:16:13.600076 2016] [core:notice] [pid 5716:tid 364] AH00094: Command line: 'E:\\113Mplewing\\Mysql\\Apache\\bin\\httpd.exe -d E:/113Mplewing/Mysql/Apache'
+[Sat Jul 30 23:16:13.608076 2016] [mpm_winnt:notice] [pid 5716:tid 364] AH00418: Parent: Created child process 5976
+[Sat Jul 30 23:16:16.521243 2016] [mpm_winnt:notice] [pid 5976:tid 380] AH00354: Child: Starting 150 worker threads.
+[Sun Jul 31 00:19:01.654046 2016] [mpm_winnt:notice] [pid 5716:tid 364] AH00428: Parent: child process 5976 exited with status 1073807364 -- Restarting.
+[Sun Aug 28 15:07:40.847120 2016] [core:warn] [pid 7484:tid 356] AH00098: pid file E:/KinMS079/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Aug 28 15:07:41.649166 2016] [mpm_winnt:notice] [pid 7484:tid 356] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Aug 28 15:07:41.658166 2016] [mpm_winnt:notice] [pid 7484:tid 356] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Aug 28 15:07:41.658166 2016] [core:notice] [pid 7484:tid 356] AH00094: Command line: 'E:\\KinMS079\\Mysql\\Apache\\bin\\httpd.exe -d E:/KinMS079/Mysql/Apache'
+[Sun Aug 28 15:07:41.703169 2016] [mpm_winnt:notice] [pid 7484:tid 356] AH00418: Parent: Created child process 7420
+[Sun Aug 28 15:07:44.018301 2016] [mpm_winnt:notice] [pid 7420:tid 372] AH00354: Child: Starting 150 worker threads.
+[Sun Aug 28 16:07:58.821234 2016] [core:warn] [pid 5380:tid 356] AH00098: pid file E:/KinMS079/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Aug 28 16:07:59.194651 2016] [mpm_winnt:notice] [pid 5380:tid 356] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Aug 28 16:07:59.194651 2016] [mpm_winnt:notice] [pid 5380:tid 356] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Aug 28 16:07:59.194651 2016] [core:notice] [pid 5380:tid 356] AH00094: Command line: 'E:\\KinMS079\\Mysql\\Apache\\bin\\httpd.exe -d E:/KinMS079/Mysql/Apache'
+[Sun Aug 28 16:07:59.246853 2016] [mpm_winnt:notice] [pid 5380:tid 356] AH00418: Parent: Created child process 3600
+[Sun Aug 28 16:08:00.930531 2016] [mpm_winnt:notice] [pid 3600:tid 372] AH00354: Child: Starting 150 worker threads.
+[Mon Aug 29 14:06:48.723437 2016] [core:warn] [pid 7964:tid 396] AH00098: pid file F:/Document And Settings2/Administrator/Desktop/mSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Aug 29 14:06:49.834682 2016] [mpm_winnt:notice] [pid 7964:tid 396] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Mon Aug 29 14:06:49.893284 2016] [mpm_winnt:notice] [pid 7964:tid 396] AH00456: Server built: Jul 15 2013 11:49:28
+[Mon Aug 29 14:06:49.893284 2016] [core:notice] [pid 7964:tid 396] AH00094: Command line: 'F:\\Document And Settings2\\Administrator\\Desktop\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d F:/Document And Settings2/Administrator/Desktop/mSer/Mysql/Apache'
+[Mon Aug 29 14:06:49.944287 2016] [mpm_winnt:notice] [pid 7964:tid 396] AH00418: Parent: Created child process 4072
+[Mon Aug 29 14:06:52.413601 2016] [mpm_winnt:notice] [pid 4072:tid 412] AH00354: Child: Starting 150 worker threads.
+[Fri Oct 21 15:41:27.070300 2016] [core:warn] [pid 6836:tid 552] AH00098: pid file D:/mSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Oct 21 15:41:27.277448 2016] [mpm_winnt:notice] [pid 6836:tid 552] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Fri Oct 21 15:41:27.277448 2016] [mpm_winnt:notice] [pid 6836:tid 552] AH00456: Server built: Jul 15 2013 11:49:28
+[Fri Oct 21 15:41:27.277448 2016] [core:notice] [pid 6836:tid 552] AH00094: Command line: 'D:\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/mSer/Mysql/Apache'
+[Fri Oct 21 15:41:27.282452 2016] [mpm_winnt:notice] [pid 6836:tid 552] AH00418: Parent: Created child process 6008
+[Fri Oct 21 15:41:28.571368 2016] [mpm_winnt:notice] [pid 6008:tid 616] AH00354: Child: Starting 150 worker threads.
+[Fri Oct 21 15:56:08.773400 2016] [core:warn] [pid 3440:tid 488] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Oct 21 15:56:08.992153 2016] [mpm_winnt:notice] [pid 3440:tid 488] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Fri Oct 21 15:56:08.992153 2016] [mpm_winnt:notice] [pid 3440:tid 488] AH00456: Server built: Jul 15 2013 11:49:28
+[Fri Oct 21 15:56:08.992153 2016] [core:notice] [pid 3440:tid 488] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Fri Oct 21 15:56:08.992153 2016] [mpm_winnt:notice] [pid 3440:tid 488] AH00418: Parent: Created child process 1156
+[Fri Oct 21 15:56:10.054666 2016] [mpm_winnt:notice] [pid 1156:tid 372] AH00354: Child: Starting 150 worker threads.
+[Sat Oct 22 10:22:10.936624 2016] [core:warn] [pid 5296:tid 664] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Oct 22 10:22:11.272278 2016] [mpm_winnt:notice] [pid 5296:tid 664] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Oct 22 10:22:11.272278 2016] [mpm_winnt:notice] [pid 5296:tid 664] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Oct 22 10:22:11.272278 2016] [core:notice] [pid 5296:tid 664] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Sat Oct 22 10:22:11.275781 2016] [mpm_winnt:notice] [pid 5296:tid 664] AH00418: Parent: Created child process 8540
+[Sat Oct 22 10:22:13.769824 2016] [mpm_winnt:notice] [pid 8540:tid 876] AH00354: Child: Starting 150 worker threads.
+[Sat Oct 22 11:53:13.625016 2016] [core:warn] [pid 6872:tid 492] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Oct 22 11:53:13.828144 2016] [mpm_winnt:notice] [pid 6872:tid 492] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Oct 22 11:53:13.828144 2016] [mpm_winnt:notice] [pid 6872:tid 492] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Oct 22 11:53:13.828144 2016] [core:notice] [pid 6872:tid 492] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Sat Oct 22 11:53:13.843770 2016] [mpm_winnt:notice] [pid 6872:tid 492] AH00418: Parent: Created child process 4828
+[Sat Oct 22 11:53:14.921910 2016] [mpm_winnt:notice] [pid 4828:tid 524] AH00354: Child: Starting 150 worker threads.
+[Sat Oct 22 16:02:18.001233 2016] [core:warn] [pid 7792:tid 492] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Oct 22 16:02:18.143335 2016] [mpm_winnt:notice] [pid 7792:tid 492] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Oct 22 16:02:18.143335 2016] [mpm_winnt:notice] [pid 7792:tid 492] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Oct 22 16:02:18.144335 2016] [core:notice] [pid 7792:tid 492] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Sat Oct 22 16:02:18.145336 2016] [mpm_winnt:notice] [pid 7792:tid 492] AH00418: Parent: Created child process 4316
+[Sat Oct 22 16:02:18.801804 2016] [mpm_winnt:notice] [pid 4316:tid 396] AH00354: Child: Starting 150 worker threads.
+[Sat Oct 22 17:55:07.468172 2016] [core:warn] [pid 4048:tid 524] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Oct 22 17:55:07.608799 2016] [mpm_winnt:notice] [pid 4048:tid 524] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Oct 22 17:55:07.608799 2016] [mpm_winnt:notice] [pid 4048:tid 524] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Oct 22 17:55:07.608799 2016] [core:notice] [pid 4048:tid 524] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Sat Oct 22 17:55:07.608799 2016] [mpm_winnt:notice] [pid 4048:tid 524] AH00418: Parent: Created child process 6912
+[Sat Oct 22 20:54:58.159030 2016] [core:warn] [pid 3688:tid 504] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Oct 22 20:54:58.349044 2016] [mpm_winnt:notice] [pid 3688:tid 504] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Oct 22 20:54:58.349044 2016] [mpm_winnt:notice] [pid 3688:tid 504] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Oct 22 20:54:58.349044 2016] [core:notice] [pid 3688:tid 504] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Sat Oct 22 20:54:58.349044 2016] [mpm_winnt:notice] [pid 3688:tid 504] AH00418: Parent: Created child process 4224
+[Sat Oct 22 20:54:59.489124 2016] [mpm_winnt:notice] [pid 4224:tid 536] AH00354: Child: Starting 150 worker threads.
+[Sun Oct 23 01:01:22.853576 2016] [core:warn] [pid 7416:tid 308] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Oct 23 01:01:23.025450 2016] [mpm_winnt:notice] [pid 7416:tid 308] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Oct 23 01:01:23.025450 2016] [mpm_winnt:notice] [pid 7416:tid 308] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Oct 23 01:01:23.025450 2016] [core:notice] [pid 7416:tid 308] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Sun Oct 23 01:01:23.025450 2016] [mpm_winnt:notice] [pid 7416:tid 308] AH00418: Parent: Created child process 7216
+[Sun Oct 23 01:01:24.165255 2016] [mpm_winnt:notice] [pid 7216:tid 312] AH00354: Child: Starting 150 worker threads.
+[Sun Oct 23 12:15:48.705261 2016] [core:warn] [pid 4800:tid 488] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Oct 23 12:15:48.895274 2016] [mpm_winnt:notice] [pid 4800:tid 488] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Oct 23 12:15:48.895274 2016] [mpm_winnt:notice] [pid 4800:tid 488] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Oct 23 12:15:48.895274 2016] [core:notice] [pid 4800:tid 488] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Sun Oct 23 12:15:48.905275 2016] [mpm_winnt:notice] [pid 4800:tid 488] AH00418: Parent: Created child process 1604
+[Sun Oct 23 12:15:49.975348 2016] [mpm_winnt:notice] [pid 1604:tid 496] AH00354: Child: Starting 150 worker threads.
+[Mon Oct 24 13:12:34.247982 2016] [core:warn] [pid 5152:tid 376] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Oct 24 13:12:34.466736 2016] [mpm_winnt:notice] [pid 5152:tid 376] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Mon Oct 24 13:12:34.466736 2016] [mpm_winnt:notice] [pid 5152:tid 376] AH00456: Server built: Jul 15 2013 11:49:28
+[Mon Oct 24 13:12:34.466736 2016] [core:notice] [pid 5152:tid 376] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Mon Oct 24 13:12:34.482361 2016] [mpm_winnt:notice] [pid 5152:tid 376] AH00418: Parent: Created child process 4904
+[Mon Oct 24 13:12:35.669877 2016] [mpm_winnt:notice] [pid 4904:tid 484] AH00354: Child: Starting 150 worker threads.
+[Tue Oct 25 12:14:50.372910 2016] [core:warn] [pid 7964:tid 484] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Oct 25 12:14:50.614430 2016] [mpm_winnt:notice] [pid 7964:tid 484] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Tue Oct 25 12:14:50.614430 2016] [mpm_winnt:notice] [pid 7964:tid 484] AH00456: Server built: Jul 15 2013 11:49:28
+[Tue Oct 25 12:14:50.614430 2016] [core:notice] [pid 7964:tid 484] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Tue Oct 25 12:14:50.618433 2016] [mpm_winnt:notice] [pid 7964:tid 484] AH00418: Parent: Created child process 8144
+[Tue Oct 25 12:14:51.802269 2016] [mpm_winnt:notice] [pid 8144:tid 508] AH00354: Child: Starting 150 worker threads.
+[Tue Oct 25 22:19:09.842481 2016] [core:warn] [pid 4800:tid 372] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Oct 25 22:19:10.142695 2016] [mpm_winnt:notice] [pid 4800:tid 372] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Tue Oct 25 22:19:10.142695 2016] [mpm_winnt:notice] [pid 4800:tid 372] AH00456: Server built: Jul 15 2013 11:49:28
+[Tue Oct 25 22:19:10.142695 2016] [core:notice] [pid 4800:tid 372] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Tue Oct 25 22:19:10.144696 2016] [mpm_winnt:notice] [pid 4800:tid 372] AH00418: Parent: Created child process 5012
+[Tue Oct 25 22:19:11.376574 2016] [mpm_winnt:notice] [pid 5012:tid 480] AH00354: Child: Starting 150 worker threads.
+[Wed Oct 26 14:49:46.252568 2016] [core:warn] [pid 6528:tid 372] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 26 14:49:46.502127 2016] [mpm_winnt:notice] [pid 6528:tid 372] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed Oct 26 14:49:46.502127 2016] [mpm_winnt:notice] [pid 6528:tid 372] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Oct 26 14:49:46.502127 2016] [core:notice] [pid 6528:tid 372] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Wed Oct 26 14:49:46.506130 2016] [mpm_winnt:notice] [pid 6528:tid 372] AH00418: Parent: Created child process 2316
+[Wed Oct 26 14:49:47.660366 2016] [mpm_winnt:notice] [pid 2316:tid 524] AH00354: Child: Starting 150 worker threads.
+[Wed Oct 26 16:11:43.078157 2016] [core:warn] [pid 5068:tid 536] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 26 16:11:43.376370 2016] [mpm_winnt:notice] [pid 5068:tid 536] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed Oct 26 16:11:43.376370 2016] [mpm_winnt:notice] [pid 5068:tid 536] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Oct 26 16:11:43.376370 2016] [core:notice] [pid 5068:tid 536] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Wed Oct 26 16:11:43.379372 2016] [mpm_winnt:notice] [pid 5068:tid 536] AH00418: Parent: Created child process 4004
+[Wed Oct 26 16:11:44.497168 2016] [mpm_winnt:notice] [pid 4004:tid 524] AH00354: Child: Starting 150 worker threads.
+[Wed Oct 26 16:16:38.524776 2016] [core:warn] [pid 5408:tid 464] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 26 16:16:38.737926 2016] [mpm_winnt:notice] [pid 5408:tid 464] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed Oct 26 16:16:38.737926 2016] [mpm_winnt:notice] [pid 5408:tid 464] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Oct 26 16:16:38.737926 2016] [core:notice] [pid 5408:tid 464] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Wed Oct 26 16:16:38.741929 2016] [mpm_winnt:notice] [pid 5408:tid 464] AH00418: Parent: Created child process 1040
+[Wed Oct 26 16:16:39.908760 2016] [mpm_winnt:notice] [pid 1040:tid 360] AH00354: Child: Starting 150 worker threads.
+[Wed Oct 26 16:31:08.843136 2016] [core:warn] [pid 5936:tid 372] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 26 16:31:09.022262 2016] [mpm_winnt:notice] [pid 5936:tid 372] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed Oct 26 16:31:09.022262 2016] [mpm_winnt:notice] [pid 5936:tid 372] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Oct 26 16:31:09.022262 2016] [core:notice] [pid 5936:tid 372] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Wed Oct 26 16:31:09.026265 2016] [mpm_winnt:notice] [pid 5936:tid 372] AH00418: Parent: Created child process 6756
+[Wed Oct 26 16:31:10.136076 2016] [mpm_winnt:notice] [pid 6756:tid 412] AH00354: Child: Starting 150 worker threads.
+[Wed Oct 26 17:15:02.089927 2016] [core:warn] [pid 704:tid 500] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 26 17:15:02.294073 2016] [mpm_winnt:notice] [pid 704:tid 500] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed Oct 26 17:15:02.294073 2016] [mpm_winnt:notice] [pid 704:tid 500] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Oct 26 17:15:02.294073 2016] [core:notice] [pid 704:tid 500] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Wed Oct 26 17:15:02.298076 2016] [mpm_winnt:notice] [pid 704:tid 500] AH00418: Parent: Created child process 6864
+[Wed Oct 26 17:15:03.400861 2016] [mpm_winnt:notice] [pid 6864:tid 520] AH00354: Child: Starting 150 worker threads.
+[Wed Oct 26 17:21:13.244481 2016] [core:warn] [pid 2684:tid 392] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 26 17:21:13.425609 2016] [mpm_winnt:notice] [pid 2684:tid 392] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed Oct 26 17:21:13.425609 2016] [mpm_winnt:notice] [pid 2684:tid 392] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Oct 26 17:21:13.425609 2016] [core:notice] [pid 2684:tid 392] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Wed Oct 26 17:21:13.429611 2016] [mpm_winnt:notice] [pid 2684:tid 392] AH00418: Parent: Created child process 6036
+[Wed Oct 26 17:21:14.586435 2016] [mpm_winnt:notice] [pid 6036:tid 520] AH00354: Child: Starting 150 worker threads.
+[Wed Oct 26 17:21:23.774297 2016] [core:warn] [pid 7088:tid 484] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 26 17:21:23.957922 2016] [mpm_winnt:notice] [pid 7088:tid 484] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed Oct 26 17:21:23.957922 2016] [mpm_winnt:notice] [pid 7088:tid 484] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Oct 26 17:21:23.957922 2016] [core:notice] [pid 7088:tid 484] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Wed Oct 26 17:21:23.960924 2016] [mpm_winnt:notice] [pid 7088:tid 484] AH00418: Parent: Created child process 7108
+[Wed Oct 26 17:21:25.106856 2016] [mpm_winnt:notice] [pid 7108:tid 360] AH00354: Child: Starting 150 worker threads.
+[Wed Oct 26 17:23:17.779226 2016] [core:warn] [pid 7116:tid 548] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 26 17:23:17.974363 2016] [mpm_winnt:notice] [pid 7116:tid 548] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed Oct 26 17:23:17.974363 2016] [mpm_winnt:notice] [pid 7116:tid 548] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Oct 26 17:23:17.974363 2016] [core:notice] [pid 7116:tid 548] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Wed Oct 26 17:23:17.978366 2016] [mpm_winnt:notice] [pid 7116:tid 548] AH00418: Parent: Created child process 2440
+[Wed Oct 26 17:23:19.090158 2016] [mpm_winnt:notice] [pid 2440:tid 520] AH00354: Child: Starting 150 worker threads.
+[Wed Oct 26 17:27:04.574001 2016] [core:warn] [pid 5812:tid 324] AH00098: pid file D:/MSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 26 17:27:04.748127 2016] [mpm_winnt:notice] [pid 5812:tid 324] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed Oct 26 17:27:04.748127 2016] [mpm_winnt:notice] [pid 5812:tid 324] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Oct 26 17:27:04.748127 2016] [core:notice] [pid 5812:tid 324] AH00094: Command line: 'D:\\MSer\\Mysql\\Apache\\bin\\httpd.exe -d D:/MSer/Mysql/Apache'
+[Wed Oct 26 17:27:04.752129 2016] [mpm_winnt:notice] [pid 5812:tid 324] AH00418: Parent: Created child process 908
+[Wed Oct 26 17:27:05.861920 2016] [mpm_winnt:notice] [pid 908:tid 364] AH00354: Child: Starting 150 worker threads.
+[Sat May 20 12:21:43.483572 2017] [core:warn] [pid 7500:tid 360] AH00098: pid file E:/079V3/mSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat May 20 12:21:49.613184 2017] [mpm_winnt:notice] [pid 7500:tid 360] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat May 20 12:21:49.613184 2017] [mpm_winnt:notice] [pid 7500:tid 360] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat May 20 12:21:49.613184 2017] [core:notice] [pid 7500:tid 360] AH00094: Command line: 'E:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d E:/079V3/mSer/Mysql/Apache'
+[Sat May 20 12:21:49.769185 2017] [mpm_winnt:notice] [pid 7500:tid 360] AH00418: Parent: Created child process 7672
+[Sat May 20 12:21:51.129387 2017] [mpm_winnt:notice] [pid 7672:tid 376] AH00354: Child: Starting 150 worker threads.
+Starting the Apache2a service
+The Apache2a service is running.
+ [core:warn] [pid 15460:tid 888] AH00098: pid file I:/079V3/mSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Dec 05 21:45:00.427567 2018] [mpm_winnt:notice] [pid 15460:tid 888] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed Dec 05 21:45:00.428567 2018] [mpm_winnt:notice] [pid 15460:tid 888] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Dec 05 21:45:00.428567 2018] [core:notice] [pid 15460:tid 888] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Wed Dec 05 21:45:00.434546 2018] [mpm_winnt:notice] [pid 15460:tid 888] AH00418: Parent: Created child process 3352
+[Wed Dec 05 21:45:03.935218 2018] [mpm_winnt:notice] [pid 3352:tid 872] AH00354: Child: Starting 150 worker threads.
+[Sun Dec 09 14:01:45.079150 2018] [mpm_winnt:notice] [pid 15460:tid 888] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Dec 09 14:01:47.121594 2018] [mpm_winnt:notice] [pid 3352:tid 872] AH00364: Child: All worker threads have exited.
+[Sun Dec 09 14:01:47.215338 2018] [mpm_winnt:notice] [pid 15460:tid 888] AH00430: Parent: Child process 3352 exited successfully.
+[Sun Dec 09 14:05:11.226200 2018] [mpm_winnt:notice] [pid 5020:tid 880] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Dec 09 14:05:11.226200 2018] [mpm_winnt:notice] [pid 5020:tid 880] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Dec 09 14:05:11.226200 2018] [core:notice] [pid 5020:tid 880] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Dec 09 14:05:11.288697 2018] [mpm_winnt:notice] [pid 5020:tid 880] AH00418: Parent: Created child process 7032
+[Sun Dec 09 14:05:17.960093 2018] [mpm_winnt:notice] [pid 7032:tid 892] AH00354: Child: Starting 150 worker threads.
+[Mon Dec 10 22:37:00.029343 2018] [:error] [pid 7032:tid 2240] [client 127.0.0.1:6460] script 'I:/079V3/mSer/Mysql/WWW/announce.php' not found or unable to stat
+[Tue Dec 11 07:34:10.810093 2018] [:error] [pid 7032:tid 2240] [client 127.0.0.1:12459] script 'I:/079V3/mSer/Mysql/WWW/announce.php' not found or unable to stat
+[Tue Dec 11 07:34:13.205723 2018] [:error] [pid 7032:tid 2240] [client 127.0.0.1:12488] script 'I:/079V3/mSer/Mysql/WWW/announce.php' not found or unable to stat
+[Fri Dec 14 22:24:26.569315 2018] [:error] [pid 7032:tid 2240] [client 127.0.0.1:1148] script 'I:/079V3/mSer/Mysql/WWW/announce.php' not found or unable to stat
+[Fri Dec 14 22:24:27.964483 2018] [:error] [pid 7032:tid 2240] [client 127.0.0.1:1169] script 'I:/079V3/mSer/Mysql/WWW/announce.php' not found or unable to stat
+[Sun Dec 16 19:34:34.853678 2018] [mpm_winnt:notice] [pid 5020:tid 880] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Dec 16 19:34:36.918372 2018] [mpm_winnt:notice] [pid 7032:tid 892] AH00364: Child: All worker threads have exited.
+[Sun Dec 16 19:34:37.027744 2018] [mpm_winnt:notice] [pid 5020:tid 880] AH00430: Parent: Child process 7032 exited successfully.
+[Sun Dec 16 19:35:25.166612 2018] [mpm_winnt:notice] [pid 4708:tid 932] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Dec 16 19:35:25.182235 2018] [mpm_winnt:notice] [pid 4708:tid 932] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Dec 16 19:35:25.182235 2018] [core:notice] [pid 4708:tid 932] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Dec 16 19:35:25.416594 2018] [mpm_winnt:notice] [pid 4708:tid 932] AH00418: Parent: Created child process 8176
+[Sun Dec 16 19:35:38.392511 2018] [mpm_winnt:notice] [pid 8176:tid 832] AH00354: Child: Starting 150 worker threads.
+[Sun Dec 16 22:25:36.348500 2018] [mpm_winnt:notice] [pid 4708:tid 932] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Dec 16 22:25:38.379852 2018] [mpm_winnt:notice] [pid 8176:tid 832] AH00364: Child: All worker threads have exited.
+[Sun Dec 16 22:25:38.473596 2018] [mpm_winnt:notice] [pid 4708:tid 932] AH00430: Parent: Child process 8176 exited successfully.
+[Sun Dec 16 22:26:15.935767 2018] [mpm_winnt:notice] [pid 3852:tid 768] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Dec 16 22:26:15.935767 2018] [mpm_winnt:notice] [pid 3852:tid 768] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Dec 16 22:26:15.935767 2018] [core:notice] [pid 3852:tid 768] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Dec 16 22:26:15.951391 2018] [mpm_winnt:notice] [pid 3852:tid 768] AH00418: Parent: Created child process 5388
+[Sun Dec 16 22:26:20.411828 2018] [mpm_winnt:notice] [pid 5388:tid 840] AH00354: Child: Starting 150 worker threads.
+[Sun Dec 23 17:43:34.211621 2018] [mpm_winnt:notice] [pid 3852:tid 768] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Dec 23 17:43:36.245589 2018] [mpm_winnt:notice] [pid 5388:tid 840] AH00364: Child: All worker threads have exited.
+[Sun Dec 23 17:43:36.342018 2018] [mpm_winnt:notice] [pid 3852:tid 768] AH00430: Parent: Child process 5388 exited successfully.
+[Sun Dec 23 17:44:14.960531 2018] [mpm_winnt:notice] [pid 3732:tid 892] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Dec 23 17:44:14.960531 2018] [mpm_winnt:notice] [pid 3732:tid 892] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Dec 23 17:44:14.960531 2018] [core:notice] [pid 3732:tid 892] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Dec 23 17:44:14.960531 2018] [mpm_winnt:notice] [pid 3732:tid 892] AH00418: Parent: Created child process 5656
+[Sun Dec 23 17:44:19.511769 2018] [mpm_winnt:notice] [pid 5656:tid 712] AH00354: Child: Starting 150 worker threads.
+[Sun Dec 23 22:15:05.814598 2018] [mpm_winnt:notice] [pid 3732:tid 892] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Dec 23 22:15:07.892818 2018] [mpm_winnt:notice] [pid 5656:tid 712] AH00364: Child: All worker threads have exited.
+[Sun Dec 23 22:15:07.979929 2018] [mpm_winnt:notice] [pid 3732:tid 892] AH00430: Parent: Child process 5656 exited successfully.
+[Sun Dec 23 22:15:53.232114 2018] [mpm_winnt:notice] [pid 3112:tid 628] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Dec 23 22:15:53.232114 2018] [mpm_winnt:notice] [pid 3112:tid 628] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Dec 23 22:15:53.232114 2018] [core:notice] [pid 3112:tid 628] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Dec 23 22:15:53.579355 2018] [mpm_winnt:notice] [pid 3112:tid 628] AH00418: Parent: Created child process 7772
+[Sun Dec 23 22:16:01.827981 2018] [mpm_winnt:notice] [pid 7772:tid 712] AH00354: Child: Starting 150 worker threads.
+[Sun Jan 13 22:55:50.243982 2019] [mpm_winnt:notice] [pid 3112:tid 628] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Jan 13 22:55:52.270502 2019] [mpm_winnt:notice] [pid 7772:tid 712] AH00364: Child: All worker threads have exited.
+[Sun Jan 13 22:55:52.385997 2019] [mpm_winnt:notice] [pid 3112:tid 628] AH00430: Parent: Child process 7772 exited successfully.
+[Sun Jan 13 22:56:33.917709 2019] [mpm_winnt:notice] [pid 4160:tid 920] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Jan 13 22:56:33.917709 2019] [mpm_winnt:notice] [pid 4160:tid 920] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Jan 13 22:56:33.917709 2019] [core:notice] [pid 4160:tid 920] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Jan 13 22:56:34.042702 2019] [mpm_winnt:notice] [pid 4160:tid 920] AH00418: Parent: Created child process 6168
+[Sun Jan 13 22:56:44.952036 2019] [mpm_winnt:notice] [pid 6168:tid 756] AH00354: Child: Starting 150 worker threads.
+[Thu Jan 24 23:23:06.729560 2019] [core:warn] [pid 4528:tid 928] AH00098: pid file I:/079V3/mSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Jan 24 23:23:07.905808 2019] [mpm_winnt:notice] [pid 4528:tid 928] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Thu Jan 24 23:23:07.905808 2019] [mpm_winnt:notice] [pid 4528:tid 928] AH00456: Server built: Jul 15 2013 11:49:28
+[Thu Jan 24 23:23:07.905808 2019] [core:notice] [pid 4528:tid 928] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Thu Jan 24 23:23:07.952679 2019] [mpm_winnt:notice] [pid 4528:tid 928] AH00418: Parent: Created child process 6860
+[Thu Jan 24 23:23:16.682044 2019] [mpm_winnt:notice] [pid 6860:tid 848] AH00354: Child: Starting 150 worker threads.
+[Wed Jan 30 21:21:31.277021 2019] [mpm_winnt:notice] [pid 4528:tid 928] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed Jan 30 21:21:33.313583 2019] [mpm_winnt:notice] [pid 6860:tid 848] AH00364: Child: All worker threads have exited.
+[Wed Jan 30 21:21:33.407306 2019] [mpm_winnt:notice] [pid 4528:tid 928] AH00430: Parent: Child process 6860 exited successfully.
+[Wed Jan 30 21:22:13.709438 2019] [mpm_winnt:notice] [pid 4104:tid 876] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed Jan 30 21:22:13.709438 2019] [mpm_winnt:notice] [pid 4104:tid 876] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Jan 30 21:22:13.709438 2019] [core:notice] [pid 4104:tid 876] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Wed Jan 30 21:22:13.787558 2019] [mpm_winnt:notice] [pid 4104:tid 876] AH00418: Parent: Created child process 7760
+[Wed Jan 30 21:22:27.957552 2019] [mpm_winnt:notice] [pid 7760:tid 692] AH00354: Child: Starting 150 worker threads.
+[Wed Jan 30 21:23:44.085482 2019] [mpm_winnt:notice] [pid 4104:tid 876] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed Jan 30 21:23:46.149399 2019] [mpm_winnt:notice] [pid 7760:tid 692] AH00364: Child: All worker threads have exited.
+[Wed Jan 30 21:23:46.180647 2019] [mpm_winnt:notice] [pid 4104:tid 876] AH00430: Parent: Child process 7760 exited successfully.
+[Wed Jan 30 21:24:20.572299 2019] [mpm_winnt:notice] [pid 4356:tid 1012] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed Jan 30 21:24:20.572798 2019] [mpm_winnt:notice] [pid 4356:tid 1012] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Jan 30 21:24:20.572798 2019] [core:notice] [pid 4356:tid 1012] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Wed Jan 30 21:24:20.640671 2019] [mpm_winnt:notice] [pid 4356:tid 1012] AH00418: Parent: Created child process 5712
+[Wed Jan 30 21:24:26.490797 2019] [mpm_winnt:notice] [pid 5712:tid 880] AH00354: Child: Starting 150 worker threads.
+[Wed Jan 30 21:25:57.269337 2019] [mpm_winnt:notice] [pid 4356:tid 1012] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed Jan 30 21:25:59.284363 2019] [mpm_winnt:notice] [pid 5712:tid 880] AH00364: Child: All worker threads have exited.
+[Wed Jan 30 21:25:59.319771 2019] [mpm_winnt:notice] [pid 4356:tid 1012] AH00430: Parent: Child process 5712 exited successfully.
+[Wed Jan 30 21:26:37.521068 2019] [mpm_winnt:notice] [pid 4376:tid 912] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed Jan 30 21:26:37.536691 2019] [mpm_winnt:notice] [pid 4376:tid 912] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Jan 30 21:26:37.536691 2019] [core:notice] [pid 4376:tid 912] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Wed Jan 30 21:26:37.736693 2019] [mpm_winnt:notice] [pid 4376:tid 912] AH00418: Parent: Created child process 7780
+[Wed Jan 30 21:26:48.476734 2019] [mpm_winnt:notice] [pid 7780:tid 808] AH00354: Child: Starting 150 worker threads.
+[Wed Jan 30 21:46:00.908241 2019] [mpm_winnt:notice] [pid 4376:tid 912] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed Jan 30 21:46:02.945207 2019] [mpm_winnt:notice] [pid 7780:tid 808] AH00364: Child: All worker threads have exited.
+[Wed Jan 30 21:46:03.038950 2019] [mpm_winnt:notice] [pid 4376:tid 912] AH00430: Parent: Child process 7780 exited successfully.
+[Wed Jan 30 21:46:41.130872 2019] [mpm_winnt:notice] [pid 4420:tid 924] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed Jan 30 21:46:41.130872 2019] [mpm_winnt:notice] [pid 4420:tid 924] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed Jan 30 21:46:41.130872 2019] [core:notice] [pid 4420:tid 924] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Wed Jan 30 21:46:41.224617 2019] [mpm_winnt:notice] [pid 4420:tid 924] AH00418: Parent: Created child process 7808
+[Wed Jan 30 21:46:57.311133 2019] [mpm_winnt:notice] [pid 7808:tid 832] AH00354: Child: Starting 150 worker threads.
+[Thu Jan 31 02:04:57.191670 2019] [mpm_winnt:notice] [pid 4420:tid 924] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Jan 31 02:04:59.217385 2019] [mpm_winnt:notice] [pid 7808:tid 832] AH00364: Child: All worker threads have exited.
+[Thu Jan 31 02:04:59.311126 2019] [mpm_winnt:notice] [pid 4420:tid 924] AH00430: Parent: Child process 7808 exited successfully.
+[Thu Jan 31 02:05:34.862824 2019] [mpm_winnt:notice] [pid 3996:tid 964] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Thu Jan 31 02:05:34.862824 2019] [mpm_winnt:notice] [pid 3996:tid 964] AH00456: Server built: Jul 15 2013 11:49:28
+[Thu Jan 31 02:05:34.862824 2019] [core:notice] [pid 3996:tid 964] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Thu Jan 31 02:05:34.878448 2019] [mpm_winnt:notice] [pid 3996:tid 964] AH00418: Parent: Created child process 5880
+[Thu Jan 31 02:05:39.228999 2019] [mpm_winnt:notice] [pid 5880:tid 832] AH00354: Child: Starting 150 worker threads.
+[Thu Feb 07 23:08:23.957730 2019] [mpm_winnt:notice] [pid 3996:tid 964] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Feb 07 23:08:26.053089 2019] [mpm_winnt:notice] [pid 5880:tid 832] AH00364: Child: All worker threads have exited.
+[Thu Feb 07 23:08:26.170947 2019] [mpm_winnt:notice] [pid 3996:tid 964] AH00430: Parent: Child process 5880 exited successfully.
+[Thu Feb 07 23:09:08.952284 2019] [mpm_winnt:notice] [pid 4504:tid 932] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Thu Feb 07 23:09:08.952284 2019] [mpm_winnt:notice] [pid 4504:tid 932] AH00456: Server built: Jul 15 2013 11:49:28
+[Thu Feb 07 23:09:08.952284 2019] [core:notice] [pid 4504:tid 932] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Thu Feb 07 23:09:08.967909 2019] [mpm_winnt:notice] [pid 4504:tid 932] AH00418: Parent: Created child process 7788
+[Thu Feb 07 23:09:20.988492 2019] [mpm_winnt:notice] [pid 7788:tid 772] AH00354: Child: Starting 150 worker threads.
+[Sat Feb 09 20:29:46.133798 2019] [core:warn] [pid 4460:tid 716] AH00098: pid file I:/079V3/mSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Feb 09 20:29:48.897051 2019] [mpm_winnt:notice] [pid 4460:tid 716] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Feb 09 20:29:48.897051 2019] [mpm_winnt:notice] [pid 4460:tid 716] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Feb 09 20:29:48.897051 2019] [core:notice] [pid 4460:tid 716] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sat Feb 09 20:29:48.958436 2019] [mpm_winnt:notice] [pid 4460:tid 716] AH00418: Parent: Created child process 5712
+[Sat Feb 09 20:30:00.642809 2019] [mpm_winnt:notice] [pid 5712:tid 800] AH00354: Child: Starting 150 worker threads.
+[Mon Feb 18 22:04:53.469907 2019] [mpm_winnt:notice] [pid 4460:tid 716] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Mon Feb 18 22:04:55.508810 2019] [mpm_winnt:notice] [pid 5712:tid 800] AH00364: Child: All worker threads have exited.
+[Mon Feb 18 22:04:55.619714 2019] [mpm_winnt:notice] [pid 4460:tid 716] AH00430: Parent: Child process 5712 exited successfully.
+[Mon Feb 18 22:05:39.437917 2019] [mpm_winnt:notice] [pid 4624:tid 820] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Mon Feb 18 22:05:39.437917 2019] [mpm_winnt:notice] [pid 4624:tid 820] AH00456: Server built: Jul 15 2013 11:49:28
+[Mon Feb 18 22:05:39.437917 2019] [core:notice] [pid 4624:tid 820] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Mon Feb 18 22:05:39.703524 2019] [mpm_winnt:notice] [pid 4624:tid 820] AH00418: Parent: Created child process 8352
+[Mon Feb 18 22:05:52.420564 2019] [mpm_winnt:notice] [pid 8352:tid 784] AH00354: Child: Starting 150 worker threads.
+[Fri Feb 22 04:06:49.347933 2019] [mpm_winnt:notice] [pid 4624:tid 820] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Feb 22 04:06:51.391733 2019] [mpm_winnt:notice] [pid 8352:tid 784] AH00364: Child: All worker threads have exited.
+[Fri Feb 22 04:06:51.469823 2019] [mpm_winnt:notice] [pid 4624:tid 820] AH00430: Parent: Child process 8352 exited successfully.
+[Fri Feb 22 04:07:27.798942 2019] [mpm_winnt:notice] [pid 4188:tid 756] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Fri Feb 22 04:07:27.798942 2019] [mpm_winnt:notice] [pid 4188:tid 756] AH00456: Server built: Jul 15 2013 11:49:28
+[Fri Feb 22 04:07:27.798942 2019] [core:notice] [pid 4188:tid 756] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Fri Feb 22 04:07:27.798942 2019] [mpm_winnt:notice] [pid 4188:tid 756] AH00418: Parent: Created child process 6024
+[Fri Feb 22 04:07:31.708016 2019] [mpm_winnt:notice] [pid 6024:tid 856] AH00354: Child: Starting 150 worker threads.
+[Sat Feb 23 20:12:19.757947 2019] [mpm_winnt:notice] [pid 4188:tid 756] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Feb 23 20:12:21.792892 2019] [mpm_winnt:notice] [pid 6024:tid 856] AH00364: Child: All worker threads have exited.
+[Sat Feb 23 20:12:21.839764 2019] [mpm_winnt:notice] [pid 4188:tid 756] AH00430: Parent: Child process 6024 exited successfully.
+[Sat Feb 23 20:13:06.582755 2019] [mpm_winnt:notice] [pid 4240:tid 964] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Feb 23 20:13:06.582755 2019] [mpm_winnt:notice] [pid 4240:tid 964] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Feb 23 20:13:06.582755 2019] [core:notice] [pid 4240:tid 964] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sat Feb 23 20:13:06.645251 2019] [mpm_winnt:notice] [pid 4240:tid 964] AH00418: Parent: Created child process 8064
+[Sat Feb 23 20:13:21.022196 2019] [mpm_winnt:notice] [pid 8064:tid 560] AH00354: Child: Starting 150 worker threads.
+Starting the Apache2a service
+The Apache2a service is running.
+ [core:warn] [pid 5616:tid 904] AH00098: pid file I:/079V3/mSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Feb 24 13:53:17.070192 2019] [mpm_winnt:notice] [pid 5616:tid 904] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Feb 24 13:53:17.070192 2019] [mpm_winnt:notice] [pid 5616:tid 904] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Feb 24 13:53:17.071173 2019] [core:notice] [pid 5616:tid 904] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Feb 24 13:53:17.079165 2019] [mpm_winnt:notice] [pid 5616:tid 904] AH00418: Parent: Created child process 1560
+[Sun Feb 24 13:53:20.350372 2019] [mpm_winnt:notice] [pid 1560:tid 672] AH00354: Child: Starting 150 worker threads.
+[Sun Mar 03 16:20:26.452115 2019] [:error] [pid 1560:tid 2248] [client 127.0.0.1:9970] script 'I:/079V3/mSer/Mysql/WWW/show.php' not found or unable to stat, referer: http://www.jishuyl.com/game/news/34526.html
+[Thu Mar 07 20:23:17.491646 2019] [core:warn] [pid 4636:tid 936] AH00098: pid file I:/079V3/mSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Mar 07 20:23:20.038349 2019] [mpm_winnt:notice] [pid 4636:tid 936] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Thu Mar 07 20:23:20.038349 2019] [mpm_winnt:notice] [pid 4636:tid 936] AH00456: Server built: Jul 15 2013 11:49:28
+[Thu Mar 07 20:23:20.038349 2019] [core:notice] [pid 4636:tid 936] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Thu Mar 07 20:23:20.132093 2019] [mpm_winnt:notice] [pid 4636:tid 936] AH00418: Parent: Created child process 1404
+[Thu Mar 07 20:23:36.889585 2019] [mpm_winnt:notice] [pid 1404:tid 832] AH00354: Child: Starting 150 worker threads.
+[Mon Mar 18 22:08:30.663520 2019] [mpm_winnt:notice] [pid 4636:tid 936] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Mon Mar 18 22:08:32.700254 2019] [mpm_winnt:notice] [pid 1404:tid 832] AH00364: Child: All worker threads have exited.
+[Mon Mar 18 22:08:32.799496 2019] [mpm_winnt:notice] [pid 4636:tid 936] AH00430: Parent: Child process 1404 exited successfully.
+[Mon Mar 18 22:09:16.370603 2019] [mpm_winnt:notice] [pid 4244:tid 692] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Mon Mar 18 22:09:16.370603 2019] [mpm_winnt:notice] [pid 4244:tid 692] AH00456: Server built: Jul 15 2013 11:49:28
+[Mon Mar 18 22:09:16.370603 2019] [core:notice] [pid 4244:tid 692] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Mon Mar 18 22:09:16.370603 2019] [mpm_winnt:notice] [pid 4244:tid 692] AH00418: Parent: Created child process 5892
+[Mon Mar 18 22:09:20.547813 2019] [mpm_winnt:notice] [pid 5892:tid 752] AH00354: Child: Starting 150 worker threads.
+[Thu Mar 28 20:38:03.679428 2019] [mpm_winnt:notice] [pid 4244:tid 692] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Mar 28 20:38:05.751267 2019] [mpm_winnt:notice] [pid 5892:tid 752] AH00364: Child: All worker threads have exited.
+[Thu Mar 28 20:38:05.845011 2019] [mpm_winnt:notice] [pid 4244:tid 692] AH00430: Parent: Child process 5892 exited successfully.
+[Thu Mar 28 20:38:29.641730 2019] [mpm_winnt:notice] [pid 4752:tid 956] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Thu Mar 28 20:38:29.641730 2019] [mpm_winnt:notice] [pid 4752:tid 956] AH00456: Server built: Jul 15 2013 11:49:28
+[Thu Mar 28 20:38:29.641730 2019] [core:notice] [pid 4752:tid 956] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Thu Mar 28 20:38:29.844842 2019] [mpm_winnt:notice] [pid 4752:tid 956] AH00418: Parent: Created child process 8244
+[Thu Mar 28 20:38:41.120464 2019] [mpm_winnt:notice] [pid 8244:tid 688] AH00354: Child: Starting 150 worker threads.
+[Sat Apr 13 23:07:05.696505 2019] [mpm_winnt:notice] [pid 4752:tid 956] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Apr 13 23:07:07.736111 2019] [mpm_winnt:notice] [pid 8244:tid 688] AH00364: Child: All worker threads have exited.
+[Sat Apr 13 23:07:07.854558 2019] [mpm_winnt:notice] [pid 4752:tid 956] AH00430: Parent: Child process 8244 exited successfully.
+[Sat Apr 13 23:07:52.764923 2019] [mpm_winnt:notice] [pid 4352:tid 728] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Apr 13 23:07:52.764923 2019] [mpm_winnt:notice] [pid 4352:tid 728] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Apr 13 23:07:52.764923 2019] [core:notice] [pid 4352:tid 728] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sat Apr 13 23:07:52.764923 2019] [mpm_winnt:notice] [pid 4352:tid 728] AH00418: Parent: Created child process 6056
+[Sat Apr 13 23:07:56.733009 2019] [mpm_winnt:notice] [pid 6056:tid 844] AH00354: Child: Starting 150 worker threads.
+[Sat Apr 20 02:02:13.397031 2019] [mpm_winnt:notice] [pid 4352:tid 728] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Apr 20 02:02:15.508975 2019] [mpm_winnt:notice] [pid 6056:tid 844] AH00364: Child: All worker threads have exited.
+[Sat Apr 20 02:02:15.602719 2019] [mpm_winnt:notice] [pid 4352:tid 728] AH00430: Parent: Child process 6056 exited successfully.
+[Sat Apr 20 02:03:01.447606 2019] [mpm_winnt:notice] [pid 4812:tid 916] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Apr 20 02:03:01.447606 2019] [mpm_winnt:notice] [pid 4812:tid 916] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Apr 20 02:03:01.447606 2019] [core:notice] [pid 4812:tid 916] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sat Apr 20 02:03:01.635092 2019] [mpm_winnt:notice] [pid 4812:tid 916] AH00418: Parent: Created child process 5064
+[Sat Apr 20 02:03:12.801020 2019] [mpm_winnt:notice] [pid 5064:tid 624] AH00354: Child: Starting 150 worker threads.
+[Tue May 07 17:40:29.894513 2019] [mpm_winnt:notice] [pid 4812:tid 916] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue May 07 17:40:31.969388 2019] [mpm_winnt:notice] [pid 5064:tid 624] AH00364: Child: All worker threads have exited.
+[Tue May 07 17:40:32.078753 2019] [mpm_winnt:notice] [pid 4812:tid 916] AH00430: Parent: Child process 5064 exited successfully.
+[Tue May 07 17:41:09.329915 2019] [mpm_winnt:notice] [pid 4268:tid 948] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Tue May 07 17:41:09.329915 2019] [mpm_winnt:notice] [pid 4268:tid 948] AH00456: Server built: Jul 15 2013 11:49:28
+[Tue May 07 17:41:09.329915 2019] [core:notice] [pid 4268:tid 948] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Tue May 07 17:41:09.361162 2019] [mpm_winnt:notice] [pid 4268:tid 948] AH00418: Parent: Created child process 6180
+[Tue May 07 17:41:19.033369 2019] [mpm_winnt:notice] [pid 6180:tid 840] AH00354: Child: Starting 150 worker threads.
+[Wed May 15 17:36:50.251732 2019] [mpm_winnt:notice] [pid 4268:tid 948] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed May 15 17:36:52.277282 2019] [mpm_winnt:notice] [pid 6180:tid 840] AH00364: Child: All worker threads have exited.
+[Wed May 15 17:36:52.378291 2019] [mpm_winnt:notice] [pid 4268:tid 948] AH00430: Parent: Child process 6180 exited successfully.
+[Wed May 15 17:37:34.652042 2019] [mpm_winnt:notice] [pid 4252:tid 760] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed May 15 17:37:34.652042 2019] [mpm_winnt:notice] [pid 4252:tid 760] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed May 15 17:37:34.652042 2019] [core:notice] [pid 4252:tid 760] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Wed May 15 17:37:34.683291 2019] [mpm_winnt:notice] [pid 4252:tid 760] AH00418: Parent: Created child process 5944
+[Wed May 15 17:37:38.786002 2019] [mpm_winnt:notice] [pid 5944:tid 632] AH00354: Child: Starting 150 worker threads.
+[Wed May 15 20:06:45.500609 2019] [mpm_winnt:notice] [pid 4252:tid 760] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed May 15 20:06:47.533094 2019] [mpm_winnt:notice] [pid 5944:tid 632] AH00364: Child: All worker threads have exited.
+[Wed May 15 20:06:47.564339 2019] [mpm_winnt:notice] [pid 4252:tid 760] AH00430: Parent: Child process 5944 exited successfully.
+[Wed May 15 20:07:28.104695 2019] [mpm_winnt:notice] [pid 4460:tid 624] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Wed May 15 20:07:28.104695 2019] [mpm_winnt:notice] [pid 4460:tid 624] AH00456: Server built: Jul 15 2013 11:49:28
+[Wed May 15 20:07:28.104695 2019] [core:notice] [pid 4460:tid 624] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Wed May 15 20:07:28.229686 2019] [mpm_winnt:notice] [pid 4460:tid 624] AH00418: Parent: Created child process 8068
+[Wed May 15 20:07:39.419525 2019] [mpm_winnt:notice] [pid 8068:tid 848] AH00354: Child: Starting 150 worker threads.
+[Mon May 20 21:15:51.684138 2019] [mpm_winnt:notice] [pid 4460:tid 624] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Mon May 20 21:15:53.720502 2019] [mpm_winnt:notice] [pid 8068:tid 848] AH00364: Child: All worker threads have exited.
+[Mon May 20 21:15:53.829862 2019] [mpm_winnt:notice] [pid 4460:tid 624] AH00430: Parent: Child process 8068 exited successfully.
+[Mon May 20 21:16:38.849755 2019] [mpm_winnt:notice] [pid 4516:tid 668] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Mon May 20 21:16:38.865379 2019] [mpm_winnt:notice] [pid 4516:tid 668] AH00456: Server built: Jul 15 2013 11:49:28
+[Mon May 20 21:16:38.865379 2019] [core:notice] [pid 4516:tid 668] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Mon May 20 21:16:39.021617 2019] [mpm_winnt:notice] [pid 4516:tid 668] AH00418: Parent: Created child process 8144
+[Mon May 20 21:16:52.870806 2019] [mpm_winnt:notice] [pid 8144:tid 684] AH00354: Child: Starting 150 worker threads.
+[Mon May 27 22:03:48.502149 2019] [mpm_winnt:notice] [pid 4516:tid 668] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Mon May 27 22:03:50.613676 2019] [mpm_winnt:notice] [pid 8144:tid 684] AH00364: Child: All worker threads have exited.
+[Mon May 27 22:03:50.723043 2019] [mpm_winnt:notice] [pid 4516:tid 668] AH00430: Parent: Child process 8144 exited successfully.
+[Mon May 27 22:04:43.312537 2019] [mpm_winnt:notice] [pid 4300:tid 684] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Mon May 27 22:04:43.312537 2019] [mpm_winnt:notice] [pid 4300:tid 684] AH00456: Server built: Jul 15 2013 11:49:28
+[Mon May 27 22:04:43.312537 2019] [core:notice] [pid 4300:tid 684] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Mon May 27 22:04:43.453153 2019] [mpm_winnt:notice] [pid 4300:tid 684] AH00418: Parent: Created child process 8000
+[Mon May 27 22:04:54.616322 2019] [mpm_winnt:notice] [pid 8000:tid 948] AH00354: Child: Starting 150 worker threads.
+[Thu May 30 20:55:41.636783 2019] [mpm_winnt:notice] [pid 4300:tid 684] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu May 30 20:55:43.805866 2019] [mpm_winnt:notice] [pid 8000:tid 948] AH00364: Child: All worker threads have exited.
+[Thu May 30 20:55:43.899579 2019] [mpm_winnt:notice] [pid 4300:tid 684] AH00430: Parent: Child process 8000 exited successfully.
+[Thu May 30 20:56:18.811434 2019] [mpm_winnt:notice] [pid 4332:tid 700] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Thu May 30 20:56:18.811434 2019] [mpm_winnt:notice] [pid 4332:tid 700] AH00456: Server built: Jul 15 2013 11:49:28
+[Thu May 30 20:56:18.811434 2019] [core:notice] [pid 4332:tid 700] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Thu May 30 20:56:18.970687 2019] [mpm_winnt:notice] [pid 4332:tid 700] AH00418: Parent: Created child process 7868
+[Thu May 30 20:56:29.875074 2019] [mpm_winnt:notice] [pid 7868:tid 640] AH00354: Child: Starting 150 worker threads.
+[Sat Jun 01 11:16:48.589697 2019] [mpm_winnt:notice] [pid 4332:tid 700] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Jun 01 11:16:50.691658 2019] [mpm_winnt:notice] [pid 7868:tid 640] AH00364: Child: All worker threads have exited.
+[Sat Jun 01 11:16:50.800994 2019] [mpm_winnt:notice] [pid 4332:tid 700] AH00430: Parent: Child process 7868 exited successfully.
+[Sat Jun 01 11:17:28.721066 2019] [mpm_winnt:notice] [pid 4628:tid 736] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Jun 01 11:17:28.721066 2019] [mpm_winnt:notice] [pid 4628:tid 736] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Jun 01 11:17:28.721066 2019] [core:notice] [pid 4628:tid 736] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sat Jun 01 11:17:28.830434 2019] [mpm_winnt:notice] [pid 4628:tid 736] AH00418: Parent: Created child process 4616
+[Sat Jun 01 11:17:38.725238 2019] [mpm_winnt:notice] [pid 4616:tid 796] AH00354: Child: Starting 150 worker threads.
+[Sun Jun 02 16:11:52.600577 2019] [mpm_winnt:notice] [pid 4628:tid 736] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Jun 02 16:11:54.684496 2019] [mpm_winnt:notice] [pid 4616:tid 796] AH00364: Child: All worker threads have exited.
+[Sun Jun 02 16:11:54.771594 2019] [mpm_winnt:notice] [pid 4628:tid 736] AH00430: Parent: Child process 4616 exited successfully.
+[Sun Jun 02 16:13:03.316904 2019] [mpm_winnt:notice] [pid 3184:tid 668] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Jun 02 16:13:03.316904 2019] [mpm_winnt:notice] [pid 3184:tid 668] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Jun 02 16:13:03.316904 2019] [core:notice] [pid 3184:tid 668] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Jun 02 16:13:03.730141 2019] [mpm_winnt:notice] [pid 3184:tid 668] AH00418: Parent: Created child process 7456
+[Sun Jun 02 16:13:15.647709 2019] [mpm_winnt:notice] [pid 7456:tid 804] AH00354: Child: Starting 150 worker threads.
+[Fri Jun 07 00:08:07.870982 2019] [mpm_winnt:notice] [pid 3184:tid 668] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Jun 07 00:08:09.901952 2019] [mpm_winnt:notice] [pid 7456:tid 804] AH00364: Child: All worker threads have exited.
+[Fri Jun 07 00:08:09.995681 2019] [mpm_winnt:notice] [pid 3184:tid 668] AH00430: Parent: Child process 7456 exited successfully.
+[Fri Jun 07 00:09:18.652739 2019] [mpm_winnt:notice] [pid 2460:tid 912] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Fri Jun 07 00:09:18.652739 2019] [mpm_winnt:notice] [pid 2460:tid 912] AH00456: Server built: Jul 15 2013 11:49:28
+[Fri Jun 07 00:09:18.652739 2019] [core:notice] [pid 2460:tid 912] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Fri Jun 07 00:09:18.811688 2019] [mpm_winnt:notice] [pid 2460:tid 912] AH00418: Parent: Created child process 4372
+[Fri Jun 07 00:09:27.697510 2019] [mpm_winnt:notice] [pid 4372:tid 628] AH00354: Child: Starting 150 worker threads.
+[Fri Jun 07 00:17:33.917265 2019] [mpm_winnt:notice] [pid 2460:tid 912] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Jun 07 00:17:35.954793 2019] [mpm_winnt:notice] [pid 4372:tid 628] AH00364: Child: All worker threads have exited.
+[Fri Jun 07 00:17:36.021419 2019] [mpm_winnt:notice] [pid 2460:tid 912] AH00430: Parent: Child process 4372 exited successfully.
+[Fri Jun 07 00:18:45.266224 2019] [mpm_winnt:notice] [pid 3988:tid 880] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Fri Jun 07 00:18:45.266224 2019] [mpm_winnt:notice] [pid 3988:tid 880] AH00456: Server built: Jul 15 2013 11:49:28
+[Fri Jun 07 00:18:45.266224 2019] [core:notice] [pid 3988:tid 880] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Fri Jun 07 00:18:45.344343 2019] [mpm_winnt:notice] [pid 3988:tid 880] AH00418: Parent: Created child process 7772
+[Fri Jun 07 00:18:54.858504 2019] [mpm_winnt:notice] [pid 7772:tid 904] AH00354: Child: Starting 150 worker threads.
+[Fri Jun 07 18:47:52.131718 2019] [mpm_winnt:notice] [pid 3988:tid 880] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Jun 07 18:47:54.151891 2019] [mpm_winnt:notice] [pid 7772:tid 904] AH00364: Child: All worker threads have exited.
+[Fri Jun 07 18:47:54.230011 2019] [mpm_winnt:notice] [pid 3988:tid 880] AH00430: Parent: Child process 7772 exited successfully.
+[Fri Jun 07 18:48:57.683718 2019] [mpm_winnt:notice] [pid 3520:tid 1012] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Fri Jun 07 18:48:57.683718 2019] [mpm_winnt:notice] [pid 3520:tid 1012] AH00456: Server built: Jul 15 2013 11:49:28
+[Fri Jun 07 18:48:57.683718 2019] [core:notice] [pid 3520:tid 1012] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Fri Jun 07 18:48:57.683718 2019] [mpm_winnt:notice] [pid 3520:tid 1012] AH00418: Parent: Created child process 7248
+[Fri Jun 07 18:49:08.262006 2019] [mpm_winnt:notice] [pid 7248:tid 624] AH00354: Child: Starting 150 worker threads.
+[Fri Jun 07 19:11:22.937192 2019] [mpm_winnt:notice] [pid 3520:tid 1012] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Jun 07 19:11:24.973285 2019] [mpm_winnt:notice] [pid 7248:tid 624] AH00364: Child: All worker threads have exited.
+[Fri Jun 07 19:11:25.051406 2019] [mpm_winnt:notice] [pid 3520:tid 1012] AH00430: Parent: Child process 7248 exited successfully.
+[Fri Jun 07 19:12:37.153061 2019] [mpm_winnt:notice] [pid 3488:tid 828] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Fri Jun 07 19:12:37.153061 2019] [mpm_winnt:notice] [pid 3488:tid 828] AH00456: Server built: Jul 15 2013 11:49:28
+[Fri Jun 07 19:12:37.153061 2019] [core:notice] [pid 3488:tid 828] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Fri Jun 07 19:12:37.403044 2019] [mpm_winnt:notice] [pid 3488:tid 828] AH00418: Parent: Created child process 8044
+[Fri Jun 07 19:12:47.286524 2019] [mpm_winnt:notice] [pid 8044:tid 672] AH00354: Child: Starting 150 worker threads.
+[Fri Jun 21 00:11:26.179118 2019] [mpm_winnt:notice] [pid 3488:tid 828] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Jun 21 00:11:28.328125 2019] [mpm_winnt:notice] [pid 8044:tid 672] AH00364: Child: All worker threads have exited.
+[Fri Jun 21 00:11:28.434920 2019] [mpm_winnt:notice] [pid 3488:tid 828] AH00430: Parent: Child process 8044 exited successfully.
+[Fri Jun 21 20:53:14.381296 2019] [mpm_winnt:notice] [pid 4208:tid 888] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Fri Jun 21 20:53:14.381296 2019] [mpm_winnt:notice] [pid 4208:tid 888] AH00456: Server built: Jul 15 2013 11:49:28
+[Fri Jun 21 20:53:14.381296 2019] [core:notice] [pid 4208:tid 888] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Fri Jun 21 20:53:14.381296 2019] [mpm_winnt:notice] [pid 4208:tid 888] AH00418: Parent: Created child process 5952
+[Fri Jun 21 20:53:17.486174 2019] [mpm_winnt:notice] [pid 5952:tid 792] AH00354: Child: Starting 150 worker threads.
+[Sat Jun 29 17:16:13.514188 2019] [mpm_winnt:notice] [pid 4208:tid 888] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Jun 29 17:16:15.541596 2019] [mpm_winnt:notice] [pid 5952:tid 792] AH00364: Child: All worker threads have exited.
+[Sat Jun 29 17:16:15.635337 2019] [mpm_winnt:notice] [pid 4208:tid 888] AH00430: Parent: Child process 5952 exited successfully.
+[Sat Jun 29 17:16:57.366869 2019] [mpm_winnt:notice] [pid 4672:tid 776] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Jun 29 17:16:57.366869 2019] [mpm_winnt:notice] [pid 4672:tid 776] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Jun 29 17:16:57.366869 2019] [core:notice] [pid 4672:tid 776] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sat Jun 29 17:16:57.444988 2019] [mpm_winnt:notice] [pid 4672:tid 776] AH00418: Parent: Created child process 8524
+[Sat Jun 29 17:17:08.021508 2019] [mpm_winnt:notice] [pid 8524:tid 788] AH00354: Child: Starting 150 worker threads.
+[Mon Jul 01 12:20:38.062247 2019] [mpm_winnt:notice] [pid 8524:tid 788] AH00358: Child: Process exiting because it reached MaxConnectionsPerChild. Signaling the parent to restart a new child process.
+[Mon Jul 01 12:20:38.072241 2019] [mpm_winnt:notice] [pid 4672:tid 776] AH00424: Parent: Received restart signal -- Restarting the server.
+[Mon Jul 01 12:20:39.811269 2019] [mpm_winnt:notice] [pid 4672:tid 776] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Mon Jul 01 12:20:39.811269 2019] [mpm_winnt:notice] [pid 4672:tid 776] AH00456: Server built: Jul 15 2013 11:49:28
+[Mon Jul 01 12:20:39.812248 2019] [core:notice] [pid 4672:tid 776] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Mon Jul 01 12:20:39.823244 2019] [mpm_winnt:notice] [pid 4672:tid 776] AH00418: Parent: Created child process 16428
+[Mon Jul 01 12:20:40.077099 2019] [mpm_winnt:notice] [pid 8524:tid 788] AH00364: Child: All worker threads have exited.
+[Mon Jul 01 12:20:43.026526 2019] [mpm_winnt:notice] [pid 16428:tid 812] AH00354: Child: Starting 150 worker threads.
+[Mon Jul 01 22:51:28.396611 2019] [mpm_winnt:notice] [pid 4672:tid 776] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Mon Jul 01 22:51:30.451699 2019] [mpm_winnt:notice] [pid 16428:tid 812] AH00364: Child: All worker threads have exited.
+[Mon Jul 01 22:51:30.498570 2019] [mpm_winnt:notice] [pid 4672:tid 776] AH00430: Parent: Child process 16428 exited successfully.
+[Mon Jul 01 22:52:16.933322 2019] [mpm_winnt:notice] [pid 4696:tid 800] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Mon Jul 01 22:52:16.933322 2019] [mpm_winnt:notice] [pid 4696:tid 800] AH00456: Server built: Jul 15 2013 11:49:28
+[Mon Jul 01 22:52:16.933322 2019] [core:notice] [pid 4696:tid 800] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Mon Jul 01 22:52:16.980193 2019] [mpm_winnt:notice] [pid 4696:tid 800] AH00418: Parent: Created child process 8344
+[Mon Jul 01 22:52:25.232365 2019] [mpm_winnt:notice] [pid 8344:tid 788] AH00354: Child: Starting 150 worker threads.
+[Sat Jul 06 00:55:47.782634 2019] [mpm_winnt:notice] [pid 4696:tid 800] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Jul 06 00:55:49.902125 2019] [mpm_winnt:notice] [pid 8344:tid 788] AH00364: Child: All worker threads have exited.
+[Sat Jul 06 00:55:50.011491 2019] [mpm_winnt:notice] [pid 4696:tid 800] AH00430: Parent: Child process 8344 exited successfully.
+[Sat Jul 06 00:56:26.321738 2019] [mpm_winnt:notice] [pid 4732:tid 744] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Jul 06 00:56:26.321738 2019] [mpm_winnt:notice] [pid 4732:tid 744] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Jul 06 00:56:26.321738 2019] [core:notice] [pid 4732:tid 744] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sat Jul 06 00:56:26.493602 2019] [mpm_winnt:notice] [pid 4732:tid 744] AH00418: Parent: Created child process 8320
+[Sat Jul 06 00:56:34.034175 2019] [mpm_winnt:notice] [pid 8320:tid 724] AH00354: Child: Starting 150 worker threads.
+[Sat Jul 06 21:12:45.953701 2019] [core:warn] [pid 4236:tid 720] AH00098: pid file I:/079V3/mSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jul 06 21:12:49.151572 2019] [mpm_winnt:notice] [pid 4236:tid 720] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Jul 06 21:12:49.151572 2019] [mpm_winnt:notice] [pid 4236:tid 720] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Jul 06 21:12:49.151572 2019] [core:notice] [pid 4236:tid 720] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sat Jul 06 21:12:49.270956 2019] [mpm_winnt:notice] [pid 4236:tid 720] AH00418: Parent: Created child process 4616
+[Sat Jul 06 21:12:58.830766 2019] [mpm_winnt:notice] [pid 4616:tid 680] AH00354: Child: Starting 150 worker threads.
+[Tue Jul 09 18:34:52.693050 2019] [core:warn] [pid 4420:tid 892] AH00098: pid file I:/079V3/mSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Jul 09 18:34:54.989768 2019] [mpm_winnt:notice] [pid 4420:tid 892] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Tue Jul 09 18:34:54.989768 2019] [mpm_winnt:notice] [pid 4420:tid 892] AH00456: Server built: Jul 15 2013 11:49:28
+[Tue Jul 09 18:34:54.989768 2019] [core:notice] [pid 4420:tid 892] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Tue Jul 09 18:34:55.067886 2019] [mpm_winnt:notice] [pid 4420:tid 892] AH00418: Parent: Created child process 884
+[Tue Jul 09 18:35:04.096466 2019] [mpm_winnt:notice] [pid 884:tid 844] AH00354: Child: Starting 150 worker threads.
+[Sun Jul 14 19:03:31.227731 2019] [mpm_winnt:notice] [pid 4420:tid 892] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Jul 14 19:03:33.250020 2019] [mpm_winnt:notice] [pid 884:tid 844] AH00364: Child: All worker threads have exited.
+[Sun Jul 14 19:03:33.358518 2019] [mpm_winnt:notice] [pid 4420:tid 892] AH00430: Parent: Child process 884 exited successfully.
+[Sun Jul 14 19:04:18.118437 2019] [mpm_winnt:notice] [pid 4388:tid 696] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Jul 14 19:04:18.118437 2019] [mpm_winnt:notice] [pid 4388:tid 696] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Jul 14 19:04:18.118437 2019] [core:notice] [pid 4388:tid 696] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Jul 14 19:04:18.196554 2019] [mpm_winnt:notice] [pid 4388:tid 696] AH00418: Parent: Created child process 8232
+[Sun Jul 14 19:04:24.366597 2019] [mpm_winnt:notice] [pid 8232:tid 772] AH00354: Child: Starting 150 worker threads.
+[Sun Jul 21 18:07:15.044573 2019] [mpm_winnt:notice] [pid 4388:tid 696] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Jul 21 18:07:17.072471 2019] [mpm_winnt:notice] [pid 8232:tid 772] AH00364: Child: All worker threads have exited.
+[Sun Jul 21 18:07:17.159609 2019] [mpm_winnt:notice] [pid 4388:tid 696] AH00430: Parent: Child process 8232 exited successfully.
+[Sun Jul 21 18:10:34.439051 2019] [mpm_winnt:notice] [pid 4152:tid 608] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Jul 21 18:10:34.439051 2019] [mpm_winnt:notice] [pid 4152:tid 608] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Jul 21 18:10:34.439051 2019] [core:notice] [pid 4152:tid 608] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Jul 21 18:10:34.454677 2019] [mpm_winnt:notice] [pid 4152:tid 608] AH00418: Parent: Created child process 6084
+[Sun Jul 21 18:10:37.962133 2019] [mpm_winnt:notice] [pid 6084:tid 804] AH00354: Child: Starting 150 worker threads.
+[Sun Jul 21 21:12:06.073628 2019] [mpm_winnt:notice] [pid 4152:tid 608] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Jul 21 21:12:08.092132 2019] [mpm_winnt:notice] [pid 6084:tid 804] AH00364: Child: All worker threads have exited.
+[Sun Jul 21 21:12:08.180289 2019] [mpm_winnt:notice] [pid 4152:tid 608] AH00430: Parent: Child process 6084 exited successfully.
+[Sun Jul 21 21:35:53.660647 2019] [mpm_winnt:notice] [pid 4364:tid 744] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Jul 21 21:35:53.660647 2019] [mpm_winnt:notice] [pid 4364:tid 744] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Jul 21 21:35:53.660647 2019] [core:notice] [pid 4364:tid 744] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Jul 21 21:35:53.676272 2019] [mpm_winnt:notice] [pid 4364:tid 744] AH00418: Parent: Created child process 7448
+[Sun Jul 21 21:36:01.410410 2019] [mpm_winnt:notice] [pid 7448:tid 852] AH00354: Child: Starting 150 worker threads.
+[Sun Jul 21 21:48:34.186240 2019] [mpm_winnt:notice] [pid 4364:tid 744] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Jul 21 21:48:36.211854 2019] [mpm_winnt:notice] [pid 7448:tid 852] AH00364: Child: All worker threads have exited.
+[Sun Jul 21 21:48:36.243102 2019] [mpm_winnt:notice] [pid 4364:tid 744] AH00430: Parent: Child process 7448 exited successfully.
+[Sun Jul 21 21:51:55.188456 2019] [mpm_winnt:notice] [pid 4292:tid 892] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Jul 21 21:51:55.188456 2019] [mpm_winnt:notice] [pid 4292:tid 892] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Jul 21 21:51:55.188456 2019] [core:notice] [pid 4292:tid 892] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Jul 21 21:51:55.188456 2019] [mpm_winnt:notice] [pid 4292:tid 892] AH00418: Parent: Created child process 7488
+[Sun Jul 21 21:52:03.397002 2019] [mpm_winnt:notice] [pid 7488:tid 652] AH00354: Child: Starting 150 worker threads.
+[Fri Jul 26 18:33:11.265665 2019] [core:warn] [pid 4112:tid 884] AH00098: pid file I:/079V3/mSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Jul 26 18:33:12.723719 2019] [mpm_winnt:notice] [pid 4112:tid 884] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Fri Jul 26 18:33:12.723719 2019] [mpm_winnt:notice] [pid 4112:tid 884] AH00456: Server built: Jul 15 2013 11:49:28
+[Fri Jul 26 18:33:12.723719 2019] [core:notice] [pid 4112:tid 884] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Fri Jul 26 18:33:12.723719 2019] [mpm_winnt:notice] [pid 4112:tid 884] AH00418: Parent: Created child process 7408
+[Fri Jul 26 18:33:19.739821 2019] [mpm_winnt:notice] [pid 7408:tid 884] AH00354: Child: Starting 150 worker threads.
+[Sun Jul 28 19:18:25.112958 2019] [core:warn] [pid 3952:tid 848] AH00098: pid file I:/079V3/mSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Jul 28 19:18:26.327963 2019] [mpm_winnt:notice] [pid 3952:tid 848] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Jul 28 19:18:26.327963 2019] [mpm_winnt:notice] [pid 3952:tid 848] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Jul 28 19:18:26.327963 2019] [core:notice] [pid 3952:tid 848] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Jul 28 19:18:26.327963 2019] [mpm_winnt:notice] [pid 3952:tid 848] AH00418: Parent: Created child process 780
+[Sun Jul 28 19:18:32.815078 2019] [mpm_winnt:notice] [pid 780:tid 956] AH00354: Child: Starting 150 worker threads.
+[Sun Jul 28 21:52:19.512472 2019] [mpm_winnt:notice] [pid 3952:tid 848] AH00428: Parent: child process 780 exited with status 1 -- Restarting.
+[Sun Jul 28 21:52:20.193049 2019] [mpm_winnt:notice] [pid 3952:tid 848] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Jul 28 21:52:20.193049 2019] [mpm_winnt:notice] [pid 3952:tid 848] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Jul 28 21:52:20.193049 2019] [core:notice] [pid 3952:tid 848] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Jul 28 21:52:20.233025 2019] [mpm_winnt:notice] [pid 3952:tid 848] AH00418: Parent: Created child process 9508
+[Sun Jul 28 21:52:21.715176 2019] [mpm_winnt:notice] [pid 9508:tid 664] AH00354: Child: Starting 150 worker threads.
+[Tue Aug 13 21:51:54.010825 2019] [core:warn] [pid 4304:tid 912] AH00098: pid file I:/079V3/mSer/Mysql/Apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Aug 13 21:51:55.390635 2019] [mpm_winnt:notice] [pid 4304:tid 912] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Tue Aug 13 21:51:55.406258 2019] [mpm_winnt:notice] [pid 4304:tid 912] AH00456: Server built: Jul 15 2013 11:49:28
+[Tue Aug 13 21:51:55.406258 2019] [core:notice] [pid 4304:tid 912] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Tue Aug 13 21:51:55.406258 2019] [mpm_winnt:notice] [pid 4304:tid 912] AH00418: Parent: Created child process 7628
+[Tue Aug 13 21:52:02.489957 2019] [mpm_winnt:notice] [pid 7628:tid 860] AH00354: Child: Starting 150 worker threads.
+[Sat Aug 17 17:42:49.073678 2019] [mpm_winnt:notice] [pid 4304:tid 912] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Aug 17 17:42:51.110940 2019] [mpm_winnt:notice] [pid 7628:tid 860] AH00364: Child: All worker threads have exited.
+[Sat Aug 17 17:42:51.189036 2019] [mpm_winnt:notice] [pid 4304:tid 912] AH00430: Parent: Child process 7628 exited successfully.
+[Sat Aug 17 17:43:21.647434 2019] [mpm_winnt:notice] [pid 4116:tid 620] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Aug 17 17:43:21.647434 2019] [mpm_winnt:notice] [pid 4116:tid 620] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Aug 17 17:43:21.647434 2019] [core:notice] [pid 4116:tid 620] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sat Aug 17 17:43:21.647434 2019] [mpm_winnt:notice] [pid 4116:tid 620] AH00418: Parent: Created child process 7404
+[Sat Aug 17 17:43:27.501291 2019] [mpm_winnt:notice] [pid 7404:tid 784] AH00354: Child: Starting 150 worker threads.
+[Sat Aug 17 20:15:11.521495 2019] [mpm_winnt:notice] [pid 4116:tid 620] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Aug 17 20:15:13.564512 2019] [mpm_winnt:notice] [pid 7404:tid 784] AH00364: Child: All worker threads have exited.
+[Sat Aug 17 20:15:13.642600 2019] [mpm_winnt:notice] [pid 4116:tid 620] AH00430: Parent: Child process 7404 exited successfully.
+[Sat Aug 17 21:04:56.615426 2019] [mpm_winnt:notice] [pid 4124:tid 940] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Aug 17 21:04:56.615426 2019] [mpm_winnt:notice] [pid 4124:tid 940] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Aug 17 21:04:56.615426 2019] [core:notice] [pid 4124:tid 940] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sat Aug 17 21:04:56.615426 2019] [mpm_winnt:notice] [pid 4124:tid 940] AH00418: Parent: Created child process 5324
+[Sat Aug 17 21:04:58.500766 2019] [mpm_winnt:notice] [pid 5324:tid 832] AH00354: Child: Starting 150 worker threads.
+[Sat Aug 17 22:48:37.948535 2019] [mpm_winnt:notice] [pid 4124:tid 940] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Aug 17 22:48:40.019992 2019] [mpm_winnt:notice] [pid 5324:tid 832] AH00364: Child: All worker threads have exited.
+[Sat Aug 17 22:48:40.114630 2019] [mpm_winnt:notice] [pid 4124:tid 940] AH00430: Parent: Child process 5324 exited successfully.
+[Sat Aug 17 22:49:14.296285 2019] [mpm_winnt:notice] [pid 4180:tid 744] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sat Aug 17 22:49:14.296285 2019] [mpm_winnt:notice] [pid 4180:tid 744] AH00456: Server built: Jul 15 2013 11:49:28
+[Sat Aug 17 22:49:14.296285 2019] [core:notice] [pid 4180:tid 744] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sat Aug 17 22:49:14.298325 2019] [mpm_winnt:notice] [pid 4180:tid 744] AH00418: Parent: Created child process 3636
+[Sat Aug 17 22:49:16.539846 2019] [mpm_winnt:notice] [pid 3636:tid 808] AH00354: Child: Starting 150 worker threads.
+[Sat Aug 24 01:31:56.533838 2019] [autoindex:error] [pid 3636:tid 2216] [client 127.0.0.1:64749] AH01276: Cannot serve directory I:/079V3/mSer/Mysql/WWW/: No matching DirectoryIndex (index.html,index.php,index.htm,l.php) found, and server-generated directory index forbidden by Options directive
+[Sun Aug 25 10:10:32.845646 2019] [mpm_winnt:notice] [pid 4180:tid 744] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Aug 25 10:10:34.900902 2019] [mpm_winnt:notice] [pid 3636:tid 808] AH00364: Child: All worker threads have exited.
+[Sun Aug 25 10:10:35.072766 2019] [mpm_winnt:notice] [pid 4180:tid 744] AH00430: Parent: Child process 3636 exited successfully.
+[Sun Aug 25 10:11:10.750699 2019] [mpm_winnt:notice] [pid 5276:tid 704] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Aug 25 10:11:10.750699 2019] [mpm_winnt:notice] [pid 5276:tid 704] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Aug 25 10:11:10.750699 2019] [core:notice] [pid 5276:tid 704] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Aug 25 10:11:10.766323 2019] [mpm_winnt:notice] [pid 5276:tid 704] AH00418: Parent: Created child process 8048
+[Sun Aug 25 10:11:13.084985 2019] [mpm_winnt:notice] [pid 8048:tid 828] AH00354: Child: Starting 150 worker threads.
+[Sun Aug 25 10:26:31.306186 2019] [mpm_winnt:notice] [pid 5276:tid 704] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Aug 25 10:26:33.318053 2019] [mpm_winnt:notice] [pid 8048:tid 828] AH00364: Child: All worker threads have exited.
+[Sun Aug 25 10:26:33.391798 2019] [mpm_winnt:notice] [pid 5276:tid 704] AH00430: Parent: Child process 8048 exited successfully.
+[Sun Aug 25 10:27:09.310486 2019] [mpm_winnt:notice] [pid 5564:tid 920] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Aug 25 10:27:09.310486 2019] [mpm_winnt:notice] [pid 5564:tid 920] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Aug 25 10:27:09.310486 2019] [core:notice] [pid 5564:tid 920] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Aug 25 10:27:09.310486 2019] [mpm_winnt:notice] [pid 5564:tid 920] AH00418: Parent: Created child process 8188
+[Sun Aug 25 10:27:15.604488 2019] [mpm_winnt:notice] [pid 8188:tid 836] AH00354: Child: Starting 150 worker threads.
+[Sun Aug 25 11:56:10.610594 2019] [mpm_winnt:notice] [pid 5564:tid 920] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Aug 25 11:56:12.647350 2019] [mpm_winnt:notice] [pid 8188:tid 836] AH00364: Child: All worker threads have exited.
+[Sun Aug 25 11:56:12.725926 2019] [mpm_winnt:notice] [pid 5564:tid 920] AH00430: Parent: Child process 8188 exited successfully.
+[Sun Aug 25 11:56:41.512408 2019] [mpm_winnt:notice] [pid 4656:tid 1004] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Aug 25 11:56:41.512408 2019] [mpm_winnt:notice] [pid 4656:tid 1004] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Aug 25 11:56:41.512408 2019] [core:notice] [pid 4656:tid 1004] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Aug 25 11:56:41.543075 2019] [mpm_winnt:notice] [pid 4656:tid 1004] AH00418: Parent: Created child process 6856
+[Sun Aug 25 11:56:47.112416 2019] [mpm_winnt:notice] [pid 6856:tid 948] AH00354: Child: Starting 150 worker threads.
+[Sat Aug 31 19:37:20.858518 2019] [mpm_winnt:notice] [pid 4656:tid 1004] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Aug 31 19:37:22.891636 2019] [mpm_winnt:notice] [pid 6856:tid 948] AH00364: Child: All worker threads have exited.
+[Sat Aug 31 19:37:22.985357 2019] [mpm_winnt:notice] [pid 4656:tid 1004] AH00430: Parent: Child process 6856 exited successfully.
+[Sun Sep 01 17:24:45.999777 2019] [mpm_winnt:notice] [pid 4420:tid 908] AH00455: Apache/2.4.6 (Win32) OpenSSL/1.0.1g PHP/5.3.27 configured -- resuming normal operations
+[Sun Sep 01 17:24:46.001801 2019] [mpm_winnt:notice] [pid 4420:tid 908] AH00456: Server built: Jul 15 2013 11:49:28
+[Sun Sep 01 17:24:46.001801 2019] [core:notice] [pid 4420:tid 908] AH00094: Command line: 'I:\\079V3\\mSer\\Mysql\\Apache\\bin\\httpd.exe -d I:/079V3/mSer/Mysql/Apache'
+[Sun Sep 01 17:24:46.001801 2019] [mpm_winnt:notice] [pid 4420:tid 908] AH00418: Parent: Created child process 6912
+[Sun Sep 01 17:24:51.306036 2019] [mpm_winnt:notice] [pid 6912:tid 836] AH00354: Child: Starting 150 worker threads.

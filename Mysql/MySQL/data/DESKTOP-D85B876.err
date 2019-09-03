@@ -1,0 +1,1747 @@
+181205 21:44:52 [Note] Plugin 'FEDERATED' is disabled.
+181205 21:44:52 InnoDB: The InnoDB memory heap is disabled
+181205 21:44:52 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+181205 21:44:52 InnoDB: Compressed tables use zlib 1.2.3
+181205 21:44:52 InnoDB: Initializing buffer pool, size = 47.0M
+181205 21:44:52 InnoDB: Completed initialization of buffer pool
+181205 21:44:52 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+181205 21:44:52  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+181205 21:44:52  InnoDB: Waiting for the background threads to start
+181205 21:44:53 InnoDB: 5.5.34 started; log sequence number 1882354892
+181205 21:44:53 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+181205 21:44:53 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+181205 21:44:53 [Note] Server socket created on IP: '0.0.0.0'.
+181205 21:44:54 [Note] Event Scheduler: Loaded 0 events
+181205 21:44:54 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+181209 14:01:45 [Note] MySQLa: Normal shutdown
+
+181209 14:01:45 [Note] Event Scheduler: Purging the queue. 0 events
+181209 14:01:45  InnoDB: Starting shutdown...
+181209 14:01:46  InnoDB: Shutdown completed; log sequence number 1984747346
+181209 14:01:46 [Note] MySQLa: Shutdown complete
+
+181209 14:04:59 [Note] Plugin 'FEDERATED' is disabled.
+181209 14:04:59 InnoDB: The InnoDB memory heap is disabled
+181209 14:04:59 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+181209 14:04:59 InnoDB: Compressed tables use zlib 1.2.3
+181209 14:04:59 InnoDB: Initializing buffer pool, size = 47.0M
+181209 14:04:59 InnoDB: Completed initialization of buffer pool
+181209 14:04:59 InnoDB: highest supported file format is Barracuda.
+181209 14:05:00  InnoDB: Waiting for the background threads to start
+181209 14:05:01 InnoDB: 5.5.34 started; log sequence number 1984747346
+181209 14:05:01 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+181209 14:05:01 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+181209 14:05:01 [Note] Server socket created on IP: '0.0.0.0'.
+181209 14:05:01 [Note] Event Scheduler: Loaded 0 events
+181209 14:05:01 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+181216 19:34:34 [Note] MySQLa: Normal shutdown
+
+181216 19:34:34 [Note] Event Scheduler: Purging the queue. 0 events
+181216 19:34:35  InnoDB: Starting shutdown...
+181216 19:34:36  InnoDB: Shutdown completed; log sequence number 2109711730
+181216 19:34:36 [Note] MySQLa: Shutdown complete
+
+181216 19:35:13 [Note] Plugin 'FEDERATED' is disabled.
+181216 19:35:13 InnoDB: The InnoDB memory heap is disabled
+181216 19:35:13 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+181216 19:35:13 InnoDB: Compressed tables use zlib 1.2.3
+181216 19:35:13 InnoDB: Initializing buffer pool, size = 47.0M
+181216 19:35:13 InnoDB: Completed initialization of buffer pool
+181216 19:35:13 InnoDB: highest supported file format is Barracuda.
+181216 19:35:14  InnoDB: Waiting for the background threads to start
+181216 19:35:15 InnoDB: 5.5.34 started; log sequence number 2109711730
+181216 19:35:15 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+181216 19:35:16 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+181216 19:35:16 [Note] Server socket created on IP: '0.0.0.0'.
+181216 19:35:16 [Note] Event Scheduler: Loaded 0 events
+181216 19:35:16 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+181216 22:25:36 [Note] MySQLa: Normal shutdown
+
+181216 22:25:36 [Note] Event Scheduler: Purging the queue. 0 events
+181216 22:25:36  InnoDB: Starting shutdown...
+181216 22:25:37  InnoDB: Shutdown completed; log sequence number 2138724798
+181216 22:25:37 [Note] MySQLa: Shutdown complete
+
+181216 22:26:11 [Note] Plugin 'FEDERATED' is disabled.
+181216 22:26:11 InnoDB: The InnoDB memory heap is disabled
+181216 22:26:11 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+181216 22:26:11 InnoDB: Compressed tables use zlib 1.2.3
+181216 22:26:11 InnoDB: Initializing buffer pool, size = 47.0M
+181216 22:26:11 InnoDB: Completed initialization of buffer pool
+181216 22:26:11 InnoDB: highest supported file format is Barracuda.
+181216 22:26:11  InnoDB: Waiting for the background threads to start
+181216 22:26:12 InnoDB: 5.5.34 started; log sequence number 2138724798
+181216 22:26:12 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+181216 22:26:12 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+181216 22:26:12 [Note] Server socket created on IP: '0.0.0.0'.
+181216 22:26:12 [Note] Event Scheduler: Loaded 0 events
+181216 22:26:12 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+181223 17:43:34 [Note] MySQLa: Normal shutdown
+
+181223 17:43:34 [Note] Event Scheduler: Purging the queue. 0 events
+181223 17:43:34  InnoDB: Starting shutdown...
+181223 17:43:34  InnoDB: Shutdown completed; log sequence number 2502024961
+181223 17:43:34 [Note] MySQLa: Shutdown complete
+
+181223 17:44:08 [Note] Plugin 'FEDERATED' is disabled.
+181223 17:44:08 InnoDB: The InnoDB memory heap is disabled
+181223 17:44:08 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+181223 17:44:08 InnoDB: Compressed tables use zlib 1.2.3
+181223 17:44:08 InnoDB: Initializing buffer pool, size = 47.0M
+181223 17:44:08 InnoDB: Completed initialization of buffer pool
+181223 17:44:08 InnoDB: highest supported file format is Barracuda.
+181223 17:44:08  InnoDB: Waiting for the background threads to start
+181223 17:44:10 InnoDB: 5.5.34 started; log sequence number 2502024961
+181223 17:44:10 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+181223 17:44:10 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+181223 17:44:10 [Note] Server socket created on IP: '0.0.0.0'.
+181223 17:44:10 [Note] Event Scheduler: Loaded 0 events
+181223 17:44:10 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+181223 22:15:05 [Note] MySQLa: Normal shutdown
+
+181223 22:15:05 [Note] Event Scheduler: Purging the queue. 0 events
+181223 22:15:05  InnoDB: Starting shutdown...
+181223 22:15:06  InnoDB: Waiting for 19 pages to be flushed
+181223 22:15:06  InnoDB: Shutdown completed; log sequence number 2511299547
+181223 22:15:06 [Note] MySQLa: Shutdown complete
+
+181223 22:15:41 [Note] Plugin 'FEDERATED' is disabled.
+181223 22:15:41 InnoDB: The InnoDB memory heap is disabled
+181223 22:15:41 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+181223 22:15:41 InnoDB: Compressed tables use zlib 1.2.3
+181223 22:15:41 InnoDB: Initializing buffer pool, size = 47.0M
+181223 22:15:41 InnoDB: Completed initialization of buffer pool
+181223 22:15:41 InnoDB: highest supported file format is Barracuda.
+181223 22:15:42  InnoDB: Waiting for the background threads to start
+181223 22:15:43 InnoDB: 5.5.34 started; log sequence number 2511299547
+181223 22:15:43 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+181223 22:15:43 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+181223 22:15:43 [Note] Server socket created on IP: '0.0.0.0'.
+181223 22:15:43 [Note] Event Scheduler: Loaded 0 events
+181223 22:15:43 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+181231 11:29:26 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+181231 15:25:28 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+181231 15:25:28 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190113 22:55:50 [Note] MySQLa: Normal shutdown
+
+190113 22:55:50 [Note] Event Scheduler: Purging the queue. 0 events
+190113 22:55:50  InnoDB: Starting shutdown...
+190113 22:55:50  InnoDB: Shutdown completed; log sequence number 2712888261
+190113 22:55:50 [Note] MySQLa: Shutdown complete
+
+190113 22:56:27 [Note] Plugin 'FEDERATED' is disabled.
+190113 22:56:27 InnoDB: The InnoDB memory heap is disabled
+190113 22:56:27 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190113 22:56:27 InnoDB: Compressed tables use zlib 1.2.3
+190113 22:56:27 InnoDB: Initializing buffer pool, size = 47.0M
+190113 22:56:27 InnoDB: Completed initialization of buffer pool
+190113 22:56:27 InnoDB: highest supported file format is Barracuda.
+190113 22:56:27  InnoDB: Waiting for the background threads to start
+190113 22:56:28 InnoDB: 5.5.34 started; log sequence number 2712888261
+190113 22:56:28 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190113 22:56:28 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190113 22:56:28 [Note] Server socket created on IP: '0.0.0.0'.
+190113 22:56:28 [Note] Event Scheduler: Loaded 0 events
+190113 22:56:28 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190120 21:48:11 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190124 23:23:00 [Note] Plugin 'FEDERATED' is disabled.
+190124 23:23:00 InnoDB: The InnoDB memory heap is disabled
+190124 23:23:00 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190124 23:23:00 InnoDB: Compressed tables use zlib 1.2.3
+190124 23:23:00 InnoDB: Initializing buffer pool, size = 47.0M
+190124 23:23:00 InnoDB: Completed initialization of buffer pool
+190124 23:23:00 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+190124 23:23:00  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+190124 23:23:00  InnoDB: Waiting for the background threads to start
+190124 23:23:01 InnoDB: 5.5.34 started; log sequence number 2726007210
+190124 23:23:01 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190124 23:23:02 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190124 23:23:02 [Note] Server socket created on IP: '0.0.0.0'.
+190124 23:23:02 [Note] Event Scheduler: Loaded 0 events
+190124 23:23:02 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190130 21:21:31 [Note] MySQLa: Normal shutdown
+
+190130 21:21:31 [Note] Event Scheduler: Purging the queue. 0 events
+190130 21:21:31  InnoDB: Starting shutdown...
+190130 21:21:32  InnoDB: Shutdown completed; log sequence number 2726007210
+190130 21:21:32 [Note] MySQLa: Shutdown complete
+
+190130 21:22:01 [Note] Plugin 'FEDERATED' is disabled.
+190130 21:22:01 InnoDB: The InnoDB memory heap is disabled
+190130 21:22:01 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190130 21:22:01 InnoDB: Compressed tables use zlib 1.2.3
+190130 21:22:01 InnoDB: Initializing buffer pool, size = 47.0M
+190130 21:22:01 InnoDB: Completed initialization of buffer pool
+190130 21:22:01 InnoDB: highest supported file format is Barracuda.
+190130 21:22:02  InnoDB: Waiting for the background threads to start
+190130 21:22:03 InnoDB: 5.5.34 started; log sequence number 2726007210
+190130 21:22:03 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190130 21:22:03 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190130 21:22:03 [Note] Server socket created on IP: '0.0.0.0'.
+190130 21:22:03 [Note] Event Scheduler: Loaded 0 events
+190130 21:22:03 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190130 21:23:44 [Note] MySQLa: Normal shutdown
+
+190130 21:23:44 [Note] Event Scheduler: Purging the queue. 0 events
+190130 21:23:44  InnoDB: Starting shutdown...
+190130 21:23:44  InnoDB: Shutdown completed; log sequence number 2726007210
+190130 21:23:44 [Note] MySQLa: Shutdown complete
+
+190130 21:24:13 [Note] Plugin 'FEDERATED' is disabled.
+190130 21:24:13 InnoDB: The InnoDB memory heap is disabled
+190130 21:24:13 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190130 21:24:13 InnoDB: Compressed tables use zlib 1.2.3
+190130 21:24:13 InnoDB: Initializing buffer pool, size = 47.0M
+190130 21:24:13 InnoDB: Completed initialization of buffer pool
+190130 21:24:14 InnoDB: highest supported file format is Barracuda.
+190130 21:24:14  InnoDB: Waiting for the background threads to start
+190130 21:24:15 InnoDB: 5.5.34 started; log sequence number 2726007210
+190130 21:24:15 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190130 21:24:15 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190130 21:24:15 [Note] Server socket created on IP: '0.0.0.0'.
+190130 21:24:15 [Note] Event Scheduler: Loaded 0 events
+190130 21:24:15 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190130 21:25:57 [Note] MySQLa: Normal shutdown
+
+190130 21:25:57 [Note] Event Scheduler: Purging the queue. 0 events
+190130 21:25:57  InnoDB: Starting shutdown...
+190130 21:25:57  InnoDB: Shutdown completed; log sequence number 2726007210
+190130 21:25:57 [Note] MySQLa: Shutdown complete
+
+190130 21:26:25 [Note] Plugin 'FEDERATED' is disabled.
+190130 21:26:25 InnoDB: The InnoDB memory heap is disabled
+190130 21:26:25 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190130 21:26:25 InnoDB: Compressed tables use zlib 1.2.3
+190130 21:26:25 InnoDB: Initializing buffer pool, size = 47.0M
+190130 21:26:25 InnoDB: Completed initialization of buffer pool
+190130 21:26:25 InnoDB: highest supported file format is Barracuda.
+190130 21:26:25  InnoDB: Waiting for the background threads to start
+190130 21:26:26 InnoDB: 5.5.34 started; log sequence number 2726007210
+190130 21:26:26 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190130 21:26:26 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190130 21:26:26 [Note] Server socket created on IP: '0.0.0.0'.
+190130 21:26:26 [Note] Event Scheduler: Loaded 0 events
+190130 21:26:26 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190130 21:46:00 [Note] MySQLa: Normal shutdown
+
+190130 21:46:00 [Note] Event Scheduler: Purging the queue. 0 events
+190130 21:46:00  InnoDB: Starting shutdown...
+190130 21:46:01  InnoDB: Shutdown completed; log sequence number 2726007210
+190130 21:46:01 [Note] MySQLa: Shutdown complete
+
+190130 21:46:30 [Note] Plugin 'FEDERATED' is disabled.
+190130 21:46:30 InnoDB: The InnoDB memory heap is disabled
+190130 21:46:30 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190130 21:46:30 InnoDB: Compressed tables use zlib 1.2.3
+190130 21:46:30 InnoDB: Initializing buffer pool, size = 47.0M
+190130 21:46:30 InnoDB: Completed initialization of buffer pool
+190130 21:46:30 InnoDB: highest supported file format is Barracuda.
+190130 21:46:31  InnoDB: Waiting for the background threads to start
+190130 21:46:32 InnoDB: 5.5.34 started; log sequence number 2726007210
+190130 21:46:32 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190130 21:46:32 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190130 21:46:32 [Note] Server socket created on IP: '0.0.0.0'.
+190130 21:46:32 [Note] Event Scheduler: Loaded 0 events
+190130 21:46:32 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190131  2:04:57 [Note] MySQLa: Normal shutdown
+
+190131  2:04:57 [Note] Event Scheduler: Purging the queue. 0 events
+190131  2:04:57  InnoDB: Starting shutdown...
+190131  2:04:57  InnoDB: Shutdown completed; log sequence number 2740456325
+190131  2:04:57 [Note] MySQLa: Shutdown complete
+
+190131  2:05:27 [Note] Plugin 'FEDERATED' is disabled.
+190131  2:05:27 InnoDB: The InnoDB memory heap is disabled
+190131  2:05:27 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190131  2:05:27 InnoDB: Compressed tables use zlib 1.2.3
+190131  2:05:27 InnoDB: Initializing buffer pool, size = 47.0M
+190131  2:05:27 InnoDB: Completed initialization of buffer pool
+190131  2:05:27 InnoDB: highest supported file format is Barracuda.
+190131  2:05:27  InnoDB: Waiting for the background threads to start
+190131  2:05:28 InnoDB: 5.5.34 started; log sequence number 2740456325
+190131  2:05:28 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190131  2:05:29 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190131  2:05:29 [Note] Server socket created on IP: '0.0.0.0'.
+190131  2:05:29 [Note] Event Scheduler: Loaded 0 events
+190131  2:05:29 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190207 23:08:23 [Note] MySQLa: Normal shutdown
+
+190207 23:08:23 [Note] Event Scheduler: Purging the queue. 0 events
+190207 23:08:24  InnoDB: Starting shutdown...
+190207 23:08:24  InnoDB: Shutdown completed; log sequence number 2740456325
+190207 23:08:24 [Note] MySQLa: Shutdown complete
+
+190207 23:08:58 [Note] Plugin 'FEDERATED' is disabled.
+190207 23:08:58 InnoDB: The InnoDB memory heap is disabled
+190207 23:08:58 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190207 23:08:58 InnoDB: Compressed tables use zlib 1.2.3
+190207 23:08:58 InnoDB: Initializing buffer pool, size = 47.0M
+190207 23:08:58 InnoDB: Completed initialization of buffer pool
+190207 23:08:58 InnoDB: highest supported file format is Barracuda.
+190207 23:08:59  InnoDB: Waiting for the background threads to start
+190207 23:09:00 InnoDB: 5.5.34 started; log sequence number 2740456325
+190207 23:09:00 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190207 23:09:01 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190207 23:09:01 [Note] Server socket created on IP: '0.0.0.0'.
+190207 23:09:01 [Note] Event Scheduler: Loaded 0 events
+190207 23:09:01 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190209 20:29:36 [Note] Plugin 'FEDERATED' is disabled.
+190209 20:29:36 InnoDB: The InnoDB memory heap is disabled
+190209 20:29:36 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190209 20:29:36 InnoDB: Compressed tables use zlib 1.2.3
+190209 20:29:36 InnoDB: Initializing buffer pool, size = 47.0M
+190209 20:29:36 InnoDB: Completed initialization of buffer pool
+190209 20:29:36 InnoDB: highest supported file format is Barracuda.
+190209 20:29:36  InnoDB: Waiting for the background threads to start
+190209 20:29:37 InnoDB: 5.5.34 started; log sequence number 2740456325
+190209 20:29:37 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190209 20:29:37 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190209 20:29:37 [Note] Server socket created on IP: '0.0.0.0'.
+190209 20:29:37 [Note] Event Scheduler: Loaded 0 events
+190209 20:29:37 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190217 21:06:36 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190218 22:04:53 [Note] MySQLa: Normal shutdown
+
+190218 22:04:53 [Note] Event Scheduler: Purging the queue. 0 events
+190218 22:04:53  InnoDB: Starting shutdown...
+190218 22:04:54  InnoDB: Shutdown completed; log sequence number 2740456335
+190218 22:04:54 [Note] MySQLa: Shutdown complete
+
+190218 22:05:27 [Note] Plugin 'FEDERATED' is disabled.
+190218 22:05:27 InnoDB: The InnoDB memory heap is disabled
+190218 22:05:27 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190218 22:05:27 InnoDB: Compressed tables use zlib 1.2.3
+190218 22:05:27 InnoDB: Initializing buffer pool, size = 47.0M
+190218 22:05:27 InnoDB: Completed initialization of buffer pool
+190218 22:05:27 InnoDB: highest supported file format is Barracuda.
+190218 22:05:28  InnoDB: Waiting for the background threads to start
+190218 22:05:29 InnoDB: 5.5.34 started; log sequence number 2740456335
+190218 22:05:29 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190218 22:05:29 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190218 22:05:29 [Note] Server socket created on IP: '0.0.0.0'.
+190218 22:05:30 [Note] Event Scheduler: Loaded 0 events
+190218 22:05:30 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190222  4:06:49 [Note] MySQLa: Normal shutdown
+
+190222  4:06:49 [Note] Event Scheduler: Purging the queue. 0 events
+190222  4:06:49  InnoDB: Starting shutdown...
+190222  4:06:50  InnoDB: Shutdown completed; log sequence number 2740456335
+190222  4:06:50 [Note] MySQLa: Shutdown complete
+
+190222  4:07:21 [Note] Plugin 'FEDERATED' is disabled.
+190222  4:07:21 InnoDB: The InnoDB memory heap is disabled
+190222  4:07:21 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190222  4:07:21 InnoDB: Compressed tables use zlib 1.2.3
+190222  4:07:21 InnoDB: Initializing buffer pool, size = 47.0M
+190222  4:07:21 InnoDB: Completed initialization of buffer pool
+190222  4:07:21 InnoDB: highest supported file format is Barracuda.
+190222  4:07:21  InnoDB: Waiting for the background threads to start
+190222  4:07:22 InnoDB: 5.5.34 started; log sequence number 2740456335
+190222  4:07:22 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190222  4:07:23 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190222  4:07:23 [Note] Server socket created on IP: '0.0.0.0'.
+190222  4:07:23 [Note] Event Scheduler: Loaded 0 events
+190222  4:07:23 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190223 20:12:19 [Note] MySQLa: Normal shutdown
+
+190223 20:12:19 [Note] Event Scheduler: Purging the queue. 0 events
+190223 20:12:19  InnoDB: Starting shutdown...
+190223 20:12:20  InnoDB: Shutdown completed; log sequence number 2740456335
+190223 20:12:20 [Note] MySQLa: Shutdown complete
+
+190223 20:12:51 [Note] Plugin 'FEDERATED' is disabled.
+190223 20:12:51 InnoDB: The InnoDB memory heap is disabled
+190223 20:12:51 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190223 20:12:51 InnoDB: Compressed tables use zlib 1.2.3
+190223 20:12:51 InnoDB: Initializing buffer pool, size = 47.0M
+190223 20:12:51 InnoDB: Completed initialization of buffer pool
+190223 20:12:51 InnoDB: highest supported file format is Barracuda.
+190223 20:12:51  InnoDB: Waiting for the background threads to start
+190223 20:12:52 InnoDB: 5.5.34 started; log sequence number 2740456335
+190223 20:12:52 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190223 20:12:52 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190223 20:12:53 [Note] Server socket created on IP: '0.0.0.0'.
+190223 20:12:53 [Note] Event Scheduler: Loaded 0 events
+190223 20:12:53 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190224 13:40:50 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190224 13:53:11 [Note] Plugin 'FEDERATED' is disabled.
+190224 13:53:11 InnoDB: The InnoDB memory heap is disabled
+190224 13:53:11 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190224 13:53:11 InnoDB: Compressed tables use zlib 1.2.3
+190224 13:53:11 InnoDB: Initializing buffer pool, size = 47.0M
+190224 13:53:11 InnoDB: Completed initialization of buffer pool
+190224 13:53:11 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+190224 13:53:11  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+190224 13:53:11  InnoDB: Waiting for the background threads to start
+190224 13:53:12 InnoDB: 5.5.34 started; log sequence number 2740509992
+190224 13:53:12 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190224 13:53:12 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190224 13:53:12 [Note] Server socket created on IP: '0.0.0.0'.
+190224 13:53:13 [Note] Event Scheduler: Loaded 0 events
+190224 13:53:13 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190224 14:08:17 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190224 14:26:38 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190224 21:32:24 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190224 21:41:37 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190224 21:52:12  InnoDB: Error: in ALTER TABLE `expoxy`.`expxy_callback`
+InnoDB: has or is referenced in foreign key constraints
+InnoDB: which are not compatible with the new table definition.
+190224 21:52:26  InnoDB: Error: in ALTER TABLE `expoxy`.`expxy_callback`
+InnoDB: has or is referenced in foreign key constraints
+InnoDB: which are not compatible with the new table definition.
+190224 21:52:38  InnoDB: Error: in ALTER TABLE `expoxy`.`expxy_callback`
+InnoDB: has or is referenced in foreign key constraints
+InnoDB: which are not compatible with the new table definition.
+190224 21:53:00  InnoDB: Error: in ALTER TABLE `expoxy`.`expxy_callback`
+InnoDB: has or is referenced in foreign key constraints
+InnoDB: which are not compatible with the new table definition.
+190224 21:54:11  InnoDB: Error: in ALTER TABLE `expoxy`.`expxy_callback`
+InnoDB: has or is referenced in foreign key constraints
+InnoDB: which are not compatible with the new table definition.
+190224 21:54:13  InnoDB: Error: in ALTER TABLE `expoxy`.`expxy_callback`
+InnoDB: has or is referenced in foreign key constraints
+InnoDB: which are not compatible with the new table definition.
+190224 21:58:53 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190225 20:56:54 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190225 21:54:04 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190303 19:20:16 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190303 19:34:34 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190307 20:23:08 [Note] Plugin 'FEDERATED' is disabled.
+190307 20:23:08 InnoDB: The InnoDB memory heap is disabled
+190307 20:23:08 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190307 20:23:08 InnoDB: Compressed tables use zlib 1.2.3
+190307 20:23:08 InnoDB: Initializing buffer pool, size = 47.0M
+190307 20:23:08 InnoDB: Completed initialization of buffer pool
+190307 20:23:08 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+190307 20:23:08  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+190307 20:23:09  InnoDB: Waiting for the background threads to start
+190307 20:23:10 InnoDB: 5.5.34 started; log sequence number 2740851150
+190307 20:23:10 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190307 20:23:10 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190307 20:23:10 [Note] Server socket created on IP: '0.0.0.0'.
+190307 20:23:10 [Note] Event Scheduler: Loaded 0 events
+190307 20:23:10 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190318 22:08:30 [Note] MySQLa: Normal shutdown
+
+190318 22:08:30 [Note] Event Scheduler: Purging the queue. 0 events
+190318 22:08:30  InnoDB: Starting shutdown...
+190318 22:08:31  InnoDB: Shutdown completed; log sequence number 2740851150
+190318 22:08:31 [Note] MySQLa: Shutdown complete
+
+190318 22:09:09 [Note] Plugin 'FEDERATED' is disabled.
+190318 22:09:09 InnoDB: The InnoDB memory heap is disabled
+190318 22:09:09 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190318 22:09:09 InnoDB: Compressed tables use zlib 1.2.3
+190318 22:09:09 InnoDB: Initializing buffer pool, size = 47.0M
+190318 22:09:09 InnoDB: Completed initialization of buffer pool
+190318 22:09:09 InnoDB: highest supported file format is Barracuda.
+190318 22:09:10  InnoDB: Waiting for the background threads to start
+190318 22:09:11 InnoDB: 5.5.34 started; log sequence number 2740851150
+190318 22:09:11 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190318 22:09:11 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190318 22:09:11 [Note] Server socket created on IP: '0.0.0.0'.
+190318 22:09:11 [Note] Event Scheduler: Loaded 0 events
+190318 22:09:11 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190328 20:38:03 [Note] MySQLa: Normal shutdown
+
+190328 20:38:03 [Note] Event Scheduler: Purging the queue. 0 events
+190328 20:38:03  InnoDB: Starting shutdown...
+190328 20:38:04  InnoDB: Shutdown completed; log sequence number 2740851150
+190328 20:38:04 [Note] MySQLa: Shutdown complete
+
+190328 20:38:18 [Note] Plugin 'FEDERATED' is disabled.
+190328 20:38:18 InnoDB: The InnoDB memory heap is disabled
+190328 20:38:18 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190328 20:38:18 InnoDB: Compressed tables use zlib 1.2.3
+190328 20:38:18 InnoDB: Initializing buffer pool, size = 47.0M
+190328 20:38:18 InnoDB: Completed initialization of buffer pool
+190328 20:38:18 InnoDB: highest supported file format is Barracuda.
+190328 20:38:18  InnoDB: Waiting for the background threads to start
+190328 20:38:19 InnoDB: 5.5.34 started; log sequence number 2740851150
+190328 20:38:19 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190328 20:38:20 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190328 20:38:20 [Note] Server socket created on IP: '0.0.0.0'.
+190328 20:38:20 [Note] Event Scheduler: Loaded 0 events
+190328 20:38:20 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190413 23:07:05 [Note] MySQLa: Normal shutdown
+
+190413 23:07:05 [Note] Event Scheduler: Purging the queue. 0 events
+190413 23:07:05  InnoDB: Starting shutdown...
+190413 23:07:06  InnoDB: Shutdown completed; log sequence number 2740851150
+190413 23:07:06 [Note] MySQLa: Shutdown complete
+
+190413 23:07:45 [Note] Plugin 'FEDERATED' is disabled.
+190413 23:07:45 InnoDB: The InnoDB memory heap is disabled
+190413 23:07:45 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190413 23:07:45 InnoDB: Compressed tables use zlib 1.2.3
+190413 23:07:45 InnoDB: Initializing buffer pool, size = 47.0M
+190413 23:07:45 InnoDB: Completed initialization of buffer pool
+190413 23:07:45 InnoDB: highest supported file format is Barracuda.
+190413 23:07:46  InnoDB: Waiting for the background threads to start
+190413 23:07:47 InnoDB: 5.5.34 started; log sequence number 2740851150
+190413 23:07:47 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190413 23:07:47 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190413 23:07:47 [Note] Server socket created on IP: '0.0.0.0'.
+190413 23:07:47 [Note] Event Scheduler: Loaded 0 events
+190413 23:07:47 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190420  2:02:13 [Note] MySQLa: Normal shutdown
+
+190420  2:02:13 [Note] Event Scheduler: Purging the queue. 0 events
+190420  2:02:13  InnoDB: Starting shutdown...
+190420  2:02:14  InnoDB: Shutdown completed; log sequence number 2740851150
+190420  2:02:14 [Note] MySQLa: Shutdown complete
+
+190420  2:02:49 [Note] Plugin 'FEDERATED' is disabled.
+190420  2:02:49 InnoDB: The InnoDB memory heap is disabled
+190420  2:02:49 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190420  2:02:49 InnoDB: Compressed tables use zlib 1.2.3
+190420  2:02:49 InnoDB: Initializing buffer pool, size = 47.0M
+190420  2:02:49 InnoDB: Completed initialization of buffer pool
+190420  2:02:49 InnoDB: highest supported file format is Barracuda.
+190420  2:02:49  InnoDB: Waiting for the background threads to start
+190420  2:02:51 InnoDB: 5.5.34 started; log sequence number 2740851150
+190420  2:02:51 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190420  2:02:51 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190420  2:02:51 [Note] Server socket created on IP: '0.0.0.0'.
+190420  2:02:51 [Note] Event Scheduler: Loaded 0 events
+190420  2:02:51 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190507 17:40:30 [Note] MySQLa: Normal shutdown
+
+190507 17:40:30 [Note] Event Scheduler: Purging the queue. 0 events
+190507 17:40:30  InnoDB: Starting shutdown...
+190507 17:40:30  InnoDB: Shutdown completed; log sequence number 2740851150
+190507 17:40:30 [Note] MySQLa: Shutdown complete
+
+190507 17:41:02 [Note] Plugin 'FEDERATED' is disabled.
+190507 17:41:02 InnoDB: The InnoDB memory heap is disabled
+190507 17:41:02 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190507 17:41:02 InnoDB: Compressed tables use zlib 1.2.3
+190507 17:41:02 InnoDB: Initializing buffer pool, size = 47.0M
+190507 17:41:02 InnoDB: Completed initialization of buffer pool
+190507 17:41:02 InnoDB: highest supported file format is Barracuda.
+190507 17:41:02  InnoDB: Waiting for the background threads to start
+190507 17:41:03 InnoDB: 5.5.34 started; log sequence number 2740851150
+190507 17:41:03 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190507 17:41:04 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190507 17:41:04 [Note] Server socket created on IP: '0.0.0.0'.
+190507 17:41:04 [Note] Event Scheduler: Loaded 0 events
+190507 17:41:04 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190515 17:36:50 [Note] MySQLa: Normal shutdown
+
+190515 17:36:50 [Note] Event Scheduler: Purging the queue. 0 events
+190515 17:36:50  InnoDB: Starting shutdown...
+190515 17:36:50  InnoDB: Shutdown completed; log sequence number 2740851150
+190515 17:36:51 [Note] MySQLa: Shutdown complete
+
+190515 17:37:28 [Note] Plugin 'FEDERATED' is disabled.
+190515 17:37:28 InnoDB: The InnoDB memory heap is disabled
+190515 17:37:28 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190515 17:37:28 InnoDB: Compressed tables use zlib 1.2.3
+190515 17:37:28 InnoDB: Initializing buffer pool, size = 47.0M
+190515 17:37:28 InnoDB: Completed initialization of buffer pool
+190515 17:37:28 InnoDB: highest supported file format is Barracuda.
+190515 17:37:28  InnoDB: Waiting for the background threads to start
+190515 17:37:29 InnoDB: 5.5.34 started; log sequence number 2740851150
+190515 17:37:29 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190515 17:37:29 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190515 17:37:29 [Note] Server socket created on IP: '0.0.0.0'.
+190515 17:37:29 [Note] Event Scheduler: Loaded 0 events
+190515 17:37:29 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190515 20:06:45 [Note] MySQLa: Normal shutdown
+
+190515 20:06:45 [Note] Event Scheduler: Purging the queue. 0 events
+190515 20:06:45  InnoDB: Starting shutdown...
+190515 20:06:46  InnoDB: Shutdown completed; log sequence number 2740851150
+190515 20:06:46 [Note] MySQLa: Shutdown complete
+
+190515 20:07:16 [Note] Plugin 'FEDERATED' is disabled.
+190515 20:07:17 InnoDB: The InnoDB memory heap is disabled
+190515 20:07:17 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190515 20:07:17 InnoDB: Compressed tables use zlib 1.2.3
+190515 20:07:17 InnoDB: Initializing buffer pool, size = 47.0M
+190515 20:07:17 InnoDB: Completed initialization of buffer pool
+190515 20:07:17 InnoDB: highest supported file format is Barracuda.
+190515 20:07:17  InnoDB: Waiting for the background threads to start
+190515 20:07:18 InnoDB: 5.5.34 started; log sequence number 2740851150
+190515 20:07:18 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190515 20:07:19 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190515 20:07:19 [Note] Server socket created on IP: '0.0.0.0'.
+190515 20:07:19 [Note] Event Scheduler: Loaded 0 events
+190515 20:07:19 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190520 21:15:51 [Note] MySQLa: Normal shutdown
+
+190520 21:15:51 [Note] Event Scheduler: Purging the queue. 0 events
+190520 21:15:51  InnoDB: Starting shutdown...
+190520 21:15:52  InnoDB: Shutdown completed; log sequence number 2740851150
+190520 21:15:52 [Note] MySQLa: Shutdown complete
+
+190520 21:16:26 [Note] Plugin 'FEDERATED' is disabled.
+190520 21:16:26 InnoDB: The InnoDB memory heap is disabled
+190520 21:16:26 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190520 21:16:26 InnoDB: Compressed tables use zlib 1.2.3
+190520 21:16:26 InnoDB: Initializing buffer pool, size = 47.0M
+190520 21:16:26 InnoDB: Completed initialization of buffer pool
+190520 21:16:26 InnoDB: highest supported file format is Barracuda.
+190520 21:16:26  InnoDB: Waiting for the background threads to start
+190520 21:16:27 InnoDB: 5.5.34 started; log sequence number 2740851150
+190520 21:16:27 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190520 21:16:27 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190520 21:16:27 [Note] Server socket created on IP: '0.0.0.0'.
+190520 21:16:27 [Note] Event Scheduler: Loaded 0 events
+190520 21:16:27 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190527 22:03:48 [Note] MySQLa: Normal shutdown
+
+190527 22:03:48 [Note] Event Scheduler: Purging the queue. 0 events
+190527 22:03:48  InnoDB: Starting shutdown...
+190527 22:03:49  InnoDB: Shutdown completed; log sequence number 2740851150
+190527 22:03:49 [Note] MySQLa: Shutdown complete
+
+190527 22:04:31 [Note] Plugin 'FEDERATED' is disabled.
+190527 22:04:31 InnoDB: The InnoDB memory heap is disabled
+190527 22:04:31 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190527 22:04:31 InnoDB: Compressed tables use zlib 1.2.3
+190527 22:04:31 InnoDB: Initializing buffer pool, size = 47.0M
+190527 22:04:31 InnoDB: Completed initialization of buffer pool
+190527 22:04:31 InnoDB: highest supported file format is Barracuda.
+190527 22:04:32  InnoDB: Waiting for the background threads to start
+190527 22:04:33 InnoDB: 5.5.34 started; log sequence number 2740851150
+190527 22:04:33 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190527 22:04:33 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190527 22:04:33 [Note] Server socket created on IP: '0.0.0.0'.
+190527 22:04:33 [Note] Event Scheduler: Loaded 0 events
+190527 22:04:33 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190530 20:55:41 [Note] MySQLa: Normal shutdown
+
+190530 20:55:41 [Note] Event Scheduler: Purging the queue. 0 events
+190530 20:55:41  InnoDB: Starting shutdown...
+190530 20:55:42  InnoDB: Shutdown completed; log sequence number 2740851150
+190530 20:55:42 [Note] MySQLa: Shutdown complete
+
+190530 20:56:07 [Note] Plugin 'FEDERATED' is disabled.
+190530 20:56:07 InnoDB: The InnoDB memory heap is disabled
+190530 20:56:07 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190530 20:56:07 InnoDB: Compressed tables use zlib 1.2.3
+190530 20:56:08 InnoDB: Initializing buffer pool, size = 47.0M
+190530 20:56:08 InnoDB: Completed initialization of buffer pool
+190530 20:56:08 InnoDB: highest supported file format is Barracuda.
+190530 20:56:08  InnoDB: Waiting for the background threads to start
+190530 20:56:09 InnoDB: 5.5.34 started; log sequence number 2740851150
+190530 20:56:09 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190530 20:56:09 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190530 20:56:09 [Note] Server socket created on IP: '0.0.0.0'.
+190530 20:56:09 [Note] Event Scheduler: Loaded 0 events
+190530 20:56:09 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190601 11:16:48 [Note] MySQLa: Normal shutdown
+
+190601 11:16:48 [Note] Event Scheduler: Purging the queue. 0 events
+190601 11:16:48  InnoDB: Starting shutdown...
+190601 11:16:49  InnoDB: Shutdown completed; log sequence number 2740851150
+190601 11:16:49 [Note] MySQLa: Shutdown complete
+
+190601 11:17:17 [Note] Plugin 'FEDERATED' is disabled.
+190601 11:17:17 InnoDB: The InnoDB memory heap is disabled
+190601 11:17:17 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190601 11:17:17 InnoDB: Compressed tables use zlib 1.2.3
+190601 11:17:17 InnoDB: Initializing buffer pool, size = 47.0M
+190601 11:17:17 InnoDB: Completed initialization of buffer pool
+190601 11:17:17 InnoDB: highest supported file format is Barracuda.
+190601 11:17:17  InnoDB: Waiting for the background threads to start
+190601 11:17:18 InnoDB: 5.5.34 started; log sequence number 2740851150
+190601 11:17:18 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190601 11:17:18 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190601 11:17:18 [Note] Server socket created on IP: '0.0.0.0'.
+190601 11:17:19 [Note] Event Scheduler: Loaded 0 events
+190601 11:17:19 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190602 16:11:52 [Note] MySQLa: Normal shutdown
+
+190602 16:11:52 [Note] Event Scheduler: Purging the queue. 0 events
+190602 16:11:52  InnoDB: Starting shutdown...
+190602 16:11:53  InnoDB: Shutdown completed; log sequence number 2740851150
+190602 16:11:53 [Note] MySQLa: Shutdown complete
+
+190602 16:12:52 [Note] Plugin 'FEDERATED' is disabled.
+190602 16:12:52 InnoDB: The InnoDB memory heap is disabled
+190602 16:12:52 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190602 16:12:52 InnoDB: Compressed tables use zlib 1.2.3
+190602 16:12:52 InnoDB: Initializing buffer pool, size = 47.0M
+190602 16:12:52 InnoDB: Completed initialization of buffer pool
+190602 16:12:52 InnoDB: highest supported file format is Barracuda.
+190602 16:12:52  InnoDB: Waiting for the background threads to start
+190602 16:12:53 InnoDB: 5.5.34 started; log sequence number 2740851150
+190602 16:12:53 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190602 16:12:53 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190602 16:12:53 [Note] Server socket created on IP: '0.0.0.0'.
+190602 16:12:53 [Note] Event Scheduler: Loaded 0 events
+190602 16:12:53 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190607  0:08:07 [Note] MySQLa: Normal shutdown
+
+190607  0:08:07 [Note] Event Scheduler: Purging the queue. 0 events
+190607  0:08:08  InnoDB: Starting shutdown...
+190607  0:08:08  InnoDB: Shutdown completed; log sequence number 2743645873
+190607  0:08:08 [Note] MySQLa: Shutdown complete
+
+190607  0:09:06 [Note] Plugin 'FEDERATED' is disabled.
+190607  0:09:06 InnoDB: The InnoDB memory heap is disabled
+190607  0:09:06 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190607  0:09:06 InnoDB: Compressed tables use zlib 1.2.3
+190607  0:09:06 InnoDB: Initializing buffer pool, size = 47.0M
+190607  0:09:06 InnoDB: Completed initialization of buffer pool
+190607  0:09:06 InnoDB: highest supported file format is Barracuda.
+190607  0:09:06  InnoDB: Waiting for the background threads to start
+190607  0:09:07 InnoDB: 5.5.34 started; log sequence number 2743645873
+190607  0:09:07 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190607  0:09:07 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190607  0:09:07 [Note] Server socket created on IP: '0.0.0.0'.
+190607  0:09:07 [Note] Event Scheduler: Loaded 0 events
+190607  0:09:07 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190607  0:17:33 [Note] MySQLa: Normal shutdown
+
+190607  0:17:33 [Note] Event Scheduler: Purging the queue. 0 events
+190607  0:17:34  InnoDB: Starting shutdown...
+190607  0:17:34  InnoDB: Shutdown completed; log sequence number 2743645873
+190607  0:17:34 [Note] MySQLa: Shutdown complete
+
+190607  0:18:33 [Note] Plugin 'FEDERATED' is disabled.
+190607  0:18:34 InnoDB: The InnoDB memory heap is disabled
+190607  0:18:34 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190607  0:18:34 InnoDB: Compressed tables use zlib 1.2.3
+190607  0:18:34 InnoDB: Initializing buffer pool, size = 47.0M
+190607  0:18:34 InnoDB: Completed initialization of buffer pool
+190607  0:18:34 InnoDB: highest supported file format is Barracuda.
+190607  0:18:34  InnoDB: Waiting for the background threads to start
+190607  0:18:35 InnoDB: 5.5.34 started; log sequence number 2743645873
+190607  0:18:35 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190607  0:18:35 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190607  0:18:35 [Note] Server socket created on IP: '0.0.0.0'.
+190607  0:18:35 [Note] Event Scheduler: Loaded 0 events
+190607  0:18:35 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190607 18:47:52 [Note] MySQLa: Normal shutdown
+
+190607 18:47:52 [Note] Event Scheduler: Purging the queue. 0 events
+190607 18:47:52  InnoDB: Starting shutdown...
+190607 18:47:52  InnoDB: Shutdown completed; log sequence number 2743645873
+190607 18:47:52 [Note] MySQLa: Shutdown complete
+
+190607 18:48:46 [Note] Plugin 'FEDERATED' is disabled.
+190607 18:48:46 InnoDB: The InnoDB memory heap is disabled
+190607 18:48:46 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190607 18:48:46 InnoDB: Compressed tables use zlib 1.2.3
+190607 18:48:46 InnoDB: Initializing buffer pool, size = 47.0M
+190607 18:48:46 InnoDB: Completed initialization of buffer pool
+190607 18:48:46 InnoDB: highest supported file format is Barracuda.
+190607 18:48:46  InnoDB: Waiting for the background threads to start
+190607 18:48:47 InnoDB: 5.5.34 started; log sequence number 2743645873
+190607 18:48:47 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190607 18:48:47 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190607 18:48:47 [Note] Server socket created on IP: '0.0.0.0'.
+190607 18:48:48 [Note] Event Scheduler: Loaded 0 events
+190607 18:48:48 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190607 19:11:22 [Note] MySQLa: Normal shutdown
+
+190607 19:11:22 [Note] Event Scheduler: Purging the queue. 0 events
+190607 19:11:23  InnoDB: Starting shutdown...
+190607 19:11:23  InnoDB: Shutdown completed; log sequence number 2743645873
+190607 19:11:23 [Note] MySQLa: Shutdown complete
+
+190607 19:12:23 [Note] Plugin 'FEDERATED' is disabled.
+190607 19:12:24 InnoDB: The InnoDB memory heap is disabled
+190607 19:12:24 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190607 19:12:24 InnoDB: Compressed tables use zlib 1.2.3
+190607 19:12:24 InnoDB: Initializing buffer pool, size = 47.0M
+190607 19:12:24 InnoDB: Completed initialization of buffer pool
+190607 19:12:24 InnoDB: highest supported file format is Barracuda.
+190607 19:12:24  InnoDB: Waiting for the background threads to start
+190607 19:12:25 InnoDB: 5.5.34 started; log sequence number 2743645873
+190607 19:12:25 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190607 19:12:25 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190607 19:12:25 [Note] Server socket created on IP: '0.0.0.0'.
+190607 19:12:25 [Note] Event Scheduler: Loaded 0 events
+190607 19:12:25 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190621  0:11:26 [Note] MySQLa: Normal shutdown
+
+190621  0:11:26 [Note] Event Scheduler: Purging the queue. 0 events
+190621  0:11:26  InnoDB: Starting shutdown...
+190621  0:11:26  InnoDB: Shutdown completed; log sequence number 2743645873
+190621  0:11:26 [Note] MySQLa: Shutdown complete
+
+190621 20:53:06 [Note] Plugin 'FEDERATED' is disabled.
+190621 20:53:06 InnoDB: The InnoDB memory heap is disabled
+190621 20:53:06 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190621 20:53:06 InnoDB: Compressed tables use zlib 1.2.3
+190621 20:53:06 InnoDB: Initializing buffer pool, size = 47.0M
+190621 20:53:06 InnoDB: Completed initialization of buffer pool
+190621 20:53:06 InnoDB: highest supported file format is Barracuda.
+190621 20:53:07  InnoDB: Waiting for the background threads to start
+190621 20:53:08 InnoDB: 5.5.34 started; log sequence number 2743645873
+190621 20:53:08 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190621 20:53:08 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190621 20:53:08 [Note] Server socket created on IP: '0.0.0.0'.
+190621 20:53:08 [Note] Event Scheduler: Loaded 0 events
+190621 20:53:08 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190629 17:16:13 [Note] MySQLa: Normal shutdown
+
+190629 17:16:13 [Note] Event Scheduler: Purging the queue. 0 events
+190629 17:16:13  InnoDB: Starting shutdown...
+190629 17:16:14  InnoDB: Shutdown completed; log sequence number 2743645873
+190629 17:16:14 [Note] MySQLa: Shutdown complete
+
+190629 17:16:44 [Note] Plugin 'FEDERATED' is disabled.
+190629 17:16:44 InnoDB: The InnoDB memory heap is disabled
+190629 17:16:44 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190629 17:16:44 InnoDB: Compressed tables use zlib 1.2.3
+190629 17:16:44 InnoDB: Initializing buffer pool, size = 47.0M
+190629 17:16:44 InnoDB: Completed initialization of buffer pool
+190629 17:16:44 InnoDB: highest supported file format is Barracuda.
+190629 17:16:45  InnoDB: Waiting for the background threads to start
+190629 17:16:46 InnoDB: 5.5.34 started; log sequence number 2743645873
+190629 17:16:46 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190629 17:16:46 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190629 17:16:46 [Note] Server socket created on IP: '0.0.0.0'.
+190629 17:16:46 [Note] Event Scheduler: Loaded 0 events
+190629 17:16:46 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190701 22:51:28 [Note] MySQLa: Normal shutdown
+
+190701 22:51:28 [Note] Event Scheduler: Purging the queue. 0 events
+190701 22:51:28  InnoDB: Starting shutdown...
+190701 22:51:29  InnoDB: Shutdown completed; log sequence number 2743645873
+190701 22:51:29 [Note] MySQLa: Shutdown complete
+
+190701 22:52:03 [Note] Plugin 'FEDERATED' is disabled.
+190701 22:52:04 InnoDB: The InnoDB memory heap is disabled
+190701 22:52:04 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190701 22:52:04 InnoDB: Compressed tables use zlib 1.2.3
+190701 22:52:04 InnoDB: Initializing buffer pool, size = 47.0M
+190701 22:52:04 InnoDB: Completed initialization of buffer pool
+190701 22:52:04 InnoDB: highest supported file format is Barracuda.
+190701 22:52:04  InnoDB: Waiting for the background threads to start
+190701 22:52:05 InnoDB: 5.5.34 started; log sequence number 2743645873
+190701 22:52:05 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190701 22:52:05 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190701 22:52:05 [Note] Server socket created on IP: '0.0.0.0'.
+190701 22:52:05 [Note] Event Scheduler: Loaded 0 events
+190701 22:52:05 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190706  0:55:47 [Note] MySQLa: Normal shutdown
+
+190706  0:55:47 [Note] Event Scheduler: Purging the queue. 0 events
+190706  0:55:47  InnoDB: Starting shutdown...
+190706  0:55:48  InnoDB: Shutdown completed; log sequence number 2743645873
+190706  0:55:48 [Note] MySQLa: Shutdown complete
+
+190706  0:56:13 [Note] Plugin 'FEDERATED' is disabled.
+190706  0:56:13 InnoDB: The InnoDB memory heap is disabled
+190706  0:56:13 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190706  0:56:13 InnoDB: Compressed tables use zlib 1.2.3
+190706  0:56:13 InnoDB: Initializing buffer pool, size = 47.0M
+190706  0:56:13 InnoDB: Completed initialization of buffer pool
+190706  0:56:13 InnoDB: highest supported file format is Barracuda.
+190706  0:56:13  InnoDB: Waiting for the background threads to start
+190706  0:56:14 InnoDB: 5.5.34 started; log sequence number 2743645873
+190706  0:56:14 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190706  0:56:14 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190706  0:56:14 [Note] Server socket created on IP: '0.0.0.0'.
+190706  0:56:15 [Note] Event Scheduler: Loaded 0 events
+190706  0:56:15 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190706 21:12:36 [Note] Plugin 'FEDERATED' is disabled.
+190706 21:12:36 InnoDB: The InnoDB memory heap is disabled
+190706 21:12:36 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190706 21:12:36 InnoDB: Compressed tables use zlib 1.2.3
+190706 21:12:36 InnoDB: Initializing buffer pool, size = 47.0M
+190706 21:12:36 InnoDB: Completed initialization of buffer pool
+190706 21:12:36 InnoDB: highest supported file format is Barracuda.
+190706 21:12:37  InnoDB: Waiting for the background threads to start
+190706 21:12:38 InnoDB: 5.5.34 started; log sequence number 2743645873
+190706 21:12:38 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190706 21:12:38 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190706 21:12:38 [Note] Server socket created on IP: '0.0.0.0'.
+190706 21:12:38 [Note] Event Scheduler: Loaded 0 events
+190706 21:12:38 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190709 18:34:42 [Note] Plugin 'FEDERATED' is disabled.
+190709 18:34:42 InnoDB: The InnoDB memory heap is disabled
+190709 18:34:42 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190709 18:34:42 InnoDB: Compressed tables use zlib 1.2.3
+190709 18:34:42 InnoDB: Initializing buffer pool, size = 47.0M
+190709 18:34:42 InnoDB: Completed initialization of buffer pool
+190709 18:34:42 InnoDB: highest supported file format is Barracuda.
+190709 18:34:43  InnoDB: Waiting for the background threads to start
+190709 18:34:44 InnoDB: 5.5.34 started; log sequence number 2743645873
+190709 18:34:44 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190709 18:34:44 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190709 18:34:44 [Note] Server socket created on IP: '0.0.0.0'.
+190709 18:34:44 [Note] Event Scheduler: Loaded 0 events
+190709 18:34:44 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190714 19:03:31 [Note] MySQLa: Normal shutdown
+
+190714 19:03:31 [Note] Event Scheduler: Purging the queue. 0 events
+190714 19:03:31  InnoDB: Starting shutdown...
+190714 19:03:32  InnoDB: Shutdown completed; log sequence number 2743645873
+190714 19:03:32 [Note] MySQLa: Shutdown complete
+
+190714 19:04:06 [Note] Plugin 'FEDERATED' is disabled.
+190714 19:04:06 InnoDB: The InnoDB memory heap is disabled
+190714 19:04:06 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190714 19:04:06 InnoDB: Compressed tables use zlib 1.2.3
+190714 19:04:06 InnoDB: Initializing buffer pool, size = 47.0M
+190714 19:04:06 InnoDB: Completed initialization of buffer pool
+190714 19:04:06 InnoDB: highest supported file format is Barracuda.
+190714 19:04:06  InnoDB: Waiting for the background threads to start
+190714 19:04:08 InnoDB: 5.5.34 started; log sequence number 2743645873
+190714 19:04:08 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190714 19:04:08 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190714 19:04:08 [Note] Server socket created on IP: '0.0.0.0'.
+190714 19:04:08 [Note] Event Scheduler: Loaded 0 events
+190714 19:04:08 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190721 18:07:15 [Note] MySQLa: Normal shutdown
+
+190721 18:07:15 [Note] Event Scheduler: Purging the queue. 0 events
+190721 18:07:15  InnoDB: Starting shutdown...
+190721 18:07:15  InnoDB: Shutdown completed; log sequence number 2743645873
+190721 18:07:15 [Note] MySQLa: Shutdown complete
+
+190721 18:10:28 [Note] Plugin 'FEDERATED' is disabled.
+190721 18:10:28 InnoDB: The InnoDB memory heap is disabled
+190721 18:10:28 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190721 18:10:28 InnoDB: Compressed tables use zlib 1.2.3
+190721 18:10:28 InnoDB: Initializing buffer pool, size = 47.0M
+190721 18:10:28 InnoDB: Completed initialization of buffer pool
+190721 18:10:28 InnoDB: highest supported file format is Barracuda.
+190721 18:10:29  InnoDB: Waiting for the background threads to start
+190721 18:10:30 InnoDB: 5.5.34 started; log sequence number 2743645873
+190721 18:10:30 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190721 18:10:30 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190721 18:10:30 [Note] Server socket created on IP: '0.0.0.0'.
+190721 18:10:30 [Note] Event Scheduler: Loaded 0 events
+190721 18:10:30 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190721 21:12:06 [Note] MySQLa: Normal shutdown
+
+190721 21:12:06 [Note] Event Scheduler: Purging the queue. 0 events
+190721 21:12:06  InnoDB: Starting shutdown...
+190721 21:12:06  InnoDB: Shutdown completed; log sequence number 2743645873
+190721 21:12:06 [Note] MySQLa: Shutdown complete
+
+190721 21:35:47 [Note] Plugin 'FEDERATED' is disabled.
+190721 21:35:47 InnoDB: The InnoDB memory heap is disabled
+190721 21:35:47 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190721 21:35:47 InnoDB: Compressed tables use zlib 1.2.3
+190721 21:35:47 InnoDB: Initializing buffer pool, size = 47.0M
+190721 21:35:47 InnoDB: Completed initialization of buffer pool
+190721 21:35:47 InnoDB: highest supported file format is Barracuda.
+190721 21:35:47  InnoDB: Waiting for the background threads to start
+190721 21:35:48 InnoDB: 5.5.34 started; log sequence number 2743645873
+190721 21:35:48 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190721 21:35:48 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190721 21:35:48 [Note] Server socket created on IP: '0.0.0.0'.
+190721 21:35:48 [Note] Event Scheduler: Loaded 0 events
+190721 21:35:48 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190721 21:48:34 [Note] MySQLa: Normal shutdown
+
+190721 21:48:34 [Note] Event Scheduler: Purging the queue. 0 events
+190721 21:48:34  InnoDB: Starting shutdown...
+190721 21:48:34  InnoDB: Shutdown completed; log sequence number 2743645873
+190721 21:48:34 [Note] MySQLa: Shutdown complete
+
+190721 21:51:48 [Note] Plugin 'FEDERATED' is disabled.
+190721 21:51:48 InnoDB: The InnoDB memory heap is disabled
+190721 21:51:48 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190721 21:51:48 InnoDB: Compressed tables use zlib 1.2.3
+190721 21:51:48 InnoDB: Initializing buffer pool, size = 47.0M
+190721 21:51:48 InnoDB: Completed initialization of buffer pool
+190721 21:51:48 InnoDB: highest supported file format is Barracuda.
+190721 21:51:49  InnoDB: Waiting for the background threads to start
+190721 21:51:50 InnoDB: 5.5.34 started; log sequence number 2743645873
+190721 21:51:50 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190721 21:51:50 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190721 21:51:50 [Note] Server socket created on IP: '0.0.0.0'.
+190721 21:51:50 [Note] Event Scheduler: Loaded 0 events
+190721 21:51:50 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190726 18:33:06 [Note] Plugin 'FEDERATED' is disabled.
+190726 18:33:06 InnoDB: The InnoDB memory heap is disabled
+190726 18:33:06 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190726 18:33:06 InnoDB: Compressed tables use zlib 1.2.3
+190726 18:33:06 InnoDB: Initializing buffer pool, size = 47.0M
+190726 18:33:06 InnoDB: Completed initialization of buffer pool
+190726 18:33:06 InnoDB: highest supported file format is Barracuda.
+190726 18:33:07  InnoDB: Waiting for the background threads to start
+190726 18:33:08 InnoDB: 5.5.34 started; log sequence number 2743645873
+190726 18:33:08 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190726 18:33:08 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190726 18:33:08 [Note] Server socket created on IP: '0.0.0.0'.
+190726 18:33:08 [Note] Event Scheduler: Loaded 0 events
+190726 18:33:08 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190728 19:17:21 [Note] MySQLa: Normal shutdown
+
+190728 19:17:21 [Note] Event Scheduler: Purging the queue. 0 events
+190728 19:17:21  InnoDB: Starting shutdown...
+190728 19:17:22  InnoDB: Shutdown completed; log sequence number 2743645873
+190728 19:17:22 [Note] MySQLa: Shutdown complete
+
+190728 19:18:20 [Note] Plugin 'FEDERATED' is disabled.
+190728 19:18:20 InnoDB: The InnoDB memory heap is disabled
+190728 19:18:20 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190728 19:18:20 InnoDB: Compressed tables use zlib 1.2.3
+190728 19:18:20 InnoDB: Initializing buffer pool, size = 47.0M
+190728 19:18:20 InnoDB: Completed initialization of buffer pool
+190728 19:18:20 InnoDB: highest supported file format is Barracuda.
+190728 19:18:21  InnoDB: Waiting for the background threads to start
+190728 19:18:22 InnoDB: 5.5.34 started; log sequence number 2743645873
+190728 19:18:22 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190728 19:18:22 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190728 19:18:22 [Note] Server socket created on IP: '0.0.0.0'.
+190728 19:18:22 [Note] Event Scheduler: Loaded 0 events
+190728 19:18:22 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190813 21:51:48 [Note] Plugin 'FEDERATED' is disabled.
+190813 21:51:48 InnoDB: The InnoDB memory heap is disabled
+190813 21:51:48 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190813 21:51:48 InnoDB: Compressed tables use zlib 1.2.3
+190813 21:51:48 InnoDB: Initializing buffer pool, size = 47.0M
+190813 21:51:48 InnoDB: Completed initialization of buffer pool
+190813 21:51:48 InnoDB: highest supported file format is Barracuda.
+190813 21:51:48  InnoDB: Waiting for the background threads to start
+190813 21:51:49 InnoDB: 5.5.34 started; log sequence number 2743645873
+190813 21:51:50 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190813 21:51:50 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190813 21:51:50 [Note] Server socket created on IP: '0.0.0.0'.
+190813 21:51:50 [Note] Event Scheduler: Loaded 0 events
+190813 21:51:50 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190817 17:42:49 [Note] MySQLa: Normal shutdown
+
+190817 17:42:49 [Note] Event Scheduler: Purging the queue. 0 events
+190817 17:42:49  InnoDB: Starting shutdown...
+190817 17:42:49  InnoDB: Shutdown completed; log sequence number 2743645873
+190817 17:42:49 [Note] MySQLa: Shutdown complete
+
+190817 17:43:15 [Note] Plugin 'FEDERATED' is disabled.
+190817 17:43:15 InnoDB: The InnoDB memory heap is disabled
+190817 17:43:15 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190817 17:43:15 InnoDB: Compressed tables use zlib 1.2.3
+190817 17:43:15 InnoDB: Initializing buffer pool, size = 47.0M
+190817 17:43:15 InnoDB: Completed initialization of buffer pool
+190817 17:43:15 InnoDB: highest supported file format is Barracuda.
+190817 17:43:15  InnoDB: Waiting for the background threads to start
+190817 17:43:16 InnoDB: 5.5.34 started; log sequence number 2743645873
+190817 17:43:16 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190817 17:43:16 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190817 17:43:16 [Note] Server socket created on IP: '0.0.0.0'.
+190817 17:43:16 [Note] Event Scheduler: Loaded 0 events
+190817 17:43:16 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190817 20:15:11 [Note] MySQLa: Normal shutdown
+
+190817 20:15:11 [Note] Event Scheduler: Purging the queue. 0 events
+190817 20:15:11  InnoDB: Starting shutdown...
+190817 20:15:12  InnoDB: Shutdown completed; log sequence number 2743645873
+190817 20:15:12 [Note] MySQLa: Shutdown complete
+
+190817 21:04:53 [Note] Plugin 'FEDERATED' is disabled.
+190817 21:04:53 InnoDB: The InnoDB memory heap is disabled
+190817 21:04:53 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190817 21:04:53 InnoDB: Compressed tables use zlib 1.2.3
+190817 21:04:53 InnoDB: Initializing buffer pool, size = 47.0M
+190817 21:04:53 InnoDB: Completed initialization of buffer pool
+190817 21:04:53 InnoDB: highest supported file format is Barracuda.
+190817 21:04:54  InnoDB: Waiting for the background threads to start
+190817 21:04:55 InnoDB: 5.5.34 started; log sequence number 2743645873
+190817 21:04:55 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190817 21:04:55 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190817 21:04:55 [Note] Server socket created on IP: '0.0.0.0'.
+190817 21:04:55 [Note] Event Scheduler: Loaded 0 events
+190817 21:04:55 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190817 22:48:37 [Note] MySQLa: Normal shutdown
+
+190817 22:48:37 [Note] Event Scheduler: Purging the queue. 0 events
+190817 22:48:38  InnoDB: Starting shutdown...
+190817 22:48:38  InnoDB: Shutdown completed; log sequence number 2743645873
+190817 22:48:38 [Note] MySQLa: Shutdown complete
+
+190817 22:49:09 [Note] Plugin 'FEDERATED' is disabled.
+190817 22:49:09 InnoDB: The InnoDB memory heap is disabled
+190817 22:49:09 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190817 22:49:09 InnoDB: Compressed tables use zlib 1.2.3
+190817 22:49:09 InnoDB: Initializing buffer pool, size = 47.0M
+190817 22:49:09 InnoDB: Completed initialization of buffer pool
+190817 22:49:09 InnoDB: highest supported file format is Barracuda.
+190817 22:49:09  InnoDB: Waiting for the background threads to start
+190817 22:49:10 InnoDB: 5.5.34 started; log sequence number 2743645873
+190817 22:49:10 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190817 22:49:10 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190817 22:49:10 [Note] Server socket created on IP: '0.0.0.0'.
+190817 22:49:11 [Note] Event Scheduler: Loaded 0 events
+190817 22:49:11 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190825 10:10:32 [Note] MySQLa: Normal shutdown
+
+190825 10:10:32 [Note] Event Scheduler: Purging the queue. 0 events
+190825 10:10:32  InnoDB: Starting shutdown...
+190825 10:10:33  InnoDB: Shutdown completed; log sequence number 2743645873
+190825 10:10:33 [Note] MySQLa: Shutdown complete
+
+190825 10:11:05 [Note] Plugin 'FEDERATED' is disabled.
+190825 10:11:05 InnoDB: The InnoDB memory heap is disabled
+190825 10:11:05 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190825 10:11:05 InnoDB: Compressed tables use zlib 1.2.3
+190825 10:11:05 InnoDB: Initializing buffer pool, size = 47.0M
+190825 10:11:05 InnoDB: Completed initialization of buffer pool
+190825 10:11:05 InnoDB: highest supported file format is Barracuda.
+190825 10:11:06  InnoDB: Waiting for the background threads to start
+190825 10:11:07 InnoDB: 5.5.34 started; log sequence number 2743645873
+190825 10:11:07 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190825 10:11:07 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190825 10:11:07 [Note] Server socket created on IP: '0.0.0.0'.
+190825 10:11:07 [Note] Event Scheduler: Loaded 0 events
+190825 10:11:07 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190825 10:26:31 [Note] MySQLa: Normal shutdown
+
+190825 10:26:31 [Note] Event Scheduler: Purging the queue. 0 events
+190825 10:26:31  InnoDB: Starting shutdown...
+190825 10:26:31  InnoDB: Shutdown completed; log sequence number 2743645873
+190825 10:26:31 [Note] MySQLa: Shutdown complete
+
+190825 10:27:03 [Note] Plugin 'FEDERATED' is disabled.
+190825 10:27:03 InnoDB: The InnoDB memory heap is disabled
+190825 10:27:03 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190825 10:27:03 InnoDB: Compressed tables use zlib 1.2.3
+190825 10:27:03 InnoDB: Initializing buffer pool, size = 47.0M
+190825 10:27:03 InnoDB: Completed initialization of buffer pool
+190825 10:27:03 InnoDB: highest supported file format is Barracuda.
+190825 10:27:04  InnoDB: Waiting for the background threads to start
+190825 10:27:05 InnoDB: 5.5.34 started; log sequence number 2743645873
+190825 10:27:05 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190825 10:27:05 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190825 10:27:05 [Note] Server socket created on IP: '0.0.0.0'.
+190825 10:27:05 [Note] Event Scheduler: Loaded 0 events
+190825 10:27:05 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190825 11:56:10 [Note] MySQLa: Normal shutdown
+
+190825 11:56:10 [Note] Event Scheduler: Purging the queue. 0 events
+190825 11:56:10  InnoDB: Starting shutdown...
+190825 11:56:11  InnoDB: Shutdown completed; log sequence number 2743645873
+190825 11:56:11 [Note] MySQLa: Shutdown complete
+
+190825 11:56:37 [Note] Plugin 'FEDERATED' is disabled.
+190825 11:56:37 InnoDB: The InnoDB memory heap is disabled
+190825 11:56:37 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190825 11:56:37 InnoDB: Compressed tables use zlib 1.2.3
+190825 11:56:37 InnoDB: Initializing buffer pool, size = 47.0M
+190825 11:56:37 InnoDB: Completed initialization of buffer pool
+190825 11:56:37 InnoDB: highest supported file format is Barracuda.
+190825 11:56:38  InnoDB: Waiting for the background threads to start
+190825 11:56:39 InnoDB: 5.5.34 started; log sequence number 2743645873
+190825 11:56:39 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190825 11:56:39 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190825 11:56:39 [Note] Server socket created on IP: '0.0.0.0'.
+190825 11:56:39 [Note] Event Scheduler: Loaded 0 events
+190825 11:56:39 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+190825 21:00:44 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:00:54 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:27 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:48 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:48 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:49 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:49 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:49 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:49 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:49 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:50 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:50 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:50 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:50 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:50 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:51 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:51 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:51 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:51 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:52 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:52 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:52 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:52 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:52 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:53 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:53 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:53 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:53 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:54 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:54 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:54 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:01:57 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:03:33 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:03:37 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:03:41 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:04:29 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:34:22 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190825 21:43:02 [ERROR] Cannot find or open table mser/back_boss from
+the internal data dictionary of InnoDB though the .frm file for the
+table exists. Maybe you have deleted and recreated InnoDB data
+files but have forgotten to delete the corresponding .frm files
+of InnoDB tables, or you have moved .frm files to another database?
+or, the table contains indexes that this version of the engine
+doesn't support.
+See http://dev.mysql.com/doc/refman/5.5/en/innodb-troubleshooting.html
+how you can resolve the problem.
+
+190829 22:05:13 [Warning] IP address '192.168.0.106' has been resolved to the host name '192.168.0.106', which resembles IPv4-address itself.
+190831 19:37:20 [Note] MySQLa: Normal shutdown
+
+190831 19:37:20 [Note] Event Scheduler: Purging the queue. 0 events
+190831 19:37:21  InnoDB: Starting shutdown...
+190831 19:37:21  InnoDB: Shutdown completed; log sequence number 2743657932
+190831 19:37:21 [Note] MySQLa: Shutdown complete
+
+190901 17:24:41 [Note] Plugin 'FEDERATED' is disabled.
+190901 17:24:41 InnoDB: The InnoDB memory heap is disabled
+190901 17:24:41 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+190901 17:24:41 InnoDB: Compressed tables use zlib 1.2.3
+190901 17:24:41 InnoDB: Initializing buffer pool, size = 47.0M
+190901 17:24:41 InnoDB: Completed initialization of buffer pool
+190901 17:24:41 InnoDB: highest supported file format is Barracuda.
+190901 17:24:41  InnoDB: Waiting for the background threads to start
+190901 17:24:42 InnoDB: 5.5.34 started; log sequence number 2743657932
+190901 17:24:42 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+190901 17:24:42 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+190901 17:24:42 [Note] Server socket created on IP: '0.0.0.0'.
+190901 17:24:42 [Note] Event Scheduler: Loaded 0 events
+190901 17:24:42 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)

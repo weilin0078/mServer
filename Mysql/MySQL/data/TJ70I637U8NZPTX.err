@@ -1,0 +1,35 @@
+160806 10:36:31 [Note] Plugin 'FEDERATED' is disabled.
+160806 10:36:31 InnoDB: The InnoDB memory heap is disabled
+160806 10:36:31 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+160806 10:36:31 InnoDB: Compressed tables use zlib 1.2.3
+160806 10:36:31 InnoDB: Initializing buffer pool, size = 47.0M
+160806 10:36:31 InnoDB: Completed initialization of buffer pool
+160806 10:36:31 InnoDB: highest supported file format is Barracuda.
+160806 10:36:31  InnoDB: Waiting for the background threads to start
+160806 10:36:33 InnoDB: 5.5.34 started; log sequence number 47024399
+160806 10:36:33 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+160806 10:36:33 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+160806 10:36:33 [Note] Server socket created on IP: '0.0.0.0'.
+160806 10:36:33 [ERROR] Can't start server: Bind on TCP/IP port: No such file or directory
+160806 10:36:33 [ERROR] Do you already have another mysqld server running on port: 3306 ?
+160806 10:36:33 [ERROR] Aborting
+
+160806 10:36:33  InnoDB: Starting shutdown...
+160806 10:36:33  InnoDB: Shutdown completed; log sequence number 47024399
+160806 10:36:33 [Note] MySQLa: Shutdown complete
+
+160806 10:37:21 [Note] Plugin 'FEDERATED' is disabled.
+160806 10:37:21 InnoDB: The InnoDB memory heap is disabled
+160806 10:37:21 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+160806 10:37:21 InnoDB: Compressed tables use zlib 1.2.3
+160806 10:37:21 InnoDB: Initializing buffer pool, size = 47.0M
+160806 10:37:21 InnoDB: Completed initialization of buffer pool
+160806 10:37:21 InnoDB: highest supported file format is Barracuda.
+160806 10:37:22  InnoDB: Waiting for the background threads to start
+160806 10:37:23 InnoDB: 5.5.34 started; log sequence number 47024399
+160806 10:37:23 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+160806 10:37:23 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+160806 10:37:23 [Note] Server socket created on IP: '0.0.0.0'.
+160806 10:37:23 [Note] Event Scheduler: Loaded 0 events
+160806 10:37:23 [Note] MySQLa: ready for connections.
+Version: '5.5.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
