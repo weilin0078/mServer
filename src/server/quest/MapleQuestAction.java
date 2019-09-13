@@ -135,7 +135,7 @@ public class MapleQuestAction implements Serializable
                         final int period = MapleDataTool.getInt(iEntry2.getChildByPath("period"), 0) / 1440;
                         final String name = MapleItemInformationProvider.getInstance().getName(id);
                         if (id / 10000 == 114 && name != null && name.length() > 0) {
-                            final String msg = "\u4f60\u5df2\u7372\u5f97\u7a31\u865f <" + name + ">";
+                            final String msg = "你已獲得稱號 <" + name + ">";
                             c.dropMessage(5, msg);
                             c.dropMessage(5, msg);
                         }
@@ -311,23 +311,23 @@ public class MapleQuestAction implements Serializable
                     }
                 }
                 if (c.getInventory(MapleInventoryType.EQUIP).getNumFreeSlot() < eq) {
-                    c.dropMessage(1, "\u8bf7\u4e3a\u60a8\u7684\u88c5\u5907\u680f\u817e\u51fa\u7a7a\u95f4.");
+                    c.dropMessage(1, "请为您的装备栏腾出空间.");
                     return false;
                 }
                 if (c.getInventory(MapleInventoryType.USE).getNumFreeSlot() < use) {
-                    c.dropMessage(1, "\u8bf7\u4e3a\u60a8\u7684\u6d88\u8017\u680f\u817e\u51fa\u7a7a\u95f4.");
+                    c.dropMessage(1, "请为您的消耗栏腾出空间.");
                     return false;
                 }
                 if (c.getInventory(MapleInventoryType.SETUP).getNumFreeSlot() < setup) {
-                    c.dropMessage(1, "\u8bf7\u4e3a\u60a8\u7684\u8bbe\u7f6e\u680f\u817e\u51fa\u7a7a\u95f4.");
+                    c.dropMessage(1, "请为您的设置栏腾出空间.");
                     return false;
                 }
                 if (c.getInventory(MapleInventoryType.ETC).getNumFreeSlot() < etc) {
-                    c.dropMessage(1, "\u8bf7\u4e3a\u60a8\u7684\u5176\u4ed6\u680f\u817e\u51fa\u7a7a\u95f4.");
+                    c.dropMessage(1, "请为您的其他栏腾出空间.");
                     return false;
                 }
                 if (c.getInventory(MapleInventoryType.CASH).getNumFreeSlot() < cash) {
-                    c.dropMessage(1, "\u8bf7\u4e3a\u60a8\u7684\u7279\u6b8a\u680f\u817e\u51fa\u7a7a\u95f4.");
+                    c.dropMessage(1, "请为您的特殊栏腾出空间.");
                     return false;
                 }
                 return true;

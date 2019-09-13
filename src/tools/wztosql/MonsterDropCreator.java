@@ -38,14 +38,14 @@ public class MonsterDropCreator
     protected static final MapleDataProvider mobData;
     
     public static void main(final String[] args) throws FileNotFoundException, IOException, NotBoundException, InstanceAlreadyExistsException, MBeanRegistrationException, NotCompliantMBeanException, MalformedObjectNameException {
-        System.out.println("\u6e96\u5099\u63d0\u53d6\u6578\u64da!");
-        System.out.println("\u6309\u4efb\u610f\u9375\u7e7c\u7e8c...");
+        System.out.println("準備提取數據!");
+        System.out.println("按任意鍵繼續...");
         System.console().readLine();
         final long currtime = System.currentTimeMillis();
         MonsterDropCreator.addFlagData = false;
-        System.out.println("\u8f09\u5165: \u7269\u54c1\u540d\u7a31.");
+        System.out.println("載入: 物品名稱.");
         getAllItems();
-        System.out.println("\u8f09\u5165: \u602a\u7269\u6578\u64da.");
+        System.out.println("載入: 怪物數據.");
         getAllMobs();
         final StringBuilder sb = new StringBuilder();
         final FileOutputStream out = new FileOutputStream("mobDrop.sql", true);
@@ -100,7 +100,7 @@ public class MonsterDropCreator
             out.write(sb.toString().getBytes());
             sb.delete(0, Integer.MAX_VALUE);
         }
-        System.out.println("\u8f09\u5165: Drops from String.wz/MonsterBook.img.");
+        System.out.println("載入: Drops from String.wz/MonsterBook.img.");
         for (final MapleData dataz : MonsterDropCreator.data.getData("MonsterBook.img").getChildren()) {
             int idtoLog;
             final int monsterId2 = idtoLog = Integer.parseInt(dataz.getName());
@@ -202,7 +202,7 @@ public class MonsterDropCreator
             out.write(sb.toString().getBytes());
             sb.delete(0, Integer.MAX_VALUE);
         }
-        System.out.println("\u8f09\u5165: \u602a\u7269\u66f8\u6578\u64da.");
+        System.out.println("載入: 怪物書數據.");
         final StringBuilder SQL = new StringBuilder();
         final StringBuilder bookName = new StringBuilder();
         for (final Pair Pair2 : MonsterDropCreator.itemNameCache) {
@@ -228,14 +228,14 @@ public class MonsterDropCreator
                         SQL.append("0, ");
                         SQL.append(rate3);
                         SQL.append(");\n");
-                        SQL.append("-- \u7269\u54c1\u540d : ").append(Pair2.getRight()).append("\n");
+                        SQL.append("-- 物品名 : ").append(Pair2.getRight()).append("\n");
                         break;
                     }
                 }
                 bookName.delete(0, Integer.MAX_VALUE);
             }
         }
-        System.out.println("\u8f09\u5165: \u602a\u7269\u5361\u6578\u64da.");
+        System.out.println("載入: 怪物卡數據.");
         SQL.append("\n");
         int k = 1;
         int lastmonsterbookid = 0;
@@ -769,7 +769,7 @@ public class MonsterDropCreator
                             
                         }
                         default: {
-                            System.out.println("\u672a\u8655\u7406\u7684\u6578\u64da, ID : " + id);
+                            System.out.println("未處理的數據, ID : " + id);
                             return 999999;
                         }
                     }

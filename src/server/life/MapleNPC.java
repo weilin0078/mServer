@@ -23,7 +23,7 @@ public class MapleNPC extends AbstractLoadedMapleLife
     
     public final void sendShop(final MapleClient c) {
         if (c.getPlayer().isGM()) {
-            c.getPlayer().dropMessage("\u60a8\u5df2\u7ecf\u5efa\u7acb\u4e0e\u5546\u5e97npc[" + this.getId() + "]\u7684\u8fde\u63a5");
+            c.getPlayer().dropMessage("您已经建立与商店npc[" + this.getId() + "]的连接");
         }
         MapleShopFactory.getInstance().getShopForNPC(this.getId()).sendShop(c);
     }

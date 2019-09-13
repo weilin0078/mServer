@@ -88,7 +88,7 @@ public class MapleGenericPortal implements MaplePortal
     @Override
     public final void enterPortal(final MapleClient c) {
         if (this.getPosition().distanceSq(c.getPlayer().getPosition()) > 22500.0) {
-            c.getPlayer().getCheatTracker().registerOffense(CheatingOffense.\u4f7f\u7528\u8fc7\u8fdc\u4f20\u9001\u70b9);
+            c.getPlayer().getCheatTracker().registerOffense(CheatingOffense.使用过远传送点);
         }
         final MapleMap currentmap = c.getPlayer().getMap();
         if (this.portalState || c.getPlayer().isGM()) {
@@ -105,7 +105,7 @@ public class MapleGenericPortal implements MaplePortal
                 final MapleMap to = ChannelServer.getInstance(c.getChannel()).getMapFactory().getMap(this.getTargetMapId());
                 if (!c.getPlayer().isGM()) {
                     if (to == null) {
-                        c.getPlayer().dropMessage(5, "\u672c\u5730\u56fe\u76ee\u524d\u5c1a\u672a\u5f00\u653e.");
+                        c.getPlayer().dropMessage(5, "本地图目前尚未开放.");
                         c.getSession().write((Object)MaplePacketCreator.enableActions());
                         return;
                     }
@@ -116,7 +116,7 @@ public class MapleGenericPortal implements MaplePortal
                     }
                 }
                 else if (to == null) {
-                    c.getPlayer().dropMessage(5, "\u672c\u5730\u56fe\u76ee\u524d\u5c1a\u672a\u5f00\u653e.");
+                    c.getPlayer().dropMessage(5, "本地图目前尚未开放.");
                     c.getSession().write((Object)MaplePacketCreator.enableActions());
                     return;
                 }

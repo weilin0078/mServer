@@ -210,7 +210,7 @@ public class MapleInventory implements Iterable<IItem>, Serializable
         }
         if (chr != null) {
             chr.getClient().sendPacket(MaplePacketCreator.modifyInventory(false, new ModifyInventory(3, item)));
-            chr.dropMessage(5, "\ue661\u671f\u9650\u9053\u5177[" + MapleItemInformationProvider.getInstance().getName(item.getItemId()) + "]\ue6c3\ue7cf\u5df2\u7ecf\u8fc7\u671f");
+            chr.dropMessage(5, "期限道具[" + MapleItemInformationProvider.getInstance().getName(item.getItemId()) + "]已经过期");
         }
     }
     

@@ -48,7 +48,7 @@ public class EventScriptManager extends AbstractScriptManager
             }
             catch (Exception ex) {
                 System.out.println("Error initiating event: " + entry.script + ":" + ex);
-                FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Error initiating event: " + entry.script + ":" + ex);
+                FileoutputUtil.log("Logs/Log_Script_Ω≈±æ“Ï≥£.rtf", "Error initiating event: " + entry.script + ":" + ex);
             }
         }
     }

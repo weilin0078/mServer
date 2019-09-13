@@ -26,18 +26,18 @@ public class MonsterCarnivalHandler
         if (tab == 0) {
             final List<Pair<Integer, Integer>> mobs = c.getPlayer().getMap().getMobsToSpawn();
             if (num >= mobs.size() || c.getPlayer().getAvailableCP() < mobs.get(num).right) {
-                c.getPlayer().dropMessage(5, "\u4f60\u6ca1\u6709\u8db3\u591f\u7684CP.");
+                c.getPlayer().dropMessage(5, "你没有足够的CP.");
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
                 return;
             }
             final MapleMonster mons = MapleLifeFactory.getMonster(mobs.get(num).left);
             if (c.getPlayer().isGM()) {
-                System.out.println("tab\uff1a" + tab);
-                System.out.println("num\uff1a" + num);
-                System.out.println("mons\uff1a" + mons);
-                System.out.println("num\uff1a" + num);
-                System.out.println("\u5224\u65adA\uff1a" + mons != null);
-                System.out.println("\u5224\u65adB\uff1a" + c.getPlayer().getMap().makeCarnivalSpawn(c.getPlayer().getCarnivalParty().getTeam(), mons, num));
+                System.out.println("tab：" + tab);
+                System.out.println("num：" + num);
+                System.out.println("mons：" + mons);
+                System.out.println("num：" + num);
+                System.out.println("判断A：" + mons != null);
+                System.out.println("判断B：" + c.getPlayer().getMap().makeCarnivalSpawn(c.getPlayer().getCarnivalParty().getTeam(), mons, num));
             }
             if (mons != null && c.getPlayer().getMap().makeCarnivalSpawn(c.getPlayer().getCarnivalParty().getTeam(), mons, num)) {
                 c.getPlayer().getCarnivalParty().useCP(c.getPlayer(), mobs.get(num).right);
@@ -49,20 +49,20 @@ public class MonsterCarnivalHandler
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
             }
             else {
-                c.getPlayer().dropMessage(5, "\u4f60\u4e0d\u80fd\u518d\u53ec\u5524\u602a\u7269\u4e86.");
+                c.getPlayer().dropMessage(5, "你不能再召唤怪物了.");
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
             }
         }
         else if (tab == 1) {
             final List<Integer> skillid = c.getPlayer().getMap().getSkillIds();
             if (num >= skillid.size()) {
-                c.getPlayer().dropMessage(5, "\u53d1\u751f\u9519\u8befA.");
+                c.getPlayer().dropMessage(5, "发生错误A.");
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
                 return;
             }
             final MapleCarnivalFactory.MCSkill skil = MapleCarnivalFactory.getInstance().getSkill(skillid.get(num));
             if (skil == null || c.getPlayer().getAvailableCP() < skil.cpLoss) {
-                c.getPlayer().dropMessage(5, "\u4f60\u6ca1\u6709\u8db3\u591f\u7684CP.");
+                c.getPlayer().dropMessage(5, "你没有足够的CP.");
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
                 return;
             }
@@ -96,14 +96,14 @@ public class MonsterCarnivalHandler
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
             }
             else {
-                c.getPlayer().dropMessage(5, "\u53d1\u751f\u9519\u8befB.");
+                c.getPlayer().dropMessage(5, "发生错误B.");
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
             }
         }
         else if (tab == 2) {
             final MapleCarnivalFactory.MCSkill skil2 = MapleCarnivalFactory.getInstance().getGuardian(num);
             if (skil2 == null || c.getPlayer().getAvailableCP() < skil2.cpLoss) {
-                c.getPlayer().dropMessage(5, "\u4f60\u6ca1\u6709\u8db3\u591f\u7684CP.");
+                c.getPlayer().dropMessage(5, "你没有足够的CP.");
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
                 return;
             }
@@ -117,7 +117,7 @@ public class MonsterCarnivalHandler
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
             }
             else {
-                c.getPlayer().dropMessage(5, "\u4f60\u4e0d\u80fd\u518d\u53ec\u5524\u4e86.");
+                c.getPlayer().dropMessage(5, "你不能再召唤了.");
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
             }
         }

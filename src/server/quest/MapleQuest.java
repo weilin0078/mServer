@@ -178,8 +178,8 @@ public class MapleQuest implements Serializable
             }
             catch (Exception ex) {
                 ex.printStackTrace();
-                FileoutputUtil.outputFileError("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", ex);
-                FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Caused by questID " + id);
+                FileoutputUtil.outputFileError("Logs/Log_Script_脚本异常.rtf", ex);
+                FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Caused by questID " + id);
                 System.out.println("Caused by questID " + id);
                 return new MapleCustomQuest(id);
             }
@@ -324,7 +324,7 @@ public class MapleQuest implements Serializable
     
     public enum MedalQuest
     {
-        \u65b0\u624b\u5192\u9669\u5bb6(29005, 29015, 15, new int[] { 104000000, 104010001, 100000006, 104020000, 100000000, 100010000, 100040000, 100040100, 101010103, 101020000, 101000000, 102000000, 101030104, 101030406, 102020300, 103000000, 102050000, 103010001, 103030200, 110000000 }), 
+        新手冒险家(29005, 29015, 15, new int[] { 104000000, 104010001, 100000006, 104020000, 100000000, 100010000, 100040000, 100040100, 101010103, 101020000, 101000000, 102000000, 101030104, 101030406, 102020300, 103000000, 102050000, 103010001, 103030200, 110000000 }), 
         ElNath(29006, 29012, 50, new int[] { 200000000, 200010100, 200010300, 200080000, 200080100, 211000000, 211030000, 211040300, 211040400, 211040401 }), 
         LudusLake(29007, 29012, 40, new int[] { 222000000, 222010400, 222020000, 220000000, 220020300, 220040200, 221020701, 221000000, 221030600, 221040400 }), 
         Underwater(29008, 29012, 40, new int[] { 230000000, 230010400, 230010200, 230010201, 230020000, 230020201, 230030100, 230040000, 230040200, 230040400 }), 

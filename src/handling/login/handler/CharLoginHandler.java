@@ -86,10 +86,10 @@ public class CharLoginHandler
         }
         AutoRegister.createAccount(login, pwd, c.getSession().getRemoteAddress().toString(), macData);
         if (AutoRegister.success && AutoRegister.mac) {
-            c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "\u8d26\u53f7\u521b\u5efa\u6210\u529f,\u8bf7\u5c1d\u8bd5\u91cd\u65b0\u767b\u5f55!\r\n\u62d2\u7edd\u4e00\u5207\u7b2c\u4e09\u65b9\u8f85\u52a9\u7a0b\u5e8f\r\n\u63d0\u5021\u624b\u52a8\u4ece\u6211\u505a\u8d77-\u5f00\u6302\u6b7b\u7239\u6b7b\u5988\r\n\uff01"));
+            c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "账号创建成功,请尝试重新登录!\r\n拒绝一切第三方辅助程序\r\n提倡手动从我做起-开挂死爹死妈\r\n！"));
         }
         else if (!AutoRegister.mac) {
-            c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "\u8d26\u53f7\u521b\u5efa\u5931\u8d25\uff0c\u4f60\u5df2\u7ecf\u6ce8\u518c\u8fc7\u8d26\u53f7\uff0c\u4e00\u4e2a\u673a\u5668\u7801\u53ea\u80fd\u6ce8\u518c\u4e00\u4e2a\u8d26\u53f7"));
+            c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "账号创建失败，你已经注册过账号，一个机器码只能注册一个账号"));
         }
         AutoRegister.success = true;
         AutoRegister.mac = true;
@@ -163,19 +163,19 @@ public class CharLoginHandler
     public static final void CreateChar(final SeekableLittleEndianAccessor slea, final MapleClient c) {
         final String name = slea.readMapleAsciiString();
         final int JobType = slea.readInt();
-        final boolean \u5192\u9669\u5bb6 = Boolean.parseBoolean(ServerProperties.getProperty("KinMS.mxj", "false"));
-        final boolean \u9a91\u58eb\u56e2 = Boolean.parseBoolean(ServerProperties.getProperty("KinMS.qst", "false"));
-        final boolean \u6218\u795e = Boolean.parseBoolean(ServerProperties.getProperty("KinMS.zs", "false"));
-        if (!\u9a91\u58eb\u56e2 && JobType == 0) {
-            c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "\u65e0\u6cd5\u521b\u5efa\u9a91\u58eb\u56e2\u804c\u4e1a\uff01"));
+        final boolean 冒险家 = Boolean.parseBoolean(ServerProperties.getProperty("KinMS.mxj", "false"));
+        final boolean 骑士团 = Boolean.parseBoolean(ServerProperties.getProperty("KinMS.qst", "false"));
+        final boolean 战神 = Boolean.parseBoolean(ServerProperties.getProperty("KinMS.zs", "false"));
+        if (!骑士团 && JobType == 0) {
+            c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "无法创建骑士团职业！"));
             return;
         }
-        if (!\u5192\u9669\u5bb6 && JobType == 1) {
-            c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "\u65e0\u6cd5\u521b\u5efa\u5192\u9669\u5bb6\u804c\u4e1a\uff01"));
+        if (!冒险家 && JobType == 1) {
+            c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "无法创建冒险家职业！"));
             return;
         }
-        if (!\u6218\u795e && JobType == 2) {
-            c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "\u65e0\u6cd5\u521b\u5efa\u6218\u795e\u804c\u4e1a\uff01"));
+        if (!战神 && JobType == 2) {
+            c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "无法创建战神职业！"));
             return;
         }
         final short db = 0;

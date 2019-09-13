@@ -466,7 +466,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction
                 return -1;
             }
             final byte rareness = GameConstants.gachaponRareItem(item.getItemId());
-            World.Broadcast.broadcastMessage(MaplePacketCreator.getGachaponMega("[" + msg + "] " + this.c.getPlayer().getName(), " : \u5927\u5bb6\u4e00\u8d77\u606d\u559c\u4ed6\uff08\u5979\uff09\u5427\uff01\uff01\uff01", item, rareness, this.getPlayer().getClient().getChannel()).getBytes());
+            World.Broadcast.broadcastMessage(MaplePacketCreator.getGachaponMega("[" + msg + "] " + this.c.getPlayer().getName(), " : 大家一起恭喜他（她）吧！！！", item, rareness, this.getPlayer().getClient().getChannel()).getBytes());
             return item.getItemId();
         }
         catch (Exception e) {
@@ -494,7 +494,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction
         }
     }
     
-    public int gainGachaponItem(final int id, final int quantity, final String msg, final int \u6982\u7387) {
+    public int gainGachaponItem(final int id, final int quantity, final String msg, final int 概率) {
         try {
             if (!MapleItemInformationProvider.getInstance().itemExists(id)) {
                 return -1;
@@ -503,8 +503,8 @@ public class NPCConversationManager extends AbstractPlayerInteraction
             if (item == null) {
                 return -1;
             }
-            if (\u6982\u7387 > 0) {
-                World.Broadcast.broadcastMessage(MaplePacketCreator.getGachaponMega("[" + msg + "] " + this.c.getPlayer().getName(), " : \u5927\u5bb6\u4e00\u8d77\u606d\u559c\u4ed6\uff08\u5979\uff09\u5427\uff01\uff01\uff01", item, (byte)0, this.getPlayer().getClient().getChannel()).getBytes());
+            if (概率 > 0) {
+                World.Broadcast.broadcastMessage(MaplePacketCreator.getGachaponMega("[" + msg + "] " + this.c.getPlayer().getName(), " : 大家一起恭喜他（她）吧！！！", item, (byte)0, this.getPlayer().getClient().getChannel()).getBytes());
             }
             return item.getItemId();
         }
@@ -1513,11 +1513,11 @@ public class NPCConversationManager extends AbstractPlayerInteraction
     }
     
     public void szhs(final String ss) {
-        this.c.getSession().write((Object)MaplePacketCreator.\u6e38\u620f\u5c4f\u5e55\u4e2d\u95f4\u9ec4\u8272\u5b57\u4f53(ss));
+        this.c.getSession().write((Object)MaplePacketCreator.游戏屏幕中间黄色字体(ss));
     }
     
     public void szhs(final String ss, final int id) {
-        this.c.getSession().write((Object)MaplePacketCreator.\u6e38\u620f\u5c4f\u5e55\u4e2d\u95f4\u9ec4\u8272\u5b57\u4f53(ss, id));
+        this.c.getSession().write((Object)MaplePacketCreator.游戏屏幕中间黄色字体(ss, id));
     }
     
     public int gainHyPay(final int hypay) {
@@ -1543,12 +1543,12 @@ public class NPCConversationManager extends AbstractPlayerInteraction
     public void xlkc(final long days) {
         final MapleQuestStatus marr = this.getPlayer().getQuestNoAdd(MapleQuest.getInstance(122700));
         if (marr != null && marr.getCustomData() != null && Long.parseLong(marr.getCustomData()) >= System.currentTimeMillis()) {
-            this.getPlayer().dropMessage(1, "\u9879\u94fe\u6269\u5145\u5931\u8d25\uff0c\u60a8\u5df2\u7ecf\u8fdb\u884c\u8fc7\u9879\u94fe\u6269\u5145\u3002");
+            this.getPlayer().dropMessage(1, "项链扩充失败，您已经进行过项链扩充。");
         }
         else {
             final String customData = String.valueOf(System.currentTimeMillis() + days * 24L * 60L * 60L * 1000L);
             this.getPlayer().getQuestNAdd(MapleQuest.getInstance(122700)).setCustomData(customData);
-            this.getPlayer().dropMessage(1, "\u9879\u94fe" + days + "\u6269\u5145\u6269\u5145\u6210\u529f\uff01");
+            this.getPlayer().dropMessage(1, "项链" + days + "扩充扩充成功！");
         }
     }
     
@@ -1571,16 +1571,16 @@ public class NPCConversationManager extends AbstractPlayerInteraction
                     itemId = de.itemId;
                     if (ii.itemExists(itemId)) {
                         if (num == 0) {
-                            name.append("\u5f53\u524d\u602a\u7269 #o").append(mobId).append("# \u7684\u7206\u7387\u4e3a:\r\n");
+                            name.append("当前怪物 #o").append(mobId).append("# 的爆率为:\r\n");
                             name.append("--------------------------------------\r\n");
                         }
                         String namez = "#z" + itemId + "#";
                         if (itemId == 0) {
                             itemId = 4031041;
-                            namez = de.Minimum * this.getClient().getChannelServer().getMesoRate() + " - " + de.Maximum * this.getClient().getChannelServer().getMesoRate() + " \u7684\u91d1\u5e01";
+                            namez = de.Minimum * this.getClient().getChannelServer().getMesoRate() + " - " + de.Maximum * this.getClient().getChannelServer().getMesoRate() + " 的金币";
                         }
                         ch = de.chance * rate;
-                        name.append(num + 1).append(") #v").append(itemId).append("#").append(namez).append(" - ").append(((ch >= 999999) ? 1000000 : ch) / 10000.0).append("%\u7684\u7206\u7387. ").append((de.questid > 0 && MapleQuest.getInstance(de.questid).getName().length() > 0) ? ("\u9700\u8981\u63a5\u53d7\u4efb\u52a1: " + MapleQuest.getInstance(de.questid).getName()) : "").append("\r\n");
+                        name.append(num + 1).append(") #v").append(itemId).append("#").append(namez).append(" - ").append(((ch >= 999999) ? 1000000 : ch) / 10000.0).append("%的爆率. ").append((de.questid > 0 && MapleQuest.getInstance(de.questid).getName().length() > 0) ? ("需要接受任务: " + MapleQuest.getInstance(de.questid).getName()) : "").append("\r\n");
                         ++num;
                     }
                 }
@@ -1589,7 +1589,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction
                 return name.toString();
             }
         }
-        return "\u6ca1\u6709\u627e\u5230\u8fd9\u4e2a\u602a\u7269\u7684\u7206\u7387\u6570\u636e\u3002";
+        return "没有找到这个怪物的爆率数据。";
     }
     
     public String checkMapDrop() {
@@ -1605,20 +1605,20 @@ public class NPCConversationManager extends AbstractPlayerInteraction
                 if (de.continent < 0 || (de.continent < 10 && mapid / 100000000 == de.continent) || (de.continent < 100 && mapid / 10000000 == de.continent) || (de.continent < 1000 && mapid / 1000000 == de.continent)) {
                     int itemId = de.itemId;
                     if (num == 0) {
-                        name.append("\u5f53\u524d\u5730\u56fe #r").append(mapid).append("#k - #m").append(mapid).append("# \u7684\u5168\u5c40\u7206\u7387\u4e3a:");
+                        name.append("当前地图 #r").append(mapid).append("#k - #m").append(mapid).append("# 的全局爆率为:");
                         name.append("\r\n--------------------------------------\r\n");
                     }
                     String names = "#z" + itemId + "#";
                     if (itemId == 0 && cashServerRate != 0) {
                         itemId = 4031041;
-                        names = de.Minimum * cashServerRate + " - " + de.Maximum * cashServerRate + " \u7684\u62b5\u7528\u5377";
+                        names = de.Minimum * cashServerRate + " - " + de.Maximum * cashServerRate + " 的抵用卷";
                     }
                     final int chance = de.chance * globalServerRate;
                     if (this.getPlayer().isAdmin()) {
-                        name.append(num + 1).append(") #v").append(itemId).append("#").append(names).append(" - ").append(((chance >= 999999) ? 1000000 : chance) / 10000.0).append("%\u7684\u7206\u7387. ").append((de.questid > 0 && MapleQuest.getInstance(de.questid).getName().length() > 0) ? ("\u9700\u8981\u63a5\u53d7\u4efb\u52a1: " + MapleQuest.getInstance(de.questid).getName()) : "").append("\r\n");
+                        name.append(num + 1).append(") #v").append(itemId).append("#").append(names).append(" - ").append(((chance >= 999999) ? 1000000 : chance) / 10000.0).append("%的爆率. ").append((de.questid > 0 && MapleQuest.getInstance(de.questid).getName().length() > 0) ? ("需要接受任务: " + MapleQuest.getInstance(de.questid).getName()) : "").append("\r\n");
                     }
                     else {
-                        name.append(num + 1).append(") #v").append(itemId).append("#").append(names).append((de.questid > 0 && MapleQuest.getInstance(de.questid).getName().length() > 0) ? ("\u9700\u8981\u63a5\u53d7\u4efb\u52a1: " + MapleQuest.getInstance(de.questid).getName()) : "").append("\r\n");
+                        name.append(num + 1).append(") #v").append(itemId).append("#").append(names).append((de.questid > 0 && MapleQuest.getInstance(de.questid).getName().length() > 0) ? ("需要接受任务: " + MapleQuest.getInstance(de.questid).getName()) : "").append("\r\n");
                     }
                     ++num;
                 }
@@ -1627,7 +1627,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction
                 return name.toString();
             }
         }
-        return "\u5f53\u524d\u5730\u56fe\u6ca1\u6709\u8bbe\u7f6e\u5168\u5c40\u7206\u7387\u3002";
+        return "当前地图没有设置全局爆率。";
     }
     
     public int getzb() {
@@ -1710,7 +1710,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction
                 if (NPCConversationManager.this.c.getPlayer() != null) {
                     NPCConversationManager.this.c.sendPacket(MaplePacketCreator.stopClock());
                     NPCConversationManager.this.c.getPlayer().changeMap(warpMap, warpMap.getPortal(0));
-                    NPCConversationManager.this.c.getPlayer().dropMessage(6, "\ue61d\u5230\u8fbe\u76ee\u7684\u5730\u30d8\ue019\ue6c7\ue5ec!");
+                    NPCConversationManager.this.c.getPlayer().dropMessage(6, "到达目的地ヘ!");
                 }
             }
         }, 1000 * time);
@@ -1790,8 +1790,8 @@ public class NPCConversationManager extends AbstractPlayerInteraction
         this.hyt = a;
     }
     
-    public void \u4eba\u6c14\u6392\u884c\u699c() {
-        MapleGuild.\u4eba\u6c14\u6392\u884c(this.getClient(), this.npc);
+    public void 人气排行榜() {
+        MapleGuild.人气排行(this.getClient(), this.npc);
     }
     
     public void deleteItem(final int inventorytype) {
@@ -1833,7 +1833,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction
         catch (SQLException ex) {}
     }
     
-    public void \u5587\u53ed(final int lx, final String msg) throws RemoteException {
+    public void 喇叭(final int lx, final String msg) throws RemoteException {
         final StringBuilder sb = new StringBuilder();
         addMedalString(this.c.getPlayer(), sb);
         sb.append(this.c.getPlayer().getName());
@@ -1855,7 +1855,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction
         }
     }
     
-    public void \u5587\u53ed2(final int lx, final String title, final String msg) throws RemoteException {
+    public void 喇叭2(final int lx, final String title, final String msg) throws RemoteException {
         switch (lx) {
             case 1: {
                 World.Broadcast.broadcastSmega(MaplePacketCreator.serverNotice(11, this.c.getChannel(), "[" + title + "]" + this.c.getPlayer().getName() + " : " + msg).getBytes());
@@ -1881,7 +1881,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction
         }
     }
     
-    public void \u516c\u544a(final String msg) {
+    public void 公告(final String msg) {
         for (final ChannelServer cserv1 : ChannelServer.getAllInstances()) {
             for (final MapleCharacter mch : cserv1.getPlayerStorage().getAllCharacters()) {
                 mch.startMapEffect(msg, 5121009);

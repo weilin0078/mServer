@@ -671,25 +671,25 @@ public class MapleMonster extends AbstractLoadedMapleLife
         sb.append(this.stats.getName());
         sb.append("(");
         sb.append(this.getId());
-        sb.append(") (\u7b49\u7d1a ");
+        sb.append(") (等級 ");
         sb.append(this.stats.getLevel());
-        sb.append(") \u5728 (X");
+        sb.append(") 在 (X");
         sb.append(this.getPosition().x);
         sb.append("/ Y");
         sb.append(this.getPosition().y);
-        sb.append(") \u5ea7\u6a19 ");
+        sb.append(") 座標 ");
         sb.append(this.getHp());
         sb.append("/ ");
         sb.append(this.getMobMaxHp());
-        sb.append("\u8840\u91cf, ");
+        sb.append("血量, ");
         sb.append(this.getMp());
         sb.append("/ ");
         sb.append(this.getMobMaxMp());
-        sb.append(" \u9b54\u529b, \u53cd\u61c9\u5806: ");
+        sb.append(" 魔力, 反應堆: ");
         sb.append(this.getObjectId());
-        sb.append(" || \u4ec7\u6068\u76ee\u6a19 : ");
+        sb.append(" || 仇恨目標 : ");
         final MapleCharacter chr = this.controller.get();
-        sb.append((chr != null) ? chr.getName() : "\u7121");
+        sb.append((chr != null) ? chr.getName() : "無");
         return sb.toString();
     }
     
@@ -730,7 +730,7 @@ public class MapleMonster extends AbstractLoadedMapleLife
             return;
         }
         if (from.hasGmLevel(5)) {
-            from.dropMessage(6, "\u602a\u7269: " + this.getId() + " \ue00b\u72b6\u6001: " + status.getStati().name() + " \u4e2d\u6bd2: " + poison + " \u6301\u7eed\u65f6\u95f4: " + duration);
+            from.dropMessage(6, "怪物: " + this.getId() + " 状态: " + status.getStati().name() + " 中毒: " + poison + " 持续时间: " + duration);
         }
         final ISkill skilz = SkillFactory.getSkill(status.getSkill());
         if (skilz != null) {

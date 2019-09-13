@@ -14,7 +14,7 @@ public class LoginWorker
     
     public static void registerClient(final MapleClient c) {
         if (LoginServer.isAdminOnly() && !c.isGm()) {
-            c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "\u670d\u52a1\u5668\u6b63\u5728\u7ef4\u62a4\u4e2d"));
+            c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "服务器正在维护中"));
             c.getSession().write((Object)LoginPacket.getLoginFailed(7));
             return;
         }

@@ -915,7 +915,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
         }
         catch (SQLException ess) {
             ess.printStackTrace();
-            System.out.println("\u52a0\u8f7d\u89d2\u8272\u6570\u636e\u4fe1\u606f\u51fa\u9519...");
+            System.out.println("加载角色数据信息出错...");
             FileoutputUtil.outputFileError("log\\Packet_Except.log", ess);
         }
         finally {
@@ -1376,14 +1376,14 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
         catch (SQLException ex2) {}
         catch (DatabaseException ex3) {}
         catch (UnsupportedOperationException e) {
-            FileoutputUtil.outputFileError("Logs/Log_Packet_\u5c01\u5305\u5f02\u5e38.rtf", e);
+            FileoutputUtil.outputFileError("Logs/Log_Packet_封包异常.rtf", e);
             try {
                 if (con != null) {
                     con.rollback();
                 }
             }
             catch (SQLException ex) {
-                FileoutputUtil.outputFileError("Logs/Log_Packet_\u5c01\u5305\u5f02\u5e38.rtf", ex);
+                FileoutputUtil.outputFileError("Logs/Log_Packet_封包异常.rtf", ex);
             }
             try {
                 if (ps != null) {
@@ -1399,7 +1399,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
                 con.setTransactionIsolation(4);
             }
             catch (SQLException e2) {
-                FileoutputUtil.outputFileError("Logs/Log_Packet_\u5c01\u5305\u5f02\u5e38.rtf", e2);
+                FileoutputUtil.outputFileError("Logs/Log_Packet_封包异常.rtf", e2);
             }
         }
         finally {
@@ -1417,7 +1417,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
                 con.setTransactionIsolation(4);
             }
             catch (SQLException e3) {
-                FileoutputUtil.outputFileError("Logs/Log_Packet_\u5c01\u5305\u5f02\u5e38.rtf", e3);
+                FileoutputUtil.outputFileError("Logs/Log_Packet_封包异常.rtf", e3);
             }
         }
     }
@@ -2058,7 +2058,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
                             energyLevel = 15000;
                         }
                         final List<Pair<MapleBuffStat, Integer>> stat = Collections.singletonList(new Pair<MapleBuffStat, Integer>(MapleBuffStat.ENERGY_CHARGE, energyLevel));
-                        this.client.getSession().write((Object)MaplePacketCreator.\u80fd\u91cf\u6761(stat, energyLevel / 1000));
+                        this.client.getSession().write((Object)MaplePacketCreator.能量条(stat, energyLevel / 1000));
                         this.setBuffedValue(MapleBuffStat.ENERGY_CHARGE, energyLevel);
                         Timer.BuffTimer.getInstance().schedule(new Runnable() {
                             @Override
@@ -2066,7 +2066,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
                                 final Integer energyLevel = 0;
                                 MapleCharacter.this.setBuffedValue(MapleBuffStat.ENERGY_CHARGE, energyLevel);
                                 final List<Pair<MapleBuffStat, Integer>> stat = Collections.singletonList(new Pair<MapleBuffStat, Integer>(MapleBuffStat.ENERGY_CHARGE, energyLevel));
-                                MapleCharacter.this.client.getSession().write((Object)MaplePacketCreator.\u80fd\u91cf\u6761(stat, 0));
+                                MapleCharacter.this.client.getSession().write((Object)MaplePacketCreator.能量条(stat, 0));
                             }
                         }, 180000L);
                     }
@@ -2621,7 +2621,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             }
         }
         catch (Exception e) {
-            FileoutputUtil.outputFileError("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", e);
+            FileoutputUtil.outputFileError("Logs/Log_Script_脚本异常.rtf", e);
         }
     }
     
@@ -2799,7 +2799,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
         }
         if (possesed > 0) {
             --possesed;
-            this.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "\u56e0\u4f7f\u7528\u4e86 [\u62a4\u8eab\u7b26] \u6b7b\u4ea1\u540e\u60a8\u7684\u7ecf\u9a8c\u4e0d\u4f1a\u51cf\u5c11\uff01\u5269\u4f59 (" + possesed + " \u4e2a)"));
+            this.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "因使用了 [护身符] 死亡后您的经验不会减少！剩余 (" + possesed + " 个)"));
             MapleInventoryManipulator.removeById(this.getClient(), MapleItemInformationProvider.getInstance().getInventoryType(charmID[i]), charmID[i], 1, true, false);
         }
         else {
@@ -2837,7 +2837,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             }
             this.updateSingleStat(MapleStat.EXP, this.exp);
             if (!this.stats.checkEquipDurabilitys(this, -100)) {
-                this.dropMessage(5, "\u8010\u4e45\u5ea6\u5df2\u7ecf\u5f52\u96f6.");
+                this.dropMessage(5, "耐久度已经归零.");
             }
             if (this.pyramidSubway != null) {
                 this.stats.setHp(50);
@@ -3024,7 +3024,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             }
         }
         catch (Exception e) {
-            FileoutputUtil.outputFileError("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", e);
+            FileoutputUtil.outputFileError("Logs/Log_Script_脚本异常.rtf", e);
         }
     }
     
@@ -3171,7 +3171,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             if (this.pendingSkills != null) {
                 for (final Integer z : this.pendingSkills) {
                     this.client.sendPacket(MaplePacketCreator.updateSkill(z, 0, 0, -1L));
-                    this.client.sendPacket(MaplePacketCreator.serverNotice(5, "[" + SkillFactory.getSkillName(z) + "] \u6280\u80fd\u5df2\u7ecf\u8fc7\u671f"));
+                    this.client.sendPacket(MaplePacketCreator.serverNotice(5, "[" + SkillFactory.getSkillName(z) + "] 技能已经过期"));
                 }
             }
             this.pendingSkills = null;
@@ -3497,7 +3497,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
         ++this.level;
         final int level = this.getLevel();
         if (!this.isGM() && (level == 10 || level == 30 || level == 70 || level == 120 || level == 200)) {
-            final StringBuilder sb = new StringBuilder("[\u606d\u559c] ");
+            final StringBuilder sb = new StringBuilder("[恭喜] ");
             final IItem medal = this.getInventory(MapleInventoryType.EQUIPPED).getItem((short)(-26));
             if (medal != null) {
                 sb.append("<");
@@ -3505,7 +3505,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
                 sb.append("> ");
             }
             sb.append(this.getName());
-            sb.append(" \u8fbe\u5230\u4e86 " + level + " \u7ea7,\u8ba9\u6211\u4eec\u4e00\u8d77\u606d\u559c\u4ed6/\u5979\u5427!");
+            sb.append(" 达到了 " + level + " 级,让我们一起恭喜他/她吧!");
             World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, sb.toString()).getBytes());
         }
         maxhp = Math.min(30000, maxhp);
@@ -4262,7 +4262,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             case 1: {
                 if (this.acash + quantity < 0) {
                     if (show) {
-                        this.dropMessage(5, "\u4f60\u7684\u70b9\u5377\u5df2\u7ecf\u6ee1\u4e86");
+                        this.dropMessage(5, "你的点卷已经满了");
                     }
                     return;
                 }
@@ -4272,7 +4272,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             case 2: {
                 if (this.maplepoints + quantity < 0) {
                     if (show) {
-                        this.dropMessage(5, "\u4f60\u7684\u62b5\u7528\u5377\u5df2\u7ecf\u6ee1\u4e86.");
+                        this.dropMessage(5, "你的抵用卷已经满了.");
                     }
                     return;
                 }
@@ -4281,7 +4281,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             }
         }
         if (show && quantity != 0) {
-            this.dropMessage(5, "\u4f60\u5df2\u7ecf " + ((quantity > 0) ? "\u83b7\u5f97 " : "\u4f7f\u7528 ") + quantity + ((type == 1) ? " \u70b9\u5377." : " \u62b5\u7528\u5377."));
+            this.dropMessage(5, "你已经 " + ((quantity > 0) ? "获得 " : "使用 ") + quantity + ((type == 1) ? " 点卷." : " 抵用卷."));
         }
     }
     
@@ -5458,7 +5458,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
         ret.maplepoints = this.maplepoints;
         ret.clone = true;
         ret.client.setChannel(this.client.getChannel());
-        System.out.println("cloneLooks\u8f93\u51fa\uff1a" + this.client.getChannel());
+        System.out.println("cloneLooks输出：" + this.client.getChannel());
         while (this.map.getCharacterById(ret.id) != null || this.client.getChannelServer().getPlayerStorage().getCharacterById(ret.id) != null) {
             final MapleCharacter mapleCharacter = ret;
             ++mapleCharacter.id;
@@ -5613,7 +5613,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
         if (energyLevel != null && energyLevel > 0) {
             this.setBuffedValue(MapleBuffStat.ENERGY_CHARGE, energyLevel);
             final List<Pair<MapleBuffStat, Integer>> stat = Collections.singletonList(new Pair<MapleBuffStat, Integer>(MapleBuffStat.ENERGY_CHARGE, energyLevel));
-            this.client.getSession().write((Object)MaplePacketCreator.\u80fd\u91cf\u6761(stat, 0));
+            this.client.getSession().write((Object)MaplePacketCreator.能量条(stat, 0));
         }
         final String[] socket = this.client.getChannelServer().getIP().split(":");
         final ChannelServer toch = ChannelServer.getInstance(channel);
@@ -6262,7 +6262,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             rs.close();
         }
         catch (SQLException ex) {
-            System.err.println("\u83b7\u53d6\u5145\u503c\u4fe1\u606f\u53d1\u751f\u9519\u8bef: " + ex);
+            System.err.println("获取充值信息发生错误: " + ex);
         }
         return pay;
     }
@@ -6286,7 +6286,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             return 1;
         }
         catch (SQLException ex) {
-            System.err.println("\u52a0\u51cf\u5145\u503c\u4fe1\u606f\u53d1\u751f\u9519\u8bef: " + ex);
+            System.err.println("加减充值信息发生错误: " + ex);
             return 0;
         }
     }
@@ -6310,7 +6310,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             return 1;
         }
         catch (SQLException ex) {
-            System.err.println("\u52a0\u51cf\u5145\u503c\u4fe1\u606f\u53d1\u751f\u9519\u8bef: " + ex);
+            System.err.println("加减充值信息发生错误: " + ex);
             return -1;
         }
     }
@@ -6333,7 +6333,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             return 1;
         }
         catch (SQLException ex) {
-            System.err.println("\u52a0\u51cf\u6d88\u8d39\u5956\u52b1\u4fe1\u606f\u53d1\u751f\u9519\u8bef: " + ex);
+            System.err.println("加减消费奖励信息发生错误: " + ex);
             return -1;
         }
     }
@@ -6375,7 +6375,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             return gamePoints;
         }
         catch (SQLException Ex) {
-            System.err.println("\u83b7\u53d6\u89d2\u8272\u5e10\u53f7\u7684\u5728\u7ebf\u65f6\u95f4\u70b9\u51fa\u73b0\u9519\u8bef - \u6570\u636e\u5e93\u67e5\u8be2\u5931\u8d251" + Ex);
+            System.err.println("获取角色帐号的在线时间点出现错误 - 数据库查询失败1" + Ex);
             return -1;
         }
     }
@@ -6417,7 +6417,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             return gamePointsPD;
         }
         catch (SQLException Ex) {
-            System.err.println("\u83b7\u53d6\u89d2\u8272\u5e10\u53f7\u7684\u5728\u7ebf\u65f6\u95f4\u70b9\u51fa\u73b0\u9519\u8bef - \u6570\u636e\u5e93\u67e5\u8be2\u5931\u8d252" + Ex);
+            System.err.println("获取角色帐号的在线时间点出现错误 - 数据库查询失败2" + Ex);
             return -1;
         }
     }
@@ -6447,7 +6447,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             ps.close();
         }
         catch (SQLException Ex) {
-            System.err.println("\u66f4\u65b0\u89d2\u8272\u5e10\u53f7\u7684\u5728\u7ebf\u65f6\u95f4\u51fa\u73b0\u9519\u8bef - \u6570\u636e\u5e93\u66f4\u65b0\u5931\u8d25." + Ex);
+            System.err.println("更新角色帐号的在线时间出现错误 - 数据库更新失败." + Ex);
         }
     }
     
@@ -6466,7 +6466,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             }
         }
         catch (SQLException Ex) {
-            System.err.println("\u66f4\u65b0\u89d2\u8272\u5e10\u53f7\u7684\u5728\u7ebf\u65f6\u95f4\u51fa\u73b0\u9519\u8bef - \u6570\u636e\u5e93\u66f4\u65b0\u5931\u8d25." + Ex);
+            System.err.println("更新角色帐号的在线时间出现错误 - 数据库更新失败." + Ex);
         }
     }
     
@@ -6507,7 +6507,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             return gamePointsRQ;
         }
         catch (SQLException Ex) {
-            System.err.println("\u83b7\u53d6\u89d2\u8272\u5e10\u53f7\u7684\u5728\u7ebf\u65f6\u95f4\u70b9\u51fa\u73b0\u9519\u8bef - \u6570\u636e\u5e93\u67e5\u8be2\u5931\u8d253" + Ex);
+            System.err.println("获取角色帐号的在线时间点出现错误 - 数据库查询失败3" + Ex);
             return -1;
         }
     }
@@ -6532,7 +6532,7 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
             ps.close();
         }
         catch (SQLException Ex) {
-            System.err.println("\u66f4\u65b0\u89d2\u8272\u5e10\u53f7\u7684\u5728\u7ebf\u65f6\u95f4\u51fa\u73b0\u9519\u8bef - \u6570\u636e\u5e93\u66f4\u65b0\u5931\u8d25." + Ex);
+            System.err.println("更新角色帐号的在线时间出现错误 - 数据库更新失败." + Ex);
         }
     }
     
@@ -6553,10 +6553,10 @@ public class MapleCharacter extends AbstractAnimatedMapleMapObject implements Se
                 if (itemName == null) {
                     continue;
                 }
-                if ((itemName.contains("\u91cd\u751f") || nEquip.getEquipLevel() >= 4) && (!itemName.contains("\u6c38\u6052") || nEquip.getEquipLevel() >= 6)) {
+                if ((itemName.contains("重生") || nEquip.getEquipLevel() >= 4) && (!itemName.contains("永恒") || nEquip.getEquipLevel() >= 6)) {
                     continue;
                 }
-                nEquip.gainItemExp(this.client, mobexp, itemName.contains("\u6c38\u6052"));
+                nEquip.gainItemExp(this.client, mobexp, itemName.contains("永恒"));
             }
         }
         catch (Exception ex) {}

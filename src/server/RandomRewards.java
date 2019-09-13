@@ -29,7 +29,7 @@ public class RandomRewards
         this.compiledEventC = null;
         this.compiledEventB = null;
         this.compiledEventA = null;
-        System.out.println("\u52a0\u8f7d \u968f\u673a\u5956\u52b1 :::");
+        System.out.println("¼ÓÔØ Ëæ»ú½±Àø :::");
         List<Integer> returnArray = new ArrayList<Integer>();
         this.processRewards(returnArray, GameConstants.goldrewards);
         this.compiledGold = returnArray;

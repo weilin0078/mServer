@@ -35,11 +35,11 @@ public class PartyHandler
                 }
             }
             else {
-                c.getPlayer().dropMessage(5, "\u8981\u53c2\u52a0\u7684\u961f\u4f0d\u4e0d\u5b58\u5728\u3002");
+                c.getPlayer().dropMessage(5, "要参加的队伍不存在。");
             }
         }
         else {
-            c.getPlayer().dropMessage(5, "\u60a8\u5df2\u7ecf\u6709\u4e00\u4e2a\u7ec4\u961f\uff0c\u65e0\u6cd5\u52a0\u5165\u5176\u4ed6\u7ec4\u961f!");
+            c.getPlayer().dropMessage(5, "您已经有一个组队，无法加入其他组队!");
         }
     }
     
@@ -59,7 +59,7 @@ public class PartyHandler
                     c.getSession().write((Object)MaplePacketCreator.partyCreated(party.getId()));
                     break;
                 }
-                c.getPlayer().dropMessage(5, "\u4f60\u4e0d\u80fd\u521b\u5efa\u4e00\u4e2a\u7ec4\u961f,\u56e0\u4e3a\u4f60\u5df2\u7ecf\u5b58\u5728\u4e00\u4e2a\u961f\u4f0d\u4e2d");
+                c.getPlayer().dropMessage(5, "你不能创建一个组队,因为你已经存在一个队伍中");
                 break;
             }
             case 2: {
@@ -90,12 +90,12 @@ public class PartyHandler
             case 3: {
                 final int partyid = slea.readInt();
                 if (c.getPlayer().getParty() != null) {
-                    c.getPlayer().dropMessage(5, "\u4f60\u4e0d\u80fd\u521b\u5efa\u4e00\u4e2a\u7ec4\u961f,\u56e0\u4e3a\u4f60\u5df2\u7ecf\u5b58\u5728\u4e00\u4e2a\u961f\u4f0d\u4e2d");
+                    c.getPlayer().dropMessage(5, "你不能创建一个组队,因为你已经存在一个队伍中");
                     break;
                 }
                 party = World.Party.getParty(partyid);
                 if (party == null) {
-                    c.getPlayer().dropMessage(5, "\u8981\u52a0\u5165\u7684\u961f\u4f0d\u4e0d\u5b58\u5728");
+                    c.getPlayer().dropMessage(5, "要加入的队伍不存在");
                     break;
                 }
                 if (party.getMembers().size() < 6) {

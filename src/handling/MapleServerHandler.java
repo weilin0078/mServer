@@ -225,7 +225,7 @@ public class MapleServerHandler extends IoHandlerAdapter implements MapleServerH
                 count = 1;
             }
             if (count >= 10) {
-                System.out.print("\u81ea\u52a8\u65ad\u5f00\u8fde\u63a5A2");
+                System.out.print("自动断开连接A2");
                 this.BlockedIP.add(address);
                 this.tracker.remove(address);
                 session.close();
@@ -236,7 +236,7 @@ public class MapleServerHandler extends IoHandlerAdapter implements MapleServerH
         final String IP = address.substring(address.indexOf(47) + 1, address.length());
         if (this.channel > -1) {
             if (ChannelServer.getInstance(this.channel).isShutdown()) {
-                System.out.print("\u81ea\u52a8\u65ad\u5f00\u8fde\u63a5B");
+                System.out.print("自动断开连接B");
                 session.close();
                 return;
             }
@@ -244,13 +244,13 @@ public class MapleServerHandler extends IoHandlerAdapter implements MapleServerH
         }
         else if (this.cs) {
             if (CashShopServer.isShutdown()) {
-                System.out.print("\u81ea\u52a8\u65ad\u5f00\u8fde\u63a5D");
+                System.out.print("自动断开连接D");
                 session.close();
                 return;
             }
         }
         else if (LoginServer.isShutdown()) {
-            System.out.print("\u81ea\u52a8\u65ad\u5f00\u8fde\u63a5E");
+            System.out.print("自动断开连接E");
             session.close();
             return;
         }
@@ -269,15 +269,15 @@ public class MapleServerHandler extends IoHandlerAdapter implements MapleServerH
         session.setAttribute((Object)IdleStatus.WRITER_IDLE, (Object)60);
         final StringBuilder sb = new StringBuilder();
         if (this.channel > -1) {
-            sb.append("[\u9891\u9053\u670d\u52a1\u5668] \u9891\u9053 ").append(this.channel).append(" : ");
+            sb.append("[频道服务器] 频道 ").append(this.channel).append(" : ");
         }
         else if (this.cs) {
-            sb.append("[\u5546\u57ce\u670d\u52a1\u5668]");
+            sb.append("[商城服务器]");
         }
         else {
-            sb.append("[\u767b\u5f55\u670d\u52a1\u5668]");
+            sb.append("[登录服务器]");
             if (!"/127.0.0.1".equals(address)) {
-                System.out.println("\u4fa6\u6d4b\u5230\u975e\u767b\u5f55\u5668\u767b\u5f55\uff1a " + address);
+                System.out.println("侦测到非登录器登录： " + address);
             }
         }
         sb.append("IoSession opened ").append(address);
@@ -334,7 +334,7 @@ public class MapleServerHandler extends IoHandlerAdapter implements MapleServerH
                 final RecvPacketOpcode recv = arr$[i$];
                 if (recv.getValue() == header_num) {
                     if (MapleServerHandler.debugMode && !RecvPacketOpcode.isSpamHeader(recv)) {
-                        final StringBuilder sb = new StringBuilder("Received data \u5df2\u8655\u7406 :" + String.valueOf(recv) + "\n");
+                        final StringBuilder sb = new StringBuilder("Received data 已處理 :" + String.valueOf(recv) + "\n");
                         sb.append(HexTool.toString((byte[])message)).append("\n").append(HexTool.toStringFromAscii((byte[])message));
                         System.out.println(sb.toString());
                     }
@@ -367,14 +367,14 @@ public class MapleServerHandler extends IoHandlerAdapter implements MapleServerH
                 }
             }
             if (MapleServerHandler.debugMode) {
-                final StringBuilder sb2 = new StringBuilder("Received data \u672a\u8655\u7406 : ");
+                final StringBuilder sb2 = new StringBuilder("Received data 未處理 : ");
                 sb2.append(HexTool.toString((byte[])message)).append("\n").append(HexTool.toStringFromAscii((byte[])message));
                 System.out.println(sb2.toString());
             }
         }
         catch (RejectedExecutionException ex) {}
         catch (Exception e) {
-            FileoutputUtil.outputFileError("Logs/Log_Packet_\u5c01\u5305\u5f02\u5e38.rtf", e);
+            FileoutputUtil.outputFileError("Logs/Log_Packet_封包异常.rtf", e);
             e.printStackTrace();
         }
     }
@@ -565,8 +565,8 @@ public class MapleServerHandler extends IoHandlerAdapter implements MapleServerH
             }
             case CHANGE_MAP: {
                 if (cs) {
-                    if (ServerConstants.\u8c03\u8bd5\u8f93\u51fa\u5c01\u5305) {
-                        System.out.println("\u9000\u51fa\u5546\u57ce");
+                    if (ServerConstants.调试输出封包) {
+                        System.out.println("退出商城");
                     }
                     CashShopOperation.LeaveCS(slea, c, c.getPlayer());
                     break;
@@ -854,7 +854,7 @@ public class MapleServerHandler extends IoHandlerAdapter implements MapleServerH
                 break;
             }
             case COUPON_CODE: {
-                FileoutputUtil.log("Logs/Log_Packet_\u5c01\u5305\u5f02\u5e38.rtf", "Coupon : \n" + slea.toString(true));
+                FileoutputUtil.log("Logs/Log_Packet_封包异常.rtf", "Coupon : \n" + slea.toString(true));
                 System.out.println(slea.toString());
                 slea.skip(2);
                 CashShopOperation.CouponCode(slea.readMapleAsciiString(), c);
@@ -1055,7 +1055,7 @@ public class MapleServerHandler extends IoHandlerAdapter implements MapleServerH
                 break;
             }
             default: {
-                System.out.println("[\u672a\u7ecf\u5904\u7406\u7684] \u5ba2\u6237\u7aef\u5305 [" + header.toString() + "] \u53d1\u73b0\u4e86");
+                System.out.println("[未经处理的] 客户端包 [" + header.toString() + "] 发现了");
                 break;
             }
         }

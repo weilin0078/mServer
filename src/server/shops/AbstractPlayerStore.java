@@ -145,8 +145,8 @@ public abstract class AbstractPlayerStore extends AbstractMapleMapObject impleme
             if (!rs.next()) {
                 rs.close();
                 ps.close();
-                System.out.println("[SaveItems] \u4fdd\u5b58\u96c7\u4f63\u5546\u5e97\u4fe1\u606f\u51fa\u9519 - 1");
-                throw new RuntimeException("\u4fdd\u5b58\u96c7\u4f63\u5546\u5e97\u4fe1\u606f\u51fa\u9519.");
+                System.out.println("[SaveItems] 保存雇佣商店信息出错 - 1");
+                throw new RuntimeException("保存雇佣商店信息出错.");
             }
             final int packageid = rs.getInt(1);
             rs.close();
@@ -166,7 +166,7 @@ public abstract class AbstractPlayerStore extends AbstractMapleMapObject impleme
             return true;
         }
         catch (Exception se) {
-            System.out.println("[SaveItems] \u4fdd\u5b58\u96c7\u4f63\u5546\u5e97\u4fe1\u606f\u51fa\u9519 - 2 " + se);
+            System.out.println("[SaveItems] 保存雇佣商店信息出错 - 2 " + se);
             return false;
         }
     }

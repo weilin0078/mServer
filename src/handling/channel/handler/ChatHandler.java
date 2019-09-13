@@ -46,7 +46,7 @@ public class ChatHandler
         }
         final String chattext = slea.readMapleAsciiString();
         if (chr == null || !chr.getCanTalk()) {
-            c.getSession().write((Object)MaplePacketCreator.serverNotice(6, "\u4f60\u5df2\u7ecf\u88ab\u7981\u8a00\uff0c\u56e0\u6b64\u65e0\u6cd5\u8bf4\u8bdd."));
+            c.getSession().write((Object)MaplePacketCreator.serverNotice(6, "你已经被禁言，因此无法说话."));
             return;
         }
         if (CommandProcessor.processCommand(c, chattext, ServerConstants.CommandType.NORMAL)) {
@@ -135,7 +135,7 @@ public class ChatHandler
                         }
                     }
                     else {
-                        c.getSession().write((Object)MaplePacketCreator.messengerChat(c.getPlayer().getName() + " : " + target.getName() + "\u5df2\u7ecf\u662f\u4f7f\u7528\u67ab\u53f6\u4fe1\u4f7f."));
+                        c.getSession().write((Object)MaplePacketCreator.messengerChat(c.getPlayer().getName() + " : " + target.getName() + "已经是使用枫叶信使."));
                     }
                 }
                 else if (World.isConnected(input)) {
@@ -219,7 +219,7 @@ public class ChatHandler
             }
             case 6: {
                 if (!c.getPlayer().getCanTalk()) {
-                    c.getSession().write((Object)MaplePacketCreator.serverNotice(6, "\u4f60\u5df2\u7ecf\u88ab\u7981\u8a00\uff0c\u56e0\u6b64\u65e0\u6cd5\u8bf4\u8bdd."));
+                    c.getSession().write((Object)MaplePacketCreator.serverNotice(6, "你已经被禁言，因此无法说话."));
                     return;
                 }
                 c.getPlayer().getCheatTracker().checkMsg();

@@ -33,22 +33,22 @@ public class DropDataTableModel implements TableModel
     public String getColumnName(final int columnIndex) {
         switch (columnIndex) {
             case 0: {
-                return "\u602a\u7269ID";
+                return "怪物ID";
             }
             case 1: {
-                return "\u7269\u54c1ID";
+                return "物品ID";
             }
             case 2: {
-                return "\u6700\u5c0f\u6389\u843d";
+                return "最小掉落";
             }
             case 3: {
-                return "\u6700\u5927\u6389\u843d";
+                return "最大掉落";
             }
             case 4: {
-                return "\u7206\u7387(%)";
+                return "爆率(%)";
             }
             default: {
-                return "\u51fa\u9519";
+                return "出错";
             }
         }
     }
@@ -83,7 +83,7 @@ public class DropDataTableModel implements TableModel
                 return drop.getChance();
             }
             default: {
-                return "\u51fa\u9519";
+                return "出错";
             }
         }
     }
@@ -138,7 +138,7 @@ public class DropDataTableModel implements TableModel
             ps.close();
         }
         catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "\u9519\u8bef!\r\n" + ex);
+            JOptionPane.showMessageDialog(null, "错误!\r\n" + ex);
         }
     }
     
@@ -152,7 +152,7 @@ public class DropDataTableModel implements TableModel
             this.dropData.remove(index);
         }
         catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "\u9519\u8bef!\r\n" + e);
+            JOptionPane.showMessageDialog(null, "错误!\r\n" + e);
         }
     }
 }

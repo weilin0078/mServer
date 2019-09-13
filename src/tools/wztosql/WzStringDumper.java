@@ -48,13 +48,13 @@ public class WzStringDumper
         mobTxt.createNewFile();
         skillTxt.createNewFile();
         npcTxt.createNewFile();
-        System.out.println("\u63d0\u53d6 Cash.img \u6578\u64da...");
+        System.out.println("提取 Cash.img 數據...");
         PrintWriter writer = new PrintWriter(new FileOutputStream(cashTxt));
         for (final MapleData child : cash.getChildren()) {
             final MapleData nameData = child.getChildByPath("name");
             final MapleData descData = child.getChildByPath("desc");
             String name = "";
-            String desc = "(\u7121\u63cf\u8ff0)";
+            String desc = "(無描述)";
             if (nameData != null) {
                 name = (String)nameData.getData();
             }
@@ -65,14 +65,14 @@ public class WzStringDumper
         }
         writer.flush();
         writer.close();
-        System.out.println("Cash.img \u63d0\u53d6\u5b8c\u6210.");
-        System.out.println("\u63d0\u53d6 Consume.img \u6578\u64da...");
+        System.out.println("Cash.img 提取完成.");
+        System.out.println("提取 Consume.img 數據...");
         writer = new PrintWriter(new FileOutputStream(useTxt));
         for (final MapleData child : consume.getChildren()) {
             final MapleData nameData = child.getChildByPath("name");
             final MapleData descData = child.getChildByPath("desc");
             String name = "";
-            String desc = "(\u7121\u63cf\u8ff0)";
+            String desc = "(無描述)";
             if (nameData != null) {
                 name = (String)nameData.getData();
             }
@@ -83,10 +83,10 @@ public class WzStringDumper
         }
         writer.flush();
         writer.close();
-        System.out.println("Consume.img \u63d0\u53d6\u5b8c\u6210.");
-        System.out.println("\u63d0\u53d6 Eqp.img \u6578\u64da...");
+        System.out.println("Consume.img 提取完成.");
+        System.out.println("提取 Eqp.img 數據...");
         for (final MapleData child : eqp.getChildren()) {
-            System.out.println("\u63d0\u53d6 " + child.getName() + " \u6578\u64da...");
+            System.out.println("提取 " + child.getName() + " 數據...");
             final File eqpFile = new File(output + "\\Equip\\" + child.getName() + ".txt");
             eqpFile.createNewFile();
             final PrintWriter eqpWriter = new PrintWriter(new FileOutputStream(eqpFile));
@@ -94,7 +94,7 @@ public class WzStringDumper
                 final MapleData nameData2 = child2.getChildByPath("name");
                 final MapleData descData2 = child2.getChildByPath("desc");
                 String name2 = "";
-                String desc2 = "(\u7121\u63cf\u8ff0)";
+                String desc2 = "(無描述)";
                 if (nameData2 != null) {
                     name2 = (String)nameData2.getData();
                 }
@@ -105,16 +105,16 @@ public class WzStringDumper
             }
             eqpWriter.flush();
             eqpWriter.close();
-            System.out.println(child.getName() + " \u63d0\u53d6\u5b8c\u6210.");
+            System.out.println(child.getName() + " 提取完成.");
         }
-        System.out.println("Eqp.img \u63d0\u53d6\u5b8c\u6210.");
-        System.out.println("\u63d0\u53d6 Etc.img \u6578\u64da...");
+        System.out.println("Eqp.img 提取完成.");
+        System.out.println("提取 Etc.img 數據...");
         writer = new PrintWriter(new FileOutputStream(etcTxt));
         for (final MapleData child : etc.getChildren()) {
             final MapleData nameData = child.getChildByPath("name");
             final MapleData descData = child.getChildByPath("desc");
             String name = "";
-            String desc = "(\u7121\u63cf\u8ff0)";
+            String desc = "(無描述)";
             if (nameData != null) {
                 name = (String)nameData.getData();
             }
@@ -125,14 +125,14 @@ public class WzStringDumper
         }
         writer.flush();
         writer.close();
-        System.out.println("Etc.img \u63d0\u53d6\u5b8c\u6210.");
-        System.out.println("\u63d0\u53d6 Ins.img \u6578\u64da...");
+        System.out.println("Etc.img 提取完成.");
+        System.out.println("提取 Ins.img 數據...");
         writer = new PrintWriter(new FileOutputStream(insTxt));
         for (final MapleData child : ins.getChildren()) {
             final MapleData nameData = child.getChildByPath("name");
             final MapleData descData = child.getChildByPath("desc");
             String name = "";
-            String desc = "(\u7121\u63cf\u8ff0)";
+            String desc = "(無描述)";
             if (nameData != null) {
                 name = (String)nameData.getData();
             }
@@ -143,14 +143,14 @@ public class WzStringDumper
         }
         writer.flush();
         writer.close();
-        System.out.println("Ins.img \u63d0\u53d6\u5b8c\u6210.");
-        System.out.println("\u63d0\u53d6 Pet.img \u6578\u64da...");
+        System.out.println("Ins.img 提取完成.");
+        System.out.println("提取 Pet.img 數據...");
         writer = new PrintWriter(new FileOutputStream(petTxt));
         for (final MapleData child : pet.getChildren()) {
             final MapleData nameData = child.getChildByPath("name");
             final MapleData descData = child.getChildByPath("desc");
             String name = "";
-            String desc = "(\u7121\u63cf\u8ff0)";
+            String desc = "(無描述)";
             if (nameData != null) {
                 name = (String)nameData.getData();
             }
@@ -161,8 +161,8 @@ public class WzStringDumper
         }
         writer.flush();
         writer.close();
-        System.out.println("Pet.img \u63d0\u53d6\u5b8c\u6210.");
-        System.out.println("\u63d0\u53d6 Map.img \u6578\u64da...");
+        System.out.println("Pet.img 提取完成.");
+        System.out.println("提取 Map.img 數據...");
         writer = new PrintWriter(new FileOutputStream(mapTxt));
         for (final MapleData child : map.getChildren()) {
             writer.println(child.getName());
@@ -170,8 +170,8 @@ public class WzStringDumper
             for (final MapleData child3 : child.getChildren()) {
                 final MapleData streetData = child3.getChildByPath("streetName");
                 final MapleData mapData = child3.getChildByPath("mapName");
-                String streetName = "(\u7121\u6578\u64da\u540d)";
-                String mapName = "(\u65e0\u5730\u56fe\u540d)";
+                String streetName = "(無數據名)";
+                String mapName = "(无地图名)";
                 if (streetData != null) {
                     streetName = (String)streetData.getData();
                 }
@@ -184,8 +184,8 @@ public class WzStringDumper
         }
         writer.flush();
         writer.close();
-        System.out.println("Map.img \u63d0\u53d6\u5b8c\u6210.");
-        System.out.println("\u63d0\u53d6 Mob.img \u6578\u64da...");
+        System.out.println("Map.img 提取完成.");
+        System.out.println("提取 Mob.img 數據...");
         writer = new PrintWriter(new FileOutputStream(mobTxt));
         for (final MapleData child : mob.getChildren()) {
             final MapleData nameData = child.getChildByPath("name");
@@ -197,8 +197,8 @@ public class WzStringDumper
         }
         writer.flush();
         writer.close();
-        System.out.println("Mob.img \u63d0\u53d6\u5b8c\u6210.");
-        System.out.println("\u63d0\u53d6 Skill.img \u6578\u64da...");
+        System.out.println("Mob.img 提取完成.");
+        System.out.println("提取 Skill.img 數據...");
         writer = new PrintWriter(new FileOutputStream(skillTxt));
         for (final MapleData child : skill.getChildren()) {
             final MapleData nameData = child.getChildByPath("name");
@@ -218,8 +218,8 @@ public class WzStringDumper
         }
         writer.flush();
         writer.close();
-        System.out.println("Skill.img \u63d0\u53d6\u5b8c\u6210.");
-        System.out.println("\u63d0\u53d6 Npc.img \u6578\u64da...");
+        System.out.println("Skill.img 提取完成.");
+        System.out.println("提取 Npc.img 數據...");
         writer = new PrintWriter(new FileOutputStream(npcTxt));
         for (final MapleData child : npc.getChildren()) {
             final MapleData nameData = child.getChildByPath("name");
@@ -231,6 +231,6 @@ public class WzStringDumper
         }
         writer.flush();
         writer.close();
-        System.out.println("Npc.img \u63d0\u53d6\u5b8c\u6210.");
+        System.out.println("Npc.img 提取完成.");
     }
 }

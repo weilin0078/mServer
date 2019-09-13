@@ -39,7 +39,7 @@ public class MaplePacketDecoder extends CumulativeProtocolDecoder
                 decoderState.packetlength = MapleAESOFB.getPacketLength(packetHeader);
             }
             else if (in.remaining() < 4 && decoderState.packetlength == -1) {
-                MaplePacketDecoder.log.trace("\u89e3\u7801\u2026\u6ca1\u6709\u8db3\u591f\u7684\u6570\u636e/\u5c31\u662f\u6240\u8c13\u7684\u5305\u4e0d\u5b8c\u6574");
+                MaplePacketDecoder.log.trace("解码…没有足够的数据/就是所谓的包不完整");
                 return false;
             }
         }
@@ -50,7 +50,7 @@ public class MaplePacketDecoder extends CumulativeProtocolDecoder
             client.getReceiveCrypto().crypt(decryptedPacket);
             MapleCustomEncryption.decryptData(decryptedPacket);
             out.write((Object)decryptedPacket);
-            if (ServerConstants.\u5c01\u5305\u663e\u793a) {
+            if (ServerConstants.封包显示) {
                 final int packetLen = decryptedPacket.length;
                 final int pHeader = this.readFirstShort(decryptedPacket);
                 final String pHeaderStr = Integer.toHexString(pHeader).toUpperCase();
@@ -72,16 +72,16 @@ public class MaplePacketDecoder extends CumulativeProtocolDecoder
                         break;
                     }
                 }
-                final String Send = "\u5ba2\u6237\u7aef\u53d1\u9001 " + op + " [" + pHeaderStr + "] (" + packetLen + ")\r\n";
+                final String Send = "客户端发送 " + op + " [" + pHeaderStr + "] (" + packetLen + ")\r\n";
                 if (packetLen <= 3000) {
                     final String SendTo = Send + HexTool.toString(decryptedPacket) + "\r\n" + HexTool.toStringFromAscii(decryptedPacket);
                     if (show) {
-                        FileoutputUtil.packetLog("log\\\u5ba2\u6237\u7aef\u5c01\u5305.log", SendTo);
+                        FileoutputUtil.packetLog("log\\客户端封包.log", SendTo);
                         System.out.println(SendTo);
                     }
-                    final String SendTos = "\r\n\u65f6\u95f4\uff1a" + FileoutputUtil.CurrentReadable_Time() + "  ";
+                    final String SendTos = "\r\n时间：" + FileoutputUtil.CurrentReadable_Time() + "  ";
                     if (op.equals("UNKNOWN")) {
-                        FileoutputUtil.packetLog("log\\\u672a\u77e5\u5ba2\u670d\u7aef\u5c01\u5305.log", SendTos + SendTo);
+                        FileoutputUtil.packetLog("log\\未知客服端封包.log", SendTos + SendTo);
                     }
                 }
                 else {

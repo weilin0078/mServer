@@ -34,10 +34,10 @@ public class NPCScriptManager extends AbstractScriptManager
         try {
             if (c.getPlayer().isGM()) {
                 if (wh == 0) {
-                    c.getPlayer().dropMessage("[\u7cfb\u7edf\u63d0\u793a]\u60a8\u5df2\u7ecf\u5efa\u7acb\u4e0eNPC:" + npc + "\u7684\u5bf9\u8bdd\u3002");
+                    c.getPlayer().dropMessage("[系统提示]您已经建立与NPC:" + npc + "的对话。");
                 }
                 else {
-                    c.getPlayer().dropMessage("[\u7cfb\u7edf\u63d0\u793a]\u60a8\u5df2\u7ecf\u5efa\u7acb\u4e0eNPC:" + npc + "_" + wh + "\u7684\u5bf9\u8bdd\u3002");
+                    c.getPlayer().dropMessage("[系统提示]您已经建立与NPC:" + npc + "_" + wh + "的对话。");
                 }
             }
             if (!this.cms.containsKey(c)) {
@@ -59,10 +59,10 @@ public class NPCScriptManager extends AbstractScriptManager
                 this.cms.put(c, cm);
                 if (iv == null || getInstance() == null) {
                     if (wh == 0) {
-                        cm.sendOk("\u6b22\u8fce\u6765\u5230#b\u5192\u9669\u5c9b#k\u3002\u5bf9\u4e0d\u8d77\u6682\u65f6\u65e0\u6cd5\u67e5\u8be2\u5230\u529f\u80fd\u3002\r\n\u6211\u7684ID\u662f: #r" + npc + "#k.\r\n ");
+                        cm.sendOk("欢迎来到#b冒险岛#k。对不起暂时无法查询到功能。\r\n我的ID是: #r" + npc + "#k.\r\n ");
                     }
                     else {
-                        cm.sendOk("\u6b22\u8fce\u6765\u5230#b\u5192\u9669\u5c9b#k\u3002\u5bf9\u4e0d\u8d77\u6682\u65f6\u65e0\u6cd5\u67e5\u8be2\u5230\u529f\u80fd\u3002\r\n\u6211\u7684ID\u662f: #r" + npc + "_" + wh + "#k.\r\n ");
+                        cm.sendOk("欢迎来到#b冒险岛#k。对不起暂时无法查询到功能。\r\n我的ID是: #r" + npc + "_" + wh + "#k.\r\n ");
                     }
                     cm.dispose();
                     return;
@@ -78,15 +78,15 @@ public class NPCScriptManager extends AbstractScriptManager
                 }
             }
             else {
-                c.getPlayer().dropMessage(5, "\u4f60\u73b0\u5728\u5df2\u7ecf\u5047\u6b7b\u8bf7\u4f7f\u7528@ea");
+                c.getPlayer().dropMessage(5, "你现在已经假死请使用@ea");
             }
         }
         catch (Exception e) {
-            System.err.println("NPC \u8173\u672c\u932f\u8aa4, \u5b83ID\u70ba : " + npc + "_" + wh + "." + e);
+            System.err.println("NPC 腳本錯誤, 它ID為 : " + npc + "_" + wh + "." + e);
             if (c.getPlayer().isGM()) {
-                c.getPlayer().dropMessage("[\u7cfb\u7d71\u63d0\u793a] NPC " + npc + "_" + wh + "\u8173\u672c\u932f\u8aa4 " + e + "");
+                c.getPlayer().dropMessage("[系統提示] NPC " + npc + "_" + wh + "腳本錯誤 " + e + "");
             }
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Error executing NPC script, NPC ID : " + npc + "_" + wh + "." + e);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Error executing NPC script, NPC ID : " + npc + "_" + wh + "." + e);
             this.dispose(c);
         }
         finally {
@@ -119,11 +119,11 @@ public class NPCScriptManager extends AbstractScriptManager
             }
             catch (Exception e) {
                 if (c.getPlayer().isGM()) {
-                    c.getPlayer().dropMessage("[\u7cfb\u7d71\u63d0\u793a] NPC " + cm.getNpc() + "_" + wh + "\u8173\u672c\u932f\u8aa4 " + e + "");
+                    c.getPlayer().dropMessage("[系統提示] NPC " + cm.getNpc() + "_" + wh + "腳本錯誤 " + e + "");
                 }
-                System.err.println("NPC \u8173\u672c\u932f\u8aa4. \u5b83ID\u70ba : " + cm.getNpc() + "_" + wh + ":" + e);
+                System.err.println("NPC 腳本錯誤. 它ID為 : " + cm.getNpc() + "_" + wh + ":" + e);
                 this.dispose(c);
-                FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Error executing NPC script, NPC ID : " + cm.getNpc() + "_" + wh + "." + e);
+                FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Error executing NPC script, NPC ID : " + cm.getNpc() + "_" + wh + "." + e);
             }
             finally {
                 lock.unlock();
@@ -150,7 +150,7 @@ public class NPCScriptManager extends AbstractScriptManager
                 scriptengine.put("qm", cm);
                 c.getPlayer().setConversation(1);
                 if (c.getPlayer().isGM()) {
-                    c.getPlayer().dropMessage("[\u7cfb\u7d71\u63d0\u793a]\u60a8\u5df2\u7d93\u5efa\u7acb\u8207\u4efb\u52d9\u8173\u672c:" + quest + "\u7684\u5f80\u4f86\u3002");
+                    c.getPlayer().dropMessage("[系統提示]您已經建立與任務腳本:" + quest + "的往來。");
                 }
                 iv.invokeFunction("start", 1, 0, 0);
             }
@@ -160,7 +160,7 @@ public class NPCScriptManager extends AbstractScriptManager
         }
         catch (Exception e) {
             System.err.println("Error executing Quest script. (" + quest + ")..NPCID: " + npc + ":" + e);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Error executing Quest script. (" + quest + ")..NPCID: " + npc + ":" + e);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Error executing Quest script. (" + quest + ")..NPCID: " + npc + ":" + e);
             this.dispose(c);
         }
         finally {
@@ -185,10 +185,10 @@ public class NPCScriptManager extends AbstractScriptManager
         }
         catch (Exception e) {
             if (c.getPlayer().isGM()) {
-                c.getPlayer().dropMessage("[\u7cfb\u7d71\u63d0\u793a]\u4efb\u52d9\u8173\u672c:" + cm.getQuest() + "\u932f\u8aa4...NPC: " + cm.getNpc() + ":" + e);
+                c.getPlayer().dropMessage("[系統提示]任務腳本:" + cm.getQuest() + "錯誤...NPC: " + cm.getNpc() + ":" + e);
             }
             System.err.println("Error executing Quest script. (" + cm.getQuest() + ")...NPC: " + cm.getNpc() + ":" + e);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Error executing Quest script. (" + cm.getQuest() + ")..NPCID: " + cm.getNpc() + ":" + e);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Error executing Quest script. (" + cm.getQuest() + ")..NPCID: " + cm.getNpc() + ":" + e);
             this.dispose(c);
         }
         finally {
@@ -219,10 +219,10 @@ public class NPCScriptManager extends AbstractScriptManager
         }
         catch (Exception e) {
             if (c.getPlayer().isGM()) {
-                c.getPlayer().dropMessage("[\u7cfb\u7d71\u63d0\u793a]\u4efb\u52d9\u8173\u672c:" + quest + "\u932f\u8aa4...NPC: " + quest + ":" + e);
+                c.getPlayer().dropMessage("[系統提示]任務腳本:" + quest + "錯誤...NPC: " + quest + ":" + e);
             }
             System.err.println("Error executing Quest script. (" + quest + ")..NPCID: " + npc + ":" + e);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Error executing Quest script. (" + quest + ")..NPCID: " + npc + ":" + e);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Error executing Quest script. (" + quest + ")..NPCID: " + npc + ":" + e);
             this.dispose(c);
         }
         finally {
@@ -247,10 +247,10 @@ public class NPCScriptManager extends AbstractScriptManager
         }
         catch (Exception e) {
             if (c.getPlayer().isGM()) {
-                c.getPlayer().dropMessage("[\u7cfb\u7d71\u63d0\u793a]\u4efb\u52d9\u8173\u672c:" + cm.getQuest() + "\u932f\u8aa4...NPC: " + cm.getNpc() + ":" + e);
+                c.getPlayer().dropMessage("[系統提示]任務腳本:" + cm.getQuest() + "錯誤...NPC: " + cm.getNpc() + ":" + e);
             }
             System.err.println("Error executing Quest script. (" + cm.getQuest() + ")...NPC: " + cm.getNpc() + ":" + e);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Error executing Quest script. (" + cm.getQuest() + ")..NPCID: " + cm.getNpc() + ":" + e);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Error executing Quest script. (" + cm.getQuest() + ")..NPCID: " + cm.getNpc() + ":" + e);
             this.dispose(c);
         }
         finally {

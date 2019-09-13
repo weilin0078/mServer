@@ -77,7 +77,7 @@ public class MapleOxQuiz extends MapleEvent
                     }
                 }
                 if (toSend.getCharactersSize() - number <= 1 || MapleOxQuiz.this.timesAsked == 10) {
-                    toSend.broadcastMessage(MaplePacketCreator.serverNotice(6, "\u4eba\u6570\u4e0d\u8db3\uff01\u6d3b\u52a8\u81ea\u52a8\u7ed3\u675f\uff01"));
+                    toSend.broadcastMessage(MaplePacketCreator.serverNotice(6, "人数不足！活动自动结束！"));
                     MapleOxQuiz.this.unreset();
                     for (final MapleCharacter chr : toSend.getCharactersThreadsafe()) {
                         if (chr != null && !chr.isGM() && chr.isAlive()) {
@@ -121,10 +121,10 @@ public class MapleOxQuiz extends MapleEvent
         final double x = chr.getPosition().getX();
         final double y = chr.getPosition().getY();
         if ((x > -234.0 && y > -26.0 && answer == 0) || (x < -234.0 && y > -26.0 && answer == 1)) {
-            chr.dropMessage(6, "[OX\u7b54\u9898\u6d3b\u52a8] \u606d\u559c\u7b54\u5bf9!");
+            chr.dropMessage(6, "[OX答题活动] 恭喜答对!");
             return true;
         }
-        chr.dropMessage(6, "[OX\u7b54\u9898\u6d3b\u52a8] \u4f60\u7b54\u9519\u4e86!");
+        chr.dropMessage(6, "[OX答题活动] 你答错了!");
         return false;
     }
 }

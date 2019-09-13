@@ -87,11 +87,11 @@ public class CheatTracker
     public final void checkAttack(final int skillId, final int tickcount) {
         final short AtkDelay = GameConstants.getAttackDelay(skillId);
         if (tickcount - this.lastAttackTickCount < AtkDelay) {
-            this.registerOffense(CheatingOffense.\u5feb\u901f\u653b\u51fb);
+            this.registerOffense(CheatingOffense.快速攻击);
         }
         final long STime_TC = System.currentTimeMillis() - tickcount;
         if (this.Server_ClientAtkTickDiff - STime_TC > 250L) {
-            this.registerOffense(CheatingOffense.\u5feb\u901f\u653b\u51fb2);
+            this.registerOffense(CheatingOffense.快速攻击2);
         }
         ++this.Attack_tickResetCount;
         if (this.Attack_tickResetCount >= ((AtkDelay <= 200) ? 2 : 4)) {
@@ -106,7 +106,7 @@ public class CheatTracker
         ++this.numSequentialDamage;
         this.lastDamageTakenTime = System.currentTimeMillis();
         if (this.lastDamageTakenTime - this.takingDamageSince / 500L < this.numSequentialDamage) {
-            this.registerOffense(CheatingOffense.\u602a\u7269\u78b0\u649e\u8fc7\u5feb);
+            this.registerOffense(CheatingOffense.怪物碰撞过快);
         }
         if (this.lastDamageTakenTime - this.takingDamageSince > 4500L) {
             this.takingDamageSince = this.lastDamageTakenTime;
@@ -116,7 +116,7 @@ public class CheatTracker
             ++this.numZeroDamageTaken;
             if (this.numZeroDamageTaken >= 35) {
                 this.numZeroDamageTaken = 0;
-                this.registerOffense(CheatingOffense.\u56de\u907f\u7387\u8fc7\u9ad8);
+                this.registerOffense(CheatingOffense.回避率过高);
             }
         }
         else if (damage != -1) {
@@ -129,7 +129,7 @@ public class CheatTracker
             ++this.numSameDamage;
             if (this.numSameDamage > 5) {
                 this.numSameDamage = 0;
-                this.registerOffense(CheatingOffense.\u4f24\u5bb3\u76f8\u540c, this.numSameDamage + " times: " + dmg);
+                this.registerOffense(CheatingOffense.伤害相同, this.numSameDamage + " times: " + dmg);
             }
         }
         else {
@@ -143,9 +143,9 @@ public class CheatTracker
             ++this.monsterMoveCount;
             if (this.monsterMoveCount > 50) {
                 this.monsterMoveCount = 0;
-                World.Broadcast.broadcastGMMessage(MaplePacketCreator.serverNotice(6, "[\u7ba1\u7406\u5458\u4fe1\u606f] \u5f00\u6302\u73a9\u5bb6[" + MapleCharacterUtil.makeMapleReadable(chr.getName()) + "] \u5730\u56feID[" + chr.getMapId() + "] \u6000\u7591\u4f7f\u7528\u5438\u602a! ").getBytes());
-                final String note = "\u65f6\u95f4\uff1a" + FileoutputUtil.CurrentReadable_Time() + " " + "|| \u73a9\u5bb6\u540d\u5b57\uff1a" + chr.getName() + "" + "|| \u73a9\u5bb6\u5730\u56fe\uff1a" + chr.getMapId() + "\r\n";
-                FileoutputUtil.packetLog("log\\\u5438\u602a\u68c0\u6d4b\\" + chr.getName() + ".log", note);
+                World.Broadcast.broadcastGMMessage(MaplePacketCreator.serverNotice(6, "[管理员信息] 开挂玩家[" + MapleCharacterUtil.makeMapleReadable(chr.getName()) + "] 地图ID[" + chr.getMapId() + "] 怀疑使用吸怪! ").getBytes());
+                final String note = "时间：" + FileoutputUtil.CurrentReadable_Time() + " " + "|| 玩家名字：" + chr.getName() + "" + "|| 玩家地图：" + chr.getMapId() + "\r\n";
+                FileoutputUtil.packetLog("log\\吸怪检测\\" + chr.getName() + ".log", note);
             }
         }
         else {
@@ -162,7 +162,7 @@ public class CheatTracker
     public final boolean checkSummonAttack() {
         ++this.numSequentialSummonAttack;
         if ((System.currentTimeMillis() - this.summonSummonTime) / 2001L < this.numSequentialSummonAttack) {
-            this.registerOffense(CheatingOffense.\u53ec\u5524\u517d\u5feb\u901f\u653b\u51fb);
+            this.registerOffense(CheatingOffense.召唤兽快速攻击);
             return false;
         }
         return true;
@@ -261,9 +261,9 @@ public class CheatTracker
                 AutobanManager.getInstance().autoban(chrhardref.getClient(), StringUtil.makeEnumHumanReadable(offense.name()));
             }
             else if (type == 2) {
-                final String outputFileName = "\u65ad\u7ebf";
-                World.Broadcast.broadcastGMMessage(MaplePacketCreator.serverNotice(6, "[GM\u4fe1\u606f] " + chrhardref.getName() + " \u81ea\u52a8\u65ad\u7ebf \u7c7b\u522b: " + offense.toString() + " \u539f\u56e0: " + ((param == null) ? "" : (" - " + param))).getBytes());
-                FileoutputUtil.logToFile_chr(chrhardref, "logs/Hack/" + outputFileName + ".txt", "\r\n " + FileoutputUtil.NowTime() + " \u7c7b\u522b" + offense.toString() + " \u539f\u56e0 " + ((param == null) ? "" : (" - " + param)));
+                final String outputFileName = "断线";
+                World.Broadcast.broadcastGMMessage(MaplePacketCreator.serverNotice(6, "[GM信息] " + chrhardref.getName() + " 自动断线 类别: " + offense.toString() + " 原因: " + ((param == null) ? "" : (" - " + param))).getBytes());
+                FileoutputUtil.logToFile_chr(chrhardref, "logs/Hack/" + outputFileName + ".txt", "\r\n " + FileoutputUtil.NowTime() + " 类别" + offense.toString() + " 原因 " + ((param == null) ? "" : (" - " + param)));
                 chrhardref.getClient().getSession().close();
             }
             else if (type == 3) {}
@@ -278,24 +278,24 @@ public class CheatTracker
             this.wL.unlock();
         }
         switch (offense) {
-            case \u9b54\u6cd5\u4f24\u5bb3\u8fc7\u9ad8:
-            case \u9b54\u6cd5\u4f24\u5bb3\u8fc7\u9ad82:
-            case \u653b\u51fb\u8fc7\u9ad82:
-            case \u653b\u51fb\u529b\u8fc7\u9ad8:
-            case \u5feb\u901f\u653b\u51fb:
-            case \u5feb\u901f\u653b\u51fb2:
-            case \u653b\u51fb\u8303\u56f4\u8fc7\u5927:
-            case \u53ec\u5524\u517d\u653b\u51fb\u8303\u56f4\u8fc7\u5927:
-            case \u4f24\u5bb3\u76f8\u540c:
-            case \u5438\u602a:
-            case \u602a\u7269\u79fb\u52a8:
-            case \u56de\u907f\u7387\u8fc7\u9ad8: {
+            case 魔法伤害过高:
+            case 魔法伤害过高2:
+            case 攻击过高2:
+            case 攻击力过高:
+            case 快速攻击:
+            case 快速攻击2:
+            case 攻击范围过大:
+            case 召唤兽攻击范围过大:
+            case 伤害相同:
+            case 吸怪:
+            case 怪物移动:
+            case 回避率过高: {
                 final String show = offense.name();
                 --this.gm_message;
                 if (this.gm_message % 5 == 0) {
-                    final String msg = "[\u7ba1\u7406\u5458\u4fe1\u606f] " + chrhardref.getName() + " \u7591\u4f3c " + show + "\u5730\u56feID [" + chrhardref.getMapId() + "]" + "" + ((param == null) ? "" : (" - " + param));
+                    final String msg = "[管理员信息] " + chrhardref.getName() + " 疑似 " + show + "地图ID [" + chrhardref.getMapId() + "]" + "" + ((param == null) ? "" : (" - " + param));
                     World.Broadcast.broadcastGMMessage(MaplePacketCreator.serverNotice(6, msg).getBytes());
-                    FileoutputUtil.logToFile_chr(chrhardref, "Logs/Log_\u6000\u7591\u5916\u6302.rtf", show);
+                    FileoutputUtil.logToFile_chr(chrhardref, "Logs/Log_怀疑外挂.rtf", show);
                 }
                 if (this.gm_message == 0) {
                     this.gm_message = 50;

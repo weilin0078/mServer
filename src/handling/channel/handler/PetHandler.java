@@ -56,7 +56,7 @@ public class PetHandler
         }
         final long time = System.currentTimeMillis();
         if (chr.getNextConsume() > time) {
-            chr.dropMessage(5, "\u4f60\u53ef\u80fd\u4e0d\u4f7f\u7528\u8fd9\u4e2a\u9879\u76ee.");
+            chr.dropMessage(5, "你可能不使用这个项目.");
             c.getSession().write((Object)MaplePacketCreator.enableActions());
             return;
         }

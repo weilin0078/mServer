@@ -82,7 +82,7 @@ public class BuddyEntry
             ps.setString(1, buddyName);
             final ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                return new BuddyEntry(rs.getString("name"), rs.getInt("id"), "\u5176\u4ed6", -1, false, rs.getInt("level"), rs.getInt("job"));
+                return new BuddyEntry(rs.getString("name"), rs.getInt("id"), "其他", -1, false, rs.getInt("level"), rs.getInt("job"));
             }
             return null;
         }
@@ -99,7 +99,7 @@ public class BuddyEntry
             ps.setInt(1, buddyCharId);
             final ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                return new BuddyEntry(rs.getString("name"), rs.getInt("id"), "\u5176\u4ed6", -1, true, rs.getInt("level"), rs.getInt("job"));
+                return new BuddyEntry(rs.getString("name"), rs.getInt("id"), "其他", -1, true, rs.getInt("level"), rs.getInt("job"));
             }
             return null;
         }

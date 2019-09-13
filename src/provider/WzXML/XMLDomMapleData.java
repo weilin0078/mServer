@@ -71,7 +71,7 @@ public class XMLDomMapleData implements MapleData, Serializable
                     }
                 }
                 catch (NullPointerException e) {
-                    FileoutputUtil.outputFileError("Logs/Log_Packet_\u5c01\u5305\u5f02\u5e38.rtf", e);
+                    FileoutputUtil.outputFileError("Logs/Log_Packet_·â°üÒì³£.rtf", e);
                 }
             }
             if (!foundChild) {

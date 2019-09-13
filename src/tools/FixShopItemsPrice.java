@@ -34,7 +34,7 @@ public class FixShopItemsPrice
             ps.close();
         }
         catch (SQLException e) {
-            System.err.println("\u65e0\u6cd5\u8f7d\u5165\u5546\u5e97");
+            System.err.println("无法载入商店");
         }
         return shopItemsId;
     }
@@ -47,7 +47,7 @@ public class FixShopItemsPrice
             final ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 if (ii.getPrice(itemId) > rs.getLong("price")) {
-                    System.out.println("\u9053\u5177: " + MapleItemInformationProvider.getInstance().getName(itemId) + "\u9053\u5177ID: " + itemId + " \u5546\u5e97: " + rs.getInt("shopid") + " \u4ef7\u683c: " + rs.getLong("price") + " \u65b0\u4ef7\u683c:" + (long)ii.getPrice(itemId));
+                    System.out.println("道具: " + MapleItemInformationProvider.getInstance().getName(itemId) + "道具ID: " + itemId + " 商店: " + rs.getInt("shopid") + " 价格: " + rs.getLong("price") + " 新价格:" + (long)ii.getPrice(itemId));
                     final PreparedStatement pp = this.con.prepareStatement("UPDATE shopitems SET price = ? WHERE itemid = ? AND shopid = ?");
                     pp.setLong(1, (long)ii.getPrice(itemId));
                     pp.setInt(2, itemId);
@@ -60,21 +60,21 @@ public class FixShopItemsPrice
             ps.close();
         }
         catch (SQLException e) {
-            System.out.println("\u8655\u7406\u5546\u54c1\u5931\u6557, \u9053\u5177ID:" + itemId);
+            System.out.println("處理商品失敗, 道具ID:" + itemId);
         }
     }
     
     public static void main(final String[] args) {
         System.setProperty("net.sf.odinms.wzpath", System.getProperty("net.sf.odinms.wzpath"));
         final FixShopItemsPrice i = new FixShopItemsPrice();
-        System.out.println("\u6b63\u5728\u52a0\u8f7d\u9053\u5177\u6570\u636e......");
+        System.out.println("正在加载道具数据......");
         MapleItemInformationProvider.getInstance().load();
-        System.out.println("\u6b63\u5728\u8bfb\u53d6\u5546\u5e97\u5185\u5546\u54c1......");
+        System.out.println("正在读取商店内商品......");
         final List<Integer> list = i.loadFromDB();
-        System.out.println("\u6b63\u5728\u5904\u7406\u5546\u5e97\u5185\u5546\u54c1\u4ef7\u683c......");
+        System.out.println("正在处理商店内商品价格......");
         for (final int ii : list) {
             i.changePrice(ii);
         }
-        System.out.println("\u5904\u7406\u5546\u54c1\u4ef7\u683c\u7ed3\u675f\u3002");
+        System.out.println("处理商品价格结束。");
     }
 }

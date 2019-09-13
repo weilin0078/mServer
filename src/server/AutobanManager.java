@@ -77,8 +77,8 @@ public class AutobanManager implements Runnable
                     sb.append(s);
                     sb.append(", ");
                 }
-                World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(0, "'" + c.getPlayer().getName() + "'\u81ea\u52a8\u5c01\u53f7\u7cfb\u7edf\u975e\u6cd5\u4f7f\u7528\u5916\u6302\u7a0b\u5e8f\uff01\u6c38\u4e45\u5c01\u505c\u5904\u7406\uff01").getBytes());
-                FileoutputUtil.logToFile_chr(c.getPlayer(), "Logs/Log_\u5c01\u53f7.rtf", sb.toString());
+                World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(0, "'" + c.getPlayer().getName() + "'自动封号系统非法使用外挂程序！永久封停处理！").getBytes());
+                FileoutputUtil.logToFile_chr(c.getPlayer(), "Logs/Log_封号.rtf", sb.toString());
                 c.getPlayer().ban(sb.toString(), false, true, false);
                 c.disconnect(true, false);
             }

@@ -217,7 +217,7 @@ public class MapleGuildAlliance implements Serializable
     public void setNotice(final String newNotice) {
         this.notice = newNotice;
         this.broadcast(MaplePacketCreator.getAllianceUpdate(this));
-        this.broadcast(MaplePacketCreator.serverNotice(5, "\u806f\u76df\u516c\u544a\u4e8b\u9805 : " + newNotice));
+        this.broadcast(MaplePacketCreator.serverNotice(5, "Â“ÃË¹«¸æÊÂí— : " + newNotice));
         this.saveToDb();
     }
     

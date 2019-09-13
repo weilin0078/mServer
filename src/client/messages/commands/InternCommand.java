@@ -17,19 +17,19 @@ public class InternCommand
         return ServerConstants.PlayerGMRank.INTERN;
     }
     
-    public static class \u8ddf\u8e2a extends Warp
+    public static class 跟踪 extends Warp
     {
     }
     
-    public static class \u5c01\u53f7 extends Ban
+    public static class 封号 extends Ban
     {
     }
     
-    public static class \u9690\u8eab extends Hide
+    public static class 隐身 extends Hide
     {
     }
     
-    public static class \u89e3\u9664\u9690\u8eab extends UnHide
+    public static class 解除隐身 extends UnHide
     {
     }
     
@@ -48,7 +48,7 @@ public class InternCommand
         @Override
         public int execute(final MapleClient c, final String[] splitted) {
             if (splitted.length < 3) {
-                c.getPlayer().dropMessage(5, "[Syntax] !" + this.getCommand() + " <\u73a9\u5bb6> <\u539f\u56e0>");
+                c.getPlayer().dropMessage(5, "[Syntax] !" + this.getCommand() + " <玩家> <原因>");
                 return 0;
             }
             final int ch = World.Find.findChannel(splitted[1]);
@@ -57,25 +57,25 @@ public class InternCommand
             final MapleCharacter target = ChannelServer.getInstance(ch).getPlayerStorage().getCharacterByName(splitted[1]);
             if (target == null || ch < 1) {
                 if (MapleCharacter.ban(splitted[1], sb.toString(), false, c.getPlayer().isAdmin() ? 250 : c.getPlayer().getGMLevel(), splitted[0].equals("!hellban"))) {
-                    c.getPlayer().dropMessage(6, "[" + this.getCommand() + "] \u6210\u529f\u79bb\u7ebf\u5c01\u9501 " + splitted[1] + ".");
+                    c.getPlayer().dropMessage(6, "[" + this.getCommand() + "] 成功离线封锁 " + splitted[1] + ".");
                     return 1;
                 }
-                c.getPlayer().dropMessage(6, "[" + this.getCommand() + "] \u5c01\u9501\u5931\u8d25 " + splitted[1]);
+                c.getPlayer().dropMessage(6, "[" + this.getCommand() + "] 封锁失败 " + splitted[1]);
                 return 0;
             }
             else {
                 if (c.getPlayer().getGMLevel() <= target.getGMLevel()) {
-                    c.getPlayer().dropMessage(6, "[" + this.getCommand() + "] \u4e0d\u80fd\u5c01\u9501GM...");
+                    c.getPlayer().dropMessage(6, "[" + this.getCommand() + "] 不能封锁GM...");
                     return 1;
                 }
                 sb.append(" (IP: ").append(target.getClient().getSessionIPAddress()).append(")");
                 if (target.ban(sb.toString(), c.getPlayer().isAdmin(), false, this.hellban)) {
-                    c.getPlayer().dropMessage(6, "[" + this.getCommand() + "] \u6210\u529f\u5c01\u9501 " + splitted[1] + ".");
-                    FileoutputUtil.logToFile_chr(c.getPlayer(), "Logs/Log_\u5c01\u53f7.rtf", sb.toString());
-                    World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "[\u5c01\u53f7\u7cfb\u7edf]" + target.getName() + " \u56e0\u4e3a\u4f7f\u7528\u975e\u6cd5\u8f6f\u4ef6\u800c\u88ab\u6c38\u4e45\u5c01\u53f7\u3002").getBytes());
+                    c.getPlayer().dropMessage(6, "[" + this.getCommand() + "] 成功封锁 " + splitted[1] + ".");
+                    FileoutputUtil.logToFile_chr(c.getPlayer(), "Logs/Log_封号.rtf", sb.toString());
+                    World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "[封号系统]" + target.getName() + " 因为使用非法软件而被永久封号。").getBytes());
                     return 1;
                 }
-                c.getPlayer().dropMessage(6, "[" + this.getCommand() + "] \u5c01\u9501\u5931\u8d25.");
+                c.getPlayer().dropMessage(6, "[" + this.getCommand() + "] 封锁失败.");
                 return 0;
             }
         }
@@ -85,7 +85,7 @@ public class InternCommand
     {
         @Override
         public int execute(final MapleClient c, final String[] splitted) {
-            c.getPlayer().dropMessage(6, "\u4e0a\u7ebf\u7684\u89d2\u8272 \u983b\u9053-" + c.getChannel() + ":");
+            c.getPlayer().dropMessage(6, "上线的角色 頻道-" + c.getChannel() + ":");
             c.getPlayer().dropMessage(6, c.getChannelServer().getPlayerStorage().getOnlinePlayers(true));
             return 1;
         }
@@ -95,7 +95,7 @@ public class InternCommand
     {
         @Override
         public int execute(final MapleClient c, final String[] splitted) {
-            World.Broadcast.broadcastGMMessage(MaplePacketCreator.serverNotice(5, "<GM\u804a\u5929\u89c6\u7a97>\u983b\u9053" + c.getPlayer().getClient().getChannel() + " [" + c.getPlayer().getName() + "] : " + StringUtil.joinStringFrom(splitted, 1)).getBytes());
+            World.Broadcast.broadcastGMMessage(MaplePacketCreator.serverNotice(5, "<GM聊天视窗>頻道" + c.getPlayer().getClient().getChannel() + " [" + c.getPlayer().getName() + "] : " + StringUtil.joinStringFrom(splitted, 1)).getBytes());
             return 1;
         }
     }
@@ -105,7 +105,7 @@ public class InternCommand
         @Override
         public int execute(final MapleClient c, final String[] splitted) {
             SkillFactory.getSkill(9001004).getEffect(1).applyTo(c.getPlayer());
-            c.getPlayer().dropMessage(6, "\u7ba1\u7406\u5458\u9690\u85cf = \u5f00\u542f \r\n \u89e3\u9664\u8bf7\u8f93\u5165!unhide");
+            c.getPlayer().dropMessage(6, "管理员隐藏 = 开启 \r\n 解除请输入!unhide");
             return 0;
         }
     }
@@ -115,7 +115,7 @@ public class InternCommand
         @Override
         public int execute(final MapleClient c, final String[] splitted) {
             c.getPlayer().dispelBuff(9001004);
-            c.getPlayer().dropMessage(6, "\u7ba1\u7406\u5458\u9690\u85cf = \u5173\u95ed \r\n \u5f00\u542f\u8bf7\u8f93\u5165!hide");
+            c.getPlayer().dropMessage(6, "管理员隐藏 = 关闭 \r\n 开启请输入!hide");
             return 1;
         }
     }
@@ -144,7 +144,7 @@ public class InternCommand
                     }
                     else {
                         victim = ChannelServer.getInstance(ch).getPlayerStorage().getCharacterByName(splitted[1]);
-                        c.getPlayer().dropMessage(6, "\u6b63\u5728\u6362\u9891\u9053,\u8bf7\u7b49\u5f85.");
+                        c.getPlayer().dropMessage(6, "正在换频道,请等待.");
                         if (victim.getMapId() != c.getPlayer().getMapId()) {
                             final MapleMap mapp = c.getChannelServer().getMapFactory().getMap(victim.getMapId());
                             c.getPlayer().changeMap(mapp, mapp.getPortal(0));
@@ -153,7 +153,7 @@ public class InternCommand
                     }
                 }
                 catch (Exception e) {
-                    c.getPlayer().dropMessage(6, "\u8be5\u73a9\u5bb6\u4e0d\u5728\u7ebf " + e.getMessage());
+                    c.getPlayer().dropMessage(6, "该玩家不在线 " + e.getMessage());
                     return 0;
                 }
             }

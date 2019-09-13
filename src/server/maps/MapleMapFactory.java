@@ -390,7 +390,7 @@ public class MapleMapFactory
     private static AbstractLoadedMapleLife loadLife(final int id, final int f, final boolean hide, final int fh, final int cy, final int rx0, final int rx1, final int x, final int y, final String type, final int mtime) {
         final AbstractLoadedMapleLife myLife = MapleLifeFactory.getLife(id, type);
         if (myLife == null) {
-            System.err.println("\u8f7d\u5165 npc " + id + " \u5f02\u5e38...");
+            System.err.println("载入 npc " + id + " 异常...");
             return null;
         }
         myLife.setCy(cy);
@@ -561,7 +561,7 @@ public class MapleMapFactory
             case 104000400: {
                 mobtime = 2700;
                 monsterid = 2220000;
-                msg = "\u7ea2\u8717\u725b\u738b\u51fa\u73b0\u4e86";
+                msg = "红蜗牛王出现了";
                 pos1 = new Point(439, 185);
                 pos2 = new Point(301, -85);
                 pos3 = new Point(107, -355);
@@ -570,7 +570,7 @@ public class MapleMapFactory
             case 101030404: {
                 mobtime = 2700;
                 monsterid = 3220000;
-                msg = "\u6811\u5996\u738b\u51fa\u73b0\u4e86,\u5c0f\u5fc3\u88ab\u4ed6\u7684\u6811\u679d\u63d2\u5230\u5c4c";
+                msg = "树妖王出现了,小心被他的树枝插到屌";
                 pos1 = new Point(867, 1282);
                 pos2 = new Point(810, 1570);
                 pos3 = new Point(838, 2197);
@@ -579,7 +579,7 @@ public class MapleMapFactory
             case 110040000: {
                 mobtime = 1200;
                 monsterid = 5220001;
-                msg = "\u5de8\u5c45\u87f9\u51fa\u73b0\u4e86,\u5c0f\u5fc3\u4f60\u7684\u3110\u3110\u88ab\u4ed6\u5939\u65ad";
+                msg = "巨居蟹出现了,小心你的ㄐㄐ被他夹断";
                 pos1 = new Point(-355, 179);
                 pos2 = new Point(-1283, -113);
                 pos3 = new Point(-571, -593);
@@ -588,7 +588,7 @@ public class MapleMapFactory
             case 250010304: {
                 mobtime = 2100;
                 monsterid = 7220000;
-                msg = "\u6d41\u6d6a\u718a\u51fa\u73b0\u4e86,\u6211\u4ed6\u5988\u4f1a\u653e\u96f7\u7535\u554a";
+                msg = "流浪熊出现了,我他妈会放雷电啊";
                 pos1 = new Point(-210, 33);
                 pos2 = new Point(-234, 393);
                 pos3 = new Point(-654, 33);
@@ -597,7 +597,7 @@ public class MapleMapFactory
             case 200010300: {
                 mobtime = 1200;
                 monsterid = 8220000;
-                msg = "\u827e\u5229\u6770\u51fa\u73b0\u4e86";
+                msg = "艾利杰出现了";
                 pos1 = new Point(665, 83);
                 pos2 = new Point(672, -217);
                 pos3 = new Point(-123, -217);
@@ -606,7 +606,7 @@ public class MapleMapFactory
             case 250010503: {
                 mobtime = 1800;
                 monsterid = 7220002;
-                msg = "\u55b5\u4ed9\u602a\u4eba\u51fa\u73b0\u4e86,\u5c0f\u5fc3\u88ab\u4ed6CC\u5230\u6b7b\u5594";
+                msg = "喵仙怪人出现了,小心被他CC到死喔";
                 pos1 = new Point(-303, 543);
                 pos2 = new Point(227, 543);
                 pos3 = new Point(719, 543);
@@ -615,7 +615,7 @@ public class MapleMapFactory
             case 222010310: {
                 mobtime = 2700;
                 monsterid = 7220001;
-                msg = "\u4e5d\u5c3e\u5996\u72d0\u51fa\u73b0\u4e86";
+                msg = "九尾妖狐出现了";
                 pos1 = new Point(-169, -147);
                 pos2 = new Point(-517, 93);
                 pos3 = new Point(247, 93);
@@ -624,7 +624,7 @@ public class MapleMapFactory
             case 107000300: {
                 mobtime = 1800;
                 monsterid = 6220000;
-                msg = "\u6cbc\u6cfd\u5de8\u9cc4\u5927\u5927\u4e86";
+                msg = "沼泽巨鳄大大了";
                 pos1 = new Point(710, 118);
                 pos2 = new Point(95, 119);
                 pos3 = new Point(-535, 120);
@@ -633,7 +633,7 @@ public class MapleMapFactory
             case 100040105: {
                 mobtime = 1800;
                 monsterid = 5220002;
-                msg = "\u50f5\u5c38\u7334\u738b\u51fa\u73b0\u4e86";
+                msg = "僵尸猴王出现了";
                 pos1 = new Point(1000, 278);
                 pos2 = new Point(557, 278);
                 pos3 = new Point(95, 278);
@@ -660,7 +660,7 @@ public class MapleMapFactory
             case 221040301: {
                 mobtime = 2400;
                 monsterid = 6220001;
-                msg = "\u845b\u96f7\u91d1\u521a\u51fa\u73b0\u4e86";
+                msg = "葛雷金刚出现了";
                 pos1 = new Point(-4134, 416);
                 pos2 = new Point(-4283, 776);
                 pos3 = new Point(-3292, 776);
@@ -669,7 +669,7 @@ public class MapleMapFactory
             case 240040401: {
                 mobtime = 7200;
                 monsterid = 8220003;
-                msg = "\u5bd2\u971c\u51b0\u9f99\u51fa\u73b0\u4e86";
+                msg = "寒霜冰龙出现了";
                 pos1 = new Point(-15, 2481);
                 pos2 = new Point(127, 1634);
                 pos3 = new Point(159, 1142);
@@ -678,7 +678,7 @@ public class MapleMapFactory
             case 260010201: {
                 mobtime = 3600;
                 monsterid = 3220001;
-                msg = "\u4ed9\u4eba\u9577\u8001\u51fa\u73fe\u4e86";
+                msg = "仙人長老出現了";
                 pos1 = new Point(-215, 275);
                 pos2 = new Point(298, 275);
                 pos3 = new Point(592, 275);
@@ -687,7 +687,7 @@ public class MapleMapFactory
             case 261030000: {
                 mobtime = 2700;
                 monsterid = 8220002;
-                msg = "\u5947\u7f8e\u62c9\u51fa\u73b0\u4e86,\u5c0f\u5fc3\u4ed6\u7684BB\u5f39";
+                msg = "奇美拉出现了,小心他的BB弹";
                 pos1 = new Point(-1094, -405);
                 pos2 = new Point(-772, -116);
                 pos3 = new Point(-108, 181);
@@ -696,7 +696,7 @@ public class MapleMapFactory
             case 230020100: {
                 mobtime = 2700;
                 monsterid = 4220000;
-                msg = "\u706b\u868c\u58f3\u51fa\u73b0\u4e86";
+                msg = "火蚌壳出现了";
                 pos1 = new Point(-291, -20);
                 pos2 = new Point(-272, -500);
                 pos3 = new Point(-462, 640);

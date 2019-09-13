@@ -135,7 +135,7 @@ public class NPCHandler
             return;
         }
         if (chr.getConversation() != 0) {
-            chr.dropMessage(5, "\u4f60\u73b0\u5728\u5df2\u7ecf\u5047\u6b7b\u8bf7\u4f7f\u7528@ea");
+            chr.dropMessage(5, "你现在已经假死请使用@ea");
             return;
         }
         if (npc.hasShop()) {
@@ -158,7 +158,7 @@ public class NPCHandler
             return;
         }
         if (!chr.canQuestAction()) {
-            chr.dropMessage(1, "\u63d0\u4ea4\u64cd\u4f5c\u8fc7\u5feb\u8bf7\u7a0d\u540e\uff01");
+            chr.dropMessage(1, "提交操作过快请稍后！");
             c.sendPacket(MaplePacketCreator.enableActions());
             return;
         }
@@ -174,7 +174,7 @@ public class NPCHandler
                 final int npc = slea.readInt();
                 q.start(chr, npc);
                 if (c.getPlayer().isAdmin()) {
-                    c.getPlayer().dropMessage("\u5f00\u59cb\u4efb\u52a1[" + quest + "] NPC: " + npc);
+                    c.getPlayer().dropMessage("开始任务[" + quest + "] NPC: " + npc);
                     break;
                 }
                 break;
@@ -189,7 +189,7 @@ public class NPCHandler
                     q.complete(chr, npc);
                 }
                 if (c.getPlayer().isAdmin()) {
-                    c.getPlayer().dropMessage("\u5b8c\u6210\u4efb\u52a1[" + quest + "] NPC: " + npc);
+                    c.getPlayer().dropMessage("完成任务[" + quest + "] NPC: " + npc);
                     break;
                 }
                 break;
@@ -207,7 +207,7 @@ public class NPCHandler
                 slea.readInt();
                 NPCScriptManager.getInstance().startQuest(c, npc, quest);
                 if (c.getPlayer().isAdmin()) {
-                    c.getPlayer().dropMessage("\u811a\u672c\u5f00\u59cb\u4efb\u52a1[" + quest + "] NPC: " + npc);
+                    c.getPlayer().dropMessage("脚本开始任务[" + quest + "] NPC: " + npc);
                     break;
                 }
                 break;
@@ -218,7 +218,7 @@ public class NPCHandler
                 c.getSession().write((Object)MaplePacketCreator.showSpecialEffect(9));
                 chr.getMap().broadcastMessage(chr, MaplePacketCreator.showSpecialEffect(chr.getId(), 9), false);
                 if (c.getPlayer().isAdmin()) {
-                    c.getPlayer().dropMessage("\u811a\u672c\u5b8c\u6210\u4efb\u52a1[" + quest + "] NPC: " + npc);
+                    c.getPlayer().dropMessage("脚本完成任务[" + quest + "] NPC: " + npc);
                     break;
                 }
                 break;
@@ -245,7 +245,7 @@ public class NPCHandler
                 if (item != null) {
                     if (!MapleInventoryManipulator.checkSpace(c, item.getItemId(), item.getQuantity(), item.getOwner())) {
                         storage.store(item);
-                        chr.dropMessage(1, "\u4f60\u7684\u7269\u54c1\u680f\u5df2\u7ecf\u6ee1\u4e86..");
+                        chr.dropMessage(1, "你的物品栏已经满了..");
                     }
                     else {
                         MapleInventoryManipulator.addFromDrop(c, item, false);
@@ -266,7 +266,7 @@ public class NPCHandler
                     return;
                 }
                 if (chr.getMeso() < 100) {
-                    chr.dropMessage(1, "\u4f60\u6c92\u6709\u8db3\u591f\u7684\u91d1\u5e01\u4e70\u8fd9\u4e2a\u9053\u5177.");
+                    chr.dropMessage(1, "你沒有足够的金币买这个道具.");
                 }
                 else {
                     final MapleInventoryType type2 = GameConstants.getInventoryType(itemId);

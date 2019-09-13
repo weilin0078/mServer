@@ -15,24 +15,24 @@ import client.MapleCharacter;
 public class FileoutputUtil
 {
     private static final SimpleDateFormat sdfT;
-    public static final String fixdam_mg = "Logs/\u9b54\u6cd5\u4f24\u5bb3\u4fee\u6b63.rtf";
-    public static final String fixdam_ph = "Logs/\u7269\u7406\u4f24\u5bb3\u4fee\u6b63.rtf";
-    public static final String MobVac_log = "Logs/Log_\u5438\u602a.txt";
-    public static final String hack_log = "Logs/Log_\u6000\u7591\u5916\u6302.rtf";
-    public static final String ban_log = "Logs/Log_\u5c01\u53f7.rtf";
-    public static final String Acc_Stuck = "Logs/Log_\u5361\u8d26\u53f7.rtf";
-    public static final String Login_Error = "Logs/Log_\u767b\u5f55\u9519\u8bef.rtf";
-    public static final String IP_Log = "Logs/Log_\u8d26\u53f7IP.rtf";
-    public static final String Zakum_Log = "Logs/Log_\u624e\u6606.rtf";
-    public static final String Horntail_Log = "Logs/Log_\u6697\u9ed1\u9f99\u738b.rtf";
-    public static final String Pinkbean_Log = "Logs/Log_\u54c1\u514b\u7f24.rtf";
-    public static final String ScriptEx_Log = "Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf";
-    public static final String PacketEx_Log = "Logs/Log_Packet_\u5c01\u5305\u5f02\u5e38.rtf";
+    public static final String fixdam_mg = "Logs/魔法伤害修正.rtf";
+    public static final String fixdam_ph = "Logs/物理伤害修正.rtf";
+    public static final String MobVac_log = "Logs/Log_吸怪.txt";
+    public static final String hack_log = "Logs/Log_怀疑外挂.rtf";
+    public static final String ban_log = "Logs/Log_封号.rtf";
+    public static final String Acc_Stuck = "Logs/Log_卡账号.rtf";
+    public static final String Login_Error = "Logs/Log_登录错误.rtf";
+    public static final String IP_Log = "Logs/Log_账号IP.rtf";
+    public static final String Zakum_Log = "Logs/Log_扎昆.rtf";
+    public static final String Horntail_Log = "Logs/Log_暗黑龙王.rtf";
+    public static final String Pinkbean_Log = "Logs/Log_品克缤.rtf";
+    public static final String ScriptEx_Log = "Logs/Log_Script_脚本异常.rtf";
+    public static final String PacketEx_Log = "Logs/Log_Packet_封包异常.rtf";
     private static final SimpleDateFormat sdf;
     private static final SimpleDateFormat sdf_;
     
     public static void logToFile_chr(final MapleCharacter chr, final String file, final String msg) {
-        logToFile(file, "\r\n" + CurrentReadable_Time() + " \u8d26\u53f7 " + chr.getClient().getAccountName() + " \u540d\u79f0 " + chr.getName() + " (" + chr.getId() + ") \u7b49\u7ea7 " + chr.getLevel() + " \u5730\u56fe " + chr.getMapId() + " " + msg, false);
+        logToFile(file, "\r\n" + CurrentReadable_Time() + " 账号 " + chr.getClient().getAccountName() + " 名称 " + chr.getName() + " (" + chr.getId() + ") 等级 " + chr.getLevel() + " 地图 " + chr.getMapId() + " " + msg, false);
     }
     
     public static void logToFile(final String file, final String msg) {
@@ -174,7 +174,7 @@ public class FileoutputUtil
     }
     
     static {
-        sdfT = new SimpleDateFormat("yyyy\u5e74MM\u6708dd\u65e5HH\u6642mm\u5206ss\u79d2");
+        sdfT = new SimpleDateFormat("yyyy年MM月dd日HH時mm分ss秒");
         sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         sdf_ = new SimpleDateFormat("yyyy-MM-dd");
     }

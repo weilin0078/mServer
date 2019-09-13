@@ -173,7 +173,7 @@ public class KinMS extends JFrame
         this.minutesLeft = 0;
         final ImageIcon icon = new ImageIcon(this.getClass().getClassLoader().getResource("gui/Icon.png"));
         this.setIconImage(icon.getImage());
-        this.setTitle("Guiæ§åˆ¶å° Vr.079");
+        this.setTitle("Gui¿ØÖÆÌ¨ Vr.079");
         this.initComponents();
     }
     
@@ -275,21 +275,21 @@ public class KinMS extends JFrame
         jPanel9Layout.setVerticalGroup(jPanel9Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGap(0, 100, 32767));
         this.setDefaultCloseOperation(3);
         this.jScrollPane1.setViewportView(this.chatLog);
-        this.jButton10.setText("å¯åŠ¨æœåŠ¡ç«¯");
+        this.jButton10.setText("Æô¶¯·şÎñ¶Ë");
         this.jButton10.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton10ActionPerformed(evt);
             }
         });
-        this.jTextField22.setText("å…³é—­æœåŠ¡å™¨å€’æ•°æ—¶é—´");
+        this.jTextField22.setText("¹Ø±Õ·şÎñÆ÷µ¹ÊıÊ±¼ä");
         this.jTextField22.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jTextField22ActionPerformed(evt);
             }
         });
-        this.jButton16.setText("å…³é—­æœåŠ¡å™¨");
+        this.jButton16.setText("¹Ø±Õ·şÎñÆ÷");
         this.jButton16.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
@@ -300,85 +300,85 @@ public class KinMS extends JFrame
         this.jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(jPanel5Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel5Layout.createSequentialGroup().addContainerGap().addGroup(jPanel5Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(this.jButton10).addGroup(jPanel5Layout.createSequentialGroup().addComponent(this.jTextField22, -2, -1, -2).addGap(18, 18, 18).addComponent(this.jButton16))).addContainerGap(440, 32767)));
         jPanel5Layout.setVerticalGroup(jPanel5Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel5Layout.createSequentialGroup().addContainerGap().addComponent(this.jButton10).addGap(18, 18, 18).addGroup(jPanel5Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField22, -2, -1, -2).addComponent(this.jButton16)).addContainerGap(207, 32767)));
-        this.jTabbedPane2.addTab("æœåŠ¡å™¨é…ç½®", this.jPanel5);
-        this.jButton7.setText("ä¿å­˜æ•°æ®");
+        this.jTabbedPane2.addTab("·şÎñÆ÷ÅäÖÃ", this.jPanel5);
+        this.jButton7.setText("±£´æÊı¾İ");
         this.jButton7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton7ActionPerformed(evt);
             }
         });
-        this.jButton8.setText("ä¿å­˜é›‡ä½£");
+        this.jButton8.setText("±£´æ¹ÍÓ¶");
         this.jButton8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton8ActionPerformed(evt);
             }
         });
-        this.jLabel2.setText("ä¿å­˜ç³»åˆ—ï¼š");
+        this.jLabel2.setText("±£´æÏµÁĞ£º");
         final GroupLayout jPanel7Layout = new GroupLayout(this.jPanel7);
         this.jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(jPanel7Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel7Layout.createSequentialGroup().addContainerGap().addGroup(jPanel7Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(this.jLabel2).addGroup(jPanel7Layout.createSequentialGroup().addComponent(this.jButton7).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jButton8))).addContainerGap(497, 32767)));
         jPanel7Layout.setVerticalGroup(jPanel7Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel7Layout.createSequentialGroup().addContainerGap().addComponent(this.jLabel2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(jPanel7Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jButton7).addComponent(this.jButton8)).addContainerGap(227, 32767)));
-        this.jTabbedPane2.addTab("ä¿å­˜æ•°æ®", this.jPanel7);
-        this.jButton9.setText("é‡è½½ä»»åŠ¡");
+        this.jTabbedPane2.addTab("±£´æÊı¾İ", this.jPanel7);
+        this.jButton9.setText("ÖØÔØÈÎÎñ");
         this.jButton9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton9ActionPerformed(evt);
             }
         });
-        this.jButton1.setText("é‡è½½å‰¯æœ¬");
+        this.jButton1.setText("ÖØÔØ¸±±¾");
         this.jButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton1ActionPerformed(evt);
             }
         });
-        this.jButton5.setText("é‡è½½çˆ†ç‡");
+        this.jButton5.setText("ÖØÔØ±¬ÂÊ");
         this.jButton5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton5ActionPerformed(evt);
             }
         });
-        this.jButton4.setText("é‡è½½å•†åº—");
+        this.jButton4.setText("ÖØÔØÉÌµê");
         this.jButton4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton4ActionPerformed(evt);
             }
         });
-        this.jButton3.setText("é‡è½½ä¼ é€é—¨");
+        this.jButton3.setText("ÖØÔØ´«ËÍÃÅ");
         this.jButton3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton3ActionPerformed(evt);
             }
         });
-        this.jButton2.setText("é‡è½½ååº”å †");
+        this.jButton2.setText("ÖØÔØ·´Ó¦¶Ñ");
         this.jButton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton2ActionPerformed(evt);
             }
         });
-        this.jLabel1.setText("é‡è½½ç³»åˆ—ï¼š");
-        this.jButton6.setText("é‡è½½åŒ…å¤´");
+        this.jLabel1.setText("ÖØÔØÏµÁĞ£º");
+        this.jButton6.setText("ÖØÔØ°üÍ·");
         this.jButton6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton6ActionPerformed(evt);
             }
         });
-        this.jButton12.setText("é‡è½½å•†åŸ");
+        this.jButton12.setText("ÖØÔØÉÌ³Ç");
         this.jButton12.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton12ActionPerformed(evt);
             }
         });
-        this.jButton19.setText("æ¸…é™¤Sqlé€£ç·š");
+        this.jButton19.setText("Çå³ıSqlßB¾€");
         this.jButton19.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
@@ -389,29 +389,29 @@ public class KinMS extends JFrame
         this.jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(jPanel6Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel6Layout.createSequentialGroup().addContainerGap().addGroup(jPanel6Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(this.jLabel1).addGroup(jPanel6Layout.createSequentialGroup().addComponent(this.jButton6).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jButton12)).addGroup(jPanel6Layout.createSequentialGroup().addComponent(this.jButton1).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jButton5).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jButton2).addGap(12, 12, 12).addComponent(this.jButton3)).addGroup(jPanel6Layout.createSequentialGroup().addComponent(this.jButton9).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jButton4)).addComponent(this.jButton19)).addContainerGap(293, 32767)));
         jPanel6Layout.setVerticalGroup(jPanel6Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel6Layout.createSequentialGroup().addContainerGap().addComponent(this.jLabel1).addGroup(jPanel6Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel6Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jButton3).addComponent(this.jButton2)).addGroup(jPanel6Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jButton1).addComponent(this.jButton5))).addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED).addGroup(jPanel6Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jButton9).addComponent(this.jButton4)).addGap(10, 10, 10).addGroup(jPanel6Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jButton6).addComponent(this.jButton12)).addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED).addComponent(this.jButton19).addContainerGap(134, 32767)));
-        this.jTabbedPane2.addTab("é‡è½½ç³»åˆ—", this.jPanel6);
-        this.jButton11.setText("è§£å¡ç©å®¶");
+        this.jTabbedPane2.addTab("ÖØÔØÏµÁĞ", this.jPanel6);
+        this.jButton11.setText("½â¿¨Íæ¼Ò");
         this.jButton11.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton11ActionPerformed(evt);
             }
         });
-        this.jTextField1.setText("è¾“å…¥ç©å®¶åå­—");
+        this.jTextField1.setText("ÊäÈëÍæ¼ÒÃû×Ö");
         this.jTextField1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jTextField1ActionPerformed(evt);
             }
         });
-        this.jTextField23.setText("è¾“å…¥è´¦å·");
+        this.jTextField23.setText("ÊäÈëÕËºÅ");
         this.jTextField23.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jTextField23ActionPerformed(evt);
             }
         });
-        this.jButton17.setText("è§£å¡è´¦å·");
+        this.jButton17.setText("½â¿¨ÕËºÅ");
         this.jButton17.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
@@ -422,58 +422,58 @@ public class KinMS extends JFrame
         this.jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(jPanel8Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel8Layout.createSequentialGroup().addContainerGap().addGroup(jPanel8Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel8Layout.createSequentialGroup().addComponent(this.jTextField1, -2, 124, -2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jButton11)).addGroup(jPanel8Layout.createSequentialGroup().addComponent(this.jTextField23, -2, 124, -2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jButton17))).addContainerGap(454, 32767)));
         jPanel8Layout.setVerticalGroup(jPanel8Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel8Layout.createSequentialGroup().addContainerGap().addGroup(jPanel8Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField1, -2, -1, -2).addComponent(this.jButton11)).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(jPanel8Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField23, -2, -1, -2).addComponent(this.jButton17)).addContainerGap(219, 32767)));
-        this.jTabbedPane2.addTab("å¡å·å¤„ç†", this.jPanel8);
+        this.jTabbedPane2.addTab("¿¨ºÅ´¦Àí", this.jPanel8);
         this.jTextField2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jTextField2ActionPerformed(evt);
             }
         });
-        this.jButton13.setText("å…¬å‘Šå‘å¸ƒ");
+        this.jButton13.setText("¹«¸æ·¢²¼");
         this.jButton13.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton13ActionPerformed(evt);
             }
         });
-        this.jTextField3.setText("ç©å®¶åå­—");
-        this.jTextField4.setText("ç‰©å“ID");
-        this.jButton14.setText("ç»™äºˆç‰©å“");
+        this.jTextField3.setText("Íæ¼ÒÃû×Ö");
+        this.jTextField4.setText("ÎïÆ·ID");
+        this.jButton14.setText("¸øÓèÎïÆ·");
         this.jButton14.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton14ActionPerformed(evt);
             }
         });
-        this.jTextField5.setText("æ•°é‡");
-        this.jTextField6.setText("åŠ›é‡");
-        this.jTextField7.setText("æ•æ·");
-        this.jTextField8.setText("æ™ºåŠ›");
-        this.jTextField9.setText("è¿æ°”");
-        this.jTextField10.setText("HPè®¾ç½®");
-        this.jTextField11.setText("MPè®¾ç½®");
-        this.jTextField12.setText("åŠ å·æ¬¡æ•°");
-        this.jTextField13.setText("åˆ¶ä½œäºº");
-        this.jTextField14.setText("ç»™äºˆç‰©å“æ—¶é—´");
-        this.jTextField15.setText("å¯ä»¥äº¤æ˜“");
-        this.jTextField16.setText("æ”»å‡»åŠ›");
-        this.jTextField17.setText("é­”æ³•åŠ›");
-        this.jTextField18.setText("ç‰©ç†é˜²å¾¡");
-        this.jTextField19.setText("é­”æ³•é˜²å¾¡");
+        this.jTextField5.setText("ÊıÁ¿");
+        this.jTextField6.setText("Á¦Á¿");
+        this.jTextField7.setText("Ãô½İ");
+        this.jTextField8.setText("ÖÇÁ¦");
+        this.jTextField9.setText("ÔËÆø");
+        this.jTextField10.setText("HPÉèÖÃ");
+        this.jTextField11.setText("MPÉèÖÃ");
+        this.jTextField12.setText("¼Ó¾í´ÎÊı");
+        this.jTextField13.setText("ÖÆ×÷ÈË");
+        this.jTextField14.setText("¸øÓèÎïÆ·Ê±¼ä");
+        this.jTextField15.setText("¿ÉÒÔ½»Ò×");
+        this.jTextField16.setText("¹¥»÷Á¦");
+        this.jTextField17.setText("Ä§·¨Á¦");
+        this.jTextField18.setText("ÎïÀí·ÀÓù");
+        this.jTextField19.setText("Ä§·¨·ÀÓù");
         final GroupLayout jPanel1Layout = new GroupLayout(this.jPanel1);
         this.jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel1Layout.createSequentialGroup().addContainerGap().addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel1Layout.createSequentialGroup().addComponent(this.jTextField2, -1, 556, 32767).addGap(18, 18, 18).addComponent(this.jButton13)).addGroup(jPanel1Layout.createSequentialGroup().addComponent(this.jTextField3, -2, 92, -2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jTextField4, -2, 77, -2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jTextField5, -2, 52, -2)).addGroup(jPanel1Layout.createSequentialGroup().addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false).addGroup(jPanel1Layout.createSequentialGroup().addComponent(this.jTextField9, -2, 58, -2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jTextField13)).addGroup(GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup().addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.TRAILING).addComponent(this.jTextField8).addComponent(this.jTextField7)).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false).addComponent(this.jTextField11, -2, 79, -2).addComponent(this.jTextField12, -2, 79, -2))).addGroup(jPanel1Layout.createSequentialGroup().addComponent(this.jTextField6, -2, 58, -2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jTextField10, -2, 79, -2))).addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED).addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false).addComponent(this.jTextField16).addComponent(this.jTextField15).addComponent(this.jTextField14).addComponent(this.jTextField17)).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false).addComponent(this.jButton14, -1, -1, 32767).addComponent(this.jTextField18).addComponent(this.jTextField19)))).addContainerGap()));
         jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel1Layout.createSequentialGroup().addContainerGap().addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField2, -2, -1, -2).addComponent(this.jButton13)).addGap(18, 18, 18).addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField3, -2, -1, -2).addComponent(this.jTextField4, -2, -1, -2).addComponent(this.jTextField5, -2, -1, -2)).addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED).addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField6, -2, -1, -2).addComponent(this.jTextField10, -2, -1, -2).addComponent(this.jTextField14, -2, -1, -2).addComponent(this.jTextField18, -2, -1, -2)).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField7, -2, -1, -2).addComponent(this.jTextField11, -2, -1, -2).addComponent(this.jTextField15, -2, -1, -2).addComponent(this.jTextField19, -2, -1, -2)).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField8, -2, -1, -2).addComponent(this.jTextField12, -2, -1, -2).addComponent(this.jTextField16, -2, -1, -2)).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField9, -2, -1, -2).addComponent(this.jTextField13, -2, -1, -2).addComponent(this.jTextField17, -2, -1, -2).addComponent(this.jButton14)).addContainerGap(95, 32767)));
-        this.jTabbedPane2.addTab("æŒ‡ä»¤/å…¬å‘Š", this.jPanel1);
-        this.jTextField20.setText("è¾“å…¥æ•°é‡");
+        this.jTabbedPane2.addTab("Ö¸Áî/¹«¸æ", this.jPanel1);
+        this.jTextField20.setText("ÊäÈëÊıÁ¿");
         this.jTextField20.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jTextField20ActionPerformed(evt);
             }
         });
-        this.jTextField21.setText("1ç‚¹å·/2æŠµç”¨/3é‡‘å¸/4ç»éªŒ");
-        this.jButton15.setText("å‘æ”¾å…¨æœç‚¹å·/æŠµç”¨å·/é‡‘å¸/ç»éªŒ");
+        this.jTextField21.setText("1µã¾í/2µÖÓÃ/3½ğ±Ò/4¾­Ñé");
+        this.jButton15.setText("·¢·ÅÈ«·şµã¾í/µÖÓÃ¾í/½ğ±Ò/¾­Ñé");
         this.jButton15.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
@@ -484,25 +484,25 @@ public class KinMS extends JFrame
         this.jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel2Layout.createSequentialGroup().addContainerGap().addComponent(this.jTextField20, -2, 88, -2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jTextField21, -2, -1, -2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jButton15).addContainerGap(214, 32767)));
         jPanel2Layout.setVerticalGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel2Layout.createSequentialGroup().addContainerGap().addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField20, -2, -1, -2).addComponent(this.jTextField21, -2, -1, -2).addComponent(this.jButton15)).addContainerGap(248, 32767)));
-        this.jTabbedPane2.addTab("å¥–åŠ±ç³»åˆ—", this.jPanel2);
+        this.jTabbedPane2.addTab("½±ÀøÏµÁĞ", this.jPanel2);
         this.jTextField27.setHorizontalAlignment(0);
-        this.jTextField27.setText("æ€ªç‰©ID");
+        this.jTextField27.setText("¹ÖÎïID");
         this.jTextField28.setHorizontalAlignment(0);
-        this.jTextField28.setText("ç‰©å“ID");
+        this.jTextField28.setText("ÎïÆ·ID");
         this.jTextField29.setHorizontalAlignment(0);
-        this.jTextField29.setText("æœ€å°æ‰è½");
+        this.jTextField29.setText("×îĞ¡µôÂä");
         this.jTextField30.setHorizontalAlignment(0);
-        this.jTextField30.setText("æœ€å¤§æ‰è½");
+        this.jTextField30.setText("×î´óµôÂä");
         this.jTextField31.setHorizontalAlignment(0);
-        this.jTextField31.setText("çˆ†ç‡");
-        this.jButton20.setText("å•ç‹¬æ·»åŠ ");
+        this.jTextField31.setText("±¬ÂÊ");
+        this.jButton20.setText("µ¥¶ÀÌí¼Ó");
         this.jButton20.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton20ActionPerformed(evt);
             }
         });
-        this.jButton21.setText("å…¨éƒ¨æ·»åŠ ");
+        this.jButton21.setText("È«²¿Ìí¼Ó");
         this.jButton21.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
@@ -510,19 +510,19 @@ public class KinMS extends JFrame
             }
         });
         this.jLabel4.setForeground(new Color(255, 0, 0));
-        this.jLabel4.setText("ç»™å…¨éƒ¨æ€ªç‰©æ·»åŠ ã€åˆ é™¤æ‰è½æ—¶æ— éœ€å¡«å†™æ€ªç‰©ID");
+        this.jLabel4.setText("¸øÈ«²¿¹ÖÎïÌí¼Ó¡¢É¾³ıµôÂäÊ±ÎŞĞèÌîĞ´¹ÖÎïID");
         this.jTextField32.setHorizontalAlignment(0);
-        this.jTextField32.setText("æ€ªç‰©ID");
+        this.jTextField32.setText("¹ÖÎïID");
         this.jTextField33.setHorizontalAlignment(0);
-        this.jTextField33.setText("ç‰©å“ID");
-        this.jButton22.setText("å•ç‹¬åˆ é™¤");
+        this.jTextField33.setText("ÎïÆ·ID");
+        this.jButton22.setText("µ¥¶ÀÉ¾³ı");
         this.jButton22.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton22ActionPerformed(evt);
             }
         });
-        this.jButton23.setText("å…¨éƒ¨åˆ é™¤");
+        this.jButton23.setText("È«²¿É¾³ı");
         this.jButton23.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
@@ -533,12 +533,12 @@ public class KinMS extends JFrame
         this.jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel4Layout.createSequentialGroup().addContainerGap().addGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(this.jSeparator1).addGroup(jPanel4Layout.createSequentialGroup().addGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(this.jLabel4).addGroup(jPanel4Layout.createSequentialGroup().addGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.TRAILING).addGroup(GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup().addComponent(this.jTextField32, -2, 80, -2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jTextField33, -2, 80, -2)).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jTextField27, -2, 80, -2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jTextField28, -2, 80, -2))).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jTextField29, -2, 70, -2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jTextField30, -2, 70, -2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jTextField31, -2, 50, -2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 115, 32767).addComponent(this.jButton20, -2, 80, -2)).addGroup(GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup().addGap(0, 0, 32767).addComponent(this.jButton22, -2, 80, -2))))).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, -1, 32767).addGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(this.jButton21, GroupLayout.Alignment.TRAILING, -2, 80, -2).addComponent(this.jButton23, GroupLayout.Alignment.TRAILING, -2, 80, -2)))).addContainerGap()));
         jPanel4Layout.setVerticalGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel4Layout.createSequentialGroup().addContainerGap().addComponent(this.jLabel4).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField27, -2, -1, -2).addComponent(this.jTextField28, -2, -1, -2).addComponent(this.jTextField29, -2, -1, -2).addComponent(this.jTextField30, -2, -1, -2).addComponent(this.jTextField31, -1, -1, -2).addComponent(this.jButton20).addComponent(this.jButton21)).addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED).addComponent(this.jSeparator1, -2, 14, -2).addGap(1, 1, 1).addGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField32, -2, -1, -2).addComponent(this.jTextField33, -2, -1, -2).addComponent(this.jButton22).addComponent(this.jButton23)).addContainerGap(179, 32767)));
-        this.jTabbedPane2.addTab("æ€ªç‰©æ‰è½", this.jPanel4);
+        this.jTabbedPane2.addTab("¹ÖÎïµôÂä", this.jPanel4);
         this.jTextField34.setHorizontalAlignment(0);
-        this.jTextField34.setText("æ€ªç‰©ID");
+        this.jTextField34.setText("¹ÖÎïID");
         this.jTextField35.setHorizontalAlignment(0);
-        this.jTextField35.setText("ç‰©å“ID");
-        this.jButton24.setText("æŸ¥è¯¢");
+        this.jTextField35.setText("ÎïÆ·ID");
+        this.jButton24.setText("²éÑ¯");
         this.jButton24.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
@@ -553,29 +553,29 @@ public class KinMS extends JFrame
         jPanel10Layout.setHorizontalGroup(jPanel10Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel10Layout.createSequentialGroup().addContainerGap().addGroup(jPanel10Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(this.jScrollPane3, -1, 655, 32767).addGroup(jPanel10Layout.createSequentialGroup().addComponent(this.jTextField34, -2, 80, -2).addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED).addComponent(this.jTextField35, -2, 80, -2).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, -1, 32767).addComponent(this.jButton24, -2, 70, -2))).addContainerGap()));
         jPanel10Layout.setVerticalGroup(jPanel10Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel10Layout.createSequentialGroup().addContainerGap().addGroup(jPanel10Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField34, -2, -1, -2).addComponent(this.jTextField35, -2, -1, -2).addComponent(this.jButton24)).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(this.jScrollPane3, -1, 232, 32767).addContainerGap()));
         this.jTextField34.getAccessibleContext().setAccessibleName("");
-        this.jTabbedPane2.addTab("æŸ¥è¯¢ä¿®æ”¹", this.jPanel10);
-        this.jTextField24.setText("è´¦å·");
+        this.jTabbedPane2.addTab("²éÑ¯ĞŞ¸Ä", this.jPanel10);
+        this.jTextField24.setText("ÕËºÅ");
         this.jTextField24.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jTextField24ActionPerformed(evt);
             }
         });
-        this.jTextField25.setText("æ–°å¯†ç ");
+        this.jTextField25.setText("ĞÂÃÜÂë");
         this.jTextField25.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jTextField25ActionPerformed(evt);
             }
         });
-        this.jButton18.setText("ä¿®æ”¹å¯†ç ");
+        this.jButton18.setText("ĞŞ¸ÄÃÜÂë");
         this.jButton18.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
                 KinMS.this.jButton18ActionPerformed(evt);
             }
         });
-        this.jTextField26.setText("ä¸‡èƒ½å¯†ç ");
+        this.jTextField26.setText("ÍòÄÜÃÜÂë");
         this.jTextField26.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
@@ -591,12 +591,12 @@ public class KinMS extends JFrame
             }
         });
         this.jLabel5.setForeground(new Color(255, 0, 0));
-        this.jLabel5.setText("ä¿®æ”¹å¯†ç ");
+        this.jLabel5.setText("ĞŞ¸ÄÃÜÂë");
         this.jLabel6.setForeground(new Color(255, 51, 0));
-        this.jLabel6.setText("æ³¨å†Œè´¦å·");
-        this.jTextField36.setText("è´¦å·");
-        this.jTextField37.setText("å¯†ç ");
-        this.jButton25.setText("æ³¨å†Œ");
+        this.jLabel6.setText("×¢²áÕËºÅ");
+        this.jTextField36.setText("ÕËºÅ");
+        this.jTextField37.setText("ÃÜÂë");
+        this.jButton25.setText("×¢²á");
         this.jButton25.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
@@ -607,7 +607,7 @@ public class KinMS extends JFrame
         this.jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel3Layout.createSequentialGroup().addContainerGap().addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel3Layout.createSequentialGroup().addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.TRAILING).addComponent(this.jTextField26, -2, 88, -2).addGroup(jPanel3Layout.createSequentialGroup().addComponent(this.jTextField24, -2, 88, -2).addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED).addComponent(this.jTextField25, -2, 88, -2))).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(this.jButton18).addComponent(this.checkbox1, -2, -1, -2))).addComponent(this.jLabel5).addComponent(this.jLabel6).addGroup(jPanel3Layout.createSequentialGroup().addComponent(this.jTextField36, -2, 88, -2).addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED).addComponent(this.jTextField37, -2, 88, -2).addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED).addComponent(this.jButton25, -2, 80, -2))).addContainerGap(388, 32767)).addComponent(this.jSeparator2));
         jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup().addContainerGap().addComponent(this.jLabel6).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField36, -2, -1, -2).addComponent(this.jTextField37, -2, -1, -2).addComponent(this.jButton25)).addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED).addComponent(this.jSeparator2, -2, 10, -2).addGap(2, 2, 2).addComponent(this.jLabel5).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.jTextField24, -2, -1, -2).addComponent(this.jTextField25, -2, -1, -2).addComponent(this.jButton18)).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.TRAILING).addComponent(this.jTextField26, -2, -1, -2).addComponent(this.checkbox1, -2, -1, -2)).addContainerGap(129, 32767)));
-        this.jTabbedPane2.addTab("è´¦å·ç®¡ç†", this.jPanel3);
+        this.jTabbedPane2.addTab("ÕËºÅ¹ÜÀí", this.jPanel3);
         final GroupLayout layout = new GroupLayout(this.getContentPane());
         this.getContentPane().setLayout(layout);
         layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(this.jScrollPane1).addGroup(layout.createSequentialGroup().addContainerGap(-1, 32767).addComponent(this.canvas1, -2, -1, -2)).addGroup(layout.createSequentialGroup().addComponent(this.jTabbedPane2, -2, 680, -2).addGap(0, 0, 32767)));
@@ -621,52 +621,52 @@ public class KinMS extends JFrame
                 instance1.reloadEvents();
             }
         }
-        final String è¾“å‡º = "[é‡è½½ç³»ç»Ÿ] å‰¯æœ¬é‡è½½æˆåŠŸã€‚";
-        JOptionPane.showMessageDialog(null, "å‰¯æœ¬é‡è½½æˆåŠŸã€‚");
-        this.printChatLog(è¾“å‡º);
+        final String Êä³ö = "[ÖØÔØÏµÍ³] ¸±±¾ÖØÔØ³É¹¦¡£";
+        JOptionPane.showMessageDialog(null, "¸±±¾ÖØÔØ³É¹¦¡£");
+        this.printChatLog(Êä³ö);
     }
     
     private void jButton5ActionPerformed(final ActionEvent evt) {
         MapleMonsterInformationProvider.getInstance().clearDrops();
-        final String è¾“å‡º = "[é‡è½½ç³»ç»Ÿ] çˆ†ç‡é‡è½½æˆåŠŸã€‚";
-        JOptionPane.showMessageDialog(null, "çˆ†ç‡é‡è½½æˆåŠŸã€‚");
-        this.printChatLog(è¾“å‡º);
+        final String Êä³ö = "[ÖØÔØÏµÍ³] ±¬ÂÊÖØÔØ³É¹¦¡£";
+        JOptionPane.showMessageDialog(null, "±¬ÂÊÖØÔØ³É¹¦¡£");
+        this.printChatLog(Êä³ö);
     }
     
     private void jButton6ActionPerformed(final ActionEvent evt) {
         SendPacketOpcode.reloadValues();
         RecvPacketOpcode.reloadValues();
-        final String è¾“å‡º = "[é‡è½½ç³»ç»Ÿ] åŒ…å¤´é‡è½½æˆåŠŸã€‚";
-        JOptionPane.showMessageDialog(null, "åŒ…å¤´é‡è½½æˆåŠŸã€‚");
-        this.printChatLog(è¾“å‡º);
+        final String Êä³ö = "[ÖØÔØÏµÍ³] °üÍ·ÖØÔØ³É¹¦¡£";
+        JOptionPane.showMessageDialog(null, "°üÍ·ÖØÔØ³É¹¦¡£");
+        this.printChatLog(Êä³ö);
     }
     
     private void jButton3ActionPerformed(final ActionEvent evt) {
         PortalScriptManager.getInstance().clearScripts();
-        final String è¾“å‡º = "[é‡è½½ç³»ç»Ÿ] ä¼ é€é—¨é‡è½½æˆåŠŸã€‚";
-        JOptionPane.showMessageDialog(null, "ä¼ é€é—¨é‡è½½æˆåŠŸã€‚");
-        this.printChatLog(è¾“å‡º);
+        final String Êä³ö = "[ÖØÔØÏµÍ³] ´«ËÍÃÅÖØÔØ³É¹¦¡£";
+        JOptionPane.showMessageDialog(null, "´«ËÍÃÅÖØÔØ³É¹¦¡£");
+        this.printChatLog(Êä³ö);
     }
     
     private void jButton4ActionPerformed(final ActionEvent evt) {
         MapleShopFactory.getInstance().clear();
-        final String è¾“å‡º = "[é‡è½½ç³»ç»Ÿ] å•†åº—é‡è½½æˆåŠŸã€‚";
-        JOptionPane.showMessageDialog(null, "å•†åº—é‡è½½æˆåŠŸã€‚");
-        this.printChatLog(è¾“å‡º);
+        final String Êä³ö = "[ÖØÔØÏµÍ³] ÉÌµêÖØÔØ³É¹¦¡£";
+        JOptionPane.showMessageDialog(null, "ÉÌµêÖØÔØ³É¹¦¡£");
+        this.printChatLog(Êä³ö);
     }
     
     private void jButton2ActionPerformed(final ActionEvent evt) {
         ReactorScriptManager.getInstance().clearDrops();
-        final String è¾“å‡º = "[é‡è½½ç³»ç»Ÿ] ååº”å †é‡è½½æˆåŠŸã€‚";
-        JOptionPane.showMessageDialog(null, "ååº”å †é‡è½½æˆåŠŸã€‚");
-        this.printChatLog(è¾“å‡º);
+        final String Êä³ö = "[ÖØÔØÏµÍ³] ·´Ó¦¶ÑÖØÔØ³É¹¦¡£";
+        JOptionPane.showMessageDialog(null, "·´Ó¦¶ÑÖØÔØ³É¹¦¡£");
+        this.printChatLog(Êä³ö);
     }
     
     private void jButton9ActionPerformed(final ActionEvent evt) {
         MapleQuest.clearQuests();
-        final String è¾“å‡º = "[é‡è½½ç³»ç»Ÿ] ä»»åŠ¡é‡è½½æˆåŠŸã€‚";
-        JOptionPane.showMessageDialog(null, "ä»»åŠ¡é‡è½½æˆåŠŸã€‚");
-        this.printChatLog(è¾“å‡º);
+        final String Êä³ö = "[ÖØÔØÏµÍ³] ÈÎÎñÖØÔØ³É¹¦¡£";
+        JOptionPane.showMessageDialog(null, "ÈÎÎñÖØÔØ³É¹¦¡£");
+        this.printChatLog(Êä³ö);
     }
     
     private void jButton8ActionPerformed(final ActionEvent evt) {
@@ -675,9 +675,9 @@ public class KinMS extends JFrame
             ++p;
             cserv.closeAllMerchant();
         }
-        final String è¾“å‡º = "[ä¿å­˜é›‡ä½£å•†äººç³»ç»Ÿ] é›‡ä½£å•†äººä¿å­˜" + p + "ä¸ªé¢‘é“æˆåŠŸã€‚";
-        JOptionPane.showMessageDialog(null, "é›‡ä½£å•†äººä¿å­˜" + p + "ä¸ªé¢‘é“æˆåŠŸã€‚");
-        this.printChatLog(è¾“å‡º);
+        final String Êä³ö = "[±£´æ¹ÍÓ¶ÉÌÈËÏµÍ³] ¹ÍÓ¶ÉÌÈË±£´æ" + p + "¸öÆµµÀ³É¹¦¡£";
+        JOptionPane.showMessageDialog(null, "¹ÍÓ¶ÉÌÈË±£´æ" + p + "¸öÆµµÀ³É¹¦¡£");
+        this.printChatLog(Êä³ö);
     }
     
     private void jButton7ActionPerformed(final ActionEvent evt) {
@@ -688,20 +688,20 @@ public class KinMS extends JFrame
                 chr.saveToDB(true, true);
             }
         }
-        final String è¾“å‡º = "[ä¿å­˜æ•°æ®ç³»ç»Ÿ] ä¿å­˜" + p + "ä¸ªæˆåŠŸã€‚";
-        JOptionPane.showMessageDialog(null, è¾“å‡º);
-        this.printChatLog(è¾“å‡º);
+        final String Êä³ö = "[±£´æÊı¾İÏµÍ³] ±£´æ" + p + "¸ö³É¹¦¡£";
+        JOptionPane.showMessageDialog(null, Êä³ö);
+        this.printChatLog(Êä³ö);
     }
     
     private void jButton10ActionPerformed(final ActionEvent evt) {
         try {
             if (Start.Check) {
                 Start.instance.startServer();
-                final String è¾“å‡º = "[æœåŠ¡å™¨] æœåŠ¡å™¨å¯åŠ¨æˆåŠŸï¼";
-                this.printChatLog(è¾“å‡º);
+                final String Êä³ö = "[·şÎñÆ÷] ·şÎñÆ÷Æô¶¯³É¹¦£¡";
+                this.printChatLog(Êä³ö);
             }
             else {
-                JOptionPane.showMessageDialog(null, "[æœåŠ¡å™¨] æ— æ³•é‡å¤è¿è¡Œã€‚");
+                JOptionPane.showMessageDialog(null, "[·şÎñÆ÷] ÎŞ·¨ÖØ¸´ÔËĞĞ¡£");
             }
         }
         catch (InterruptedException ex) {
@@ -718,9 +718,9 @@ public class KinMS extends JFrame
     
     private void jButton12ActionPerformed(final ActionEvent evt) {
         CashItemFactory.getInstance().clearCashShop();
-        final String è¾“å‡º = "[é‡è½½ç³»ç»Ÿ] å•†åŸé‡è½½æˆåŠŸã€‚";
-        JOptionPane.showMessageDialog(null, "å•†åŸé‡è½½æˆåŠŸã€‚");
-        this.printChatLog(è¾“å‡º);
+        final String Êä³ö = "[ÖØÔØÏµÍ³] ÉÌ³ÇÖØÔØ³É¹¦¡£";
+        JOptionPane.showMessageDialog(null, "ÉÌ³ÇÖØÔØ³É¹¦¡£");
+        this.printChatLog(Êä³ö);
     }
     
     private void jTextField2ActionPerformed(final ActionEvent evt) {
@@ -731,18 +731,18 @@ public class KinMS extends JFrame
     }
     
     private void jButton14ActionPerformed(final ActionEvent evt) {
-        this.åˆ·ç‰©å“();
+        this.Ë¢ÎïÆ·();
     }
     
     private void jTextField20ActionPerformed(final ActionEvent evt) {
     }
     
     private void jButton15ActionPerformed(final ActionEvent evt) {
-        this.ç»™å…¨æœç‚¹å·();
+        this.¸øÈ«·şµã¾í();
     }
     
     private void jButton16ActionPerformed(final ActionEvent evt) {
-        this.é‡å¯æœåŠ¡å™¨();
+        this.ÖØÆô·şÎñÆ÷();
     }
     
     private void jTextField22ActionPerformed(final ActionEvent evt) {
@@ -783,43 +783,43 @@ public class KinMS extends JFrame
     }
     
     private void jButton20ActionPerformed(final ActionEvent evt) {
-        this.å•ç‹¬æ·»åŠ ();
+        this.µ¥¶ÀÌí¼Ó();
     }
     
     private void jButton21ActionPerformed(final ActionEvent evt) {
-        this.å…¨éƒ¨æ·»åŠ ();
+        this.È«²¿Ìí¼Ó();
     }
     
     private void jButton22ActionPerformed(final ActionEvent evt) {
-        this.å•ç‹¬åˆ é™¤();
+        this.µ¥¶ÀÉ¾³ı();
     }
     
     private void jButton23ActionPerformed(final ActionEvent evt) {
-        this.å…¨éƒ¨åˆ é™¤();
+        this.È«²¿É¾³ı();
     }
     
     private void jButton24ActionPerformed(final ActionEvent evt) {
-        this.æŸ¥è¯¢çˆ†ç‡();
+        this.²éÑ¯±¬ÂÊ();
     }
     
     private void jButton25ActionPerformed(final ActionEvent evt) {
-        this.æ³¨å†Œ();
+        this.×¢²á();
     }
     
-    private void æ³¨å†Œ() {
+    private void ×¢²á() {
         final String acc = this.jTextField36.getText();
         final String password = this.jTextField37.getText();
         if (acc == null || password == null) {
-            this.printChatLog("è´¦å·æˆ–å¯†ç å¼‚å¸¸");
+            this.printChatLog("ÕËºÅ»òÃÜÂëÒì³£");
             return;
         }
         final boolean ACCexist = AutoRegister.getAccountExists(acc);
         if (ACCexist) {
-            this.printChatLog("å¸å·å·²è¢«ä½¿ç”¨");
+            this.printChatLog("ÕÊºÅÒÑ±»Ê¹ÓÃ");
             return;
         }
         if (acc.length() >= 12) {
-            this.printChatLog("å¯†ç é•¿åº¦è¿‡é•¿");
+            this.printChatLog("ÃÜÂë³¤¶È¹ı³¤");
             return;
         }
         try {
@@ -841,15 +841,15 @@ public class KinMS extends JFrame
             System.out.println(ex2);
             return;
         }
-        this.jTextField36.setText("è´¦å·");
-        this.jTextField37.setText("å¯†ç ");
-        this.printChatLog("[æ³¨å†Œå®Œæˆ] è´¦å·: " + acc + " å¯†ç : " + password);
+        this.jTextField36.setText("ÕËºÅ");
+        this.jTextField37.setText("ÃÜÂë");
+        this.printChatLog("[×¢²áÍê³É] ÕËºÅ: " + acc + " ÃÜÂë: " + password);
     }
     
-    private void æŸ¥è¯¢çˆ†ç‡() {
+    private void ²éÑ¯±¬ÂÊ() {
         if (this.popupMenu == null) {
             this.popupMenu = new JPopupMenu();
-            final JMenuItem jMenuItem = new JMenuItem("åˆ é™¤");
+            final JMenuItem jMenuItem = new JMenuItem("É¾³ı");
             this.popupMenu.add(jMenuItem);
             this.jTable1.addMouseListener(new MouseAdapter() {
                 @Override
@@ -878,7 +878,7 @@ public class KinMS extends JFrame
             final Connection con = DatabaseConnection.getConnection();
             java.sql.PreparedStatement ps = null;
             String sql = "SELECT * FROM drop_data where dropperid = ?";
-            if (this.jTextField34.getText().equals("æ€ªç‰©ID") || this.jTextField34.getText().equals("")) {
+            if (this.jTextField34.getText().equals("¹ÖÎïID") || this.jTextField34.getText().equals("")) {
                 itemid = Integer.parseInt(this.jTextField35.getText());
                 sql = "SELECT * FROM drop_data where itemid = ?";
                 ps = con.prepareStatement(sql);
@@ -887,15 +887,15 @@ public class KinMS extends JFrame
             else {
                 dropperid = Integer.parseInt(this.jTextField34.getText());
                 if (this.jTextField35.getText().equals("")) {
-                    this.jTextField35.setText("ç‰©å“ID");
+                    this.jTextField35.setText("ÎïÆ·ID");
                 }
-                if (!this.jTextField35.getText().equals("ç‰©å“ID")) {
+                if (!this.jTextField35.getText().equals("ÎïÆ·ID")) {
                     itemid = Integer.parseInt(this.jTextField35.getText());
                     sql += " and itemid = ?";
                 }
                 ps = con.prepareStatement(sql);
                 ps.setInt(1, dropperid);
-                if (!this.jTextField35.getText().equals("ç‰©å“ID")) {
+                if (!this.jTextField35.getText().equals("ÎïÆ·ID")) {
                     ps.setInt(2, itemid);
                 }
             }
@@ -914,17 +914,17 @@ public class KinMS extends JFrame
             final DropDataTableModel dataTableModel = new DropDataTableModel(dropData);
             this.jTable1.setModel(dataTableModel);
             if (dropData.isEmpty()) {
-                this.printChatLog("æŸ¥è¯¢ä¸åˆ°æ•°æ®!");
+                this.printChatLog("²éÑ¯²»µ½Êı¾İ!");
             }
         }
         catch (NumberFormatException | SQLException ex3) {
             final Exception ex2 = null;
             final Exception ex = ex2;
-            JOptionPane.showMessageDialog(null, "é”™è¯¯!\r\n" + ex);
+            JOptionPane.showMessageDialog(null, "´íÎó!\r\n" + ex);
         }
     }
     
-    private void å•ç‹¬åˆ é™¤() {
+    private void µ¥¶ÀÉ¾³ı() {
         final int dropperid = Integer.parseInt(this.jTextField32.getText());
         final int itemid = Integer.parseInt(this.jTextField33.getText());
         try {
@@ -935,18 +935,18 @@ public class KinMS extends JFrame
             final int execute = ps.executeUpdate();
             ps.close();
             if (execute > 0) {
-                this.printChatLog("åˆ é™¤æ€ªç‰©ï¼š" + dropperid + "çš„" + itemid + "æˆåŠŸ!");
+                this.printChatLog("É¾³ı¹ÖÎï£º" + dropperid + "µÄ" + itemid + "³É¹¦!");
             }
             else {
-                this.printChatLog("æ€ªç‰©IDæˆ–è€…ç‰©å“IDä¸å­˜åœ¨,åˆ é™¤å¤±è´¥.");
+                this.printChatLog("¹ÖÎïID»òÕßÎïÆ·ID²»´æÔÚ,É¾³ıÊ§°Ü.");
             }
         }
         catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "é”™è¯¯!\r\n" + ex);
+            JOptionPane.showMessageDialog(null, "´íÎó!\r\n" + ex);
         }
     }
     
-    private void å…¨éƒ¨åˆ é™¤() {
+    private void È«²¿É¾³ı() {
         final int itemid = Integer.parseInt(this.jTextField33.getText());
         try {
             final Connection con = DatabaseConnection.getConnection();
@@ -963,12 +963,12 @@ public class KinMS extends JFrame
             ps2.close();
         }
         catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "é”™è¯¯!\r\n" + ex);
+            JOptionPane.showMessageDialog(null, "´íÎó!\r\n" + ex);
         }
-        this.printChatLog("åˆ é™¤æ‰€æœ‰ä¼šæ‰è½" + itemid + "çš„ç‰©å“æˆåŠŸ!");
+        this.printChatLog("É¾³ıËùÓĞ»áµôÂä" + itemid + "µÄÎïÆ·³É¹¦!");
     }
     
-    private void å•ç‹¬æ·»åŠ () {
+    private void µ¥¶ÀÌí¼Ó() {
         final int dropperid = Integer.parseInt(this.jTextField27.getText());
         final int itemid = Integer.parseInt(this.jTextField28.getText());
         final int minimumQuantity = Integer.parseInt(this.jTextField29.getText());
@@ -989,13 +989,13 @@ public class KinMS extends JFrame
         catch (NumberFormatException | SQLException ex3) {
             final Exception ex2 = null;
             final Exception ex = ex2;
-            JOptionPane.showMessageDialog(null, "é”™è¯¯!\r\n" + ex);
-            JOptionPane.showMessageDialog(null, "é”™è¯¯!\r\n" + ex3);
+            JOptionPane.showMessageDialog(null, "´íÎó!\r\n" + ex);
+            JOptionPane.showMessageDialog(null, "´íÎó!\r\n" + ex3);
         }
-        this.printChatLog("å•ç‹¬æ·»åŠ æ‰è½æˆåŠŸ!");
+        this.printChatLog("µ¥¶ÀÌí¼ÓµôÂä³É¹¦!");
     }
     
-    private void å…¨éƒ¨æ·»åŠ () {
+    private void È«²¿Ìí¼Ó() {
         final int itemid = Integer.parseInt(this.jTextField28.getText());
         final int minimumQuantity = Integer.parseInt(this.jTextField29.getText());
         final int maximumQuantity = Integer.parseInt(this.jTextField30.getText());
@@ -1019,20 +1019,20 @@ public class KinMS extends JFrame
             ps2.close();
         }
         catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "é”™è¯¯!\r\n" + ex);
+            JOptionPane.showMessageDialog(null, "´íÎó!\r\n" + ex);
         }
-        this.printChatLog("ç»™æ‰€æœ‰æ€ªç‰©æ·»åŠ æ‰è½æˆåŠŸ!");
+        this.printChatLog("¸øËùÓĞ¹ÖÎïÌí¼ÓµôÂä³É¹¦!");
     }
     
     private void ChangePassWord() {
         final String account = this.jTextField24.getText();
         final String password = this.jTextField25.getText();
         if (password.length() > 12) {
-            JOptionPane.showMessageDialog(null, "å¯†ç è¿‡é•¿");
+            JOptionPane.showMessageDialog(null, "ÃÜÂë¹ı³¤");
             return;
         }
         if (!AutoRegister.getAccountExists(account)) {
-            JOptionPane.showMessageDialog(null, "è´¦å·ä¸å­˜åœ¨");
+            JOptionPane.showMessageDialog(null, "ÕËºÅ²»´æÔÚ");
             return;
         }
         try {
@@ -1044,14 +1044,14 @@ public class KinMS extends JFrame
             ps.close();
         }
         catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "é”™è¯¯!\r\n" + ex);
+            JOptionPane.showMessageDialog(null, "´íÎó!\r\n" + ex);
         }
-        this.printChatLog("æ›´æ”¹è´¦å·: " + account + "çš„å¯†ç ä¸º " + password);
+        this.printChatLog("¸ü¸ÄÕËºÅ: " + account + "µÄÃÜÂëÎª " + password);
     }
     
-    private void é‡å¯æœåŠ¡å™¨() {
+    private void ÖØÆô·şÎñÆ÷() {
         try {
-            final String è¾“å‡º = "å…³é—­æœåŠ¡å™¨å€’æ•°æ—¶é—´";
+            final String Êä³ö = "¹Ø±Õ·şÎñÆ÷µ¹ÊıÊ±¼ä";
             this.minutesLeft = Integer.parseInt(this.jTextField22.getText());
             if (KinMS.ts == null && (KinMS.t == null || !KinMS.t.isAlive())) {
                 KinMS.t = new Thread(ShutdownServer.getInstance());
@@ -1064,252 +1064,252 @@ public class KinMS extends JFrame
                             KinMS.ts.cancel(false);
                             return;
                         }
-                        World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(0, "æœåŠ¡å™¨å°‡åœ¨ " + KinMS.this.minutesLeft + "åˆ†é’Ÿåå…³é—­. è¯·å°½å¿«å…³é—­é›‡ä½£å•†äººå®‰å…¨ä¸‹çº¿.").getBytes());
-                        System.out.println("æœåŠ¡å™¨å°‡åœ¨ " + KinMS.this.minutesLeft + "åˆ†é’Ÿåå…³é—­.");
+                        World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(0, "·şÎñÆ÷Œ¢ÔÚ " + KinMS.this.minutesLeft + "·ÖÖÓºó¹Ø±Õ. Çë¾¡¿ì¹Ø±Õ¹ÍÓ¶ÉÌÈË°²È«ÏÂÏß.").getBytes());
+                        System.out.println("·şÎñÆ÷Œ¢ÔÚ " + KinMS.this.minutesLeft + "·ÖÖÓºó¹Ø±Õ.");
                         KinMS.this.minutesLeft--;
                     }
                 }, 60000L);
             }
-            this.jTextField22.setText("å…³é—­æœåŠ¡å™¨å€’æ•°æ—¶é—´");
-            this.printChatLog(è¾“å‡º);
+            this.jTextField22.setText("¹Ø±Õ·şÎñÆ÷µ¹ÊıÊ±¼ä");
+            this.printChatLog(Êä³ö);
         }
         catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "é”™è¯¯!\r\n" + e);
+            JOptionPane.showMessageDialog(null, "´íÎó!\r\n" + e);
         }
     }
     
-    private void ç»™å…¨æœç‚¹å·() {
+    private void ¸øÈ«·şµã¾í() {
         try {
-            int æ•°é‡;
-            if ("è¾“å…¥æ•°é‡".equals(this.jTextField20.getText())) {
-                æ•°é‡ = 0;
+            int ÊıÁ¿;
+            if ("ÊäÈëÊıÁ¿".equals(this.jTextField20.getText())) {
+                ÊıÁ¿ = 0;
             }
             else {
-                æ•°é‡ = Integer.parseInt(this.jTextField20.getText());
+                ÊıÁ¿ = Integer.parseInt(this.jTextField20.getText());
             }
-            int ç±»å‹;
-            if ("1ç‚¹å·/2æŠµç”¨/3é‡‘å¸/4ç»éªŒ".equals(this.jTextField21.getText())) {
-                ç±»å‹ = 0;
+            int ÀàĞÍ;
+            if ("1µã¾í/2µÖÓÃ/3½ğ±Ò/4¾­Ñé".equals(this.jTextField21.getText())) {
+                ÀàĞÍ = 0;
             }
             else {
-                ç±»å‹ = Integer.parseInt(this.jTextField21.getText());
+                ÀàĞÍ = Integer.parseInt(this.jTextField21.getText());
             }
-            if (æ•°é‡ <= 0 || ç±»å‹ <= 0) {
+            if (ÊıÁ¿ <= 0 || ÀàĞÍ <= 0) {
                 return;
             }
-            String è¾“å‡º = "";
+            String Êä³ö = "";
             int ret = 0;
-            if (ç±»å‹ == 1 || ç±»å‹ == 2) {
+            if (ÀàĞÍ == 1 || ÀàĞÍ == 2) {
                 for (final ChannelServer cserv1 : ChannelServer.getAllInstances()) {
                     for (final MapleCharacter mch : cserv1.getPlayerStorage().getAllCharacters()) {
-                        mch.modifyCSPoints(ç±»å‹, æ•°é‡);
+                        mch.modifyCSPoints(ÀàĞÍ, ÊıÁ¿);
                         String cash = null;
-                        if (ç±»å‹ == 1) {
-                            cash = "ç‚¹å·";
+                        if (ÀàĞÍ == 1) {
+                            cash = "µã¾í";
                         }
-                        else if (ç±»å‹ == 2) {
-                            cash = "æŠµç”¨å·";
+                        else if (ÀàĞÍ == 2) {
+                            cash = "µÖÓÃ¾í";
                         }
-                        mch.startMapEffect("ç®¡ç†å‘˜å‘æ”¾" + æ•°é‡ + cash + "ç»™åœ¨çº¿çš„æ‰€æœ‰ç©å®¶ï¼å¿«æ„Ÿè°¢ç®¡ç†å‘˜å§ï¼", 5121009);
+                        mch.startMapEffect("¹ÜÀíÔ±·¢·Å" + ÊıÁ¿ + cash + "¸øÔÚÏßµÄËùÓĞÍæ¼Ò£¡¿ì¸ĞĞ»¹ÜÀíÔ±°É£¡", 5121009);
                         ++ret;
                     }
                 }
             }
-            else if (ç±»å‹ == 3) {
+            else if (ÀàĞÍ == 3) {
                 for (final ChannelServer cserv1 : ChannelServer.getAllInstances()) {
                     for (final MapleCharacter mch : cserv1.getPlayerStorage().getAllCharacters()) {
-                        mch.gainMeso(æ•°é‡, true);
-                        mch.startMapEffect("ç®¡ç†å‘˜å‘æ”¾" + æ•°é‡ + "å†’é™©å¸ç»™åœ¨çº¿çš„æ‰€æœ‰ç©å®¶ï¼å¿«æ„Ÿè°¢ç®¡ç†å‘˜å§ï¼", 5121009);
+                        mch.gainMeso(ÊıÁ¿, true);
+                        mch.startMapEffect("¹ÜÀíÔ±·¢·Å" + ÊıÁ¿ + "Ã°ÏÕ±Ò¸øÔÚÏßµÄËùÓĞÍæ¼Ò£¡¿ì¸ĞĞ»¹ÜÀíÔ±°É£¡", 5121009);
                         ++ret;
                     }
                 }
             }
-            else if (ç±»å‹ == 4) {
+            else if (ÀàĞÍ == 4) {
                 for (final ChannelServer cserv1 : ChannelServer.getAllInstances()) {
                     for (final MapleCharacter mch : cserv1.getPlayerStorage().getAllCharacters()) {
-                        mch.gainExp(æ•°é‡, true, false, true);
-                        mch.startMapEffect("ç®¡ç†å‘˜å‘æ”¾" + æ•°é‡ + "ç»éªŒç»™åœ¨çº¿çš„æ‰€æœ‰ç©å®¶ï¼å¿«æ„Ÿè°¢ç®¡ç†å‘˜å§ï¼", 5121009);
+                        mch.gainExp(ÊıÁ¿, true, false, true);
+                        mch.startMapEffect("¹ÜÀíÔ±·¢·Å" + ÊıÁ¿ + "¾­Ñé¸øÔÚÏßµÄËùÓĞÍæ¼Ò£¡¿ì¸ĞĞ»¹ÜÀíÔ±°É£¡", 5121009);
                         ++ret;
                     }
                 }
             }
-            String ç±»å‹A = "";
-            if (ç±»å‹ == 1) {
-                ç±»å‹A = "ç‚¹å·";
+            String ÀàĞÍA = "";
+            if (ÀàĞÍ == 1) {
+                ÀàĞÍA = "µã¾í";
             }
-            else if (ç±»å‹ == 2) {
-                ç±»å‹A = "æŠµç”¨å·";
+            else if (ÀàĞÍ == 2) {
+                ÀàĞÍA = "µÖÓÃ¾í";
             }
-            else if (ç±»å‹ == 3) {
-                ç±»å‹A = "é‡‘å¸";
+            else if (ÀàĞÍ == 3) {
+                ÀàĞÍA = "½ğ±Ò";
             }
-            else if (ç±»å‹ == 4) {
-                ç±»å‹A = "ç»éªŒ";
+            else if (ÀàĞÍ == 4) {
+                ÀàĞÍA = "¾­Ñé";
             }
-            è¾“å‡º = "ä¸€ä¸ªå‘æ”¾[" + æ•°é‡ * ret + "]." + ç±»å‹A + "!ä¸€å…±å‘æ”¾ç»™äº†" + ret + "äººï¼";
-            this.jTextField20.setText("è¾“å…¥æ•°é‡");
-            this.jTextField21.setText("1ç‚¹å·/2æŠµç”¨/3é‡‘å¸/4ç»éªŒ");
-            this.printChatLog(è¾“å‡º);
+            Êä³ö = "Ò»¸ö·¢·Å[" + ÊıÁ¿ * ret + "]." + ÀàĞÍA + "!Ò»¹²·¢·Å¸øÁË" + ret + "ÈË£¡";
+            this.jTextField20.setText("ÊäÈëÊıÁ¿");
+            this.jTextField21.setText("1µã¾í/2µÖÓÃ/3½ğ±Ò/4¾­Ñé");
+            this.printChatLog(Êä³ö);
         }
         catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "é”™è¯¯!\r\n" + e);
+            JOptionPane.showMessageDialog(null, "´íÎó!\r\n" + e);
         }
     }
     
-    private void åˆ·ç‰©å“() {
+    private void Ë¢ÎïÆ·() {
         try {
-            String åå­—;
-            if ("ç©å®¶åå­—".equals(this.jTextField3.getText())) {
-                åå­— = "";
+            String Ãû×Ö;
+            if ("Íæ¼ÒÃû×Ö".equals(this.jTextField3.getText())) {
+                Ãû×Ö = "";
             }
             else {
-                åå­— = this.jTextField3.getText();
+                Ãû×Ö = this.jTextField3.getText();
             }
-            int ç‰©å“ID;
-            if ("ç‰©å“ID".equals(this.jTextField4.getText())) {
-                ç‰©å“ID = 0;
-            }
-            else {
-                ç‰©å“ID = Integer.parseInt(this.jTextField4.getText());
-            }
-            int æ•°é‡;
-            if ("æ•°é‡".equals(this.jTextField5.getText())) {
-                æ•°é‡ = 0;
+            int ÎïÆ·ID;
+            if ("ÎïÆ·ID".equals(this.jTextField4.getText())) {
+                ÎïÆ·ID = 0;
             }
             else {
-                æ•°é‡ = Integer.parseInt(this.jTextField5.getText());
+                ÎïÆ·ID = Integer.parseInt(this.jTextField4.getText());
             }
-            int åŠ›é‡;
-            if ("åŠ›é‡".equals(this.jTextField6.getText())) {
-                åŠ›é‡ = 0;
-            }
-            else {
-                åŠ›é‡ = Integer.parseInt(this.jTextField6.getText());
-            }
-            int æ•æ·;
-            if ("æ•æ·".equals(this.jTextField7.getText())) {
-                æ•æ· = 0;
+            int ÊıÁ¿;
+            if ("ÊıÁ¿".equals(this.jTextField5.getText())) {
+                ÊıÁ¿ = 0;
             }
             else {
-                æ•æ· = Integer.parseInt(this.jTextField7.getText());
+                ÊıÁ¿ = Integer.parseInt(this.jTextField5.getText());
             }
-            int æ™ºåŠ›;
-            if ("æ™ºåŠ›".equals(this.jTextField8.getText())) {
-                æ™ºåŠ› = 0;
-            }
-            else {
-                æ™ºåŠ› = Integer.parseInt(this.jTextField8.getText());
-            }
-            int è¿æ°”;
-            if ("è¿æ°”".equals(this.jTextField9.getText())) {
-                è¿æ°” = 0;
+            int Á¦Á¿;
+            if ("Á¦Á¿".equals(this.jTextField6.getText())) {
+                Á¦Á¿ = 0;
             }
             else {
-                è¿æ°” = Integer.parseInt(this.jTextField9.getText());
+                Á¦Á¿ = Integer.parseInt(this.jTextField6.getText());
+            }
+            int Ãô½İ;
+            if ("Ãô½İ".equals(this.jTextField7.getText())) {
+                Ãô½İ = 0;
+            }
+            else {
+                Ãô½İ = Integer.parseInt(this.jTextField7.getText());
+            }
+            int ÖÇÁ¦;
+            if ("ÖÇÁ¦".equals(this.jTextField8.getText())) {
+                ÖÇÁ¦ = 0;
+            }
+            else {
+                ÖÇÁ¦ = Integer.parseInt(this.jTextField8.getText());
+            }
+            int ÔËÆø;
+            if ("ÔËÆø".equals(this.jTextField9.getText())) {
+                ÔËÆø = 0;
+            }
+            else {
+                ÔËÆø = Integer.parseInt(this.jTextField9.getText());
             }
             int HP;
-            if ("HPè®¾ç½®".equals(this.jTextField10.getText())) {
+            if ("HPÉèÖÃ".equals(this.jTextField10.getText())) {
                 HP = 0;
             }
             else {
                 HP = Integer.parseInt(this.jTextField10.getText());
             }
             int MP;
-            if ("MPè®¾ç½®".equals(this.jTextField11.getText())) {
+            if ("MPÉèÖÃ".equals(this.jTextField11.getText())) {
                 MP = 0;
             }
             else {
                 MP = Integer.parseInt(this.jTextField11.getText());
             }
-            int å¯åŠ å·æ¬¡æ•°;
-            if ("åŠ å·æ¬¡æ•°".equals(this.jTextField12.getText())) {
-                å¯åŠ å·æ¬¡æ•° = 0;
+            int ¿É¼Ó¾í´ÎÊı;
+            if ("¼Ó¾í´ÎÊı".equals(this.jTextField12.getText())) {
+                ¿É¼Ó¾í´ÎÊı = 0;
             }
             else {
-                å¯åŠ å·æ¬¡æ•° = Integer.parseInt(this.jTextField12.getText());
+                ¿É¼Ó¾í´ÎÊı = Integer.parseInt(this.jTextField12.getText());
             }
-            String åˆ¶ä½œäººåå­—;
-            if ("åˆ¶ä½œäºº".equals(this.jTextField13.getText())) {
-                åˆ¶ä½œäººåå­— = "";
-            }
-            else {
-                åˆ¶ä½œäººåå­— = this.jTextField13.getText();
-            }
-            int ç»™äºˆæ—¶é—´;
-            if ("ç»™äºˆç‰©å“æ—¶é—´".equals(this.jTextField14.getText())) {
-                ç»™äºˆæ—¶é—´ = 0;
+            String ÖÆ×÷ÈËÃû×Ö;
+            if ("ÖÆ×÷ÈË".equals(this.jTextField13.getText())) {
+                ÖÆ×÷ÈËÃû×Ö = "";
             }
             else {
-                ç»™äºˆæ—¶é—´ = Integer.parseInt(this.jTextField14.getText());
+                ÖÆ×÷ÈËÃû×Ö = this.jTextField13.getText();
             }
-            final String æ˜¯å¦å¯ä»¥äº¤æ˜“ = this.jTextField15.getText();
-            int æ”»å‡»åŠ›;
-            if ("æ”»å‡»åŠ›".equals(this.jTextField16.getText())) {
-                æ”»å‡»åŠ› = 0;
-            }
-            else {
-                æ”»å‡»åŠ› = Integer.parseInt(this.jTextField16.getText());
-            }
-            int é­”æ³•åŠ›;
-            if ("é­”æ³•åŠ›".equals(this.jTextField17.getText())) {
-                é­”æ³•åŠ› = 0;
+            int ¸øÓèÊ±¼ä;
+            if ("¸øÓèÎïÆ·Ê±¼ä".equals(this.jTextField14.getText())) {
+                ¸øÓèÊ±¼ä = 0;
             }
             else {
-                é­”æ³•åŠ› = Integer.parseInt(this.jTextField17.getText());
+                ¸øÓèÊ±¼ä = Integer.parseInt(this.jTextField14.getText());
             }
-            int ç‰©ç†é˜²å¾¡;
-            if ("ç‰©ç†é˜²å¾¡".equals(this.jTextField18.getText())) {
-                ç‰©ç†é˜²å¾¡ = 0;
-            }
-            else {
-                ç‰©ç†é˜²å¾¡ = Integer.parseInt(this.jTextField18.getText());
-            }
-            int é­”æ³•é˜²å¾¡;
-            if ("é­”æ³•é˜²å¾¡".equals(this.jTextField19.getText())) {
-                é­”æ³•é˜²å¾¡ = 0;
+            final String ÊÇ·ñ¿ÉÒÔ½»Ò× = this.jTextField15.getText();
+            int ¹¥»÷Á¦;
+            if ("¹¥»÷Á¦".equals(this.jTextField16.getText())) {
+                ¹¥»÷Á¦ = 0;
             }
             else {
-                é­”æ³•é˜²å¾¡ = Integer.parseInt(this.jTextField19.getText());
+                ¹¥»÷Á¦ = Integer.parseInt(this.jTextField16.getText());
+            }
+            int Ä§·¨Á¦;
+            if ("Ä§·¨Á¦".equals(this.jTextField17.getText())) {
+                Ä§·¨Á¦ = 0;
+            }
+            else {
+                Ä§·¨Á¦ = Integer.parseInt(this.jTextField17.getText());
+            }
+            int ÎïÀí·ÀÓù;
+            if ("ÎïÀí·ÀÓù".equals(this.jTextField18.getText())) {
+                ÎïÀí·ÀÓù = 0;
+            }
+            else {
+                ÎïÀí·ÀÓù = Integer.parseInt(this.jTextField18.getText());
+            }
+            int Ä§·¨·ÀÓù;
+            if ("Ä§·¨·ÀÓù".equals(this.jTextField19.getText())) {
+                Ä§·¨·ÀÓù = 0;
+            }
+            else {
+                Ä§·¨·ÀÓù = Integer.parseInt(this.jTextField19.getText());
             }
             final MapleItemInformationProvider ii = MapleItemInformationProvider.getInstance();
-            final MapleInventoryType type = GameConstants.getInventoryType(ç‰©å“ID);
-            String è¾“å‡ºA = "";
-            final String è¾“å‡º = "ç©å®¶åå­—ï¼š" + åå­— + " ç‰©å“IDï¼š" + ç‰©å“ID + " æ•°é‡ï¼š" + æ•°é‡ + " åŠ›é‡:" + åŠ›é‡ + " æ•æ·:" + æ•æ· + " æ™ºåŠ›:" + æ™ºåŠ› + " è¿æ°”:" + è¿æ°” + " HP:" + HP + " MP:" + MP + " å¯åŠ å·æ¬¡æ•°:" + å¯åŠ å·æ¬¡æ•° + " åˆ¶ä½œäººåå­—:" + åˆ¶ä½œäººåå­— + " ç»™äºˆæ—¶é—´:" + ç»™äºˆæ—¶é—´ + " æ˜¯å¦å¯ä»¥äº¤æ˜“:" + æ˜¯å¦å¯ä»¥äº¤æ˜“ + " æ”»å‡»åŠ›:" + æ”»å‡»åŠ› + " é­”æ³•åŠ›:" + é­”æ³•åŠ› + " ç‰©ç†é˜²å¾¡:" + ç‰©ç†é˜²å¾¡ + " é­”æ³•é˜²å¾¡:" + é­”æ³•é˜²å¾¡ + "\r\n";
+            final MapleInventoryType type = GameConstants.getInventoryType(ÎïÆ·ID);
+            String Êä³öA = "";
+            final String Êä³ö = "Íæ¼ÒÃû×Ö£º" + Ãû×Ö + " ÎïÆ·ID£º" + ÎïÆ·ID + " ÊıÁ¿£º" + ÊıÁ¿ + " Á¦Á¿:" + Á¦Á¿ + " Ãô½İ:" + Ãô½İ + " ÖÇÁ¦:" + ÖÇÁ¦ + " ÔËÆø:" + ÔËÆø + " HP:" + HP + " MP:" + MP + " ¿É¼Ó¾í´ÎÊı:" + ¿É¼Ó¾í´ÎÊı + " ÖÆ×÷ÈËÃû×Ö:" + ÖÆ×÷ÈËÃû×Ö + " ¸øÓèÊ±¼ä:" + ¸øÓèÊ±¼ä + " ÊÇ·ñ¿ÉÒÔ½»Ò×:" + ÊÇ·ñ¿ÉÒÔ½»Ò× + " ¹¥»÷Á¦:" + ¹¥»÷Á¦ + " Ä§·¨Á¦:" + Ä§·¨Á¦ + " ÎïÀí·ÀÓù:" + ÎïÀí·ÀÓù + " Ä§·¨·ÀÓù:" + Ä§·¨·ÀÓù + "\r\n";
             for (final ChannelServer cserv1 : ChannelServer.getAllInstances()) {
                 for (final MapleCharacter mch : cserv1.getPlayerStorage().getAllCharacters()) {
-                    if (mch.getName().equals(åå­—)) {
-                        if (æ•°é‡ >= 0) {
-                            if (!MapleInventoryManipulator.checkSpace(mch.getClient(), ç‰©å“ID, æ•°é‡, "")) {
+                    if (mch.getName().equals(Ãû×Ö)) {
+                        if (ÊıÁ¿ >= 0) {
+                            if (!MapleInventoryManipulator.checkSpace(mch.getClient(), ÎïÆ·ID, ÊıÁ¿, "")) {
                                 return;
                             }
-                            if ((type.equals(MapleInventoryType.EQUIP) && !GameConstants.isThrowingStar(ç‰©å“ID) && !GameConstants.isBullet(ç‰©å“ID)) || (type.equals(MapleInventoryType.CASH) && ç‰©å“ID >= 5000000 && ç‰©å“ID <= 5000100)) {
-                                final Equip item = (Equip)ii.getEquipById(ç‰©å“ID);
-                                if (ii.isCash(ç‰©å“ID)) {
+                            if ((type.equals(MapleInventoryType.EQUIP) && !GameConstants.isThrowingStar(ÎïÆ·ID) && !GameConstants.isBullet(ÎïÆ·ID)) || (type.equals(MapleInventoryType.CASH) && ÎïÆ·ID >= 5000000 && ÎïÆ·ID <= 5000100)) {
+                                final Equip item = (Equip)ii.getEquipById(ÎïÆ·ID);
+                                if (ii.isCash(ÎïÆ·ID)) {
                                     item.setUniqueId(1);
                                 }
-                                if (åŠ›é‡ > 0 && åŠ›é‡ <= 32767) {
-                                    item.setStr((short)åŠ›é‡);
+                                if (Á¦Á¿ > 0 && Á¦Á¿ <= 32767) {
+                                    item.setStr((short)Á¦Á¿);
                                 }
-                                if (æ•æ· > 0 && æ•æ· <= 32767) {
-                                    item.setDex((short)æ•æ·);
+                                if (Ãô½İ > 0 && Ãô½İ <= 32767) {
+                                    item.setDex((short)Ãô½İ);
                                 }
-                                if (æ™ºåŠ› > 0 && æ™ºåŠ› <= 32767) {
-                                    item.setInt((short)æ™ºåŠ›);
+                                if (ÖÇÁ¦ > 0 && ÖÇÁ¦ <= 32767) {
+                                    item.setInt((short)ÖÇÁ¦);
                                 }
-                                if (è¿æ°” > 0 && è¿æ°” <= 32767) {
-                                    item.setLuk((short)è¿æ°”);
+                                if (ÔËÆø > 0 && ÔËÆø <= 32767) {
+                                    item.setLuk((short)ÔËÆø);
                                 }
-                                if (æ”»å‡»åŠ› > 0 && æ”»å‡»åŠ› <= 32767) {
-                                    item.setWatk((short)æ”»å‡»åŠ›);
+                                if (¹¥»÷Á¦ > 0 && ¹¥»÷Á¦ <= 32767) {
+                                    item.setWatk((short)¹¥»÷Á¦);
                                 }
-                                if (é­”æ³•åŠ› > 0 && é­”æ³•åŠ› <= 32767) {
-                                    item.setMatk((short)é­”æ³•åŠ›);
+                                if (Ä§·¨Á¦ > 0 && Ä§·¨Á¦ <= 32767) {
+                                    item.setMatk((short)Ä§·¨Á¦);
                                 }
-                                if (ç‰©ç†é˜²å¾¡ > 0 && ç‰©ç†é˜²å¾¡ <= 32767) {
-                                    item.setWdef((short)ç‰©ç†é˜²å¾¡);
+                                if (ÎïÀí·ÀÓù > 0 && ÎïÀí·ÀÓù <= 32767) {
+                                    item.setWdef((short)ÎïÀí·ÀÓù);
                                 }
-                                if (é­”æ³•é˜²å¾¡ > 0 && é­”æ³•é˜²å¾¡ <= 32767) {
-                                    item.setMdef((short)é­”æ³•é˜²å¾¡);
+                                if (Ä§·¨·ÀÓù > 0 && Ä§·¨·ÀÓù <= 32767) {
+                                    item.setMdef((short)Ä§·¨·ÀÓù);
                                 }
                                 if (HP > 0 && HP <= 30000) {
                                     item.setHp((short)HP);
@@ -1317,7 +1317,7 @@ public class KinMS extends JFrame
                                 if (MP > 0 && MP <= 30000) {
                                     item.setMp((short)MP);
                                 }
-                                if ("å¯ä»¥äº¤æ˜“".equals(æ˜¯å¦å¯ä»¥äº¤æ˜“)) {
+                                if ("¿ÉÒÔ½»Ò×".equals(ÊÇ·ñ¿ÉÒÔ½»Ò×)) {
                                     byte flag = item.getFlag();
                                     if (item.getType() == MapleInventoryType.EQUIP.getType()) {
                                         flag |= (byte)ItemFlag.KARMA_EQ.getValue();
@@ -1327,56 +1327,56 @@ public class KinMS extends JFrame
                                     }
                                     item.setFlag(flag);
                                 }
-                                if (ç»™äºˆæ—¶é—´ > 0) {
-                                    item.setExpiration(System.currentTimeMillis() + ç»™äºˆæ—¶é—´ * 24 * 60 * 60 * 1000);
+                                if (¸øÓèÊ±¼ä > 0) {
+                                    item.setExpiration(System.currentTimeMillis() + ¸øÓèÊ±¼ä * 24 * 60 * 60 * 1000);
                                 }
-                                if (å¯åŠ å·æ¬¡æ•° > 0) {
-                                    item.setUpgradeSlots((byte)å¯åŠ å·æ¬¡æ•°);
+                                if (¿É¼Ó¾í´ÎÊı > 0) {
+                                    item.setUpgradeSlots((byte)¿É¼Ó¾í´ÎÊı);
                                 }
-                                if (åˆ¶ä½œäººåå­— != null) {
-                                    item.setOwner(åˆ¶ä½œäººåå­—);
+                                if (ÖÆ×÷ÈËÃû×Ö != null) {
+                                    item.setOwner(ÖÆ×÷ÈËÃû×Ö);
                                 }
-                                final String name = ii.getName(ç‰©å“ID);
-                                if (ç‰©å“ID / 10000 == 114 && name != null && name.length() > 0) {
-                                    final String msg = "ä½ å·²è·å¾—ç§°å· <" + name + ">";
+                                final String name = ii.getName(ÎïÆ·ID);
+                                if (ÎïÆ·ID / 10000 == 114 && name != null && name.length() > 0) {
+                                    final String msg = "ÄãÒÑ»ñµÃ³ÆºÅ <" + name + ">";
                                     mch.getClient().getPlayer().dropMessage(5, msg);
                                     mch.getClient().getPlayer().dropMessage(5, msg);
                                 }
                                 MapleInventoryManipulator.addbyItem(mch.getClient(), item.copy());
                             }
                             else {
-                                MapleInventoryManipulator.addById(mch.getClient(), ç‰©å“ID, (short)æ•°é‡, "", null, ç»™äºˆæ—¶é—´, (byte)0);
+                                MapleInventoryManipulator.addById(mch.getClient(), ÎïÆ·ID, (short)ÊıÁ¿, "", null, ¸øÓèÊ±¼ä, (byte)0);
                             }
                         }
                         else {
-                            MapleInventoryManipulator.removeById(mch.getClient(), GameConstants.getInventoryType(ç‰©å“ID), ç‰©å“ID, -æ•°é‡, true, false);
+                            MapleInventoryManipulator.removeById(mch.getClient(), GameConstants.getInventoryType(ÎïÆ·ID), ÎïÆ·ID, -ÊıÁ¿, true, false);
                         }
-                        mch.getClient().getSession().write((Object)MaplePacketCreator.getShowItemGain(ç‰©å“ID, (short)æ•°é‡, true));
-                        è¾“å‡ºA = "[åˆ·ç‰©å“]:" + è¾“å‡º;
+                        mch.getClient().getSession().write((Object)MaplePacketCreator.getShowItemGain(ÎïÆ·ID, (short)ÊıÁ¿, true));
+                        Êä³öA = "[Ë¢ÎïÆ·]:" + Êä³ö;
                     }
                 }
             }
-            this.jTextField3.setText("ç©å®¶åå­—");
-            this.jTextField4.setText("ç‰©å“ID");
-            this.jTextField5.setText("æ•°é‡");
-            this.jTextField6.setText("åŠ›é‡");
-            this.jTextField7.setText("æ•æ·");
-            this.jTextField8.setText("æ™ºåŠ›");
-            this.jTextField9.setText("è¿æ°”");
-            this.jTextField10.setText("HPè®¾ç½®");
-            this.jTextField11.setText("MPè®¾ç½®");
-            this.jTextField12.setText("åŠ å·æ¬¡æ•°");
-            this.jTextField13.setText("åˆ¶ä½œäºº");
-            this.jTextField14.setText("ç»™äºˆç‰©å“æ—¶é—´");
-            this.jTextField15.setText("å¯ä»¥äº¤æ˜“");
-            this.jTextField16.setText("æ”»å‡»åŠ›");
-            this.jTextField17.setText("é­”æ³•åŠ›");
-            this.jTextField18.setText("ç‰©ç†é˜²å¾¡");
-            this.jTextField19.setText("é­”æ³•é˜²å¾¡");
-            this.printChatLog(è¾“å‡ºA);
+            this.jTextField3.setText("Íæ¼ÒÃû×Ö");
+            this.jTextField4.setText("ÎïÆ·ID");
+            this.jTextField5.setText("ÊıÁ¿");
+            this.jTextField6.setText("Á¦Á¿");
+            this.jTextField7.setText("Ãô½İ");
+            this.jTextField8.setText("ÖÇÁ¦");
+            this.jTextField9.setText("ÔËÆø");
+            this.jTextField10.setText("HPÉèÖÃ");
+            this.jTextField11.setText("MPÉèÖÃ");
+            this.jTextField12.setText("¼Ó¾í´ÎÊı");
+            this.jTextField13.setText("ÖÆ×÷ÈË");
+            this.jTextField14.setText("¸øÓèÎïÆ·Ê±¼ä");
+            this.jTextField15.setText("¿ÉÒÔ½»Ò×");
+            this.jTextField16.setText("¹¥»÷Á¦");
+            this.jTextField17.setText("Ä§·¨Á¦");
+            this.jTextField18.setText("ÎïÀí·ÀÓù");
+            this.jTextField19.setText("Ä§·¨·ÀÓù");
+            this.printChatLog(Êä³öA);
         }
         catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "é”™è¯¯!\r\n" + e);
+            JOptionPane.showMessageDialog(null, "´íÎó!\r\n" + e);
         }
     }
     
@@ -1387,18 +1387,18 @@ public class KinMS extends JFrame
     private void sendNoticeGG() {
         try {
             final String str = this.jTextField2.getText();
-            String è¾“å‡º = "";
+            String Êä³ö = "";
             for (final ChannelServer cserv1 : ChannelServer.getAllInstances()) {
                 for (final MapleCharacter mch : cserv1.getPlayerStorage().getAllCharacters()) {
                     mch.startMapEffect(str, 5121009);
-                    è¾“å‡º = "[å…¬å‘Š]:" + str;
+                    Êä³ö = "[¹«¸æ]:" + str;
                 }
             }
             this.jTextField2.setText("");
-            this.printChatLog(è¾“å‡º);
+            this.printChatLog(Êä³ö);
         }
         catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "é”™è¯¯!\r\n" + e);
+            JOptionPane.showMessageDialog(null, "´íÎó!\r\n" + e);
         }
     }
     
@@ -1408,7 +1408,7 @@ public class KinMS extends JFrame
             try (final PreparedStatement ps = (PreparedStatement)dcon.prepareStatement("UPDATE accounts SET loggedin = 0 WHERE name = " + this.jTextField23.getText())) {
                 ps.executeUpdate();
             }
-            this.printChatLog("è§£é™¤å¡è´¦å·" + this.jTextField23.getText());
+            this.printChatLog("½â³ı¿¨ÕËºÅ" + this.jTextField23.getText());
             this.jTextField23.setText("");
         }
         catch (SQLException ex) {}
@@ -1418,7 +1418,7 @@ public class KinMS extends JFrame
         try {
             final String str = this.jTextField1.getText();
             final byte[] p = null;
-            String è¾“å‡º = "";
+            String Êä³ö = "";
             if (type == 0) {
                 for (final ChannelServer cserv : ChannelServer.getAllInstances()) {
                     for (final MapleCharacter chr : cserv.getPlayerStorage().getAllCharacters()) {
@@ -1427,10 +1427,10 @@ public class KinMS extends JFrame
                             if (chr.getName().equals(str) && chr.getMapId() != 0) {
                                 chr.getClient().getSession().close();
                                 chr.getClient().disconnect(true, false);
-                                è¾“å‡º = "[è§£å¡ç³»ç»Ÿ] æˆåŠŸæ–­å¼€" + str + "ç©å®¶ï¼";
+                                Êä³ö = "[½â¿¨ÏµÍ³] ³É¹¦¶Ï¿ª" + str + "Íæ¼Ò£¡";
                             }
                             else {
-                                è¾“å‡º = "[è§£å¡ç³»ç»Ÿ] ç©å®¶åå­—è¾“å…¥é”™è¯¯æˆ–è€…è¯¥ç©å®¶æ²¡æœ‰åœ¨çº¿ï¼";
+                                Êä³ö = "[½â¿¨ÏµÍ³] Íæ¼ÒÃû×ÖÊäÈë´íÎó»òÕß¸ÃÍæ¼ÒÃ»ÓĞÔÚÏß£¡";
                             }
                         }
                         catch (Exception ex) {}
@@ -1438,10 +1438,10 @@ public class KinMS extends JFrame
                 }
             }
             this.jTextField1.setText("");
-            this.printChatLog(è¾“å‡º);
+            this.printChatLog(Êä³ö);
         }
         catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "é”™è¯¯!\r\n" + e);
+            JOptionPane.showMessageDialog(null, "´íÎó!\r\n" + e);
         }
     }
     

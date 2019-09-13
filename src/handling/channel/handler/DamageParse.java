@@ -42,7 +42,7 @@ public class DamageParse
     
     public static void applyAttack(final AttackInfo attack, final ISkill theSkill, final MapleCharacter player, int attackCount, final double maxDamagePerMonster, final MapleStatEffect effect, final AttackType attack_type) {
         if (!player.isAlive()) {
-            player.getCheatTracker().registerOffense(CheatingOffense.\u4eba\u7269\u6b7b\u4ea1\u653b\u51fb);
+            player.getCheatTracker().registerOffense(CheatingOffense.人物死亡攻击);
             return;
         }
         if (attack.real) {}
@@ -68,8 +68,8 @@ public class DamageParse
             }
             if (ban && !player.isAdmin()) {
                 player.ban(lastReason, true, true, false);
-                FileoutputUtil.logToFile_chr(player, "Logs/Log_\u5c01\u53f7.rtf", lastReason);
-                World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "[\u5c01\u53f7\u7cfb\u7edf]" + player.getName() + " \u8be5\u73a9\u5bb6\u653b\u51fb\u5f02\u5e38\u88ab\u7cfb\u7edf\u81ea\u52a8\u5c01\u53f7\u5904\u7406\u3002").getBytes());
+                FileoutputUtil.logToFile_chr(player, "Logs/Log_封号.rtf", lastReason);
+                World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "[封号系统]" + player.getName() + " 该玩家攻击异常被系统自动封号处理。").getBytes());
                 return;
             }
             if (GameConstants.isMulungSkill(attack.skill)) {
@@ -96,14 +96,14 @@ public class DamageParse
                 }
                 final MapleMapObject mapobject = map.getMapObject(oned.objectid, MapleMapObjectType.ITEM);
                 if (mapobject == null) {
-                    player.getCheatTracker().registerOffense(CheatingOffense.\u91d1\u94b1\u70b8\u5f39_\u4e0d\u5b58\u5728\u9053\u5177);
+                    player.getCheatTracker().registerOffense(CheatingOffense.金钱炸弹_不存在道具);
                     return;
                 }
                 final MapleMapItem mapitem = (MapleMapItem)mapobject;
                 mapitem.getLock().lock();
                 try {
                     if (mapitem.getMeso() <= 0) {
-                        player.getCheatTracker().registerOffense(CheatingOffense.\u5176\u4ed6\u5f02\u5e38);
+                        player.getCheatTracker().registerOffense(CheatingOffense.其他异常);
                         return;
                     }
                     if (mapitem.isPickedUp()) {
@@ -173,21 +173,21 @@ public class DamageParse
                         if (Tempest) {
                             if (eachd > monster.getMobMaxHp()) {
                                 eachd = (int)Math.min(monster.getMobMaxHp(), 2147483647L);
-                                player.getCheatTracker().registerOffense(CheatingOffense.\u653b\u51fb\u529b\u8fc7\u9ad8);
+                                player.getCheatTracker().registerOffense(CheatingOffense.攻击力过高);
                             }
                         }
                         else if (!monster.isBuffed(MonsterStatus.DAMAGE_IMMUNITY) && !monster.isBuffed(MonsterStatus.WEAPON_IMMUNITY) && !monster.isBuffed(MonsterStatus.WEAPON_DAMAGE_REFLECT)) {
                             if (eachd > maxDamagePerHit) {
-                                player.getCheatTracker().registerOffense(CheatingOffense.\u653b\u51fb\u529b\u8fc7\u9ad8);
+                                player.getCheatTracker().registerOffense(CheatingOffense.攻击力过高);
                                 if (eachd > maxDamagePerHit * 2.0) {
-                                    FileoutputUtil.logToFile_chr(player, "Logs/\u7269\u7406\u4f24\u5bb3\u4fee\u6b63.rtf", " \u6280\u80fd " + attack.skill + " \u602a\u7269 " + monster.getId() + " \u9884\u8ba1\u4f24\u5bb3:" + (long)maxDamagePerHit + "  \u5b9e\u9645" + eachd);
+                                    FileoutputUtil.logToFile_chr(player, "Logs/物理伤害修正.rtf", " 技能 " + attack.skill + " 怪物 " + monster.getId() + " 预计伤害:" + (long)maxDamagePerHit + "  实际" + eachd);
                                     eachd = (int)(maxDamagePerHit * 2.0);
-                                    player.getCheatTracker().registerOffense(CheatingOffense.\u653b\u51fb\u8fc7\u9ad82);
+                                    player.getCheatTracker().registerOffense(CheatingOffense.攻击过高2);
                                 }
                             }
                         }
                         else if (eachd > maxDamagePerHit * 2.0) {
-                            FileoutputUtil.logToFile_chr(player, "Logs/\u7269\u7406\u4f24\u5bb3\u4fee\u6b63.rtf", " \u6280\u80fd " + attack.skill + " \u602a\u7269 " + monster.getId() + " \u9884\u8ba1\u4f24\u5bb3:" + (long)maxDamagePerHit + "  \u5b9e\u9645" + eachd);
+                            FileoutputUtil.logToFile_chr(player, "Logs/物理伤害修正.rtf", " 技能 " + attack.skill + " 怪物 " + monster.getId() + " 预计伤害:" + (long)maxDamagePerHit + "  实际" + eachd);
                             eachd = (int)maxDamagePerHit;
                         }
                     }
@@ -203,15 +203,15 @@ public class DamageParse
                 totDamage += totDamageToOneMonster;
                 player.checkMonsterAggro(monster);
                 if (attack.skill == 2301002 && !monsterstats.getUndead()) {
-                    player.ban("\u4fee\u6539WZ", true, true, false);
-                    FileoutputUtil.logToFile_chr(player, "Logs/Log_\u5c01\u53f7.rtf", "\u4f7f\u7528\u7fa4\u4f53\u6cbb\u6108\u4f24\u5bb3\u602a\u7269 " + monster.getId());
-                    World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "[\u5c01\u53f7\u7cfb\u7edf] " + player.getName() + " \u8be5\u73a9\u5bb6\u653b\u51fb\u5f02\u5e38\u88ab\u7cfb\u7edf\u81ea\u52a8\u5c01\u53f7\u5904\u7406\u3002"));
+                    player.ban("修改WZ", true, true, false);
+                    FileoutputUtil.logToFile_chr(player, "Logs/Log_封号.rtf", "使用群体治愈伤害怪物 " + monster.getId());
+                    World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "[封号系统] " + player.getName() + " 该玩家攻击异常被系统自动封号处理。"));
                     return;
                 }
                 final double Position_range = player.getPosition().distanceSq(monster.getPosition());
                 final double Count_range = 700000.0;
                 if (Position_range > Count_range) {
-                    player.getCheatTracker().registerOffense(CheatingOffense.\u653b\u51fb\u8303\u56f4\u8fc7\u5927, " \u6280\u80fd " + attack.skill + " \u8303\u56f4 : " + (long)Position_range + "\u6b63\u5e38\u8303\u56f4 " + (long)Count_range);
+                    player.getCheatTracker().registerOffense(CheatingOffense.攻击范围过大, " 技能 " + attack.skill + " 范围 : " + (long)Position_range + "正常范围 " + (long)Count_range);
                     return;
                 }
                 if (player.getBuffedValue(MapleBuffStat.PICKPOCKET) != null) {
@@ -412,14 +412,14 @@ public class DamageParse
             final CheatTracker tracker = player.getCheatTracker();
             tracker.setAttacksWithoutHit(true);
             if (tracker.getAttacksWithoutHit() > 1000) {
-                tracker.registerOffense(CheatingOffense.\u4eba\u7269\u65e0\u654c, Integer.toString(tracker.getAttacksWithoutHit()));
+                tracker.registerOffense(CheatingOffense.人物无敌, Integer.toString(tracker.getAttacksWithoutHit()));
             }
         }
     }
     
     public static final void applyAttackMagic(final AttackInfo attack, final ISkill theSkill, final MapleCharacter player, final MapleStatEffect effect) {
         if (!player.isAlive()) {
-            player.getCheatTracker().registerOffense(CheatingOffense.\u4eba\u7269\u6b7b\u4ea1\u653b\u51fb);
+            player.getCheatTracker().registerOffense(CheatingOffense.人物死亡攻击);
             return;
         }
         if (effect == null) {
@@ -443,8 +443,8 @@ public class DamageParse
         }
         if (ban && !player.isAdmin()) {
             player.ban(lastReason, true, true, false);
-            FileoutputUtil.logToFile_chr(player, "Logs/Log_\u5c01\u53f7.rtf", lastReason);
-            World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "[\u5c01\u53f7\u7cfb\u7edf]" + player.getName() + " \u8be5\u73a9\u5bb6\u653b\u51fb\u5f02\u5e38\u88ab\u7cfb\u7edf\u81ea\u52a8\u5c01\u53f7\u5904\u7406\u3002").getBytes());
+            FileoutputUtil.logToFile_chr(player, "Logs/Log_封号.rtf", lastReason);
+            World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "[封号系统]" + player.getName() + " 该玩家攻击异常被系统自动封号处理。").getBytes());
             return;
         }
         if (GameConstants.isMulungSkill(attack.skill)) {
@@ -503,21 +503,21 @@ public class DamageParse
                         if (Tempest) {
                             if (eachd > monster.getMobMaxHp()) {
                                 eachd = (int)Math.min(monster.getMobMaxHp(), 2147483647L);
-                                player.getCheatTracker().registerOffense(CheatingOffense.\u9b54\u6cd5\u4f24\u5bb3\u8fc7\u9ad8);
+                                player.getCheatTracker().registerOffense(CheatingOffense.魔法伤害过高);
                             }
                         }
                         else if (!monster.isBuffed(MonsterStatus.DAMAGE_IMMUNITY) && !monster.isBuffed(MonsterStatus.MAGIC_IMMUNITY) && !monster.isBuffed(MonsterStatus.MAGIC_DAMAGE_REFLECT)) {
                             if (eachd > maxDamagePerHit) {
-                                player.getCheatTracker().registerOffense(CheatingOffense.\u9b54\u6cd5\u4f24\u5bb3\u8fc7\u9ad8);
+                                player.getCheatTracker().registerOffense(CheatingOffense.魔法伤害过高);
                                 if (eachd > MaxDamagePerHit * 2.0) {
                                     eachd = (int)(MaxDamagePerHit * 2.0);
-                                    FileoutputUtil.logToFile_chr(player, "Logs/\u7269\u7406\u4f24\u5bb3\u4fee\u6b63.rtf", " \u6280\u80fd " + attack.skill + " \u602a\u7269 " + monster.getId() + " \u9884\u8ba1\u4f24\u5bb3:" + (long)MaxDamagePerHit + "  \u5b9e\u9645" + eachd);
-                                    player.getCheatTracker().registerOffense(CheatingOffense.\u9b54\u6cd5\u4f24\u5bb3\u8fc7\u9ad82);
+                                    FileoutputUtil.logToFile_chr(player, "Logs/物理伤害修正.rtf", " 技能 " + attack.skill + " 怪物 " + monster.getId() + " 预计伤害:" + (long)MaxDamagePerHit + "  实际" + eachd);
+                                    player.getCheatTracker().registerOffense(CheatingOffense.魔法伤害过高2);
                                 }
                             }
                         }
                         else if (eachd > maxDamagePerHit * 2.0) {
-                            FileoutputUtil.logToFile_chr(player, "Logs/\u7269\u7406\u4f24\u5bb3\u4fee\u6b63.rtf", " \u6280\u80fd " + attack.skill + " \u602a\u7269 " + monster.getId() + " \u9884\u8ba1\u4f24\u5bb3:" + (long)MaxDamagePerHit + "  \u5b9e\u9645" + eachd);
+                            FileoutputUtil.logToFile_chr(player, "Logs/物理伤害修正.rtf", " 技能 " + attack.skill + " 怪物 " + monster.getId() + " 预计伤害:" + (long)MaxDamagePerHit + "  实际" + eachd);
                             eachd = (int)maxDamagePerHit;
                         }
                     }
@@ -528,11 +528,11 @@ public class DamageParse
                 final double Position_range = player.getPosition().distanceSq(monster.getPosition());
                 final double Count_range = 700000.0;
                 if (Position_range > Count_range) {
-                    player.getCheatTracker().registerOffense(CheatingOffense.\u653b\u51fb\u8303\u56f4\u8fc7\u5927, " \u6280\u80fd " + attack.skill + " \u8303\u56f4 : " + (long)Position_range + "\u6b63\u5e38\u8303\u56f4 " + (long)Count_range);
+                    player.getCheatTracker().registerOffense(CheatingOffense.攻击范围过大, " 技能 " + attack.skill + " 范围 : " + (long)Position_range + "正常范围 " + (long)Count_range);
                     return;
                 }
                 if (attack.skill == 2301002 && !monsterstats.getUndead()) {
-                    player.getCheatTracker().registerOffense(CheatingOffense.\u6cbb\u6108\u672f\u653b\u51fb\u975e\u4e0d\u6b7b\u7cfb\u602a\u7269);
+                    player.getCheatTracker().registerOffense(CheatingOffense.治愈术攻击非不死系怪物);
                     return;
                 }
                 if (totDamageToOneMonster <= 0) {
@@ -570,7 +570,7 @@ public class DamageParse
             final CheatTracker tracker = player.getCheatTracker();
             tracker.setAttacksWithoutHit(true);
             if (tracker.getAttacksWithoutHit() > 1000) {
-                tracker.registerOffense(CheatingOffense.\u4eba\u7269\u65e0\u654c, Integer.toString(tracker.getAttacksWithoutHit()));
+                tracker.registerOffense(CheatingOffense.人物无敌, Integer.toString(tracker.getAttacksWithoutHit()));
             }
         }
     }
@@ -820,7 +820,7 @@ public class DamageParse
         final PlayerStats stat = player.getStat();
         elementalMaxDamagePerMonster += elementalMaxDamagePerMonster * (monster.getStats().isBoss() ? stat.bossdam_r : stat.dam_r) / 100.0;
         if (player.getDebugMessage()) {
-            player.dropMessage("[\u4f24\u5bb3\u8ba1\u7b97] \u5c5e\u6027\u4f24\u5bb3:" + (int)elementalMaxDamagePerMonster);
+            player.dropMessage("[伤害计算] 属性伤害:" + (int)elementalMaxDamagePerMonster);
         }
         if (elementalMaxDamagePerMonster >= 199999.0) {
             if (!defined) {
@@ -1069,58 +1069,58 @@ public class DamageParse
     
     public static void Damage_Position(final MapleCharacter c, final MapleMonster monster, final AttackInfo ret) {
         try {
-            if (!GameConstants.\u4e0d\u68c0\u6d4b\u6280\u80fd(ret.skill)) {
+            if (!GameConstants.不检测技能(ret.skill)) {
                 if ((c.getJob() >= 1300 && c.getJob() <= 1311) || (c.getJob() >= 1400 && c.getJob() <= 1411) || (c.getJob() >= 400 && c.getJob() <= 422) || (c.getJob() >= 300 && c.getJob() <= 322) || c.getJob() == 500 || (c.getJob() >= 520 && c.getJob() <= 522)) {
                     if (c.getPosition().y - monster.getPosition().y >= 800) {
-                        final String \u5168\u5c4f = "\u7b49\u7ea7A\uff1a" + c.getLevel() + "\r\n" + "\u804c\u4e1a\uff1a" + c.getJob() + "\r\n" + "\u5730\u56fe\uff1a" + c.getMapId() + "\r\n" + "\u4eba\u7269\u5750\u6807\uff1aX:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "\u602a\u7269\u5750\u6807\uff1a" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "\u65f6\u95f4\uff1a" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP\uff1a" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
-                        FileoutputUtil.packetLog("log\\\u5168\u5c4f\u68c0\u6d4b\\" + c.getName() + ".log", \u5168\u5c4f);
+                        final String 全屏 = "等级A：" + c.getLevel() + "\r\n" + "职业：" + c.getJob() + "\r\n" + "地图：" + c.getMapId() + "\r\n" + "人物坐标：X:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "怪物坐标：" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "时间：" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP：" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
+                        FileoutputUtil.packetLog("log\\全屏检测\\" + c.getName() + ".log", 全屏);
                     }
                     else if (c.getPosition().y - monster.getPosition().y <= -800) {
-                        final String \u5168\u5c4f = "\u7b49\u7ea7B\uff1a" + c.getLevel() + "\r\n" + "\u804c\u4e1a\uff1a" + c.getJob() + "\r\n" + "\u5730\u56fe\uff1a" + c.getMapId() + "\r\n" + "\u4eba\u7269\u5750\u6807\uff1aX:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "\u602a\u7269\u5750\u6807\uff1a" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "\u65f6\u95f4\uff1a" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP\uff1a" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
-                        FileoutputUtil.packetLog("log\\\u5168\u5c4f\u68c0\u6d4b\\" + c.getName() + ".log", \u5168\u5c4f);
+                        final String 全屏 = "等级B：" + c.getLevel() + "\r\n" + "职业：" + c.getJob() + "\r\n" + "地图：" + c.getMapId() + "\r\n" + "人物坐标：X:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "怪物坐标：" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "时间：" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP：" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
+                        FileoutputUtil.packetLog("log\\全屏检测\\" + c.getName() + ".log", 全屏);
                     }
                     else if (c.getPosition().x - monster.getPosition().x >= 800) {
-                        final String \u5168\u5c4f = "\u7b49\u7ea7C\uff1a" + c.getLevel() + "\r\n" + "\u804c\u4e1a\uff1a" + c.getJob() + "\r\n" + "\u5730\u56fe\uff1a" + c.getMapId() + "\r\n" + "\u4eba\u7269\u5750\u6807\uff1aX:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "\u602a\u7269\u5750\u6807\uff1a" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "\u65f6\u95f4\uff1a" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP\uff1a" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
-                        FileoutputUtil.packetLog("log\\\u5168\u5c4f\u68c0\u6d4b\\" + c.getName() + ".log", \u5168\u5c4f);
+                        final String 全屏 = "等级C：" + c.getLevel() + "\r\n" + "职业：" + c.getJob() + "\r\n" + "地图：" + c.getMapId() + "\r\n" + "人物坐标：X:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "怪物坐标：" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "时间：" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP：" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
+                        FileoutputUtil.packetLog("log\\全屏检测\\" + c.getName() + ".log", 全屏);
                     }
                     else if (c.getPosition().x - monster.getPosition().x <= -900) {
-                        final String \u5168\u5c4f = "\u7b49\u7ea7D\uff1a" + c.getLevel() + "\r\n" + "\u804c\u4e1a\uff1a" + c.getJob() + "\r\n" + "\u5730\u56fe\uff1a" + c.getMapId() + "\r\n" + "\u4eba\u7269\u5750\u6807\uff1aX:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "\u602a\u7269\u5750\u6807\uff1a" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "\u65f6\u95f4\uff1a" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP\uff1a" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
-                        FileoutputUtil.packetLog("log\\\u5168\u5c4f\u68c0\u6d4b\\" + c.getName() + ".log", \u5168\u5c4f);
+                        final String 全屏 = "等级D：" + c.getLevel() + "\r\n" + "职业：" + c.getJob() + "\r\n" + "地图：" + c.getMapId() + "\r\n" + "人物坐标：X:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "怪物坐标：" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "时间：" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP：" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
+                        FileoutputUtil.packetLog("log\\全屏检测\\" + c.getName() + ".log", 全屏);
                     }
                 }
                 else if (c.getJob() >= 200 && c.getJob() < 300) {
                     if (c.getPosition().y - monster.getPosition().y >= 800) {
-                        final String \u5168\u5c4f = "\u7b49\u7ea7E\uff1a" + c.getLevel() + "\r\n" + "\u804c\u4e1a\uff1a" + c.getJob() + "\r\n" + "\u5730\u56fe\uff1a" + c.getMapId() + "\r\n" + "\u4eba\u7269\u5750\u6807\uff1aX:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "\u602a\u7269\u5750\u6807\uff1a" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "\u65f6\u95f4\uff1a" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP\uff1a" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
-                        FileoutputUtil.packetLog("log\\\u5168\u5c4f\u68c0\u6d4b\\" + c.getName() + ".log", \u5168\u5c4f);
+                        final String 全屏 = "等级E：" + c.getLevel() + "\r\n" + "职业：" + c.getJob() + "\r\n" + "地图：" + c.getMapId() + "\r\n" + "人物坐标：X:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "怪物坐标：" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "时间：" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP：" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
+                        FileoutputUtil.packetLog("log\\全屏检测\\" + c.getName() + ".log", 全屏);
                     }
                     else if (c.getPosition().y - monster.getPosition().y <= -800) {
-                        final String \u5168\u5c4f = "\u7b49\u7ea7F\uff1a" + c.getLevel() + "\r\n" + "\u804c\u4e1a\uff1a" + c.getJob() + "\r\n" + "\u5730\u56fe\uff1a" + c.getMapId() + "\r\n" + "\u4eba\u7269\u5750\u6807\uff1aX:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "\u602a\u7269\u5750\u6807\uff1a" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "\u65f6\u95f4\uff1a" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP\uff1a" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
-                        FileoutputUtil.packetLog("log\\\u5168\u5c4f\u68c0\u6d4b\\" + c.getName() + ".log", \u5168\u5c4f);
+                        final String 全屏 = "等级F：" + c.getLevel() + "\r\n" + "职业：" + c.getJob() + "\r\n" + "地图：" + c.getMapId() + "\r\n" + "人物坐标：X:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "怪物坐标：" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "时间：" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP：" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
+                        FileoutputUtil.packetLog("log\\全屏检测\\" + c.getName() + ".log", 全屏);
                     }
                     else if (c.getPosition().x - monster.getPosition().x >= 550) {
-                        final String \u5168\u5c4f = "\u7b49\u7ea7G\uff1a" + c.getLevel() + "\r\n" + "\u804c\u4e1a\uff1a" + c.getJob() + "\r\n" + "\u5730\u56fe\uff1a" + c.getMapId() + "\r\n" + "\u4eba\u7269\u5750\u6807\uff1aX:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "\u602a\u7269\u5750\u6807\uff1a" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "\u65f6\u95f4\uff1a" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP\uff1a" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
-                        FileoutputUtil.packetLog("log\\\u5168\u5c4f\u68c0\u6d4b\\" + c.getName() + ".log", \u5168\u5c4f);
+                        final String 全屏 = "等级G：" + c.getLevel() + "\r\n" + "职业：" + c.getJob() + "\r\n" + "地图：" + c.getMapId() + "\r\n" + "人物坐标：X:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "怪物坐标：" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "时间：" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP：" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
+                        FileoutputUtil.packetLog("log\\全屏检测\\" + c.getName() + ".log", 全屏);
                     }
                     else if (c.getPosition().x - monster.getPosition().x <= -550) {
-                        final String \u5168\u5c4f = "\u7b49\u7ea7H\uff1a" + c.getLevel() + "\r\n" + "\u804c\u4e1a\uff1a" + c.getJob() + "\r\n" + "\u5730\u56fe\uff1a" + c.getMapId() + "\r\n" + "\u4eba\u7269\u5750\u6807\uff1aX:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "\u602a\u7269\u5750\u6807\uff1a" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "\u65f6\u95f4\uff1a" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP\uff1a" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
-                        FileoutputUtil.packetLog("log\\\u5168\u5c4f\u68c0\u6d4b\\" + c.getName() + ".log", \u5168\u5c4f);
+                        final String 全屏 = "等级H：" + c.getLevel() + "\r\n" + "职业：" + c.getJob() + "\r\n" + "地图：" + c.getMapId() + "\r\n" + "人物坐标：X:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "怪物坐标：" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "时间：" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP：" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
+                        FileoutputUtil.packetLog("log\\全屏检测\\" + c.getName() + ".log", 全屏);
                     }
                 }
                 else if (c.getPosition().y - monster.getPosition().y >= 350) {
-                    final String \u5168\u5c4f = "\u7b49\u7ea7I\uff1a" + c.getLevel() + "\r\n" + "\u804c\u4e1a\uff1a" + c.getJob() + "\r\n" + "\u5730\u56fe\uff1a" + c.getMapId() + "\r\n" + "\u4eba\u7269\u5750\u6807\uff1aX:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "\u602a\u7269\u5750\u6807\uff1a" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "\u65f6\u95f4\uff1a" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP\uff1a" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
-                    FileoutputUtil.packetLog("log\\\u5168\u5c4f\u68c0\u6d4b\\" + c.getName() + ".log", \u5168\u5c4f);
+                    final String 全屏 = "等级I：" + c.getLevel() + "\r\n" + "职业：" + c.getJob() + "\r\n" + "地图：" + c.getMapId() + "\r\n" + "人物坐标：X:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "怪物坐标：" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "时间：" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP：" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
+                    FileoutputUtil.packetLog("log\\全屏检测\\" + c.getName() + ".log", 全屏);
                 }
                 else if (c.getPosition().y - monster.getPosition().y <= -350) {
-                    final String \u5168\u5c4f = "\u7b49\u7ea7J\uff1a" + c.getLevel() + "\r\n" + "\u804c\u4e1a\uff1a" + c.getJob() + "\r\n" + "\u5730\u56fe\uff1a" + c.getMapId() + "\r\n" + "\u4eba\u7269\u5750\u6807\uff1aX:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "\u602a\u7269\u5750\u6807\uff1a" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "\u65f6\u95f4\uff1a" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP\uff1a" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
-                    FileoutputUtil.packetLog("log\\\u5168\u5c4f\u68c0\u6d4b\\" + c.getName() + ".log", \u5168\u5c4f);
+                    final String 全屏 = "等级J：" + c.getLevel() + "\r\n" + "职业：" + c.getJob() + "\r\n" + "地图：" + c.getMapId() + "\r\n" + "人物坐标：X:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "怪物坐标：" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "时间：" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP：" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
+                    FileoutputUtil.packetLog("log\\全屏检测\\" + c.getName() + ".log", 全屏);
                 }
                 else if (c.getPosition().x - monster.getPosition().x >= 500) {
-                    final String \u5168\u5c4f = "\u7b49\u7ea7K\uff1a" + c.getLevel() + "\r\n" + "\u804c\u4e1a\uff1a" + c.getJob() + "\r\n" + "\u5730\u56fe\uff1a" + c.getMapId() + "\r\n" + "\u4eba\u7269\u5750\u6807\uff1aX:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "\u602a\u7269\u5750\u6807\uff1a" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "\u65f6\u95f4\uff1a" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP\uff1a" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
-                    FileoutputUtil.packetLog("log\\\u5168\u5c4f\u68c0\u6d4b\\" + c.getName() + ".log", \u5168\u5c4f);
+                    final String 全屏 = "等级K：" + c.getLevel() + "\r\n" + "职业：" + c.getJob() + "\r\n" + "地图：" + c.getMapId() + "\r\n" + "人物坐标：X:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "怪物坐标：" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "时间：" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP：" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
+                    FileoutputUtil.packetLog("log\\全屏检测\\" + c.getName() + ".log", 全屏);
                 }
                 else if (c.getPosition().x - monster.getPosition().x <= -500) {
-                    final String \u5168\u5c4f = "\u7b49\u7ea7L\uff1a" + c.getLevel() + "\r\n" + "\u804c\u4e1a\uff1a" + c.getJob() + "\r\n" + "\u5730\u56fe\uff1a" + c.getMapId() + "\r\n" + "\u4eba\u7269\u5750\u6807\uff1aX:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "\u602a\u7269\u5750\u6807\uff1a" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "\u65f6\u95f4\uff1a" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP\uff1a" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
-                    FileoutputUtil.packetLog("log\\\u5168\u5c4f\u68c0\u6d4b\\" + c.getName() + ".log", \u5168\u5c4f);
+                    final String 全屏 = "等级L：" + c.getLevel() + "\r\n" + "职业：" + c.getJob() + "\r\n" + "地图：" + c.getMapId() + "\r\n" + "人物坐标：X:" + c.getPosition().x + " Y:" + c.getPosition().y + "\r\n" + "怪物坐标：" + monster.getPosition().x + " Y:" + monster.getPosition().y + "\r\n" + "时间：" + FileoutputUtil.CurrentReadable_Time() + "\r\n" + "IP：" + c.getClient().getSession().getRemoteAddress().toString().split(":")[0];
+                    FileoutputUtil.packetLog("log\\全屏检测\\" + c.getName() + ".log", 全屏);
                 }
             }
         }
@@ -1128,7 +1128,7 @@ public class DamageParse
     }
     
     public static final int Damage_PG(final MapleCharacter c, int damage, final AttackInfo ret) {
-        if (Boolean.parseBoolean(ServerProperties.getProperty("KinMS.\u7834\u529f", "false"))) {
+        if (Boolean.parseBoolean(ServerProperties.getProperty("KinMS.破功", "false"))) {
             if (ret.skill != 14101006 && damage >= 199999) {
                 final int sj = Randomizer.nextInt(10000);
                 if (c.isGM()) {
@@ -1150,7 +1150,7 @@ public class DamageParse
                 }
                 DamageParse.pvpMob = MapleLifeFactory.getMonster(9400711);
                 c.getClient().getSession().write((Object)MaplePacketCreator.damagePlayer(ret.skill, DamageParse.pvpMob.getId(), c.getId(), damage));
-                c.getClient().getSession().write((Object)MaplePacketCreator.sendHint("#r\u7834\u529f\u4f24\u5bb3#k:" + damage, 200, 5));
+                c.getClient().getSession().write((Object)MaplePacketCreator.sendHint("#r破功伤害#k:" + damage, 200, 5));
             }
             return damage;
         }
@@ -1168,7 +1168,7 @@ public class DamageParse
             last *= 2;
         }
         if (attack.hits > last) {
-            reason = "\u5c01\u5305\u4f24\u5bb3\u6b21\u6570 : " + last + " \u5c01\u5305\u4f24\u5bb3\u6b21\u6570: " + attack.skill;
+            reason = "封包伤害次数 : " + last + " 封包伤害次数: " + attack.skill;
         }
         return reason;
     }
@@ -1199,22 +1199,22 @@ public class DamageParse
             if (player.getMap().getMonsterByOid(oned.objectid) != null) {
                 for (final Pair<Integer, Boolean> eachde : oned.attack) {
                     if (eachde.left >= 2000001) {
-                        reason = "\u6280\u80fd " + attack.skill + " \u6253\u602a\u4f24\u5bb3 " + eachde.left;
+                        reason = "技能 " + attack.skill + " 打怪伤害 " + eachde.left;
                     }
                     if (GameConstants.Novice_Skill(attack.skill) && eachde.left > 40) {
-                        reason = "\u6280\u80fd " + attack.skill + " \u6253\u602a\u4f24\u5bb3 " + eachde.left;
+                        reason = "技能 " + attack.skill + " 打怪伤害 " + eachde.left;
                     }
                     if (BeginnerJob) {
                         if (eachde.left <= 40) {
                             continue;
                         }
-                        reason = "\u6280\u80fd " + attack.skill + " \u6253\u602a\u4f24\u5bb3 " + eachde.left;
+                        reason = "技能 " + attack.skill + " 打怪伤害 " + eachde.left;
                     }
                     else {
                         if (eachde.left < check) {
                             continue;
                         }
-                        reason = "\u6280\u80fd " + attack.skill + " \u6253\u602a\u4f24\u5bb3 " + eachde.left;
+                        reason = "技能 " + attack.skill + " 打怪伤害 " + eachde.left;
                     }
                 }
             }

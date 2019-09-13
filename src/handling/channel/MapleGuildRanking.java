@@ -24,7 +24,7 @@ public class MapleGuildRanking
     }
     
     public void RankingUpdate() {
-        System.out.println("\u52a0\u8f7d \u6392\u540d\u670d\u52a1\u5668 :::");
+        System.out.println("加载 排名服务器 :::");
         Timer.WorldTimer.getInstance().register(new Runnable() {
             @Override
             public void run() {
@@ -78,7 +78,7 @@ public class MapleGuildRanking
             rs.close();
         }
         catch (SQLException e) {
-            System.err.println("\u5bb6\u65cf\u6392\u884c\u9519\u8bef" + e);
+            System.err.println("家族排行错误" + e);
         }
     }
     
@@ -96,7 +96,7 @@ public class MapleGuildRanking
             rs.close();
         }
         catch (SQLException e) {
-            System.err.println("\u4eba\u7269\u6392\u884c\u9519\u8bef");
+            System.err.println("人物排行错误");
         }
     }
     
@@ -112,7 +112,7 @@ public class MapleGuildRanking
             rs.close();
         }
         catch (SQLException e) {
-            System.err.println("\u91d1\u5e01\u6392\u884c\u9519\u8bef");
+            System.err.println("金币排行错误");
         }
     }
     

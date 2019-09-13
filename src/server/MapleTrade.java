@@ -265,17 +265,17 @@ public class MapleTrade
             c.getClient().getSession().write((Object)MaplePacketCreator.getTradeStart(c.getClient(), c.getTrade(), (byte)0, false));
         }
         else {
-            c.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "\u4e0d\u80fd\u540c\u65f6\u505a\u591a\u4ef6\u4e8b\u60c5\u3002"));
+            c.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "不能同时做多件事情。"));
         }
     }
     
-    public static final void start\u73b0\u91d1\u4ea4\u6613(final MapleCharacter c) {
+    public static final void start现金交易(final MapleCharacter c) {
         if (c.getTrade() == null) {
             c.setTrade(new MapleTrade((byte)0, c));
             c.getClient().getSession().write((Object)MaplePacketCreator.getTradeStart(c.getClient(), c.getTrade(), (byte)0, true));
         }
         else {
-            c.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "\u4e0d\u80fd\u540c\u65f6\u505a\u591a\u4ef6\u4e8b\u60c5\u3002"));
+            c.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "不能同时做多件事情。"));
         }
     }
     
@@ -290,12 +290,12 @@ public class MapleTrade
             c2.getClient().getSession().write((Object)MaplePacketCreator.getTradeInvite(c1, false));
         }
         else {
-            c1.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "\u5bf9\u65b9\u6b63\u5728\u548c\u5176\u4ed6\u73a9\u5bb6\u8fdb\u884c\u4ea4\u6613\u4e2d\u3002"));
+            c1.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "对方正在和其他玩家进行交易中。"));
             cancelTrade(c1.getTrade(), c1.getClient());
         }
     }
     
-    public static final void invite\u73b0\u91d1\u4ea4\u6613(final MapleCharacter c1, final MapleCharacter c2) {
+    public static final void invite现金交易(final MapleCharacter c1, final MapleCharacter c2) {
         if (c1 == null || c1.getTrade() == null) {
             return;
         }
@@ -306,18 +306,18 @@ public class MapleTrade
             c2.getClient().getSession().write((Object)MaplePacketCreator.getTradeInvite(c1, true));
         }
         else {
-            c1.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "\u5bf9\u65b9\u6b63\u5728\u548c\u5176\u4ed6\u73a9\u5bb6\u8fdb\u884c\u4ea4\u6613\u4e2d\u3002"));
+            c1.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "对方正在和其他玩家进行交易中。"));
             cancelTrade(c1.getTrade(), c1.getClient());
         }
     }
     
-    public static final void visit\u73b0\u91d1\u4ea4\u6613(final MapleCharacter c1, final MapleCharacter c2) {
+    public static final void visit现金交易(final MapleCharacter c1, final MapleCharacter c2) {
         if (c1.getTrade() != null && c1.getTrade().getPartner() == c2.getTrade() && c2.getTrade() != null && c2.getTrade().getPartner() == c1.getTrade()) {
             c2.getClient().getSession().write((Object)MaplePacketCreator.getTradePartnerAdd(c1));
             c1.getClient().getSession().write((Object)MaplePacketCreator.getTradeStart(c1.getClient(), c1.getTrade(), (byte)1, true));
         }
         else {
-            c1.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "\u5bf9\u65b9\u5df2\u7ecf\u53d6\u6d88\u4e86\u4ea4\u6613\u3002"));
+            c1.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "对方已经取消了交易。"));
         }
     }
     
@@ -327,7 +327,7 @@ public class MapleTrade
             c1.getClient().getSession().write((Object)MaplePacketCreator.getTradeStart(c1.getClient(), c1.getTrade(), (byte)1, false));
         }
         else {
-            c1.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "\u5bf9\u65b9\u5df2\u7ecf\u53d6\u6d88\u4e86\u4ea4\u6613\u3002"));
+            c1.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "对方已经取消了交易。"));
         }
     }
     
@@ -338,7 +338,7 @@ public class MapleTrade
                 final MapleCharacter other = trade.getPartner().getChr();
                 other.getTrade().cancel(other.getClient());
                 other.setTrade(null);
-                other.dropMessage(5, c.getName() + " \u62d2\u7edd\u4e86\u4f60\u7684\u4ea4\u6613\u9080\u8bf7\u3002");
+                other.dropMessage(5, c.getName() + " 拒绝了你的交易邀请。");
             }
             trade.cancel(c.getClient());
             c.setTrade(null);

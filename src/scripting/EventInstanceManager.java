@@ -84,11 +84,11 @@ public class EventInstanceManager
             this.em.getIv().invokeFunction("playerEntry", this, chr);
         }
         catch (NullPointerException ex) {
-            FileoutputUtil.outputFileError("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", ex);
+            FileoutputUtil.outputFileError("Logs/Log_Script_脚本异常.rtf", ex);
             ex.printStackTrace();
         }
         catch (Exception ex2) {
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : playerEntry:\n" + ex2);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : playerEntry:\n" + ex2);
             System.out.println("Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : playerEntry:\n" + ex2);
         }
     }
@@ -102,7 +102,7 @@ public class EventInstanceManager
         }
         catch (NullPointerException ex2) {}
         catch (Exception ex) {
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "\u526f\u672c\u540d\u79f0" + this.em.getName() + ", \u5b9e\u4f8b\u540d\u79f0 : " + this.name + ", \u65b9\u6cd5\u540d\u79f0 : changedMap:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "副本名称" + this.em.getName() + ", 实例名称 : " + this.name + ", 方法名称 : changedMap:\n" + ex);
             System.out.println("Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : changedMap:\n" + ex);
         }
     }
@@ -121,7 +121,7 @@ public class EventInstanceManager
                     EventInstanceManager.this.em.getIv().invokeFunction("scheduledTimeout", eim);
                 }
                 catch (Exception ex) {
-                    FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + EventInstanceManager.this.em.getName() + ", Instance name : " + EventInstanceManager.this.name + ", method Name : scheduledTimeout:\n" + ex);
+                    FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + EventInstanceManager.this.em.getName() + ", Instance name : " + EventInstanceManager.this.name + ", method Name : scheduledTimeout:\n" + ex);
                     System.out.println("Event name" + EventInstanceManager.this.em.getName() + ", Instance name : " + EventInstanceManager.this.name + ", method Name : scheduledTimeout:\n" + ex);
                 }
             }
@@ -158,7 +158,7 @@ public class EventInstanceManager
             this.timeOut(time, this);
         }
         catch (Exception ex) {
-            FileoutputUtil.outputFileError("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", ex);
+            FileoutputUtil.outputFileError("Logs/Log_Script_脚本异常.rtf", ex);
             System.out.println("Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : restartEventTimer:\n");
             ex.printStackTrace();
         }
@@ -319,7 +319,7 @@ public class EventInstanceManager
                 this.em.getIv().invokeFunction("allMonstersDead", this);
             }
             catch (Exception ex) {
-                FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : allMonstersDead:\n" + ex);
+                FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : allMonstersDead:\n" + ex);
                 System.out.println("Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : allMonstersDead:\n" + ex);
             }
         }
@@ -333,7 +333,7 @@ public class EventInstanceManager
             this.em.getIv().invokeFunction("playerDead", this, chr);
         }
         catch (Exception ex) {
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : playerDead:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : playerDead:\n" + ex);
             System.out.println("Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : playerDead:\n" + ex);
         }
     }
@@ -349,7 +349,7 @@ public class EventInstanceManager
             }
         }
         catch (Exception ex) {
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : playerRevive:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : playerRevive:\n" + ex);
             System.out.println("Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : playerRevive:\n" + ex);
         }
         return true;
@@ -392,7 +392,7 @@ public class EventInstanceManager
         }
         catch (Exception ex) {
             ex.printStackTrace();
-            FileoutputUtil.outputFileError("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", ex);
+            FileoutputUtil.outputFileError("Logs/Log_Script_脚本异常.rtf", ex);
         }
         finally {
             this.wL.unlock();
@@ -422,15 +422,15 @@ public class EventInstanceManager
         }
         catch (ScriptException ex) {
             System.out.println("Event name" + ((this.em == null) ? "null" : this.em.getName()) + ", Instance name : " + this.name + ", method Name : monsterValue:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + ((this.em == null) ? "null" : this.em.getName()) + ", Instance name : " + this.name + ", method Name : monsterValue:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + ((this.em == null) ? "null" : this.em.getName()) + ", Instance name : " + this.name + ", method Name : monsterValue:\n" + ex);
         }
         catch (NoSuchMethodException ex2) {
             System.out.println("Event name" + ((this.em == null) ? "null" : this.em.getName()) + ", Instance name : " + this.name + ", method Name : monsterValue:\n" + ex2);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + ((this.em == null) ? "null" : this.em.getName()) + ", Instance name : " + this.name + ", method Name : monsterValue:\n" + ex2);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + ((this.em == null) ? "null" : this.em.getName()) + ", Instance name : " + this.name + ", method Name : monsterValue:\n" + ex2);
         }
         catch (Exception ex3) {
             ex3.printStackTrace();
-            FileoutputUtil.outputFileError("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", ex3);
+            FileoutputUtil.outputFileError("Logs/Log_Script_脚本异常.rtf", ex3);
         }
     }
     
@@ -443,15 +443,15 @@ public class EventInstanceManager
         }
         catch (ScriptException ex) {
             System.out.println("Event name" + ((this.em == null) ? "null" : this.em.getName()) + ", Instance name : " + this.name + ", method Name : monsterValue:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + ((this.em == null) ? "null" : this.em.getName()) + ", Instance name : " + this.name + ", method Name : monsterValue:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + ((this.em == null) ? "null" : this.em.getName()) + ", Instance name : " + this.name + ", method Name : monsterValue:\n" + ex);
         }
         catch (NoSuchMethodException ex2) {
             System.out.println("Event name" + ((this.em == null) ? "null" : this.em.getName()) + ", Instance name : " + this.name + ", method Name : monsterValue:\n" + ex2);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + ((this.em == null) ? "null" : this.em.getName()) + ", Instance name : " + this.name + ", method Name : monsterValue:\n" + ex2);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + ((this.em == null) ? "null" : this.em.getName()) + ", Instance name : " + this.name + ", method Name : monsterValue:\n" + ex2);
         }
         catch (Exception ex3) {
             ex3.printStackTrace();
-            FileoutputUtil.outputFileError("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", ex3);
+            FileoutputUtil.outputFileError("Logs/Log_Script_脚本异常.rtf", ex3);
         }
     }
     
@@ -504,7 +504,7 @@ public class EventInstanceManager
         }
         catch (Exception e) {
             System.out.println("Caused by : " + emN + " instance name: " + this.name + " method: dispose: " + e);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + emN + ", Instance name : " + this.name + ", method Name : dispose:\n" + e);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + emN + ", Instance name : " + this.name + ", method Name : dispose:\n" + e);
         }
     }
     
@@ -604,7 +604,7 @@ public class EventInstanceManager
             return map;
         }
         catch (NullPointerException ex) {
-            FileoutputUtil.outputFileError("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", ex);
+            FileoutputUtil.outputFileError("Logs/Log_Script_脚本异常.rtf", ex);
             ex.printStackTrace();
             return null;
         }
@@ -626,7 +626,7 @@ public class EventInstanceManager
                 catch (NullPointerException ex2) {}
                 catch (Exception ex) {
                     System.out.println("Event name" + EventInstanceManager.this.em.getName() + ", Instance name : " + EventInstanceManager.this.name + ", method Name : " + methodName + ":\n" + ex);
-                    FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + EventInstanceManager.this.em.getName() + ", Instance name : " + EventInstanceManager.this.name + ", method Name(schedule) : " + methodName + " :\n" + ex);
+                    FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + EventInstanceManager.this.em.getName() + ", Instance name : " + EventInstanceManager.this.name + ", method Name(schedule) : " + methodName + " :\n" + ex);
                 }
             }
         }, delay);
@@ -670,7 +670,7 @@ public class EventInstanceManager
         }
         catch (Exception ex) {
             System.out.println("Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : leftParty:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : leftParty:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : leftParty:\n" + ex);
         }
     }
     
@@ -683,7 +683,7 @@ public class EventInstanceManager
         }
         catch (Exception ex) {
             System.out.println("Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : disbandParty:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : disbandParty:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : disbandParty:\n" + ex);
         }
     }
     
@@ -696,7 +696,7 @@ public class EventInstanceManager
         }
         catch (Exception ex) {
             System.out.println("Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : clearPQ:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : clearPQ:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : clearPQ:\n" + ex);
         }
     }
     
@@ -709,7 +709,7 @@ public class EventInstanceManager
         }
         catch (Exception ex) {
             System.out.println("Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : playerExit:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : playerExit:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : playerExit:\n" + ex);
         }
     }
     
@@ -737,7 +737,7 @@ public class EventInstanceManager
         }
         catch (ScriptException ex) {
             System.out.println("Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : registerCarnivalParty:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : registerCarnivalParty:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : registerCarnivalParty:\n" + ex);
         }
         catch (NoSuchMethodException ex2) {}
     }
@@ -751,7 +751,7 @@ public class EventInstanceManager
         }
         catch (ScriptException ex) {
             System.out.println("Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : onMapLoad:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : onMapLoad:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name" + this.em.getName() + ", Instance name : " + this.name + ", method Name : onMapLoad:\n" + ex);
         }
         catch (NoSuchMethodException ex2) {}
     }

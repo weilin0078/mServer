@@ -17,7 +17,7 @@ public class MapleCarnivalChallenge
         for (final MaplePartyCharacter pc : challenger.getParty().getMembers()) {
             final MapleCharacter c = challenger.getMap().getCharacterById(pc.getId());
             if (c != null) {
-                this.challengeinfo = this.challengeinfo + c.getName() + " / \u7b49\u7d1a" + c.getLevel() + " / " + getJobNameById(c.getJob()) + "\r\n";
+                this.challengeinfo = this.challengeinfo + c.getName() + " / 等級" + c.getLevel() + " / " + getJobNameById(c.getJob()) + "\r\n";
             }
         }
         this.challengeinfo += "#k";
@@ -34,7 +34,7 @@ public class MapleCarnivalChallenge
     public static final String getJobNameById(final int job) {
         switch (job) {
             case 0: {
-                return "\u521d\u5fc3\u8005";
+                return "初心者";
             }
             case 1000: {
                 return "Nobless";
@@ -49,106 +49,106 @@ public class MapleCarnivalChallenge
                 return "Citizen";
             }
             case 100: {
-                return "\u528d\u58eb";
+                return "劍士";
             }
             case 110: {
-                return "\u72c2\u6230\u58eb";
+                return "狂戰士";
             }
             case 111: {
-                return "\u72c2\u6230\u58eb";
+                return "狂戰士";
             }
             case 112: {
-                return "\u82f1\u96c4";
+                return "英雄";
             }
             case 120: {
-                return "\u898b\u7fd2\u9a0e\u58eb";
+                return "見習騎士";
             }
             case 121: {
-                return "\u9a0e\u58eb";
+                return "騎士";
             }
             case 122: {
-                return "\u8056\u6230\u58eb";
+                return "聖戰士";
             }
             case 130: {
-                return "\u69cd\u9a0e\u5175";
+                return "槍騎兵";
             }
             case 131: {
-                return "\u9f8d\u9a0e\u58eb";
+                return "龍騎士";
             }
             case 132: {
-                return "\u9ed1\u9a0e\u58eb";
+                return "黑騎士";
             }
             case 200: {
-                return "\u6cd5\u5e2b";
+                return "法師";
             }
             case 210: {
-                return "\u5deb\u5e2b(\u706b,\u6bd2)";
+                return "巫師(火,毒)";
             }
             case 211: {
-                return "\u9b54\u5c0e\u58eb(\u706b,\u6bd2)";
+                return "魔導士(火,毒)";
             }
             case 212: {
-                return "\u5927\u9b54\u5c0e\u58eb(\u706b,\u6bd2)";
+                return "大魔導士(火,毒)";
             }
             case 220: {
-                return "\u5deb\u5e2b(\u51b0,\u96f7)";
+                return "巫師(冰,雷)";
             }
             case 221: {
-                return "\u9b54\u5c0e\u58eb(\u51b0,\u96f7)";
+                return "魔導士(冰,雷)";
             }
             case 222: {
-                return "\u5927\u9b54\u5c0e\u58eb(\u51b0,\u96f7)";
+                return "大魔導士(冰,雷)";
             }
             case 230: {
-                return "\u50e7\u4fb6";
+                return "僧侶";
             }
             case 231: {
-                return "\u796d\u53f8";
+                return "祭司";
             }
             case 232: {
-                return "\u4e3b\u6559";
+                return "主教";
             }
             case 300: {
-                return "\u5f13\u7bad\u624b";
+                return "弓箭手";
             }
             case 310: {
-                return "\u7375\u4eba";
+                return "獵人";
             }
             case 311: {
-                return "\u904a\u4fe0";
+                return "遊俠";
             }
             case 312: {
-                return "\u7bad\u795e";
+                return "箭神";
             }
             case 320: {
-                return "\u5f29\u5f13\u624b";
+                return "弩弓手";
             }
             case 321: {
-                return "\u72d9\u64ca\u624b";
+                return "狙擊手";
             }
             case 322: {
-                return "\u795e\u5c04\u624b";
+                return "神射手";
             }
             case 400: {
-                return "\u76dc\u8cca";
+                return "盜賊";
             }
             case 410: {
-                return "\u523a\u5ba2";
+                return "刺客";
             }
             case 411: {
-                return "\u6697\u6bba\u8005";
+                return "暗殺者";
             }
             case 412: {
-                return "\u591c\u4f7f\u8005";
+                return "夜使者";
             }
             case 420: {
-                return "\u4fe0\u76dc";
+                return "俠盜";
             }
             case 421: {
-                return "\u795e\u5077";
+                return "神偷";
             }
             case 422: {
-                return "\u6697\u5f71\u795e\u5077";
+                return "暗影神偷";
             }
             case 430: {
                 return "Blade Recruit";
@@ -166,25 +166,25 @@ public class MapleCarnivalChallenge
                 return "Blade Master";
             }
             case 500: {
-                return "\u6d77\u76dc";
+                return "海盜";
             }
             case 510: {
-                return "\u6253\u624b";
+                return "打手";
             }
             case 511: {
-                return "\u683c\u9b25\u5bb6";
+                return "格鬥家";
             }
             case 512: {
-                return "\u62f3\u9738";
+                return "拳霸";
             }
             case 520: {
-                return "\u69cd\u624b";
+                return "槍手";
             }
             case 521: {
-                return "\u795e\u69cd\u624b";
+                return "神槍手";
             }
             case 522: {
-                return "\u69cd\u795e";
+                return "槍神";
             }
             case 1100:
             case 1110:
@@ -265,7 +265,7 @@ public class MapleCarnivalChallenge
             case 2000:
             case 2001:
             case 3000: {
-                return "\u521d\u5fc3\u8005";
+                return "初心者";
             }
             case 100:
             case 110:
@@ -285,7 +285,7 @@ public class MapleCarnivalChallenge
             case 2110:
             case 2111:
             case 2112: {
-                return "\u528d\u58eb";
+                return "劍士";
             }
             case 200:
             case 210:
@@ -315,7 +315,7 @@ public class MapleCarnivalChallenge
             case 3210:
             case 3211:
             case 3212: {
-                return "\u6cd5\u5e2b";
+                return "法師";
             }
             case 300:
             case 310:
@@ -332,7 +332,7 @@ public class MapleCarnivalChallenge
             case 3310:
             case 3311:
             case 3312: {
-                return "\u5f13\u7bad\u624b";
+                return "弓箭手";
             }
             case 400:
             case 410:
@@ -350,7 +350,7 @@ public class MapleCarnivalChallenge
             case 1410:
             case 1411:
             case 1412: {
-                return "\u76dc\u8cca";
+                return "盜賊";
             }
             case 500:
             case 510:
@@ -367,7 +367,7 @@ public class MapleCarnivalChallenge
             case 3510:
             case 3511:
             case 3512: {
-                return "\u6d77\u76dc";
+                return "海盜";
             }
             default: {
                 return "Unknown Job";

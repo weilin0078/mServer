@@ -50,7 +50,7 @@ public class MapleFitness extends MapleEvent
                 MapleFitness.this.unreset();
             }
         }, this.time);
-        this.broadcast(MaplePacketCreator.serverNotice(0, "\u95e8\u5df2\u6253\u5f00\u3002\u8bb0\u5f97\u5728\u5149\u67f1\u95e8\u2191\u952e\u8fdb\u5165\u3002"));
+        this.broadcast(MaplePacketCreator.serverNotice(0, "门已打开。记得在光柱门↑键进入。"));
     }
     
     public boolean isTimerStarted() {
@@ -97,40 +97,40 @@ public class MapleFitness extends MapleEvent
             public void run() {
                 final long timeLeft = MapleFitness.this.getTimeLeft();
                 if (timeLeft > 9000L && timeLeft < 11000L) {
-                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "\u5bf9\u4e8e\u4f60\u4eec\u65e0\u6cd5\u6218\u80dc\u7684\u6bd4\u8d5b\uff0c\u6211\u4eec\u5e0c\u671b\u60a8\u4e0b\u4e00\u6b21\u6218\u80dc\u5b83\uff01\u4e0b\u6b21\u518d\u89c1~"));
+                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "对于你们无法战胜的比赛，我们希望您下一次战胜它！下次再见~"));
                 }
                 else if (timeLeft > 11000L && timeLeft < 101000L) {
-                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "\u597d\u5427\uff0c\u4f60\u5269\u4e0b\u7684\u65f6\u95f4\u6ca1\u6709\u591a\u5c11\u4e86\u3002\u8bf7\u6293\u7d27\u65f6\u95f4!"));
+                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "好吧，你剩下的时间没有多少了。请抓紧时间!"));
                 }
                 else if (timeLeft > 101000L && timeLeft < 241000L) {
-                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "\u7b2c4\u9636\u6bb5\uff0c\u662f\u6700\u540e\u4e00\u9879 [\u5192\u9669\u5c9b\u4f53\u80fd\u6d4b\u8bd5]. \u8bf7\u4e0d\u8981\u5728\u6700\u540e\u4e00\u523b\u653e\u5f03\uff0c\u62fc\u5c3d\u5168\u529b. \u4e30\u539a\u7684\u5956\u52b1\u5728\u6700\u9ad8\u5c42\u7b49\u7740\u4f60\u54e6!"));
+                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "第4阶段，是最后一项 [冒险岛体能测试]. 请不要在最后一刻放弃，拼尽全力. 丰厚的奖励在最高层等着你哦!"));
                 }
                 else if (timeLeft > 241000L && timeLeft < 301000L) {
-                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "\u7b2c\u4e09\u9636\u6bb5\uff0c\u6709\u5f88\u591a\u9677\u9631\uff0c\u4f60\u53ef\u80fd\u4f1a\u770b\u5230\u4ed6\u4eec\uff0c\u4f46\u4f60\u4e0d\u80fd\u8e29\u4ed6\u4eec.\u6309\u7167\u4f60\u7684\u65b9\u5f0f\u8fdb\u884c\u4e0b\u53bb\u5427."));
+                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "第三阶段，有很多陷阱，你可能会看到他们，但你不能踩他们.按照你的方式进行下去吧."));
                 }
                 else if (timeLeft > 301000L && timeLeft < 361000L) {
-                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "\u8bf7\u52a1\u5fc5\u6162\u6162\u5730\u79fb\u52a8\uff0c\u5c0f\u5fc3\u6389\u5230\u4e0b\u9762\u53bb\u3002"));
+                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "请务必慢慢地移动，小心掉到下面去。"));
                 }
                 else if (timeLeft > 361000L && timeLeft < 501000L) {
-                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "\u8bf7\u8bb0\u4f4f\uff0c\u5982\u679c\u4f60\u5728\u6d3b\u52a8\u671f\u95f4\u6b7b\u6389\u4e86\uff0c\u4f60\u4f1a\u4ece\u6e38\u620f\u4e2d\u6dd8\u6c70. \u5982\u679c\u4f60\u60f3\u8865\u5145HP\uff0c\u4f7f\u7528\u836f\u6c34\u6216\u79fb\u52a8\u4e4b\u524d\u5148\u6062\u590dHP\u3002"));
+                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "请记住，如果你在活动期间死掉了，你会从游戏中淘汰. 如果你想补充HP，使用药水或移动之前先恢复HP。"));
                 }
                 else if (timeLeft > 501000L && timeLeft < 601000L) {
-                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "\u6700\u91cd\u8981\u7684\u662f\u4f60\u9700\u8981\u77e5\u9053\uff0c\u4e0d\u8981\u88ab\u7334\u5b50\u6254\u7684\u9999\u8549\u6253\u4e2d\uff0c\u8bf7\u5728\u89c4\u5b9a\u7684\u65f6\u95f4\u5b8c\u6210\u4e00\u5207\uff01"));
+                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "最重要的是你需要知道，不要被猴子扔的香蕉打中，请在规定的时间完成一切！"));
                 }
                 else if (timeLeft > 601000L && timeLeft < 661000L) {
-                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "\u7b2c\u4e8c\u9636\u6bb5\u969c\u788d\u662f\u7334\u5b50\u6254\u9999\u8549. \u8bf7\u786e\u4fdd\u6cbf\u7740\u6b63\u786e\u7684\u8def\u7ebf\u79fb\u52a8\uff0c\u8eb2\u907f\u5b83\u4eec\u7684\u653b\u51fb\u3002"));
+                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "第二阶段障碍是猴子扔香蕉. 请确保沿着正确的路线移动，躲避它们的攻击。"));
                 }
                 else if (timeLeft > 661000L && timeLeft < 701000L) {
-                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "\u8bf7\u8bb0\u4f4f\uff0c\u5982\u679c\u4f60\u5728\u6d3b\u52a8\u671f\u95f4\u6b7b\u6389\u4e86\uff0c\u4f60\u4f1a\u4ece\u6e38\u620f\u4e2d\u6dd8\u6c70. \u5982\u679c\u4f60\u60f3\u8865\u5145HP\uff0c\u4f7f\u7528\u836f\u6c34\u6216\u79fb\u52a8\u4e4b\u524d\u5148\u6062\u590dHP\u3002"));
+                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "请记住，如果你在活动期间死掉了，你会从游戏中淘汰. 如果你想补充HP，使用药水或移动之前先恢复HP。"));
                 }
                 else if (timeLeft > 701000L && timeLeft < 781000L) {
-                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "\u6bcf\u4e2a\u4eba\u90fd\u8be5\u53c2\u52a0 [\u5192\u9669\u5c9b\u4f53\u80fd\u6d4b\u8bd5] \u53c2\u52a0\u8fd9\u4e2a\u9879\u76ee\uff0c\u65e0\u8bba\u5b8c\u6210\u7684\u987a\u5e8f\uff0c\u90fd\u4f1a\u83b7\u5f97\u5956\u52b1\uff0c\u6240\u4ee5\u53ea\u662f\u5a31\u4e50\uff0c\u6162\u6162\u6765\uff0c\u6e05\u9664\u4e864\u4e2a\u9636\u6bb5\u3002"));
+                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "每个人都该参加 [冒险岛体能测试] 参加这个项目，无论完成的顺序，都会获得奖励，所以只是娱乐，慢慢来，清除了4个阶段。"));
                 }
                 else if (timeLeft > 781000L && timeLeft < 841000L) {
-                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "\u4e0d\u8981\u754f\u60e7\u82e6\u96be\uff0c\u7ee7\u7eed\u4e0b\u53bb\uff0c\u4eab\u53d7\u6e38\u620f\uff0c\u91cd\u5728\u5a31\u4e50\u561b."));
+                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "不要畏惧苦难，继续下去，享受游戏，重在娱乐嘛."));
                 }
                 else if (timeLeft > 841000L) {
-                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "[\u5192\u9669\u5c9b\u4f53\u80fd\u6d4b\u8bd5]\u67094\u4e2a\u9636\u6bb5\uff0c\u5982\u679c\u4f60\u78b0\u5de7\u5728\u6e38\u620f\u8fc7\u7a0b\u4e2d\u6b7b\u4ea1\uff0c\u4f60\u4f1a\u4ece\u6bd4\u8d5b\u88ab\u6dd8\u6c70\uff0c\u6240\u4ee5\u8bf7\u6ce8\u610f\u8fd9\u4e00\u70b9\u3002"));
+                    MapleFitness.this.broadcast(MaplePacketCreator.serverNotice(0, "[冒险岛体能测试]有4个阶段，如果你碰巧在游戏过程中死亡，你会从比赛被淘汰，所以请注意这一点。"));
                 }
             }
         }, 90000L);

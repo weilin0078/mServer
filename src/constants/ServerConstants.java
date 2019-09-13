@@ -16,20 +16,20 @@ public class ServerConstants
     public static final int MTS_MESO = 5000;
     public static final int CHANNEL_COUNT = 200;
     public static String PACKET_ERROR;
-    public static boolean \u5c01\u5305\u663e\u793a;
-    public static boolean \u8c03\u8bd5\u8f93\u51fa\u5c01\u5305;
+    public static boolean 封包显示;
+    public static boolean 调试输出封包;
     public static final boolean PACKET_ERROR_OFF;
-    public static boolean \u81ea\u52a8\u6ce8\u518c;
+    public static boolean 自动注册;
     public static boolean Super_password;
     public static String superpw;
     
     public static boolean getAutoReg() {
-        return ServerConstants.\u81ea\u52a8\u6ce8\u518c;
+        return ServerConstants.自动注册;
     }
     
     public static String ChangeAutoReg() {
-        ServerConstants.\u81ea\u52a8\u6ce8\u518c = !getAutoReg();
-        return ServerConstants.\u81ea\u52a8\u6ce8\u518c ? "\u5f00\u542f" : "\u5173\u95ed";
+        ServerConstants.自动注册 = !getAutoReg();
+        return ServerConstants.自动注册 ? "开启" : "关闭";
     }
     
     public void setPACKET_ERROR(final String ERROR) {
@@ -62,10 +62,10 @@ public class ServerConstants
     static {
         Poll_Answers = new String[] { "test1", "test2", "test3" };
         ServerConstants.PACKET_ERROR = "";
-        ServerConstants.\u5c01\u5305\u663e\u793a = Boolean.parseBoolean(ServerProperties.getProperty("tms.\u5c01\u5305\u663e\u793a", "false"));
-        ServerConstants.\u8c03\u8bd5\u8f93\u51fa\u5c01\u5305 = Boolean.parseBoolean(ServerProperties.getProperty("tms.\u8c03\u8bd5\u8f93\u51fa\u5c01\u5305", "false"));
-        PACKET_ERROR_OFF = Boolean.parseBoolean(ServerProperties.getProperty("KinMS.\u8bb0\u5f5538\u9519\u8bef", "false"));
-        ServerConstants.\u81ea\u52a8\u6ce8\u518c = false;
+        ServerConstants.封包显示 = Boolean.parseBoolean(ServerProperties.getProperty("tms.封包显示", "false"));
+        ServerConstants.调试输出封包 = Boolean.parseBoolean(ServerProperties.getProperty("tms.调试输出封包", "false"));
+        PACKET_ERROR_OFF = Boolean.parseBoolean(ServerProperties.getProperty("KinMS.记录38错误", "false"));
+        ServerConstants.自动注册 = false;
         ServerConstants.Super_password = false;
         ServerConstants.superpw = "";
     }

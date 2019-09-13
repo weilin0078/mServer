@@ -72,7 +72,7 @@ public class HiredMerchantSave
                     this.TimeTaken += System.currentTimeMillis() - Start;
                     ++this.ShopsSaved;
                 }
-                System.out.println("[\u4fdd\u5b58\u96c7\u4f63\u5546\u5e97\u6570\u636e \u7ebf\u7a0b " + this.ThreadID + "] \u5171\u4fdd\u5b58: " + this.ShopsSaved + " | \u8017\u65f6: " + this.TimeTaken + " \u6beb\u79d2.");
+                System.out.println("[保存雇佣商店数据 线程 " + this.ThreadID + "] 共保存: " + this.ShopsSaved + " | 耗时: " + this.TimeTaken + " 毫秒.");
                 synchronized (this.ToNotify) {
                     this.ToNotify.notify();
                 }

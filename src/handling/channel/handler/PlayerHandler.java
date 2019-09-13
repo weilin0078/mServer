@@ -125,7 +125,7 @@ public class PlayerHandler
         }
         final IItem toUse = chr.getInventory(MapleInventoryType.SETUP).findById(itemId);
         if (toUse == null) {
-            chr.getCheatTracker().registerOffense(CheatingOffense.\u4f7f\u7528\u4e0d\u5b58\u5728\u9053\u5177, Integer.toString(itemId));
+            chr.getCheatTracker().registerOffense(CheatingOffense.使用不存在道具, Integer.toString(itemId));
             return;
         }
         if (itemId == 3011000) {
@@ -179,7 +179,7 @@ public class PlayerHandler
                     chr.addRockMap();
                 }
                 else {
-                    chr.dropMessage(1, "\u4f60\u53ef\u80fd\u4e0d\u80fd\u6dfb\u52a0\u6b64\u5730\u56fe.");
+                    chr.dropMessage(1, "你可能不能添加此地图.");
                 }
             }
         }
@@ -191,7 +191,7 @@ public class PlayerHandler
                 chr.addRegRockMap();
             }
             else {
-                chr.dropMessage(1, "\u4f60\u53ef\u80fd\u4e0d\u80fd\u6dfb\u52a0\u6b64\u5730\u56fe.");
+                chr.dropMessage(1, "你可能不能添加此地图.");
             }
         }
         c.getSession().write((Object)MTSCSPacket.getTrockRefresh(chr, vip == 1, addrem == 3));
@@ -320,11 +320,11 @@ public class PlayerHandler
             }
             final MapleStatEffect bouncedam_A = chr.getStatForBuff(MapleBuffStat.BODY_PRESSURE);
             if (attacker != null && bouncedam_A != null && damage > 0) {
-                final ISkill \u6297\u538b = SkillFactory.getSkill(21101003);
-                final int \u6297\u538b\u4f24\u5bb3 = (int)(\u6297\u538b.getEffect(chr.getSkillLevel(21101003)).getDamage() / 100.0 * damage);
-                attacker.damage(chr, \u6297\u538b\u4f24\u5bb3, true);
-                damage -= \u6297\u538b\u4f24\u5bb3;
-                chr.getMap().broadcastMessage(chr, MobPacket.damageMonster(oid, \u6297\u538b\u4f24\u5bb3), chr.getPosition());
+                final ISkill 抗压 = SkillFactory.getSkill(21101003);
+                final int 抗压伤害 = (int)(抗压.getEffect(chr.getSkillLevel(21101003)).getDamage() / 100.0 * damage);
+                attacker.damage(chr, 抗压伤害, true);
+                damage -= 抗压伤害;
+                chr.getMap().broadcastMessage(chr, MobPacket.damageMonster(oid, 抗压伤害), chr.getPosition());
                 chr.checkMonsterAggro(attacker);
                 chr.setHp(chr.getHp() - damage);
             }
@@ -592,7 +592,7 @@ public class PlayerHandler
             return;
         }
         if (!chr.isAlive() || chr.getMap() == null) {
-            chr.getCheatTracker().registerOffense(CheatingOffense.\u4eba\u7269\u6b7b\u4ea1\u653b\u51fb);
+            chr.getCheatTracker().registerOffense(CheatingOffense.人物死亡攻击);
             return;
         }
         final AttackInfo attack = DamageParse.Modify_AttackCrit(DamageParse.parseDmgM(slea, chr), chr, 1);
@@ -727,7 +727,7 @@ public class PlayerHandler
             return;
         }
         if (!chr.isAlive() || chr.getMap() == null) {
-            chr.getCheatTracker().registerOffense(CheatingOffense.\u4eba\u7269\u6b7b\u4ea1\u653b\u51fb);
+            chr.getCheatTracker().registerOffense(CheatingOffense.人物死亡攻击);
             return;
         }
         final AttackInfo attack = DamageParse.Modify_AttackCrit(DamageParse.parseDmgR(slea, chr), chr, 2);
@@ -871,7 +871,7 @@ public class PlayerHandler
             return;
         }
         if (!chr.isAlive() || chr.getMap() == null) {
-            chr.getCheatTracker().registerOffense(CheatingOffense.\u4eba\u7269\u6b7b\u4ea1\u653b\u51fb);
+            chr.getCheatTracker().registerOffense(CheatingOffense.人物死亡攻击);
             return;
         }
         final AttackInfo attack = DamageParse.Modify_AttackCrit(DamageParse.parseDmgMa(slea, chr), chr, 3);
@@ -926,7 +926,7 @@ public class PlayerHandler
             final int emoteid = 5159992 + emote;
             final MapleInventoryType type = GameConstants.getInventoryType(emoteid);
             if (chr.getInventory(type).findById(emoteid) == null) {
-                chr.getCheatTracker().registerOffense(CheatingOffense.\u4f7f\u7528\u4e0d\u5b58\u5728\u9053\u5177, Integer.toString(emoteid));
+                chr.getCheatTracker().registerOffense(CheatingOffense.使用不存在道具, Integer.toString(emoteid));
                 return;
             }
         }
@@ -965,13 +965,13 @@ public class PlayerHandler
                 check_hp += 150;
             }
             if (healHP > check_hp * 2 && healHP > 20) {
-                chr.getCheatTracker().registerOffense(CheatingOffense.\u56de\u590d\u8fc7\u591aHP, String.valueOf(healHP) + " \u670d\u52a1\u5668:" + check_hp);
+                chr.getCheatTracker().registerOffense(CheatingOffense.回复过多HP, String.valueOf(healHP) + " 服务器:" + check_hp);
             }
             chr.addHP(healHP);
         }
         if (chr.canMP() && healMP != 0) {
             if (healMP > check_mp * 2 && healMP > 20) {
-                chr.getCheatTracker().registerOffense(CheatingOffense.\u56de\u590d\u8fc7\u591aMP, String.valueOf(healMP) + "\u670d\u52a1\u5668:" + check_mp);
+                chr.getCheatTracker().registerOffense(CheatingOffense.回复过多MP, String.valueOf(healMP) + "服务器:" + check_mp);
             }
             chr.addMP(healMP);
         }
@@ -1080,7 +1080,7 @@ public class PlayerHandler
     
     public static final void ChangeMap(final SeekableLittleEndianAccessor slea, final MapleClient c, final MapleCharacter chr) {
         if (chr == null) {
-            chr.dropMessage(5, "\u4f60\u73b0\u5728\u5df2\u7ecf\u5047\u6b7b\u8bf7\u4f7f\u7528@ea");
+            chr.dropMessage(5, "你现在已经假死请使用@ea");
             return;
         }
         if (slea.available() == 0L) {
@@ -1223,7 +1223,7 @@ public class PlayerHandler
             return;
         }
         if (portal.getPosition().distanceSq(chr.getPosition()) > 22500.0) {
-            chr.getCheatTracker().registerOffense(CheatingOffense.\u4f7f\u7528\u8fc7\u8fdc\u4f20\u9001\u70b9);
+            chr.getCheatTracker().registerOffense(CheatingOffense.使用过远传送点);
         }
         chr.getMap().movePlayer(chr, new Point(toX, toY));
         chr.checkFollow();

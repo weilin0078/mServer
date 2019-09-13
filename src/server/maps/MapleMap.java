@@ -619,8 +619,8 @@ public final class MapleMap
         SpeedRunType type = SpeedRunType.NULL;
         final MapleSquad sqd = this.getSquadByMap();
         if (mobid == 8810018 && this.mapid == 240060200) {
-            World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "\u7ecf\u8fc7\u65e0\u6570\u6b21\u7684\u6311\u6218\uff0c" + chr.getName() + "\u6240\u5e26\u9886\u7684\u961f\u4f0d\u7ec8\u4e8e\u51fb\u8d25\u4e86\u6697\u9ed1\u9f99\u738b\u7684\u8fdc\u5f81\u961f\uff01\u4f60\u4eec\u624d\u662f\u9f99\u4e4b\u6797\u7684\u771f\u6b63\u82f1\u96c4~").getBytes());
-            FileoutputUtil.log("Logs/Log_\u6697\u9ed1\u9f99\u738b.rtf", this.MapDebug_Log());
+            World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "经过无数次的挑战，" + chr.getName() + "所带领的队伍终于击败了暗黑龙王的远征队！你们才是龙之林的真正英雄~").getBytes());
+            FileoutputUtil.log("Logs/Log_暗黑龙王.rtf", this.MapDebug_Log());
             if (this.speedRunStart > 0L) {
                 type = SpeedRunType.Horntail;
             }
@@ -633,8 +633,8 @@ public final class MapleMap
             }
         }
         else if (mobid == 8810122 && this.mapid == 240060201) {
-            World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "\u7ecf\u8fc7\u65e0\u6570\u6b21\u7684\u6311\u6218\uff0c" + chr.getName() + "\u6240\u5e26\u9886\u7684\u961f\u4f0d\u7ec8\u4e8e\u51fb\u8d25\u4e86\u6df7\u6c8c\u6697\u9ed1\u9f99\u738b\u7684\u8fdc\u5f81\u961f\uff01\u4f60\u4eec\u624d\u662f\u9f99\u4e4b\u6797\u7684\u771f\u6b63\u82f1\u96c4~").getBytes());
-            FileoutputUtil.log("Logs/Log_\u6697\u9ed1\u9f99\u738b.rtf", this.MapDebug_Log());
+            World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "经过无数次的挑战，" + chr.getName() + "所带领的队伍终于击败了混沌暗黑龙王的远征队！你们才是龙之林的真正英雄~").getBytes());
+            FileoutputUtil.log("Logs/Log_暗黑龙王.rtf", this.MapDebug_Log());
             if (this.speedRunStart > 0L) {
                 type = SpeedRunType.ChaosHT;
             }
@@ -647,10 +647,10 @@ public final class MapleMap
             for (final MaplePartyCharacter member : members) {
                 chr.delBossBack(member.getId());
             }
-            World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "\u7ecf\u8fc7\u65e0\u6570\u6b21\u7684\u6311\u6218\uff0c" + chr.getName() + "\u6240\u5e26\u9886\u7684\u961f\u4f0d\u7ec8\u4e8e\u51fb\u8d25\u4e86\u5996\u50e7\uff01\u4f60\u4eec\u624d\u662f\u5c11\u6797\u5bfa\u7684\u771f\u6b63\u82f1\u96c4~").getBytes());
+            World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "经过无数次的挑战，" + chr.getName() + "所带领的队伍终于击败了妖僧！你们才是少林寺的真正英雄~").getBytes());
         }
         else if (mobid == 8500002 && this.mapid == 220080001) {
-            World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "\u7ecf\u8fc7\u65e0\u6570\u6b21\u7684\u6311\u6218\uff0c" + chr.getName() + "\u6240\u5e26\u9886\u7684\u961f\u4f0d\u7ec8\u4e8e\u51fb\u8d25\u4e86\u95f9\u949f\uff01\u4f60\u4eec\u624d\u662f\u65f6\u95f4\u96a7\u9053\u7684\u771f\u6b63\u82f1\u96c4~").getBytes());
+            World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, "经过无数次的挑战，" + chr.getName() + "所带领的队伍终于击败了闹钟！你们才是时间隧道的真正英雄~").getBytes());
             if (this.speedRunStart > 0L) {
                 type = SpeedRunType.Papulatus;
             }
@@ -722,21 +722,21 @@ public final class MapleMap
             }
         }
         else if (mobid == 8820001 && this.mapid == 270050100) {
-            World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, chr.getName() + "\u7ecf\u8fc7\u5e26\u9886\u7684\u961f\u4f0d\u7ecf\u8fc7\u65e0\u6570\u6b21\u7684\u6311\u6218\uff0c\u7ec8\u4e8e\u51fb\u8d25\u4e86\u65f6\u95f4\u7684\u5ba0\u513f\uff0d\u54c1\u514b\u7f24\u7684\u8fdc\u5f81\u961f\uff01\u4f60\u4eec\u624d\u662f\u65f6\u95f4\u795e\u6bbf\u7684\u771f\u6b63\u82f1\u96c4~").getBytes());
+            World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, chr.getName() + "经过带领的队伍经过无数次的挑战，终于击败了时间的宠儿－品克缤的远征队！你们才是时间神殿的真正英雄~").getBytes());
             if (this.speedRunStart > 0L) {
                 type = SpeedRunType.Pink_Bean;
             }
             if (sqd != null) {
                 this.doShrine(true);
             }
-            FileoutputUtil.log("Logs/Log_\u54c1\u514b\u7f24.rtf", this.MapDebug_Log());
+            FileoutputUtil.log("Logs/Log_品克缤.rtf", this.MapDebug_Log());
             final Collection<MaplePartyCharacter> members = chr.getParty().getMembers();
             for (final MaplePartyCharacter member : members) {
                 chr.delBossBack(member.getId());
             }
         }
         else if (mobid == 8800002 && this.mapid == 280030000) {
-            FileoutputUtil.log("Logs/Log_\u624e\u6606.rtf", this.MapDebug_Log());
+            FileoutputUtil.log("Logs/Log_扎昆.rtf", this.MapDebug_Log());
             if (this.speedRunStart > 0L) {
                 type = SpeedRunType.Zakum;
             }
@@ -749,7 +749,7 @@ public final class MapleMap
             }
         }
         else if (mobid == 8800102 && this.mapid == 280030001) {
-            FileoutputUtil.log("Logs/Log_\u624e\u6606.rtf", this.MapDebug_Log());
+            FileoutputUtil.log("Logs/Log_扎昆.rtf", this.MapDebug_Log());
             if (this.speedRunStart > 0L) {
                 type = SpeedRunType.Chaos_Zakum;
             }
@@ -801,7 +801,7 @@ public final class MapleMap
         if (type != SpeedRunType.NULL && this.speedRunStart > 0L && this.speedRunLeader.length() > 0) {
             final long endTime = System.currentTimeMillis();
             final String time = StringUtil.getReadableMillis(this.speedRunStart, endTime);
-            this.broadcastMessage(MaplePacketCreator.serverNotice(5, this.speedRunLeader + "'\u8fdc\u5f81\u961f\u82b1\u4e86 " + time + " \u65f6\u95f4\u6253\u8d25\u4e86 " + type + "!"));
+            this.broadcastMessage(MaplePacketCreator.serverNotice(5, this.speedRunLeader + "'远征队花了 " + time + " 时间打败了 " + type + "!"));
             this.getRankAndAdd(this.speedRunLeader, time, type, endTime - this.speedRunStart, (sqd == null) ? null : sqd.getMembers());
             this.endSpeedRun();
         }
@@ -1788,31 +1788,31 @@ public final class MapleMap
         finally {
             this.charactersLock.writeLock().unlock();
         }
-        final boolean \u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e = false;
+        final boolean 进入地图开启显示数据 = false;
         if (this.mapid == 109080000 || this.mapid == 109080001 || this.mapid == 109080002 || this.mapid == 109080003 || this.mapid == 109080010 || this.mapid == 109080011 || this.mapid == 109080012) {
             chr.setCoconutTeam(this.getAndSwitchTeam() ? 0 : 1);
-            if (ServerConstants.\u5c01\u5305\u663e\u793a || \u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e) {
-                System.out.println("\u8fdb\u5165\u5730\u56fe\u52a0\u8f7d\u6570\u636eA");
+            if (ServerConstants.封包显示 || 进入地图开启显示数据) {
+                System.out.println("进入地图加载数据A");
             }
         }
         if (!chr.isHidden()) {
             this.broadcastMessage(chr, MaplePacketCreator.spawnPlayerMapobject(chr), false);
-            if (ServerConstants.\u5c01\u5305\u663e\u793a || \u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e) {
-                System.out.println("\u8fdb\u5165\u5730\u56fe\u52a0\u8f7d\u6570\u636eB");
+            if (ServerConstants.封包显示 || 进入地图开启显示数据) {
+                System.out.println("进入地图加载数据B");
             }
             if (chr.isGM() && this.speedRunStart > 0L) {
                 this.endSpeedRun();
                 this.broadcastMessage(MaplePacketCreator.serverNotice(5, "The speed run has ended."));
-                if (ServerConstants.\u5c01\u5305\u663e\u793a || \u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e) {
-                    System.out.println("\u8fdb\u5165\u5730\u56fe\u52a0\u8f7d\u6570\u636eC");
+                if (ServerConstants.封包显示 || 进入地图开启显示数据) {
+                    System.out.println("进入地图加载数据C");
                 }
             }
         }
         if (!chr.isClone()) {
             this.sendObjectPlacement(chr);
             chr.getClient().getSession().write((Object)MaplePacketCreator.spawnPlayerMapobject(chr));
-            if (ServerConstants.\u5c01\u5305\u663e\u793a || \u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e) {
-                System.out.println("\u8fdb\u5165\u5730\u56fe\u52a0\u8f7d\u6570\u636eD");
+            if (ServerConstants.封包显示 || 进入地图开启显示数据) {
+                System.out.println("进入地图加载数据D");
             }
             switch (this.mapid) {
                 case 109030001:
@@ -1834,10 +1834,10 @@ public final class MapleMap
             if (pet.getSummoned()) {
                 chr.getClient().getSession().write((Object)PetPacket.updatePet(pet, chr.getInventory(MapleInventoryType.CASH).getItem((byte)pet.getInventoryPosition()), true));
                 this.broadcastMessage(chr, PetPacket.showPet(chr, pet, false, false), false);
-                if (!ServerConstants.\u5c01\u5305\u663e\u793a && !\u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e) {
+                if (!ServerConstants.封包显示 && !进入地图开启显示数据) {
                     continue;
                 }
-                System.out.println("\u8fdb\u5165\u5730\u56fe\u52a0\u8f7d\u6570\u636eF");
+                System.out.println("进入地图加载数据F");
             }
         }
         if (this.hasForcedEquip()) {
@@ -1869,8 +1869,8 @@ public final class MapleMap
             }
             this.spawnSummon(summon);
             chr.addVisibleMapObject(summon);
-            if (ServerConstants.\u5c01\u5305\u663e\u793a || \u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e) {
-                System.out.println("\u8fdb\u5165\u5730\u56fe\u52a0\u8f7d\u6570\u636eH");
+            if (ServerConstants.封包显示 || 进入地图开启显示数据) {
+                System.out.println("进入地图加载数据H");
             }
         }
         if (chr.getChalkboard() != null) {
@@ -1879,47 +1879,47 @@ public final class MapleMap
         this.broadcastMessage(MaplePacketCreator.loveEffect());
         if (this.timeLimit > 0 && this.getForcedReturnMap() != null && !chr.isClone()) {
             chr.startMapTimeLimitTask(this.timeLimit, this.getForcedReturnMap());
-            if (ServerConstants.\u5c01\u5305\u663e\u793a || \u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e) {
-                System.out.println("\u8fdb\u5165\u5730\u56fe\u52a0\u8f7d\u6570\u636eI");
+            if (ServerConstants.封包显示 || 进入地图开启显示数据) {
+                System.out.println("进入地图加载数据I");
             }
         }
         if (this.getSquadBegin() != null && this.getSquadBegin().getTimeLeft() > 0L && this.getSquadBegin().getStatus() == 1) {
             chr.getClient().getSession().write((Object)MaplePacketCreator.getClock((int)(this.getSquadBegin().getTimeLeft() / 1000L)));
-            if (ServerConstants.\u5c01\u5305\u663e\u793a || \u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e) {
-                System.out.println("\u8fdb\u5165\u5730\u56fe\u52a0\u8f7d\u6570\u636eO");
+            if (ServerConstants.封包显示 || 进入地图开启显示数据) {
+                System.out.println("进入地图加载数据O");
             }
         }
         if (chr.getCarnivalParty() != null && chr.getEventInstance() != null) {
             chr.getEventInstance().onMapLoad(chr);
-            if (ServerConstants.\u5c01\u5305\u663e\u793a || \u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e) {
-                System.out.println("\u8fdb\u5165\u5730\u56fe\u52a0\u8f7d\u6570\u636eM");
+            if (ServerConstants.封包显示 || 进入地图开启显示数据) {
+                System.out.println("进入地图加载数据M");
             }
         }
         MapleEvent.mapLoad(chr, this.channel);
         if (chr.getEventInstance() != null && chr.getEventInstance().isTimerStarted() && !chr.isClone()) {
             chr.getClient().getSession().write((Object)MaplePacketCreator.getClock((int)(chr.getEventInstance().getTimeLeft() / 1000L)));
-            if (ServerConstants.\u5c01\u5305\u663e\u793a || \u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e) {
-                System.out.println("\u8fdb\u5165\u5730\u56fe\u52a0\u8f7d\u6570\u636eK");
+            if (ServerConstants.封包显示 || 进入地图开启显示数据) {
+                System.out.println("进入地图加载数据K");
             }
         }
         if (this.hasClock()) {
             final Calendar cal = Calendar.getInstance();
             chr.getClient().getSession().write((Object)MaplePacketCreator.getClockTime(cal.get(11), cal.get(12), cal.get(13)));
-            if (ServerConstants.\u5c01\u5305\u663e\u793a || \u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e) {
-                System.out.println("\u8fdb\u5165\u5730\u56fe\u52a0\u8f7d\u6570\u636eL");
+            if (ServerConstants.封包显示 || 进入地图开启显示数据) {
+                System.out.println("进入地图加载数据L");
             }
         }
         if (this.isTown()) {
             chr.cancelEffectFromBuffStat(MapleBuffStat.RAINING_MINES);
-            if (ServerConstants.\u5c01\u5305\u663e\u793a || \u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e) {
-                System.out.println("\u8fdb\u5165\u5730\u56fe\u52a0\u8f7d\u6570\u636eW-------------\u5b8c");
+            if (ServerConstants.封包显示 || 进入地图开启显示数据) {
+                System.out.println("进入地图加载数据W-------------完");
             }
         }
         if (chr.getParty() != null && !chr.isClone()) {
             chr.updatePartyMemberHP();
             chr.receivePartyMemberHP();
-            if (ServerConstants.\u5c01\u5305\u663e\u793a || \u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e) {
-                System.out.println("\u8fdb\u5165\u5730\u56fe\u52a0\u8f7d\u6570\u636eG");
+            if (ServerConstants.封包显示 || 进入地图开启显示数据) {
+                System.out.println("进入地图加载数据G");
             }
         }
         if (this.permanentWeather > 0) {
@@ -1933,8 +1933,8 @@ public final class MapleMap
         }
         if (this.isTown()) {
             chr.cancelEffectFromBuffStat(MapleBuffStat.RAINING_MINES);
-            if (ServerConstants.\u5c01\u5305\u663e\u793a || \u8fdb\u5165\u5730\u56fe\u5f00\u542f\u663e\u793a\u6570\u636e) {
-                System.out.println("\u8fdb\u5165\u5730\u56fe\u52a0\u8f7d\u6570\u636eW-------------\u5b8c");
+            if (ServerConstants.封包显示 || 进入地图开启显示数据) {
+                System.out.println("进入地图加载数据W-------------完");
             }
         }
     }
@@ -2777,25 +2777,25 @@ public final class MapleMap
     
     public void AutoNx(final int dy, final int dd) {
         for (final MapleCharacter chr : this.characters) {
-            int \u7ecf\u9a8c\u500d\u6570 = 1;
+            int 经验倍数 = 1;
             if (chr.getLevel() <= 30) {
-                \u7ecf\u9a8c\u500d\u6570 = Randomizer.nextInt(10) + 10;
+                经验倍数 = Randomizer.nextInt(10) + 10;
             }
             else if (chr.getLevel() <= 70) {
-                \u7ecf\u9a8c\u500d\u6570 = Randomizer.nextInt(10) + 20;
+                经验倍数 = Randomizer.nextInt(10) + 20;
             }
             else if (chr.getLevel() <= 120) {
-                \u7ecf\u9a8c\u500d\u6570 = Randomizer.nextInt(10) + 30;
+                经验倍数 = Randomizer.nextInt(10) + 30;
             }
             else if (chr.getLevel() > 120) {
-                \u7ecf\u9a8c\u500d\u6570 = Randomizer.nextInt(10) + 40;
+                经验倍数 = Randomizer.nextInt(10) + 40;
             }
-            chr.gainExp(chr.getLevel() * \u7ecf\u9a8c\u500d\u6570, true, false, true);
+            chr.gainExp(chr.getLevel() * 经验倍数, true, false, true);
             final int cashdy = 1 + Randomizer.nextInt(10) + dy;
             chr.modifyCSPoints(2, cashdy);
             final int cashdd = 1 + Randomizer.nextInt(10) + dd;
             chr.gainBeans(cashdd);
-            chr.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "[\u7cfb\u7edf\u5956\u52b1] \u6302\u673a\u83b7\u5f97[" + cashdy + "] \u62b5\u7528\u5377,[" + cashdd + "] \u8c46\u8c46,[" + chr.getLevel() * \u7ecf\u9a8c\u500d\u6570 + "] \u7ecf\u9a8c"));
+            chr.getClient().getSession().write((Object)MaplePacketCreator.serverNotice(5, "[系统奖励] 挂机获得[" + cashdy + "] 抵用卷,[" + cashdd + "] 豆豆,[" + chr.getLevel() * 经验倍数 + "] 经验"));
         }
     }
     
@@ -3174,7 +3174,7 @@ public final class MapleMap
         }
         if (this.speedRunStart > 0L && this.speedRunLeader.equalsIgnoreCase(chr)) {
             if (size > 0) {
-                this.broadcastMessage(MaplePacketCreator.serverNotice(5, "\u961f\u957f\u4e0d\u5728\u5730\u56fe\u4e0a\uff01\u4f60\u7684\u6311\u6218\u5931\u8d25"));
+                this.broadcastMessage(MaplePacketCreator.serverNotice(5, "队长不在地图上！你的挑战失败"));
             }
             this.endSpeedRun();
         }

@@ -41,7 +41,7 @@ public class CashShopServer
         try {
             CashShopServer.acceptor.setHandler((IoHandler)new MapleServerHandler(-1, true));
             CashShopServer.acceptor.bind((SocketAddress)new InetSocketAddress(8596));
-            System.out.println("\u5546\u57ce    1: \u542f\u52a8\u7aef\u53e3 8596");
+            System.out.println("商城    1: 启动端口 8596");
         }
         catch (Exception e) {
             System.err.println("Binding to port 8596 failed");
@@ -66,9 +66,9 @@ public class CashShopServer
         if (CashShopServer.finishedShutdown) {
             return;
         }
-        System.out.println("\u6b63\u5728\u65ad\u5f00\u5546\u57ce\u5185\u73a9\u5bb6...");
+        System.out.println("正在断开商城内玩家...");
         CashShopServer.players.disconnectAll();
-        System.out.println("\u6b63\u5728\u5173\u95ed\u5546\u57ce\u4f3a\u670d\u5668...");
+        System.out.println("正在关闭商城伺服器...");
         CashShopServer.finishedShutdown = true;
     }
     

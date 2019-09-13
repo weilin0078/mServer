@@ -69,7 +69,7 @@ public class AllianceHandler
                 final int inviteid = World.Guild.getInvitedId(c.getPlayer().getGuildId());
                 if (inviteid > 0) {
                     if (!World.Alliance.addGuildToAlliance(inviteid, c.getPlayer().getGuildId())) {
-                        c.getPlayer().dropMessage(5, "\u52a0\u5165\u5bb6\u65cf\u65f6\u51fa\u73b0\u9519\u8bef.");
+                        c.getPlayer().dropMessage(5, "加入家族时出现错误.");
                     }
                     World.Guild.setInvitedId(c.getPlayer().getGuildId(), 0);
                     break;
@@ -90,14 +90,14 @@ public class AllianceHandler
                 }
                 int gid2 = 0;
                 if (c.getPlayer().getAllianceRank() <= 2 && (c.getPlayer().getAllianceRank() == 1 || c.getPlayer().getGuildId() == gid) && !World.Alliance.removeGuildFromAlliance(gs.getAllianceId(), gid2, c.getPlayer().getGuildId() != (gid2 = gid))) {
-                    c.getPlayer().dropMessage(5, "\u5220\u9664\u5bb6\u65cf\u65f6\u51fa\u73b0\u9519\u8bef.");
+                    c.getPlayer().dropMessage(5, "删除家族时出现错误.");
                     break;
                 }
                 break;
             }
             case 7: {
                 if (c.getPlayer().getAllianceRank() == 1 && leaderid == c.getPlayer().getId() && !World.Alliance.changeAllianceLeader(gs.getAllianceId(), slea.readInt())) {
-                    c.getPlayer().dropMessage(5, "\u66f4\u6362\u65cf\u957f\u65f6\u53d1\u751f\u9519\u8bef.");
+                    c.getPlayer().dropMessage(5, "更换族长时发生错误.");
                     break;
                 }
                 break;
@@ -115,7 +115,7 @@ public class AllianceHandler
             }
             case 9: {
                 if (c.getPlayer().getAllianceRank() <= 2 && !World.Alliance.changeAllianceRank(gs.getAllianceId(), slea.readInt(), slea.readByte())) {
-                    c.getPlayer().dropMessage(5, "\u66f4\u6539\u7b49\u7ea7\u65f6\u53d1\u751f\u9519\u8bef.");
+                    c.getPlayer().dropMessage(5, "更改等级时发生错误.");
                     break;
                 }
                 break;

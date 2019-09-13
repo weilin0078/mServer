@@ -14,58 +14,58 @@ public class BeanGame
         final MapleCharacter chr = c.getPlayer();
         final List<Beans> beansInfo = new ArrayList<Beans>();
         final int type = slea.readByte();
-        int \u529b\u5ea6 = 0;
-        int \u8c46\u8c46\u5e8f\u865f = 0;
+        int 力度 = 0;
+        int 豆豆序號 = 0;
         if (type == 1) {
-            \u529b\u5ea6 = slea.readShort();
-            chr.setBeansRange(\u529b\u5ea6);
+            力度 = slea.readShort();
+            chr.setBeansRange(力度);
             c.getSession().write((Object)MaplePacketCreator.enableActions());
         }
         else if (type == 0) {
-            \u529b\u5ea6 = slea.readShort();
-            \u8c46\u8c46\u5e8f\u865f = slea.readInt() + 1;
-            chr.setBeansRange(\u529b\u5ea6);
-            chr.setBeansNum(\u8c46\u8c46\u5e8f\u865f);
-            if (\u8c46\u8c46\u5e8f\u865f == 1) {
+            力度 = slea.readShort();
+            豆豆序號 = slea.readInt() + 1;
+            chr.setBeansRange(力度);
+            chr.setBeansNum(豆豆序號);
+            if (豆豆序號 == 1) {
                 chr.setCanSetBeansNum(false);
             }
         }
         else if (type == 2) {
             if (type == 11 || type == 0) {
-                \u529b\u5ea6 = slea.readShort();
-                \u8c46\u8c46\u5e8f\u865f = slea.readInt() + 1;
-                chr.setBeansRange(\u529b\u5ea6);
-                chr.setBeansNum(\u8c46\u8c46\u5e8f\u865f);
-                if (\u8c46\u8c46\u5e8f\u865f == 1) {
+                力度 = slea.readShort();
+                豆豆序號 = slea.readInt() + 1;
+                chr.setBeansRange(力度);
+                chr.setBeansNum(豆豆序號);
+                if (豆豆序號 == 1) {
                     chr.setCanSetBeansNum(false);
                 }
             }
         }
         else if (type == 6) {
             slea.skip(1);
-            final int \u5faa\u74b0\u6b21\u6578 = slea.readByte();
-            if (\u5faa\u74b0\u6b21\u6578 == 0) {
+            final int 循環次數 = slea.readByte();
+            if (循環次數 == 0) {
                 return;
             }
-            if (\u5faa\u74b0\u6b21\u6578 != 1) {
-                slea.skip((\u5faa\u74b0\u6b21\u6578 - 1) * 8);
+            if (循環次數 != 1) {
+                slea.skip((循環次數 - 1) * 8);
             }
             if (chr.isCanSetBeansNum()) {
-                chr.setBeansNum(chr.getBeansNum() + \u5faa\u74b0\u6b21\u6578);
+                chr.setBeansNum(chr.getBeansNum() + 循環次數);
             }
-            chr.gainBeans(-\u5faa\u74b0\u6b21\u6578);
+            chr.gainBeans(-循環次數);
             chr.setCanSetBeansNum(true);
         }
         else if (type == 11 || type == 6) {
-            \u529b\u5ea6 = slea.readShort();
-            chr.setBeansRange(\u529b\u5ea6);
+            力度 = slea.readShort();
+            chr.setBeansRange(力度);
             final byte size = (byte)(slea.readByte() + 1);
             final short Pos = slea.readShort();
             final byte Type = (byte)(slea.readByte() + 1);
-            c.getSession().write((Object)MaplePacketCreator.showBeans(\u529b\u5ea6, size, Pos, Type));
+            c.getSession().write((Object)MaplePacketCreator.showBeans(力度, size, Pos, Type));
         }
         else {
-            System.out.println("\u672a\u8655\u7406\u7684\u985e\u578b\u3010" + type + "\u3011\n\u5305" + slea.toString());
+            System.out.println("未處理的類型【" + type + "】\n包" + slea.toString());
         }
     }
     

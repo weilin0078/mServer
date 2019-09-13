@@ -143,7 +143,7 @@ public class MapleSnowball extends MapleEvent
         
         public static void hitSnowball(final MapleCharacter chr) {
             final int team = (chr.getPosition().y <= -80) ? 1 : 0;
-            final MapleSnowball sb = (MapleSnowball)chr.getClient().getChannelServer().getEvent(MapleEventType.\u96ea\u7403\u8d5b);
+            final MapleSnowball sb = (MapleSnowball)chr.getClient().getChannelServer().getEvent(MapleEventType.Ñ©ÇòÈü);
             final MapleSnowballs ball = sb.getSnowBall(team);
             if (ball != null && !ball.isInvis()) {
                 final boolean snowman = chr.getPosition().x < -360 && chr.getPosition().x > -560;
@@ -168,7 +168,7 @@ public class MapleSnowball extends MapleEvent
                                 sb.getSnowBall(i).setInvis(true);
                                 map.broadcastMessage(MaplePacketCreator.rollSnowball(i + 2, sb.getSnowBall(0), sb.getSnowBall(1)));
                             }
-                            chr.getMap().broadcastMessage(MaplePacketCreator.serverNotice(6, "[\u606d\u559c] " + ((team == 0) ? "\u84dd\u961f" : "\u7ea2\u961f") + " \u8d62\u5f97\u80dc\u5229!"));
+                            chr.getMap().broadcastMessage(MaplePacketCreator.serverNotice(6, "[¹§Ï²] " + ((team == 0) ? "À¶¶Ó" : "ºì¶Ó") + " Ó®µÃÊ¤Àû!"));
                             for (final MapleCharacter chrz : chr.getMap().getCharactersThreadsafe()) {
                                 if ((team == 0 && chrz.getPosition().y > -80) || (team == 1 && chrz.getPosition().y <= -80)) {
                                     sb.givePrize(chrz);

@@ -34,7 +34,7 @@ public class ReactorScriptManager extends AbstractScriptManager
     public final void act(final MapleClient c, final MapleReactor reactor) {
         try {
             if (c.getPlayer().isGM()) {
-                c.getPlayer().dropMessage("[\u7cfb\u7edf\u63d0\u793a]\u60a8\u5df2\u7ecf\u5efa\u7acb\u4e0ereactor:" + reactor.getReactorId() + "\u7684\u5bf9\u8bdd\u3002");
+                c.getPlayer().dropMessage("[系统提示]您已经建立与reactor:" + reactor.getReactorId() + "的对话。");
             }
             final Invocable iv = this.getInvocable("reactor/" + reactor.getReactorId() + ".js", c);
             if (iv == null) {
@@ -47,7 +47,7 @@ public class ReactorScriptManager extends AbstractScriptManager
         }
         catch (Exception e) {
             System.err.println("Error executing reactor script. ReactorID: " + reactor.getReactorId() + ", ReactorName: " + reactor.getName() + ":" + e);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Error executing reactor script. ReactorID: " + reactor.getReactorId() + ", ReactorName: " + reactor.getName() + ":" + e);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Error executing reactor script. ReactorID: " + reactor.getReactorId() + ", ReactorName: " + reactor.getName() + ":" + e);
         }
     }
     

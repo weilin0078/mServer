@@ -45,27 +45,27 @@ public abstract class MapleEvent
         final int reward = RandomRewards.getInstance().getEventReward();
         if (reward == 0) {
             chr.gainMeso(66666, true, false, false);
-            chr.dropMessage(5, "\u4f60\u83b7\u5f97 166666 \u5192\u9669\u5e01");
+            chr.dropMessage(5, "你获得 166666 冒险币");
         }
         else if (reward == 1) {
             chr.gainMeso(399999, true, false, false);
-            chr.dropMessage(5, "\u4f60\u83b7\u5f97 399999 \u5192\u9669\u5e01");
+            chr.dropMessage(5, "你获得 399999 冒险币");
         }
         else if (reward == 2) {
             chr.modifyCSPoints(0, 200, false);
-            chr.dropMessage(5, "\u4f60\u83b7\u5f97 200 \u70b9\u5377");
+            chr.dropMessage(5, "你获得 200 点卷");
         }
         else if (reward == 3) {
             chr.addFame(2);
-            chr.dropMessage(5, "\u4f60\u83b7\u5f97 2 \u4eba\u6c14");
+            chr.dropMessage(5, "你获得 2 人气");
         }
         if (MapleInventoryManipulator.checkSpace(chr.getClient(), 4032226, 1, "")) {
             MapleInventoryManipulator.addById(chr.getClient(), 4032226, (short)1, (byte)0);
-            chr.dropMessage(5, "\u4f60\u83b7\u5f97 1 \u4e2a\u9ec4\u91d1\u732a\u732a");
+            chr.dropMessage(5, "你获得 1 个黄金猪猪");
         }
         else {
             chr.gainMeso(100000, true, false, false);
-            chr.dropMessage(5, "\u7531\u4e8e\u4f60\u80cc\u5305\u6ee1\u4e86\u3002\u6240\u4ee5\u53ea\u80fd\u7ed9\u4e88\u4f60\u5192\u9669\u5e01\uff01");
+            chr.dropMessage(5, "由于你背包满了。所以只能给予你冒险币！");
         }
     }
     
@@ -102,7 +102,7 @@ public abstract class MapleEvent
                 if (e.isRunning) {
                     for (final int i : e.mapid) {
                         if (cserv.getEvent() == i) {
-                            e.broadcast(MaplePacketCreator.serverNotice(0, "\u8ddd\u79bb\u6d3b\u52a8\u5f00\u59cb\u53ea\u5269\u4e0b\u4e00\u5206\u949f!"));
+                            e.broadcast(MaplePacketCreator.serverNotice(0, "距离活动开始只剩下一分钟!"));
                             e.broadcast(MaplePacketCreator.getClock(60));
                             Timer.EventTimer.getInstance().schedule(new Runnable() {
                                 @Override
@@ -145,7 +145,7 @@ public abstract class MapleEvent
                 for (final int i : e.mapid) {
                     if (chr.getMapId() == i) {
                         e.startEvent();
-                        chr.dropMessage(5, String.valueOf(t) + " \u6d3b\u52a8\u5f00\u59cb");
+                        chr.dropMessage(5, String.valueOf(t) + " 活动开始");
                     }
                 }
             }
@@ -154,18 +154,18 @@ public abstract class MapleEvent
     
     public static final String scheduleEvent(final MapleEventType event, final ChannelServer cserv) {
         if (cserv.getEvent() != -1 || cserv.getEvent(event) == null) {
-            return "\u6539\u6d3b\u52a8\u5df2\u7ecf\u88ab\u7981\u6b62\u5b89\u6392\u4e86.";
+            return "改活动已经被禁止安排了.";
         }
         for (final int i : cserv.getEvent(event).mapid) {
             if (cserv.getMapFactory().getMap(i).getCharactersSize() > 0) {
-                return "\u8be5\u6d3b\u52a8\u5df2\u7ecf\u5728\u6267\u884c\u4e2d.";
+                return "该活动已经在执行中.";
             }
         }
         cserv.setEvent(cserv.getEvent(event).mapid[0]);
         cserv.getEvent(event).reset();
-        World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(0, "\u6d3b\u52a8 " + String.valueOf(event) + " \u5373\u5c06\u5728\u9891\u9053 " + cserv.getChannel() + " \u4e3e\u884c , \u8981\u53c2\u52a0\u7684\u73a9\u5bb6\u8bf7\u5230\u9891\u9053 " + cserv.getChannel() + ".\u8bf7\u627e\u5230\u81ea\u7531\u5e02\u573a\u76f8\u6846\u6d3b\u52a8npc\u5e76\u8fdb\u5165\uff01").getBytes());
-        World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(0, "\u6d3b\u52a8 " + String.valueOf(event) + " \u5373\u5c06\u5728\u9891\u9053 " + cserv.getChannel() + " \u4e3e\u884c , \u8981\u53c2\u52a0\u7684\u73a9\u5bb6\u8bf7\u5230\u9891\u9053 " + cserv.getChannel() + ".\u8bf7\u627e\u5230\u81ea\u7531\u5e02\u573a\u76f8\u6846\u6d3b\u52a8npc\u5e76\u8fdb\u5165\uff01").getBytes());
-        World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(0, "\u6d3b\u52a8 " + String.valueOf(event) + " \u5373\u5c06\u5728\u9891\u9053 " + cserv.getChannel() + " \u4e3e\u884c , \u8981\u53c2\u52a0\u7684\u73a9\u5bb6\u8bf7\u5230\u9891\u9053 " + cserv.getChannel() + ".\u8bf7\u627e\u5230\u81ea\u7531\u5e02\u573a\u76f8\u6846\u6d3b\u52a8npc\u5e76\u8fdb\u5165\uff01").getBytes());
+        World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(0, "活动 " + String.valueOf(event) + " 即将在频道 " + cserv.getChannel() + " 举行 , 要参加的玩家请到频道 " + cserv.getChannel() + ".请找到自由市场相框活动npc并进入！").getBytes());
+        World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(0, "活动 " + String.valueOf(event) + " 即将在频道 " + cserv.getChannel() + " 举行 , 要参加的玩家请到频道 " + cserv.getChannel() + ".请找到自由市场相框活动npc并进入！").getBytes());
+        World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(0, "活动 " + String.valueOf(event) + " 即将在频道 " + cserv.getChannel() + " 举行 , 要参加的玩家请到频道 " + cserv.getChannel() + ".请找到自由市场相框活动npc并进入！").getBytes());
         return "";
     }
 }

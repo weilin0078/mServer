@@ -16,7 +16,7 @@ import tools.MaplePacketCreator;
 
 public class BuddyList implements Serializable
 {
-    public static final String DEFAULT_GROUP = "\u5176\u4ed6";
+    public static final String DEFAULT_GROUP = "其他";
     private final Map<Integer, BuddyEntry> buddies;
     private byte capacity;
     private final Deque<BuddyEntry> pendingReqs;
@@ -125,12 +125,12 @@ public class BuddyList implements Serializable
     }
     
     public void addBuddyRequest(final MapleClient client, final int buddyId, final String buddyName, final int buddyChannel, final int buddyLevel, final int buddyJob) {
-        this.put(new BuddyEntry(buddyName, buddyId, "\u5176\u4ed6", buddyChannel, false, buddyLevel, buddyJob));
+        this.put(new BuddyEntry(buddyName, buddyId, "其他", buddyChannel, false, buddyLevel, buddyJob));
         if (this.pendingReqs.isEmpty()) {
             client.sendPacket(MaplePacketCreator.requestBuddylistAdd(buddyId, buddyName, buddyLevel, buddyJob));
         }
         else {
-            final BuddyEntry newPair = new BuddyEntry(buddyName, buddyId, "\u5176\u4ed6", -1, false, buddyJob, buddyLevel);
+            final BuddyEntry newPair = new BuddyEntry(buddyName, buddyId, "其他", -1, false, buddyJob, buddyLevel);
             this.pendingReqs.push(newPair);
         }
     }

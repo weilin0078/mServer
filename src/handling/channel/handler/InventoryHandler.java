@@ -77,7 +77,7 @@ public class InventoryHandler
         }
         else if (dst < 0) {
             if (dst == -128) {
-                c.getPlayer().dropMessage(5, "dst:-128\u73b0\u91d1\u6212\u6307\u4f4d\u6682\u505c\u5f00\u653e(\u5f85\u4fee\u590d)\uff01");
+                c.getPlayer().dropMessage(5, "dst:-128现金戒指位暂停开放(待修复)！");
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
                 return;
             }
@@ -204,7 +204,7 @@ public class InventoryHandler
                 }
             }
             else {
-                chr.dropMessage(6, "\u4f60\u6709\u4e00\u500b\u6b04\u4f4d\u6eff\u4e86 \u8acb\u7a7a\u51fa\u4f86\u518d\u6253\u958b");
+                chr.dropMessage(6, "你有一個欄位滿了 請空出來再打開");
             }
         }
         return false;
@@ -212,7 +212,7 @@ public class InventoryHandler
     
     public static final void QuestKJ(final SeekableLittleEndianAccessor slea, final MapleClient c, final MapleCharacter chr) {
         if (chr == null || !chr.isAlive() || chr.getCSPoints(2) < 200) {
-            chr.dropMessage(1, "\u4f60\u6ca1\u6709\u8db3\u591f\u7684\u62b5\u7528\u5377\uff01");
+            chr.dropMessage(1, "你没有足够的抵用卷！");
             c.getSession().write((Object)MaplePacketCreator.enableActions());
             return;
         }
@@ -507,7 +507,7 @@ public class InventoryHandler
                         break;
                     }
                     map.broadcastMessage(MaplePacketCreator.catchMonster(mob.getId(), itemid, (byte)0));
-                    chr.dropMessage(5, "\u602a\u7269\u7684\u751f\u547d\u529b\u8fd8\u5f88\u5f3a\u5927,\u65e0\u6cd5\u6355\u6349.");
+                    chr.dropMessage(5, "怪物的生命力还很强大,无法捕捉.");
                     break;
                 }
                 case 2270002: {
@@ -547,7 +547,7 @@ public class InventoryHandler
                         break;
                     }
                     map.broadcastMessage(MaplePacketCreator.catchMonster(mob.getId(), itemid, (byte)0));
-                    chr.dropMessage(5, "\u602a\u7269\u7684\u751f\u547d\u529b\u8fd8\u5f88\u5f3a\u5927,\u65e0\u6cd5\u6355\u6349.");
+                    chr.dropMessage(5, "怪物的生命力还很强大,无法捕捉.");
                     break;
                 }
             }
@@ -619,12 +619,12 @@ public class InventoryHandler
                         MapleInventoryManipulator.removeById(c, MapleInventoryType.USE, 2430008, 1, false, false);
                         break;
                     }
-                    c.getPlayer().dropMessage(5, "\u6240\u6709\u5730\u56fe\u90fd\u5728\u4f7f\u7528\uff0c\u8bf7\u7a0d\u540e\u518d\u8bd5.");
+                    c.getPlayer().dropMessage(5, "所有地图都在使用，请稍后再试.");
                     break;
                 }
                 case 2430112: {
                     if (c.getPlayer().getInventory(MapleInventoryType.USE).getNumFreeSlot() < 1) {
-                        c.getPlayer().dropMessage(5, "\u8bf7\u6e05\u7406\u7a7a\u95f4.");
+                        c.getPlayer().dropMessage(5, "请清理空间.");
                         break;
                     }
                     if (c.getPlayer().getInventory(MapleInventoryType.USE).countById(2430112) >= 25) {
@@ -632,19 +632,19 @@ public class InventoryHandler
                             MapleInventoryManipulator.addById(c, 2049400, (short)1, (byte)0);
                             break;
                         }
-                        c.getPlayer().dropMessage(5, "\u8bf7\u6e05\u7406\u7a7a\u95f4.");
+                        c.getPlayer().dropMessage(5, "请清理空间.");
                         break;
                     }
                     else {
                         if (c.getPlayer().getInventory(MapleInventoryType.USE).countById(2430112) < 10) {
-                            c.getPlayer().dropMessage(5, "\u4e00\u4e2a\u6f5c\u5728\u7684\u6eda\u52a8\u6761\u9700\u8981\u670910\u4e2a\u7247\u6bb5\uff0c25\u4e2a\u6f5c\u5728\u7684\u6eda\u52a8\u6761.");
+                            c.getPlayer().dropMessage(5, "一个潜在的滚动条需要有10个片段，25个潜在的滚动条.");
                             break;
                         }
                         if (MapleInventoryManipulator.checkSpace(c, 2049400, 1, "") && MapleInventoryManipulator.removeById(c, MapleInventoryType.USE, 2430112, 10, true, false)) {
                             MapleInventoryManipulator.addById(c, 2049401, (short)1, (byte)0);
                             break;
                         }
-                        c.getPlayer().dropMessage(5, "\u8bf7\u6e05\u7406\u7a7a\u95f4.");
+                        c.getPlayer().dropMessage(5, "请清理空间.");
                         break;
                     }
                     
@@ -814,17 +814,17 @@ public class InventoryHandler
         if (mountid > 0) {
             mountid += (GameConstants.isAran(c.getPlayer().getJob()) ? 20000000 : (GameConstants.isEvan(c.getPlayer().getJob()) ? 20010000 : (GameConstants.isKOC(c.getPlayer().getJob()) ? 10000000 : (GameConstants.isResist(c.getPlayer().getJob()) ? 30000000 : 0))));
             if (c.getPlayer().getSkillLevel(mountid) > 0) {
-                c.getPlayer().dropMessage(5, "\u4f60\u5df2\u7ecf\u62e5\u6709\u4e86\u8fd9\u4e2a\u6280\u80fd.");
+                c.getPlayer().dropMessage(5, "你已经拥有了这个技能.");
             }
             else if (expiration_days > 0L) {
                 MapleInventoryManipulator.removeFromSlot(c, MapleInventoryType.USE, slot, (short)1, false);
                 c.getPlayer().changeSkillLevel(SkillFactory.getSkill(mountid), (byte)1, (byte)1, System.currentTimeMillis() + expiration_days * 24L * 60L * 60L * 1000L);
-                c.getPlayer().dropMessage(5, "\u5df2\u7ecf\u8fbe\u5230\u7684\u6280\u80fd.");
+                c.getPlayer().dropMessage(5, "已经达到的技能.");
             }
         }
         if (itemId >= 2022570 && itemId <= 2022573 && itemId >= 2022575 && itemId <= 2022578 && itemId >= 2022580 && itemId <= 2022583) {
             if (c.getPlayer().getInventory(MapleInventoryType.EQUIP).getNumFreeSlot() < 1) {
-                c.getPlayer().dropMessage(1, "\u80cc\u5305\u6709");
+                c.getPlayer().dropMessage(1, "背包有");
             }
         }
         c.getSession().write((Object)MaplePacketCreator.enableActions());
@@ -840,7 +840,7 @@ public class InventoryHandler
             return;
         }
         if (c.getPlayer().getInventory(MapleInventoryType.EQUIP).getNumFreeSlot() <= 1) {
-            c.getPlayer().dropMessage(1, "\u80cc\u5305\u5df2\u6ee1\uff0c\u65e0\u6cd5\u83b7\u5f97\u7269\u54c1");
+            c.getPlayer().dropMessage(1, "背包已满，无法获得物品");
             c.getSession().write((Object)MaplePacketCreator.enableActions());
             return;
         }
@@ -910,7 +910,7 @@ public class InventoryHandler
             }
         }
         if (gift.isEmpty()) {
-            c.getPlayer().dropMessage(1, item + " \u7bb1\u5b50\u5c1a\u672a\u8bbe\u7f6e");
+            c.getPlayer().dropMessage(1, item + " 箱子尚未设置");
         }
         else {
             final int rand = ThreadLocalRandom.current().nextInt(gift.size());
@@ -948,7 +948,7 @@ public class InventoryHandler
         final IItem toUse = chr.getInventory(MapleInventoryType.USE).getItem(slot);
         if (chr.getMapId() >= 910000000 && chr.getMapId() <= 910000022) {
             c.getSession().write((Object)MaplePacketCreator.enableActions());
-            c.getPlayer().dropMessage(5, "\u5e02\u573a\u65e0\u6cd5\u4f7f\u7528\u53ec\u5524\u5305.");
+            c.getPlayer().dropMessage(5, "市场无法使用召唤包.");
             return;
         }
         if (toUse != null && toUse.getQuantity() >= 1 && toUse.getItemId() == itemId) {
@@ -991,13 +991,13 @@ public class InventoryHandler
             case 4280000: {
                 reward = RandomRewards.getInstance().getGoldBoxReward();
                 keyIDforRemoval = 5490000;
-                box = "\u91d1\u5bf6\u7bb1";
+                box = "金寶箱";
                 break;
             }
             case 4280001: {
                 reward = RandomRewards.getInstance().getSilverBoxReward();
                 keyIDforRemoval = 5490001;
-                box = "\u9280\u5bf6\u7bb1";
+                box = "銀寶箱";
                 break;
             }
             default: {
@@ -1018,7 +1018,7 @@ public class InventoryHandler
         if (chr.getInventory(MapleInventoryType.CASH).countById(keyIDforRemoval) > 0) {
             final IItem item = MapleInventoryManipulator.addbyId_Gachapon(c, reward, (short)amount);
             if (item == null) {
-                chr.dropMessage(5, "\u8acb\u78ba\u8a8d\u662f\u5426\u6709\u91d1\u9470\u5319\u6216\u8005\u4f60\u8eab\u4e0a\u7684\u7a7a\u9593\u6eff\u4e86.");
+                chr.dropMessage(5, "請確認是否有金鑰匙或者你身上的空間滿了.");
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
                 return;
             }
@@ -1026,11 +1026,11 @@ public class InventoryHandler
             MapleInventoryManipulator.removeById(c, MapleInventoryType.CASH, keyIDforRemoval, 1, true, false);
             c.getSession().write((Object)MaplePacketCreator.getShowItemGain(reward, (short)amount, true));
             if (GameConstants.gachaponRareItem(item.getItemId()) > 0) {
-                World.Broadcast.broadcastMessage(MaplePacketCreator.getGachaponMega("[" + box + "] " + c.getPlayer().getName(), " : \u5f9e\u91d1\u5bf6\u7bb1\u4e2d\u7372\u5f97", item, (byte)2, c.getPlayer().getClient().getChannel()).getBytes());
+                World.Broadcast.broadcastMessage(MaplePacketCreator.getGachaponMega("[" + box + "] " + c.getPlayer().getName(), " : 從金寶箱中獲得", item, (byte)2, c.getPlayer().getClient().getChannel()).getBytes());
             }
         }
         else {
-            chr.dropMessage(5, "\u8acb\u78ba\u8a8d\u662f\u5426\u6709\u9280\u9470\u5319\u6216\u8005\u4f60\u8eab\u4e0a\u7684\u7a7a\u9593\u6eff\u4e86.");
+            chr.dropMessage(5, "請確認是否有銀鑰匙或者你身上的空間滿了.");
             c.getSession().write((Object)MaplePacketCreator.enableActions());
         }
     }
@@ -1071,7 +1071,7 @@ public class InventoryHandler
                         used = true;
                     }
                     else {
-                        c.getPlayer().dropMessage(1, "\u53d1\u751f\u672a\u77e5\u9519\u8bef.");
+                        c.getPlayer().dropMessage(1, "发生未知错误.");
                     }
                     break;
                 }
@@ -1514,11 +1514,11 @@ public class InventoryHandler
                         used = true;
                     }
                     else {
-                        c.getPlayer().dropMessage(5, "\u786e\u4fdd\u4f60\u7684\u8bbe\u5907\u6709\u6f5c\u529b.");
+                        c.getPlayer().dropMessage(5, "确保你的设备有潜力.");
                     }
                     break;
                 }
-                c.getPlayer().dropMessage(5, "\u786e\u4fdd\u4f60\u6709\u4e00\u4e2a\u7247\u6bb5\u7684\u7a7a\u95f4.");
+                c.getPlayer().dropMessage(5, "确保你有一个片段的空间.");
                 break;
             }
             case 5080000:
@@ -1562,7 +1562,7 @@ public class InventoryHandler
                     cc = true;
                     break;
                 }
-                c.getPlayer().dropMessage(5, "\u4f60\u4e0d\u5f97\u5728\u8fd9\u4e2a\u7269\u54c1\u4e0a\u4f7f\u7528\u5b83.");
+                c.getPlayer().dropMessage(5, "你不得在这个物品上使用它.");
                 cc = true;
                 break;
             }
@@ -1643,15 +1643,15 @@ public class InventoryHandler
             }
             case 5070000: {
                 if (c.getPlayer().getLevel() < 10) {
-                    c.getPlayer().dropMessage(5, "\u5fc5\u9808\u7b49\u7d1a10\u7d1a\u4ee5\u4e0a\u624d\u53ef\u4ee5\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "必須等級10級以上才可以使用.");
                     break;
                 }
                 if (!c.getPlayer().getCheatTracker().canAvatarSmega2()) {
-                    c.getPlayer().dropMessage(6, "\u5f88\u62b1\u6b49\u70ba\u4e86\u9632\u6b62\u5237\u5ee3,\u6240\u4ee5\u4f60\u6bcf10\u79d2\u53ea\u80fd\u7528\u4e00\u6b21.");
+                    c.getPlayer().dropMessage(6, "很抱歉為了防止刷廣,所以你每10秒只能用一次.");
                     break;
                 }
                 if (c.getChannelServer().getMegaphoneMuteState()) {
-                    c.getPlayer().dropMessage(5, "\u76ee\u524d\u5587\u53ed\u505c\u6b62\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "目前喇叭停止使用.");
                     break;
                 }
                 final String message = slea.readMapleAsciiString();
@@ -1664,33 +1664,33 @@ public class InventoryHandler
                 sb.append(" : ");
                 sb.append(message);
                 final boolean ear = slea.readByte() != 0;
-                if ((c.getPlayer().isPlayer() && message.indexOf("\u5e79") != -1) || message.indexOf("\u8c6c") != -1 || message.indexOf("\u7b28") != -1 || message.indexOf("\u9760") != -1 || message.indexOf("\u8166\u5305") != -1 || message.indexOf("\u8166") != -1 || message.indexOf("\u667a\u969c") != -1 || message.indexOf("\u767d\u76ee") != -1 || message.indexOf("\u767d\u5403") != -1) {
-                    c.getPlayer().dropMessage("\u8aaa\u9ad2\u8a71\u662f\u4e0d\u79ae\u8c8c\u7684\uff0c\u8acb\u52ff\u8aaa\u9ad2\u8a71\u3002");
+                if ((c.getPlayer().isPlayer() && message.indexOf("幹") != -1) || message.indexOf("豬") != -1 || message.indexOf("笨") != -1 || message.indexOf("靠") != -1 || message.indexOf("腦包") != -1 || message.indexOf("腦") != -1 || message.indexOf("智障") != -1 || message.indexOf("白目") != -1 || message.indexOf("白吃") != -1) {
+                    c.getPlayer().dropMessage("說髒話是不禮貌的，請勿說髒話。");
                     c.getSession().write((Object)MaplePacketCreator.enableActions());
                     return;
                 }
                 if (c.getPlayer().isPlayer()) {
                     c.getPlayer().getMap().broadcastMessage(MaplePacketCreator.serverNotice(2, sb.toString()));
-                    System.out.println("[\u73a9\u5bb6\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + message);
+                    System.out.println("[玩家廣播頻道 " + c.getPlayer().getName() + "] : " + message);
                 }
                 else if (c.getPlayer().isGM()) {
                     c.getPlayer().getMap().broadcastMessage(MaplePacketCreator.serverNotice(2, sb.toString()));
-                    System.out.println("[\uff27\uff2d\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + message);
+                    System.out.println("[ＧＭ廣播頻道 " + c.getPlayer().getName() + "] : " + message);
                 }
                 used = true;
                 break;
             }
             case 5071000: {
                 if (c.getPlayer().getLevel() < 10) {
-                    c.getPlayer().dropMessage(5, "\u5fc5\u9808\u7b49\u7d1a10\u7d1a\u4ee5\u4e0a\u624d\u53ef\u4ee5\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "必須等級10級以上才可以使用.");
                     break;
                 }
                 if (!c.getPlayer().getCheatTracker().canAvatarSmega2()) {
-                    c.getPlayer().dropMessage(6, "\u5f88\u62b1\u6b49\u70ba\u4e86\u9632\u6b62\u5237\u5ee3,\u6240\u4ee5\u4f60\u6bcf10\u79d2\u53ea\u80fd\u7528\u4e00\u6b21.");
+                    c.getPlayer().dropMessage(6, "很抱歉為了防止刷廣,所以你每10秒只能用一次.");
                     break;
                 }
                 if (c.getChannelServer().getMegaphoneMuteState()) {
-                    c.getPlayer().dropMessage(5, "\u76ee\u524d\u5587\u53ed\u505c\u6b62\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "目前喇叭停止使用.");
                     break;
                 }
                 final String message = slea.readMapleAsciiString();
@@ -1698,8 +1698,8 @@ public class InventoryHandler
                     break;
                 }
                 final boolean ear2 = slea.readByte() != 0;
-                if ((c.getPlayer().isPlayer() && message.indexOf("\u5e79") != -1) || message.indexOf("\u8c6c") != -1 || message.indexOf("\u7b28") != -1 || message.indexOf("\u9760") != -1 || message.indexOf("\u8166\u5305") != -1 || message.indexOf("\u8166") != -1 || message.indexOf("\u667a\u969c") != -1 || message.indexOf("\u767d\u76ee") != -1 || message.indexOf("\u767d\u5403") != -1) {
-                    c.getPlayer().dropMessage("\u8aaa\u9ad2\u8a71\u662f\u4e0d\u79ae\u8c8c\u7684\uff0c\u8acb\u52ff\u8aaa\u9ad2\u8a71\u3002");
+                if ((c.getPlayer().isPlayer() && message.indexOf("幹") != -1) || message.indexOf("豬") != -1 || message.indexOf("笨") != -1 || message.indexOf("靠") != -1 || message.indexOf("腦包") != -1 || message.indexOf("腦") != -1 || message.indexOf("智障") != -1 || message.indexOf("白目") != -1 || message.indexOf("白吃") != -1) {
+                    c.getPlayer().dropMessage("說髒話是不禮貌的，請勿說髒話。");
                     c.getSession().write((Object)MaplePacketCreator.enableActions());
                     return;
                 }
@@ -1710,26 +1710,26 @@ public class InventoryHandler
                 sb2.append(message);
                 if (c.getPlayer().isPlayer()) {
                     c.getPlayer().getMap().broadcastMessage(MaplePacketCreator.serverNotice(2, sb2.toString()));
-                    System.out.println("[\u73a9\u5bb6\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + message);
+                    System.out.println("[玩家廣播頻道 " + c.getPlayer().getName() + "] : " + message);
                 }
                 else if (c.getPlayer().isGM()) {
                     c.getPlayer().getMap().broadcastMessage(MaplePacketCreator.serverNotice(2, sb2.toString()));
-                    System.out.println("[\uff27\uff2d\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + message);
+                    System.out.println("[ＧＭ廣播頻道 " + c.getPlayer().getName() + "] : " + message);
                 }
                 used = true;
                 break;
             }
             case 5077000: {
                 if (c.getPlayer().getLevel() < 10) {
-                    c.getPlayer().dropMessage(5, "\u5fc5\u9808\u7b49\u7d1a10\u7d1a\u4ee5\u4e0a\u624d\u53ef\u4ee5\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "必須等級10級以上才可以使用.");
                     break;
                 }
                 if (!c.getPlayer().getCheatTracker().canAvatarSmega2()) {
-                    c.getPlayer().dropMessage(6, "\u5f88\u62b1\u6b49\u70ba\u4e86\u9632\u6b62\u5237\u5ee3,\u6240\u4ee5\u4f60\u6bcf10\u79d2\u53ea\u80fd\u7528\u4e00\u6b21.");
+                    c.getPlayer().dropMessage(6, "很抱歉為了防止刷廣,所以你每10秒只能用一次.");
                     break;
                 }
                 if (c.getChannelServer().getMegaphoneMuteState()) {
-                    c.getPlayer().dropMessage(5, "\u76ee\u524d\u5587\u53ed\u505c\u6b62\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "目前喇叭停止使用.");
                     break;
                 }
                 final byte numLines = slea.readByte();
@@ -1745,33 +1745,33 @@ public class InventoryHandler
                     messages.add(c.getPlayer().getName() + " : " + message2);
                 }
                 final boolean ear3 = slea.readByte() > 0;
-                if ((c.getPlayer().isPlayer() && messages.indexOf("\u5e79") != -1) || messages.indexOf("\u8c6c") != -1 || messages.indexOf("\u7b28") != -1 || messages.indexOf("\u9760") != -1 || messages.indexOf("\u8166\u5305") != -1 || messages.indexOf("\u8166") != -1 || messages.indexOf("\u667a\u969c") != -1 || messages.indexOf("\u767d\u76ee") != -1 || messages.indexOf("\u767d\u5403") != -1) {
-                    c.getPlayer().dropMessage("\u8aaa\u9ad2\u8a71\u662f\u4e0d\u79ae\u8c8c\u7684\uff0c\u8acb\u52ff\u8aaa\u9ad2\u8a71\u3002");
+                if ((c.getPlayer().isPlayer() && messages.indexOf("幹") != -1) || messages.indexOf("豬") != -1 || messages.indexOf("笨") != -1 || messages.indexOf("靠") != -1 || messages.indexOf("腦包") != -1 || messages.indexOf("腦") != -1 || messages.indexOf("智障") != -1 || messages.indexOf("白目") != -1 || messages.indexOf("白吃") != -1) {
+                    c.getPlayer().dropMessage("說髒話是不禮貌的，請勿說髒話。");
                     c.getSession().write((Object)MaplePacketCreator.enableActions());
                     return;
                 }
                 if (c.getPlayer().isPlayer()) {
                     World.Broadcast.broadcastSmega(MaplePacketCreator.tripleSmega(messages, ear3, c.getChannel()).getBytes());
-                    System.out.println("[\u73a9\u5bb6\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + messages);
+                    System.out.println("[玩家廣播頻道 " + c.getPlayer().getName() + "] : " + messages);
                 }
                 else if (c.getPlayer().isGM()) {
                     World.Broadcast.broadcastSmega(MaplePacketCreator.tripleSmega(messages, ear3, c.getChannel()).getBytes());
-                    System.out.println("[\uff27\uff2d\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + messages);
+                    System.out.println("[ＧＭ廣播頻道 " + c.getPlayer().getName() + "] : " + messages);
                 }
                 used = true;
                 break;
             }
             case 5073000: {
                 if (c.getPlayer().getLevel() < 10) {
-                    c.getPlayer().dropMessage(5, "\u5fc5\u9808\u7b49\u7d1a10\u7d1a\u4ee5\u4e0a\u624d\u53ef\u4ee5\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "必須等級10級以上才可以使用.");
                     break;
                 }
                 if (!c.getPlayer().getCheatTracker().canAvatarSmega2()) {
-                    c.getPlayer().dropMessage(6, "\u5f88\u62b1\u6b49\u70ba\u4e86\u9632\u6b62\u5237\u5ee3,\u6240\u4ee5\u4f60\u6bcf10\u79d2\u53ea\u80fd\u7528\u4e00\u6b21.");
+                    c.getPlayer().dropMessage(6, "很抱歉為了防止刷廣,所以你每10秒只能用一次.");
                     break;
                 }
                 if (c.getChannelServer().getMegaphoneMuteState()) {
-                    c.getPlayer().dropMessage(5, "\u76ee\u524d\u5587\u53ed\u505c\u6b62\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "目前喇叭停止使用.");
                     break;
                 }
                 final String message = slea.readMapleAsciiString();
@@ -1784,33 +1784,33 @@ public class InventoryHandler
                 sb.append(" : ");
                 sb.append(message);
                 final boolean ear = slea.readByte() != 0;
-                if ((c.getPlayer().isPlayer() && message.indexOf("\u5e79") != -1) || message.indexOf("\u8c6c") != -1 || message.indexOf("\u7b28") != -1 || message.indexOf("\u9760") != -1 || message.indexOf("\u8166\u5305") != -1 || message.indexOf("\u8166") != -1 || message.indexOf("\u667a\u969c") != -1 || message.indexOf("\u767d\u76ee") != -1 || message.indexOf("\u767d\u5403") != -1) {
-                    c.getPlayer().dropMessage("\u8aaa\u9ad2\u8a71\u662f\u4e0d\u79ae\u8c8c\u7684\uff0c\u8acb\u52ff\u8aaa\u9ad2\u8a71\u3002");
+                if ((c.getPlayer().isPlayer() && message.indexOf("幹") != -1) || message.indexOf("豬") != -1 || message.indexOf("笨") != -1 || message.indexOf("靠") != -1 || message.indexOf("腦包") != -1 || message.indexOf("腦") != -1 || message.indexOf("智障") != -1 || message.indexOf("白目") != -1 || message.indexOf("白吃") != -1) {
+                    c.getPlayer().dropMessage("說髒話是不禮貌的，請勿說髒話。");
                     c.getSession().write((Object)MaplePacketCreator.enableActions());
                     return;
                 }
                 if (c.getPlayer().isPlayer()) {
                     c.getPlayer().getMap().broadcastMessage(MaplePacketCreator.serverNotice(2, sb.toString()));
-                    System.out.println("[\u73a9\u5bb6\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + message);
+                    System.out.println("[玩家廣播頻道 " + c.getPlayer().getName() + "] : " + message);
                 }
                 else if (c.getPlayer().isGM()) {
                     c.getPlayer().getMap().broadcastMessage(MaplePacketCreator.serverNotice(2, sb.toString()));
-                    System.out.println("[\uff27\uff2d\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + message);
+                    System.out.println("[ＧＭ廣播頻道 " + c.getPlayer().getName() + "] : " + message);
                 }
                 used = true;
                 break;
             }
             case 5074000: {
                 if (c.getPlayer().getLevel() < 10) {
-                    c.getPlayer().dropMessage(5, "\u5fc5\u9808\u7b49\u7d1a10\u7d1a\u4ee5\u4e0a\u624d\u53ef\u4ee5\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "必須等級10級以上才可以使用.");
                     break;
                 }
                 if (!c.getPlayer().getCheatTracker().canAvatarSmega2()) {
-                    c.getPlayer().dropMessage(6, "\u5f88\u62b1\u6b49\u70ba\u4e86\u9632\u6b62\u5237\u5ee3,\u6240\u4ee5\u4f60\u6bcf10\u79d2\u53ea\u80fd\u7528\u4e00\u6b21.");
+                    c.getPlayer().dropMessage(6, "很抱歉為了防止刷廣,所以你每10秒只能用一次.");
                     break;
                 }
                 if (c.getChannelServer().getMegaphoneMuteState()) {
-                    c.getPlayer().dropMessage(5, "\u76ee\u524d\u5587\u53ed\u505c\u6b62\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "目前喇叭停止使用.");
                     break;
                 }
                 final String message = slea.readMapleAsciiString();
@@ -1823,33 +1823,33 @@ public class InventoryHandler
                 sb.append(" : ");
                 sb.append(message);
                 final boolean ear = slea.readByte() != 0;
-                if ((c.getPlayer().isPlayer() && message.indexOf("\u5e79") != -1) || message.indexOf("\u8c6c") != -1 || message.indexOf("\u7b28") != -1 || message.indexOf("\u9760") != -1 || message.indexOf("\u8166\u5305") != -1 || message.indexOf("\u8166") != -1 || message.indexOf("\u667a\u969c") != -1 || message.indexOf("\u767d\u76ee") != -1 || message.indexOf("\u767d\u5403") != -1) {
-                    c.getPlayer().dropMessage("\u8aaa\u9ad2\u8a71\u662f\u4e0d\u79ae\u8c8c\u7684\uff0c\u8acb\u52ff\u8aaa\u9ad2\u8a71\u3002");
+                if ((c.getPlayer().isPlayer() && message.indexOf("幹") != -1) || message.indexOf("豬") != -1 || message.indexOf("笨") != -1 || message.indexOf("靠") != -1 || message.indexOf("腦包") != -1 || message.indexOf("腦") != -1 || message.indexOf("智障") != -1 || message.indexOf("白目") != -1 || message.indexOf("白吃") != -1) {
+                    c.getPlayer().dropMessage("說髒話是不禮貌的，請勿說髒話。");
                     c.getSession().write((Object)MaplePacketCreator.enableActions());
                     return;
                 }
                 if (c.getPlayer().isPlayer()) {
                     World.Broadcast.broadcastSmega(MaplePacketCreator.serverNotice(12, c.getChannel(), sb.toString(), ear).getBytes());
-                    System.out.println("[\u73a9\u5bb6\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + message);
+                    System.out.println("[玩家廣播頻道 " + c.getPlayer().getName() + "] : " + message);
                 }
                 else if (c.getPlayer().isGM()) {
                     World.Broadcast.broadcastSmega(MaplePacketCreator.serverNotice(12, c.getChannel(), sb.toString(), ear).getBytes());
-                    System.out.println("[\uff27\uff2d\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + message);
+                    System.out.println("[ＧＭ廣播頻道 " + c.getPlayer().getName() + "] : " + message);
                 }
                 used = true;
                 break;
             }
             case 5072000: {
                 if (c.getPlayer().getLevel() < 10) {
-                    c.getPlayer().dropMessage(5, "\u5fc5\u9808\u898110\u7b49\u4ee5\u4e0a\u624d\u80fd\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "必須要10等以上才能使用.");
                     break;
                 }
                 if (!c.getPlayer().getCheatTracker().canAvatarSmega2()) {
-                    c.getPlayer().dropMessage(6, "\u5f88\u62b1\u6b49\u70ba\u4e86\u9632\u6b62\u5237\u5ee3,\u6240\u4ee5\u4f60\u6bcf10\u79d2\u53ea\u80fd\u7528\u4e00\u6b21.");
+                    c.getPlayer().dropMessage(6, "很抱歉為了防止刷廣,所以你每10秒只能用一次.");
                     break;
                 }
                 if (c.getChannelServer().getMegaphoneMuteState()) {
-                    c.getPlayer().dropMessage(5, "\u76ee\u524d\u5587\u53ed\u505c\u6b62\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "目前喇叭停止使用.");
                     break;
                 }
                 final String message = slea.readMapleAsciiString();
@@ -1862,33 +1862,33 @@ public class InventoryHandler
                 sb.append(" : ");
                 sb.append(message);
                 final boolean ear = slea.readByte() != 0;
-                if ((c.getPlayer().isPlayer() && message.indexOf("\u5e79") != -1) || message.indexOf("\u8c6c") != -1 || message.indexOf("\u7b28") != -1 || message.indexOf("\u9760") != -1 || message.indexOf("\u8166\u5305") != -1 || message.indexOf("\u8166") != -1 || message.indexOf("\u667a\u969c") != -1 || message.indexOf("\u767d\u76ee") != -1 || message.indexOf("\u767d\u5403") != -1) {
-                    c.getPlayer().dropMessage("\u8aaa\u9ad2\u8a71\u662f\u4e0d\u79ae\u8c8c\u7684\uff0c\u8acb\u52ff\u8aaa\u9ad2\u8a71\u3002");
+                if ((c.getPlayer().isPlayer() && message.indexOf("幹") != -1) || message.indexOf("豬") != -1 || message.indexOf("笨") != -1 || message.indexOf("靠") != -1 || message.indexOf("腦包") != -1 || message.indexOf("腦") != -1 || message.indexOf("智障") != -1 || message.indexOf("白目") != -1 || message.indexOf("白吃") != -1) {
+                    c.getPlayer().dropMessage("說髒話是不禮貌的，請勿說髒話。");
                     c.getSession().write((Object)MaplePacketCreator.enableActions());
                     return;
                 }
                 if (c.getPlayer().isPlayer()) {
                     World.Broadcast.broadcastSmega(MaplePacketCreator.serverNotice(3, c.getChannel(), sb.toString(), ear).getBytes());
-                    System.out.println("[\u73a9\u5bb6\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + message);
+                    System.out.println("[玩家廣播頻道 " + c.getPlayer().getName() + "] : " + message);
                 }
                 else if (c.getPlayer().isGM()) {
                     World.Broadcast.broadcastSmega(MaplePacketCreator.serverNotice(3, c.getChannel(), sb.toString(), ear).getBytes());
-                    System.out.println("[\uff27\uff2d\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + message);
+                    System.out.println("[ＧＭ廣播頻道 " + c.getPlayer().getName() + "] : " + message);
                 }
                 used = true;
                 break;
             }
             case 5076000: {
                 if (c.getPlayer().getLevel() < 10) {
-                    c.getPlayer().dropMessage(5, "\u5fc5\u9808\u7b49\u7d1a10\u7d1a\u4ee5\u4e0a\u624d\u53ef\u4ee5\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "必須等級10級以上才可以使用.");
                     break;
                 }
                 if (!c.getPlayer().getCheatTracker().canAvatarSmega2()) {
-                    c.getPlayer().dropMessage(6, "\u5f88\u62b1\u6b49\u70ba\u4e86\u9632\u6b62\u5237\u5ee3,\u6240\u4ee5\u4f60\u6bcf10\u79d2\u53ea\u80fd\u7528\u4e00\u6b21.");
+                    c.getPlayer().dropMessage(6, "很抱歉為了防止刷廣,所以你每10秒只能用一次.");
                     break;
                 }
                 if (c.getChannelServer().getMegaphoneMuteState()) {
-                    c.getPlayer().dropMessage(5, "\u76ee\u524d\u5587\u53ed\u505c\u6b62\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "目前喇叭停止使用.");
                     break;
                 }
                 final String message = slea.readMapleAsciiString();
@@ -1907,18 +1907,18 @@ public class InventoryHandler
                     final byte pos = (byte)slea.readInt();
                     item4 = c.getPlayer().getInventory(MapleInventoryType.getByType(invType)).getItem(pos);
                 }
-                if ((c.getPlayer().isPlayer() && message.indexOf("\u5e79") != -1) || message.indexOf("\u8c6c") != -1 || message.indexOf("\u7b28") != -1 || message.indexOf("\u9760") != -1 || message.indexOf("\u8166\u5305") != -1 || message.indexOf("\u8166") != -1 || message.indexOf("\u667a\u969c") != -1 || message.indexOf("\u767d\u76ee") != -1 || message.indexOf("\u767d\u5403") != -1) {
-                    c.getPlayer().dropMessage("\u8aaa\u9ad2\u8a71\u662f\u4e0d\u79ae\u8c8c\u7684\uff0c\u8acb\u52ff\u8aaa\u9ad2\u8a71\u3002");
+                if ((c.getPlayer().isPlayer() && message.indexOf("幹") != -1) || message.indexOf("豬") != -1 || message.indexOf("笨") != -1 || message.indexOf("靠") != -1 || message.indexOf("腦包") != -1 || message.indexOf("腦") != -1 || message.indexOf("智障") != -1 || message.indexOf("白目") != -1 || message.indexOf("白吃") != -1) {
+                    c.getPlayer().dropMessage("說髒話是不禮貌的，請勿說髒話。");
                     c.getSession().write((Object)MaplePacketCreator.enableActions());
                     return;
                 }
                 if (c.getPlayer().isPlayer()) {
                     World.Broadcast.broadcastSmega(MaplePacketCreator.itemMegaphone(sb.toString(), ear, c.getChannel(), item4).getBytes());
-                    System.out.println("[\u73a9\u5bb6\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + message);
+                    System.out.println("[玩家廣播頻道 " + c.getPlayer().getName() + "] : " + message);
                 }
                 else if (c.getPlayer().isGM()) {
                     World.Broadcast.broadcastSmega(MaplePacketCreator.itemMegaphone(sb.toString(), ear, c.getChannel(), item4).getBytes());
-                    System.out.println("[\uff27\uff2d\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + message);
+                    System.out.println("[ＧＭ廣播頻道 " + c.getPlayer().getName() + "] : " + message);
                 }
                 used = true;
                 break;
@@ -1926,14 +1926,14 @@ public class InventoryHandler
             case 5075000:
             case 5075001:
             case 5075002: {
-                c.getPlayer().dropMessage(5, "\u6ca1\u6709mapletvs\u5e7f\u64ad\u6d88\u606f.");
+                c.getPlayer().dropMessage(5, "没有mapletvs广播消息.");
                 break;
             }
             case 5075003:
             case 5075004:
             case 5075005: {
                 if (c.getPlayer().getLevel() < 10) {
-                    c.getPlayer().dropMessage(5, "\u5fc5\u9808\u7b49\u7d1a10\u7d1a\u4ee5\u4e0a\u624d\u53ef\u4ee5\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "必須等級10級以上才可以使用.");
                     break;
                 }
                 final int tvType = itemId % 10;
@@ -1946,7 +1946,7 @@ public class InventoryHandler
                     victim2 = null;
                 }
                 else if (victim2 == null) {
-                    c.getPlayer().dropMessage(1, "\u8fd9\u4e2a\u89d2\u8272\u4e0d\u662f\u5728\u9891\u9053\u91cc.");
+                    c.getPlayer().dropMessage(1, "这个角色不是在频道里.");
                     break;
                 }
                 final String message3 = slea.readMapleAsciiString();
@@ -2138,7 +2138,7 @@ public class InventoryHandler
                     used = true;
                     break;
                 }
-                c.getPlayer().dropMessage(1, "\u65e0\u6cd5\u627e\u5230\u8be5\u9879\u76ee.");
+                c.getPlayer().dropMessage(1, "无法找到该项目.");
                 break;
             }
             case 5280001:
@@ -2170,15 +2170,15 @@ public class InventoryHandler
                 if (Comment == null) {
                     break;
                 }
-                c.getPlayer().dropMessage(5, "\u7231\u60c5\u5360\u535c\u6210\u529f\u3002");
+                c.getPlayer().dropMessage(5, "爱情占卜成功。");
                 final int love2 = Randomizer.rand(1, Comment.score) + 5;
-                c.getSession().write((Object)MTSCSPacket.show\u5854\u7f57\u724c(name, otherName, love2, cardId, Comment.effectType));
+                c.getSession().write((Object)MTSCSPacket.show塔罗牌(name, otherName, love2, cardId, Comment.effectType));
                 used = true;
                 break;
             }
             case 5370000: {
                 if (c.getPlayer().getMapId() / 1000000 == 109) {
-                    c.getPlayer().dropMessage(1, "\u8bf7\u52ff\u5728\u6d3b\u52a8\u5730\u56fe\u4f7f\u7528\u9ed1\u677f");
+                    c.getPlayer().dropMessage(1, "请勿在活动地图使用黑板");
                     break;
                 }
                 c.getPlayer().setChalkboard(slea.readMapleAsciiString());
@@ -2199,15 +2199,15 @@ public class InventoryHandler
             case 5390005:
             case 5390006: {
                 if (c.getPlayer().getLevel() < 10) {
-                    c.getPlayer().dropMessage(5, "\u5fc5\u987b\u7b49\u7ea710\u7ea7\u4ee5\u4e0a\u624d\u53ef\u4ee5\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "必须等级10级以上才可以使用.");
                     break;
                 }
                 if (!c.getPlayer().getCheatTracker().canAvatarSmega2()) {
-                    c.getPlayer().dropMessage(6, "\u5f88\u62b1\u6b49\u70ba\u4e86\u9632\u6b62\u5237\u5ee3,\u6240\u4ee5\u4f60\u6bcf10\u79d2\u53ea\u80fd\u7528\u4e00\u6b21.");
+                    c.getPlayer().dropMessage(6, "很抱歉為了防止刷廣,所以你每10秒只能用一次.");
                     break;
                 }
                 if (c.getChannelServer().getMegaphoneMuteState()) {
-                    c.getPlayer().dropMessage(5, "\u76ee\u524d\u5587\u53ed\u505c\u6b62\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(5, "目前喇叭停止使用.");
                     break;
                 }
                 final String text = slea.readMapleAsciiString();
@@ -2215,18 +2215,18 @@ public class InventoryHandler
                     break;
                 }
                 final boolean ear2 = slea.readByte() != 0;
-                if ((c.getPlayer().isPlayer() && text.indexOf("\u5e79") != -1) || text.indexOf("\u8c6c") != -1 || text.indexOf("\u7b28") != -1 || text.indexOf("\u9760") != -1 || text.indexOf("\u8166\u5305") != -1 || text.indexOf("\u8166") != -1 || text.indexOf("\u667a\u969c") != -1 || text.indexOf("\u767d\u76ee") != -1 || text.indexOf("\u767d\u5403") != -1) {
-                    c.getPlayer().dropMessage("\u8aaa\u9ad2\u8a71\u662f\u4e0d\u79ae\u8c8c\u7684\uff0c\u8acb\u52ff\u8aaa\u9ad2\u8a71\u3002");
+                if ((c.getPlayer().isPlayer() && text.indexOf("幹") != -1) || text.indexOf("豬") != -1 || text.indexOf("笨") != -1 || text.indexOf("靠") != -1 || text.indexOf("腦包") != -1 || text.indexOf("腦") != -1 || text.indexOf("智障") != -1 || text.indexOf("白目") != -1 || text.indexOf("白吃") != -1) {
+                    c.getPlayer().dropMessage("說髒話是不禮貌的，請勿說髒話。");
                     c.getSession().write((Object)MaplePacketCreator.enableActions());
                     return;
                 }
                 if (c.getPlayer().isPlayer()) {
                     World.Broadcast.broadcastSmega(MaplePacketCreator.getAvatarMega(c.getPlayer(), c.getChannel(), itemId, text, ear2).getBytes());
-                    System.out.println("[\u73a9\u5bb6\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + text);
+                    System.out.println("[玩家廣播頻道 " + c.getPlayer().getName() + "] : " + text);
                 }
                 else if (c.getPlayer().isGM()) {
                     World.Broadcast.broadcastSmega(MaplePacketCreator.getAvatarMega(c.getPlayer(), c.getChannel(), itemId, text, ear2).getBytes());
-                    System.out.println("[\uff27\uff2d\u5ee3\u64ad\u983b\u9053 " + c.getPlayer().getName() + "] : " + text);
+                    System.out.println("[ＧＭ廣播頻道 " + c.getPlayer().getName() + "] : " + text);
                 }
                 used = true;
                 break;
@@ -2254,7 +2254,7 @@ public class InventoryHandler
                         used = true;
                     }
                     else {
-                        c.getPlayer().dropMessage(1, "\ue785\ue00a\u6b64\u88c5\u5907\u65e0\u6cd5\u4f7f\u7528.");
+                        c.getPlayer().dropMessage(1, "此装备无法使用.");
                     }
                     break;
                 }
@@ -2309,10 +2309,10 @@ public class InventoryHandler
         c.getSession().write((Object)MaplePacketCreator.enableActions());
         if (cc) {
             if (!c.getPlayer().isAlive() || c.getPlayer().getEventInstance() != null || FieldLimitType.ChannelSwitch.check(c.getPlayer().getMap().getFieldLimit())) {
-                c.getPlayer().dropMessage(1, "\u81ea\u52a8\u6362\u9891\u9053\u5931\u8d25.");
+                c.getPlayer().dropMessage(1, "自动换频道失败.");
                 return;
             }
-            c.getPlayer().dropMessage(5, "\u81ea\u52a8\u6362\u9891\u9053\u3002\u8bf7\u7b49\u5f85.");
+            c.getPlayer().dropMessage(5, "自动换频道。请等待.");
             c.getPlayer().changeChannel((c.getChannel() == ChannelServer.getChannelCount()) ? 1 : (c.getChannel() + 1));
         }
     }
@@ -2350,10 +2350,10 @@ public class InventoryHandler
             }
             final double Distance = Client_Reportedpos.distanceSq(mapitem.getPosition());
             if (Distance > 2500.0) {
-                chr.getCheatTracker().registerOffense(CheatingOffense.\u5168\u56fe\u5438\u7269_\u5ba2\u6237\u7aef, String.valueOf(Distance));
+                chr.getCheatTracker().registerOffense(CheatingOffense.全图吸物_客户端, String.valueOf(Distance));
             }
             else if (chr.getPosition().distanceSq(mapitem.getPosition()) > 640000.0) {
-                chr.getCheatTracker().registerOffense(CheatingOffense.\u5168\u56fe\u5438\u7269_\u670d\u52a1\u7aef);
+                chr.getCheatTracker().registerOffense(CheatingOffense.全图吸物_服务端);
             }
             if (mapitem.getMeso() > 0) {
                 if (chr.getParty() != null && mapitem.getOwner() != chr.getId()) {
@@ -2375,7 +2375,7 @@ public class InventoryHandler
             }
             else if (MapleItemInformationProvider.getInstance().isPickupBlocked(mapitem.getItem().getItemId())) {
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
-                c.getPlayer().dropMessage(5, "\u8fd9\u4e2a\u9879\u76ee\u4e0d\u80fd\u88ab\u9009\u4e0a.");
+                c.getPlayer().dropMessage(5, "这个项目不能被选上.");
             }
             else if (useItem(c, mapitem.getItemId())) {
                 removeItem(c.getPlayer(), mapitem, ob);
@@ -2439,10 +2439,10 @@ public class InventoryHandler
             }
             final double Distance = Client_Reportedpos.distanceSq(mapitem.getPosition());
             if (Distance > 10000.0 && (mapitem.getMeso() > 0 || mapitem.getItemId() != 4001025)) {
-                chr.getCheatTracker().registerOffense(CheatingOffense.\u5ba0\u7269\u5168\u56fe\u5438\u7269_\u5ba2\u6237\u7aef, String.valueOf(Distance));
+                chr.getCheatTracker().registerOffense(CheatingOffense.宠物全图吸物_客户端, String.valueOf(Distance));
             }
             else if (pet.getPos().distanceSq(mapitem.getPosition()) > 640000.0) {
-                chr.getCheatTracker().registerOffense(CheatingOffense.\u5ba0\u7269\u5168\u56fe\u5438\u7269_\u670d\u52a1\u7aef);
+                chr.getCheatTracker().registerOffense(CheatingOffense.宠物全图吸物_服务端);
             }
             if (mapitem.getMeso() > 0) {
                 if (chr.getParty() != null && mapitem.getOwner() != chr.getId()) {
@@ -2538,7 +2538,7 @@ public class InventoryHandler
     
     private static final boolean getIncubatedItems(final MapleClient c) {
         if (c.getPlayer().getInventory(MapleInventoryType.EQUIP).getNumFreeSlot() < 2 || c.getPlayer().getInventory(MapleInventoryType.USE).getNumFreeSlot() < 2 || c.getPlayer().getInventory(MapleInventoryType.SETUP).getNumFreeSlot() < 2) {
-            c.getPlayer().dropMessage(5, "\u8bf7\u5728\u60a8\u7684\u5e93\u5b58\u4e2d\u6e05\u7406\u7a7a\u95f4.");
+            c.getPlayer().dropMessage(5, "请在您的库存中清理空间.");
             return false;
         }
         int[] ids;
@@ -2563,7 +2563,7 @@ public class InventoryHandler
                 MapleInventoryManipulator.removeById(c, MapleInventoryType.USE, itemid, 1, true, false);
             }
             else {
-                c.getPlayer().dropMessage(1, "\u65e0\u6cd5\u627e\u5230\u8be5\u9879\u76ee.");
+                c.getPlayer().dropMessage(1, "无法找到该项目.");
             }
         }
         c.getSession().write((Object)MaplePacketCreator.enableActions());
@@ -2575,7 +2575,7 @@ public class InventoryHandler
                 c.getSession().write((Object)MaplePacketCreator.getOwlOpen());
             }
             else {
-                c.getPlayer().dropMessage(5, "\u8fd9\u53ea\u80fd\u7528\u5728\u81ea\u7531\u5e02\u573a.");
+                c.getPlayer().dropMessage(5, "这只能用在自由市场.");
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
             }
         }
@@ -2696,13 +2696,13 @@ public class InventoryHandler
                         c.getSession().write((Object)PlayerShopPacket.getHiredMerch(c.getPlayer(), merchant, false));
                     }
                     else if (!merchant.isOpen() || !merchant.isAvailable()) {
-                        c.getPlayer().dropMessage(1, "\u8fd9\u5bb6\u5e97\u5728\u7ef4\u4fee\uff0c\u8bf7\u7a0d\u540e.");
+                        c.getPlayer().dropMessage(1, "这家店在维修，请稍后.");
                     }
                     else if (merchant.getFreeSlot() == -1) {
-                        c.getPlayer().dropMessage(1, "\u8fd9\u5bb6\u5e97\u5df2\u7ecf\u8fbe\u5230\u4e86\u6700\u5927\u5bb9\u91cf\uff0c\u8bf7\u7a0d\u540e.");
+                        c.getPlayer().dropMessage(1, "这家店已经达到了最大容量，请稍后.");
                     }
                     else if (merchant.isInBlackList(c.getPlayer().getName())) {
-                        c.getPlayer().dropMessage(1, "\u4f60\u5df2\u88ab\u7981\u6b62\u4ece\u8fd9\u5bb6\u5546\u5e97.");
+                        c.getPlayer().dropMessage(1, "你已被禁止从这家商店.");
                     }
                     else {
                         c.getPlayer().setPlayerShop(merchant);
@@ -2711,7 +2711,7 @@ public class InventoryHandler
                     }
                 }
                 else {
-                    c.getPlayer().dropMessage(1, "\u8fd9\u5bb6\u5e97\u5728\u7ef4\u4fee\uff0c\u8bf7\u7a0d\u540e.");
+                    c.getPlayer().dropMessage(1, "这家店在维修，请稍后.");
                 }
             }
         }

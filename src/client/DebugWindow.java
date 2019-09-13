@@ -42,7 +42,7 @@ public class DebugWindow extends JFrame
     public void setC(final MapleClient c) {
         this.c = c;
         if (c.getPlayer() != null) {
-            this.setTitle("\u73a9\u5bb6: " + c.getPlayer().getName() + " - \u5c01\u5305\u6d4b\u8bd5");
+            this.setTitle("玩家: " + c.getPlayer().getName() + " - 封包测试");
         }
     }
     
@@ -61,7 +61,7 @@ public class DebugWindow extends JFrame
         this.jTextArea2.setColumns(20);
         this.jTextArea2.setRows(5);
         this.jScrollPane2.setViewportView(this.jTextArea2);
-        this.jButton1.setText("\u53d1\u9001\u5c01\u5305");
+        this.jButton1.setText("发送封包");
         this.jButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent evt) {
@@ -81,7 +81,7 @@ public class DebugWindow extends JFrame
     
     private void jButton1ActionPerformed(final ActionEvent evt) {
         if (this.c == null) {
-            this.jLabel1.setText("\u53d1\u9001\u5931\u8d25\uff0c\u5ba2\u6237\u4e3a\u7a7a.");
+            this.jLabel1.setText("发送失败，客户为空.");
             return;
         }
         final byte[] data = HexTool.getByteArrayFromHexString(this.jTextArea2.getText());
@@ -89,10 +89,10 @@ public class DebugWindow extends JFrame
         this.jLabel1.setText(null);
         if (this.c != null && data.length >= 2) {
             this.c.getSession().write((Object)MaplePacketCreator.testPacket(data));
-            this.jLabel1.setText("\u53d1\u9001\u6210\u529f\uff0c\u53d1\u9001\u7684\u5c01\u5305\u957f\u5ea6: " + data.length);
+            this.jLabel1.setText("发送成功，发送的封包长度: " + data.length);
         }
         else {
-            this.jLabel1.setText("\u53d1\u9001\u5931\u8d25\uff0c\u53d1\u9001\u7684\u5c01\u5305\u957f\u5ea6: " + data.length);
+            this.jLabel1.setText("发送失败，发送的封包长度: " + data.length);
         }
     }
     

@@ -75,7 +75,7 @@ public class HiredMerchant extends AbstractPlayerStore
             newItem.setFlag((byte)(flag - ItemFlag.KARMA_USE.getValue()));
         }
         if (!c.getPlayer().canHold(newItem.getItemId())) {
-            c.getPlayer().dropMessage(1, "\u80cc\u5305\u5df2\u6ee1");
+            c.getPlayer().dropMessage(1, "背包已满");
             c.sendPacket(MaplePacketCreator.enableActions());
             return;
         }
@@ -90,19 +90,19 @@ public class HiredMerchant extends AbstractPlayerStore
                 c.getPlayer().gainMeso(-theQuantity, false);
                 this.saveItems();
                 final MapleCharacter chr = this.getMCOwnerWorld();
-                final String itemText = MapleItemInformationProvider.getInstance().getName(newItem.getItemId()) + " (" + perbundle + ") x " + quantity + " \u5df2\u7ecf\u88ab\u5356\u51fa\u3002 \u5269\u4f59\u6570\u91cf: " + pItem.bundles + " \u8d2d\u4e70\u8005: " + c.getPlayer().getName();
+                final String itemText = MapleItemInformationProvider.getInstance().getName(newItem.getItemId()) + " (" + perbundle + ") x " + quantity + " 已经被卖出。 剩余数量: " + pItem.bundles + " 购买者: " + c.getPlayer().getName();
                 if (chr != null) {
-                    chr.dropMessage(-5, "\u60a8\u96c7\u4f63\u5546\u5e97\u91cc\u9762\u7684\u9053\u5177: " + itemText);
+                    chr.dropMessage(-5, "您雇佣商店里面的道具: " + itemText);
                 }
-                System.out.println("[\u96c7\u4f63] " + ((chr != null) ? chr.getName() : this.getOwnerName()) + " \u96c7\u4f63\u5546\u5e97\u5356\u51fa: " + newItem.getItemId() + " - " + itemText + " \u4ef7\u683c: " + theQuantity);
+                System.out.println("[雇佣] " + ((chr != null) ? chr.getName() : this.getOwnerName()) + " 雇佣商店卖出: " + newItem.getItemId() + " - " + itemText + " 价格: " + theQuantity);
             }
             else {
-                c.getPlayer().dropMessage(1, "\u91d1\u5e01\u4e0d\u8db3.");
+                c.getPlayer().dropMessage(1, "金币不足.");
                 c.getSession().write((Object)MaplePacketCreator.enableActions());
             }
         }
         else {
-            c.getPlayer().dropMessage(1, "\u80cc\u5305\u5df2\u6ee1\r\n\u8bf7\u75591\u683c\u4ee5\u4e0a\u4f4d\u7f6e\r\n\u5728\u8fdb\u884c\u8d2d\u4e70\u7269\u54c1\r\n\u9632\u6b62\u975e\u6cd5\u590d\u5236");
+            c.getPlayer().dropMessage(1, "背包已满\r\n请留1格以上位置\r\n在进行购买物品\r\n防止非法复制");
             c.getSession().write((Object)MaplePacketCreator.enableActions());
         }
     }

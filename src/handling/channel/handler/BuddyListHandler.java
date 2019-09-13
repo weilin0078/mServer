@@ -166,9 +166,9 @@ public class BuddyListHandler
                         otherJob = otherChar.getJob();
                     }
                     if (otherName != null) {
-                        buddylist.put(new BuddyEntry(otherName, otherCid2, "\u3124\ue652", channel2, true, otherLevel, otherJob));
+                        buddylist.put(new BuddyEntry(otherName, otherCid2, "其水", channel2, true, otherLevel, otherJob));
                         c.getSession().write((Object)MaplePacketCreator.updateBuddylist(buddylist.getBuddies()));
-                        notifyRemoteChannel(c, channel2, otherCid2, "\u3124\ue652", BuddyList.BuddyOperation.ADDED);
+                        notifyRemoteChannel(c, channel2, otherCid2, "其水", BuddyList.BuddyOperation.ADDED);
                     }
                 }
                 catch (SQLException e2) {

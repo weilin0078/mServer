@@ -140,15 +140,15 @@ public class MapleSquad
     }
     
     public String getNextPlayer() {
-        final StringBuilder sb = new StringBuilder("\n\u6392\u961f\u6210\u5458 : ");
-        sb.append("#b").append(this.type.queue.get(this.ch).size()).append(" #k ").append("\u4e0e\u8fdc\u5f81\u961f\u540d\u5355 : \n\r ");
+        final StringBuilder sb = new StringBuilder("\n排队成员 : ");
+        sb.append("#b").append(this.type.queue.get(this.ch).size()).append(" #k ").append("与远征队名单 : \n\r ");
         int i = 0;
         for (final Pair<String, Long> chr : this.type.queue.get(this.ch)) {
             ++i;
             sb.append(i).append(" : ").append(chr.left);
             sb.append(" \n\r ");
         }
-        sb.append("\u4f60\u662f\u5426\u60f3\u8981 #e\u5f53\u4e0b\u4e00\u4e2a#n \u5728\u8fdc\u5f81\u961f\u6392\u961f\u4e2d\u3000\u6216\u8005 #e\u79fb\u9664#n \u5728\u8fdc\u5f81\u961f? \u5982\u679c\u4f60\u60f3\u7684\u8bdd...");
+        sb.append("你是否想要 #e当下一个#n 在远征队排队中　或者 #e移除#n 在远征队? 如果你想的话...");
         return sb.toString();
     }
     
@@ -223,7 +223,7 @@ public class MapleSquad
             }
             if (this.members.size() <= 30) {
                 this.members.put(member.getName(), job);
-                this.getLeader().dropMessage(6, member.getName() + " (" + job + ") \u52a0\u5165\u8fdc\u5f81\u961f!");
+                this.getLeader().dropMessage(6, member.getName() + " (" + job + ") 加入远征队!");
                 return 1;
             }
             return 2;
@@ -231,7 +231,7 @@ public class MapleSquad
         else {
             if (this.containsMember(member)) {
                 this.members.remove(member.getName());
-                this.getLeader().dropMessage(6, member.getName() + " (" + job + ") \u79bb\u5f00\u4e86\u8fdc\u5f81\u961f.");
+                this.getLeader().dropMessage(6, member.getName() + " (" + job + ") 离开了远征队.");
                 return 1;
             }
             return -1;
@@ -247,7 +247,7 @@ public class MapleSquad
         if (toadd != null && this.getChar(toadd) != null) {
             this.members.put(toadd, this.bannedMembers.get(toadd));
             this.bannedMembers.remove(toadd);
-            this.getChar(toadd).dropMessage(5, this.getLeaderName() + " \u5141\u8bb8\u4f60\u4ece\u65b0\u56de\u6765\u8fdc\u5f81\u961f");
+            this.getChar(toadd).dropMessage(5, this.getLeaderName() + " 允许你从新回来远征队");
         }
     }
     
@@ -277,7 +277,7 @@ public class MapleSquad
         if (toban != null && this.getChar(toban) != null) {
             this.bannedMembers.put(toban, this.members.get(toban));
             this.members.remove(toban);
-            this.getChar(toban).dropMessage(5, this.getLeaderName() + " \u4ece\u8fdc\u5f81\u961f\u4e2d\u5220\u9664\u4e86\u60a8.");
+            this.getChar(toban).dropMessage(5, this.getLeaderName() + " 从远征队中删除了您.");
         }
     }
     
@@ -300,14 +300,14 @@ public class MapleSquad
     public String getSquadMemberString(final byte type) {
         switch (type) {
             case 0: {
-                final StringBuilder sb = new StringBuilder("\u8fdc\u5f81\u961f\u540d\u5355 : ");
-                sb.append("#b").append(this.members.size()).append(" #k ").append("\u4e0e\u6210\u5458\u540d\u5355 : \n\r ");
+                final StringBuilder sb = new StringBuilder("远征队名单 : ");
+                sb.append("#b").append(this.members.size()).append(" #k ").append("与成员名单 : \n\r ");
                 int i = 0;
                 for (final Map.Entry<String, String> chr : this.members.entrySet()) {
                     ++i;
                     sb.append(i).append(" : ").append(chr.getKey()).append(" (").append(chr.getValue()).append(") ");
                     if (i == 1) {
-                        sb.append("(\u8fdc\u5f81\u961f\u9886\u8896)");
+                        sb.append("(远征队领袖)");
                     }
                     sb.append(" \n\r ");
                 }
@@ -318,8 +318,8 @@ public class MapleSquad
                 return sb.toString();
             }
             case 1: {
-                final StringBuilder sb = new StringBuilder("\u8fdc\u5f81\u961f\u540d\u5355 : ");
-                sb.append("#b").append(this.members.size()).append(" #n ").append("\u4e0e\u6210\u5458\u540d\u5355 : \n\r ");
+                final StringBuilder sb = new StringBuilder("远征队名单 : ");
+                sb.append("#b").append(this.members.size()).append(" #n ").append("与成员名单 : \n\r ");
                 int i = 0;
                 int selection = 0;
                 for (final Map.Entry<String, String> chr2 : this.members.entrySet()) {
@@ -328,7 +328,7 @@ public class MapleSquad
                     ++selection;
                     sb.append(i).append(" : ").append(chr2.getKey()).append(" (").append(chr2.getValue()).append(") ");
                     if (i == 1) {
-                        sb.append("(\u8fdc\u5f81\u961f\u9886\u8896)");
+                        sb.append("(远征队领袖)");
                     }
                     sb.append("#l").append(" \n\r ");
                 }
@@ -339,8 +339,8 @@ public class MapleSquad
                 return sb.toString();
             }
             case 2: {
-                final StringBuilder sb = new StringBuilder("\u8fdc\u5f81\u961f\u540d\u5355 : ");
-                sb.append("#b").append(this.members.size()).append(" #n ").append("\u4e0e\u6210\u5458\u540d\u5355 : \n\r ");
+                final StringBuilder sb = new StringBuilder("远征队名单 : ");
+                sb.append("#b").append(this.members.size()).append(" #n ").append("与成员名单 : \n\r ");
                 int i = 0;
                 int selection = 0;
                 for (final Map.Entry<String, String> chr2 : this.bannedMembers.entrySet()) {
@@ -357,7 +357,7 @@ public class MapleSquad
                 return sb.toString();
             }
             case 3: {
-                final StringBuilder sb = new StringBuilder("\u804c\u4e1a : ");
+                final StringBuilder sb = new StringBuilder("职业 : ");
                 final Map<String, Integer> jobs = this.getJobs();
                 for (final Map.Entry<String, Integer> chr3 : jobs.entrySet()) {
                     sb.append("\r\n").append(chr3.getKey()).append(" : ").append(chr3.getValue());

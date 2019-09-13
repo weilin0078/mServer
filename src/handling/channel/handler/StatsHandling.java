@@ -254,7 +254,7 @@ public class StatsHandling
         }
         for (final int i : GameConstants.blockedSkills) {
             if (skill.getId() == i) {
-                chr.dropMessage(1, "\u4f60\u53ef\u80fd\u4e0d\u4f1a\u589e\u52a0\u8fd9\u4e2a\u6280\u80fd.");
+                chr.dropMessage(1, "你可能不会增加这个技能.");
                 return;
             }
         }

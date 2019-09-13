@@ -126,12 +126,12 @@ public class ChannelServer implements Serializable
         if (this.events.size() != 0) {
             return;
         }
-        this.events.put(MapleEventType.\u6253\u6930\u5b50\u6bd4\u8d5b, new MapleCoconut(this.channel, MapleEventType.\u6253\u6930\u5b50\u6bd4\u8d5b.mapids));
-        this.events.put(MapleEventType.\u6253\u74f6\u76d6\u6bd4\u8d5b, new MapleCoconut(this.channel, MapleEventType.\u6253\u74f6\u76d6\u6bd4\u8d5b.mapids));
-        this.events.put(MapleEventType.\u5411\u9ad8\u5730, new MapleFitness(this.channel, MapleEventType.\u5411\u9ad8\u5730.mapids));
-        this.events.put(MapleEventType.\u4e0a\u697c\u4e0a\u697c, new MapleOla(this.channel, MapleEventType.\u4e0a\u697c\u4e0a\u697c.mapids));
-        this.events.put(MapleEventType.\u5feb\u901f0X\u731c\u9898, new MapleOxQuiz(this.channel, MapleEventType.\u5feb\u901f0X\u731c\u9898.mapids));
-        this.events.put(MapleEventType.\u96ea\u7403\u8d5b, new MapleSnowball(this.channel, MapleEventType.\u96ea\u7403\u8d5b.mapids));
+        this.events.put(MapleEventType.打椰子比赛, new MapleCoconut(this.channel, MapleEventType.打椰子比赛.mapids));
+        this.events.put(MapleEventType.打瓶盖比赛, new MapleCoconut(this.channel, MapleEventType.打瓶盖比赛.mapids));
+        this.events.put(MapleEventType.向高地, new MapleFitness(this.channel, MapleEventType.向高地.mapids));
+        this.events.put(MapleEventType.上楼上楼, new MapleOla(this.channel, MapleEventType.上楼上楼.mapids));
+        this.events.put(MapleEventType.快速0X猜题, new MapleOxQuiz(this.channel, MapleEventType.快速0X猜题.mapids));
+        this.events.put(MapleEventType.雪球赛, new MapleSnowball(this.channel, MapleEventType.雪球赛.mapids));
     }
     
     public final void run_startup_configurations() {
@@ -163,7 +163,7 @@ public class ChannelServer implements Serializable
             this.acceptor.setHandler((IoHandler)new MapleServerHandler(this.channel, false));
             this.acceptor.bind((SocketAddress)new InetSocketAddress(this.port));
             ((SocketSessionConfig)this.acceptor.getSessionConfig()).setTcpNoDelay(true);
-            System.out.println("\u9891\u9053 " + this.channel + ": \u542f\u52a8\u7aef\u53e3 " + this.port + ": \u670d\u52a1\u5668IP " + this.ip + "");
+            System.out.println("频道 " + this.channel + ": 启动端口 " + this.port + ": 服务器IP " + this.ip + "");
             this.eventSM.init();
         }
         catch (IOException e2) {
@@ -175,7 +175,7 @@ public class ChannelServer implements Serializable
         if (this.finishedShutdown) {
             return;
         }
-        this.broadcastPacket(MaplePacketCreator.serverNotice(0, "\u8fd9\u4e2a\u9891\u9053\u6b63\u5728\u5173\u95ed\u4e2d."));
+        this.broadcastPacket(MaplePacketCreator.serverNotice(0, "这个频道正在关闭中."));
         this.shutdown = true;
         System.out.println("Channel " + this.channel + ", Saving hired merchants...");
         System.out.println("Channel " + this.channel + ", Saving characters...");
@@ -569,12 +569,12 @@ public class ChannelServer implements Serializable
     
     public final void setShutdown() {
         this.shutdown = true;
-        System.out.println("\u9891\u9053 " + this.channel + " \u5df2\u5f00\u59cb\u5173\u95ed.");
+        System.out.println("频道 " + this.channel + " 已开始关闭.");
     }
     
     public final void setFinishShutdown() {
         this.finishedShutdown = true;
-        System.out.println("\u9891\u9053 " + this.channel + " \u5df2\u5173\u95ed\u5b8c\u6210.");
+        System.out.println("频道 " + this.channel + " 已关闭完成.");
     }
     
     public final boolean isAdminOnly() {
@@ -635,14 +635,14 @@ public class ChannelServer implements Serializable
                 chr.saveToDB(false, false);
             }
         }
-        System.out.println("[\u81ea\u52a8\u5b58\u6863] \u5df2\u7ecf\u5c06\u9891\u9053 " + this.channel + " \u7684 " + ppl + " \u4e2a\u73a9\u5bb6\u4fdd\u5b58\u5230\u6570\u636e\u4e2d.");
+        System.out.println("[自动存档] 已经将频道 " + this.channel + " 的 " + ppl + " 个玩家保存到数据中.");
     }
     
     public void AutoNx(final int dy, final int dd) {
         this.mapFactory.getMap(910000000).AutoNx(dy, dd);
     }
     
-    public void \u516c\u544a(final String msg) {
+    public void 公告(final String msg) {
         for (final ChannelServer cserv1 : getAllInstances()) {
             for (final MapleCharacter mch : cserv1.getPlayerStorage().getAllCharacters()) {
                 mch.startMapEffect(msg, 5121009);
@@ -680,12 +680,12 @@ public class ChannelServer implements Serializable
         if (this.finishedShutdown) {
             return;
         }
-        this.broadcastPacket(MaplePacketCreator.serverNotice(0, "\u6e38\u620f\u5373\u5c06\u5173\u95ed\u7ef4\u62a4..."));
+        this.broadcastPacket(MaplePacketCreator.serverNotice(0, "游戏即将关闭维护..."));
         this.shutdown = true;
-        System.out.println("\u9891\u9053 " + this.channel + " \u6b63\u5728\u6e05\u7406\u6d3b\u52a8\u811a\u672c...");
+        System.out.println("频道 " + this.channel + " 正在清理活动脚本...");
         this.eventSM.cancel();
-        System.out.println("\u9891\u9053 " + this.channel + " \u6b63\u5728\u4fdd\u5b58\u6240\u6709\u89d2\u8272\u6570\u636e...");
-        System.out.println("\u9891\u9053 " + this.channel + " \u89e3\u9664\u7ed1\u5b9a\u7aef\u53e3...");
+        System.out.println("频道 " + this.channel + " 正在保存所有角色数据...");
+        System.out.println("频道 " + this.channel + " 解除绑定端口...");
         this.acceptor.unbind((SocketAddress)new InetSocketAddress(this.port));
         ChannelServer.instances.remove(this.channel);
         this.setFinishShutdown();

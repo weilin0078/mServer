@@ -855,7 +855,7 @@ public class MapleGuild implements Serializable
         return chr.getPrefix();
     }
     
-    public static void \u4eba\u6c14\u6392\u884c(final MapleClient c, final int npcid) {
+    public static void »À∆¯≈≈––(final MapleClient c, final int npcid) {
         try {
             final Connection con = DatabaseConnection.getConnection();
             final PreparedStatement ps = con.prepareStatement("SELECT `name`, `fame`, `level`, `meso` FROM characters ORDER BY `fame` DESC LIMIT 100");

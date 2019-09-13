@@ -32,7 +32,7 @@ public class HiredMerchantHandler
             final byte state = checkExistance(c.getPlayer().getAccountID(), c.getPlayer().getId());
             switch (state) {
                 case 1: {
-                    c.getPlayer().dropMessage(1, "\u8bf7\u5148\u53bb\u627e\u5f17\u5170\u5fb7\u91cc\u9886\u53d6\u4f60\u4e4b\u524d\u6446\u644a\u7684\u4e1c\u897f");
+                    c.getPlayer().dropMessage(1, "请先去找弗兰德里领取你之前摆摊的东西");
                     break;
                 }
                 case 0: {
@@ -41,11 +41,11 @@ public class HiredMerchantHandler
                         c.getSession().write((Object)PlayerShopPacket.sendTitleBox());
                         break;
                     }
-                    c.getPlayer().dropMessage(1, "\u8bf7\u6362\u4e2a\u5730\u65b9\u5f00\u6216\u8005\u662f\u4f60\u5df2\u7ecf\u6709\u5f00\u5e97\u4e86");
+                    c.getPlayer().dropMessage(1, "请换个地方开或者是你已经有开店了");
                     break;
                 }
                 default: {
-                    c.getPlayer().dropMessage(1, "\u53d1\u751f\u672a\u77e5\u9519\u8bef.");
+                    c.getPlayer().dropMessage(1, "发生未知错误.");
                     break;
                 }
             }
@@ -82,7 +82,7 @@ public class HiredMerchantHandler
         }
         final byte operation = slea.readByte();
         if ((operation == 20 || operation == 26) && c.getPlayer().getLastHM() + 86400000L > System.currentTimeMillis()) {
-            c.getPlayer().dropMessage(1, "24\u5c0f\u65f6\u5185\u65e0\u6cd5\u8fdb\u884c\u64cd\u4f5c\uff0c\r\n\u8bf724\u5c0f\u65f6\u4e4b\u540e\u518d\u8fdb\u884c\u64cd\u4f5c\u3002\r\n");
+            c.getPlayer().dropMessage(1, "24小时内无法进行操作，\r\n请24小时之后再进行操作。\r\n");
             c.getSession().write((Object)MaplePacketCreator.enableActions());
             c.getPlayer().setConversation(0);
             return;
@@ -93,14 +93,14 @@ public class HiredMerchantHandler
                 final int conv = c.getPlayer().getConversation();
                 final boolean merch = World.hasMerchant(c.getPlayer().getAccountID());
                 if (merch) {
-                    c.getPlayer().dropMessage(1, "\u8bf7\u5173\u95ed\u5546\u5e97\u540e\u518d\u8bd5\u4e00\u6b21.");
+                    c.getPlayer().dropMessage(1, "请关闭商店后再试一次.");
                     c.getPlayer().setConversation(0);
                     break;
                 }
                 if (conv == 3) {
                     final MerchItemPackage pack = loadItemFrom_Database(c.getPlayer().getId(), c.getPlayer().getAccountID());
                     if (pack == null) {
-                        c.getPlayer().dropMessage(1, "\u4f60\u6ca1\u6709\u7269\u54c1\u53ef\u4ee5\u9886\u53d6!");
+                        c.getPlayer().dropMessage(1, "你没有物品可以领取!");
                         c.getPlayer().setConversation(0);
                     }
                     else if (pack.getItems().size() <= 0) {
@@ -109,13 +109,13 @@ public class HiredMerchantHandler
                             return;
                         }
                         if (deletePackage(c.getPlayer().getId(), c.getPlayer().getAccountID(), pack.getPackageid())) {
-                            FileoutputUtil.logToFile_chr(c.getPlayer(), "Logs/Log_\u96c7\u4f63\u91d1\u5e01\u9886\u53d6\u8bb0\u5f55.txt", " \u9886\u56de\u91d1\u5e01 " + pack.getMesos());
+                            FileoutputUtil.logToFile_chr(c.getPlayer(), "Logs/Log_雇佣金币领取记录.txt", " 领回金币 " + pack.getMesos());
                             c.getPlayer().gainMeso(pack.getMesos(), false);
                             c.getPlayer().setConversation(0);
-                            c.getPlayer().dropMessage("\u9886\u53d6\u91d1\u5e01" + pack.getMesos());
+                            c.getPlayer().dropMessage("领取金币" + pack.getMesos());
                         }
                         else {
-                            c.getPlayer().dropMessage(1, "\u53d1\u751f\u672a\u77e5\u9519\u8bef\u3002");
+                            c.getPlayer().dropMessage(1, "发生未知错误。");
                         }
                         c.getPlayer().setConversation(0);
                         c.getSession().write((Object)MaplePacketCreator.enableActions());
@@ -136,13 +136,13 @@ public class HiredMerchantHandler
             }
             case 26: {
                 if (c.getPlayer().getConversation() != 3) {
-                    c.getPlayer().dropMessage(1, "\u53d1\u751f\u672a\u77e5\u9519\u8bef1.");
+                    c.getPlayer().dropMessage(1, "发生未知错误1.");
                     c.getSession().write((Object)MaplePacketCreator.enableActions());
                     return;
                 }
                 final MerchItemPackage pack2 = loadItemFrom_Database(c.getPlayer().getId(), c.getPlayer().getAccountID());
                 if (pack2 == null) {
-                    c.getPlayer().dropMessage(1, "\u53d1\u751f\u672a\u77e5\u9519\u8bef\u3002\r\n\u4f60\u6ca1\u6709\u7269\u54c1\u53ef\u4ee5\u9886\u53d6\uff01");
+                    c.getPlayer().dropMessage(1, "发生未知错误。\r\n你没有物品可以领取！");
                     return;
                 }
                 if (!check(c.getPlayer(), pack2)) {
@@ -161,11 +161,11 @@ public class HiredMerchantHandler
                         item_id = item_id + item2.getItemId() + "(" + item2.getQuantity() + "), ";
                         item_name = item_name + MapleItemInformationProvider.getInstance().getName(item2.getItemId()) + "(" + item2.getQuantity() + "), ";
                     }
-                    FileoutputUtil.logToFile_chr(c.getPlayer(), "Logs/Log_\u96c7\u4f63\u9886\u53d6\u8bb0\u5f55.txt", " \u9886\u56de\u91d1\u5e01 " + pack2.getMesos() + " \u9886\u56de\u9053\u5177\u6570\u91cf " + pack2.getItems().size() + " \u9053\u5177 " + item_id);
-                    FileoutputUtil.logToFile_chr(c.getPlayer(), "Logs/Log_\u96c7\u4f63\u9886\u53d6\u8bb0\u5f552.txt", " \u9886\u56de\u91d1\u5e01 " + pack2.getMesos() + " \u9886\u56de\u9053\u5177\u6570\u91cf " + pack2.getItems().size() + " \u9053\u5177 " + item_name);
+                    FileoutputUtil.logToFile_chr(c.getPlayer(), "Logs/Log_雇佣领取记录.txt", " 领回金币 " + pack2.getMesos() + " 领回道具数量 " + pack2.getItems().size() + " 道具 " + item_id);
+                    FileoutputUtil.logToFile_chr(c.getPlayer(), "Logs/Log_雇佣领取记录2.txt", " 领回金币 " + pack2.getMesos() + " 领回道具数量 " + pack2.getItems().size() + " 道具 " + item_name);
                     break;
                 }
-                c.getPlayer().dropMessage(1, "\u53d1\u751f\u672a\u77e5\u9519\u8bef.");
+                c.getPlayer().dropMessage(1, "发生未知错误.");
                 break;
             }
             case 27: {
@@ -181,11 +181,11 @@ public class HiredMerchantHandler
         }
         final MerchItemPackage pack = loadItemFrom_Database(c.getPlayer().getId(), c.getPlayer().getAccountID());
         if (pack == null) {
-            c.getPlayer().dropMessage(1, "\u53d1\u751f\u672a\u77e5\u9519\u8bef\u3002");
+            c.getPlayer().dropMessage(1, "发生未知错误。");
             return;
         }
         if (!check(c.getPlayer(), pack)) {
-            c.getPlayer().dropMessage(1, "\u4f60\u80cc\u5305\u683c\u5b50\u4e0d\u591f\u3002");
+            c.getPlayer().dropMessage(1, "你背包格子不够。");
             return;
         }
         if (deletePackage(c.getPlayer().getId(), c.getPlayer().getAccountID(), pack.getPackageid())) {
@@ -193,10 +193,10 @@ public class HiredMerchantHandler
             for (final IItem item : pack.getItems()) {
                 MapleInventoryManipulator.addFromDrop(c, item, false);
             }
-            c.getPlayer().dropMessage(5, "\u9886\u53d6\u6210\u529f\u3002");
+            c.getPlayer().dropMessage(5, "领取成功。");
         }
         else {
-            c.getPlayer().dropMessage(1, "\u53d1\u751f\u672a\u77e5\u9519\u8bef\u3002");
+            c.getPlayer().dropMessage(1, "发生未知错误。");
         }
     }
     

@@ -44,10 +44,10 @@ public class ShutdownServer implements Runnable
             World.Family.save();
         }
         catch (Exception ex) {}
-        World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(0, " \u6e38\u620f\u670d\u52a1\u5668\u5c06\u5173\u95ed\u7ef4\u62a4\uff0c\u8bf7\u73a9\u5bb6\u5b89\u5168\u4e0b\u7ebf..."));
+        World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(0, " 游戏服务器将关闭维护，请玩家安全下线..."));
         for (final ChannelServer cs : ChannelServer.getAllInstances()) {
             try {
-                cs.setServerMessage("\u6e38\u620f\u670d\u52a1\u5668\u5c06\u5173\u95ed\u7ef4\u62a4\uff0c\u8bf7\u73a9\u5bb6\u5b89\u5168\u4e0b\u7ebf...");
+                cs.setServerMessage("游戏服务器将关闭维护，请玩家安全下线...");
             }
             catch (Exception ex2) {}
         }
@@ -60,31 +60,31 @@ public class ShutdownServer implements Runnable
                 cs2.shutdown();
             }
             catch (Exception e2) {
-                System.out.println("\u9891\u9053" + String.valueOf(channel) + " \u5173\u95ed\u9519\u8bef.");
+                System.out.println("频道" + String.valueOf(channel) + " 关闭错误.");
             }
         }
-        System.out.println("\u670d\u52a1\u7aef\u5173\u95ed\u4e8b\u4ef6 1 \u5df2\u5b8c\u6210.");
-        System.out.println("\u670d\u52a1\u7aef\u5173\u95ed\u4e8b\u4ef6 2 \u5f00\u59cb...");
+        System.out.println("服务端关闭事件 1 已完成.");
+        System.out.println("服务端关闭事件 2 开始...");
         try {
             LoginServer.shutdown();
-            System.out.println("\u767b\u5f55\u4f3a\u670d\u5668\u5173\u95ed\u5b8c\u6210...");
+            System.out.println("登录伺服器关闭完成...");
         }
         catch (Exception ex3) {}
         try {
             CashShopServer.shutdown();
-            System.out.println("\u5546\u57ce\u4f3a\u670d\u5668\u5173\u95ed\u5b8c\u6210...");
+            System.out.println("商城伺服器关闭完成...");
         }
         catch (Exception ex4) {}
         try {
             DatabaseConnection.closeAll();
         }
         catch (Exception ex5) {}
-        System.out.println("\u670d\u52a1\u7aef\u5173\u95ed\u4e8b\u4ef6 2 \u5df2\u5b8c\u6210.");
+        System.out.println("服务端关闭事件 2 已完成.");
         try {
             Thread.sleep(1000L);
         }
         catch (Exception e) {
-            System.out.println("\u5173\u95ed\u670d\u52a1\u7aef\u9519\u8bef - 2" + e);
+            System.out.println("关闭服务端错误 - 2" + e);
         }
         System.exit(0);
     }

@@ -176,29 +176,29 @@ public class World
             @Override
             public void run() {
                 final String rate = type;
-                if (rate.equals("\u7ecf\u9a8c")) {
+                if (rate.equals("经验")) {
                     for (final ChannelServer cservs : ChannelServer.getAllInstances()) {
                         cservs.setExpRate(Integer.parseInt(ServerProperties.getProperty("tms.Exp", "1")));
                     }
                 }
-                else if (rate.equals("\u7206\u7387")) {
+                else if (rate.equals("爆率")) {
                     for (final ChannelServer cservs : ChannelServer.getAllInstances()) {
                         cservs.setDropRate(Integer.parseInt(ServerProperties.getProperty("tms.Drop", "1")));
                     }
                 }
-                else if (rate.equals("\u91d1\u5e01")) {
+                else if (rate.equals("金币")) {
                     for (final ChannelServer cservs : ChannelServer.getAllInstances()) {
                         cservs.setMesoRate(Integer.parseInt(ServerProperties.getProperty("tms.Meso", "1")));
                     }
                 }
-                else if (rate.equalsIgnoreCase("boss\u7206\u7387")) {
+                else if (rate.equalsIgnoreCase("boss爆率")) {
                     for (final ChannelServer cservs : ChannelServer.getAllInstances()) {
                         cservs.setBossDropRate(Integer.parseInt(ServerProperties.getProperty("tms.BDrop", "1")));
                     }
                 }
-                else if (rate.equals("\u5ba0\u7269\u7ecf\u9a8c")) {}
+                else if (rate.equals("宠物经验")) {}
                 for (final ChannelServer cservs : ChannelServer.getAllInstances()) {
-                    cservs.broadcastPacket(MaplePacketCreator.serverNotice(6, "\u7cfb\u7edf\u53cc\u500d" + rate + "\u6d3b\u52a8\u5df2\u7ecf\u7ed3\u675f\u3002\u7cfb\u7edf\u5df2\u6210\u529f\u81ea\u52a8\u5207\u6362\u4e3a\u6b63\u5e38\u6e38\u620f\u6a21\u5f0f\uff01"));
+                    cservs.broadcastPacket(MaplePacketCreator.serverNotice(6, "系统双倍" + rate + "活动已经结束。系统已成功自动切换为正常游戏模式！"));
                 }
             }
         }, delay * 1000L);
@@ -947,7 +947,7 @@ public class World
         static {
             guilds = new LinkedHashMap<Integer, MapleGuild>();
             lock = new ReentrantReadWriteLock();
-            System.out.println("\u52a0\u8f7d \u5bb6\u65cf\u5b8c\u6210 :::");
+            System.out.println("加载 家族完成 :::");
             final Collection<MapleGuild> allGuilds = MapleGuild.loadAll();
             for (final MapleGuild g : allGuilds) {
                 if (g.isProper()) {
@@ -1362,7 +1362,7 @@ public class World
         static {
             alliances = new LinkedHashMap<Integer, MapleGuildAlliance>();
             lock = new ReentrantReadWriteLock();
-            System.out.println("\u52a0\u8f7d \u5bb6\u65cf\u8054\u76df\u5b8c\u6210 :::");
+            System.out.println("加载 家族联盟完成 :::");
             final Collection<MapleGuildAlliance> allGuilds = MapleGuildAlliance.loadAll();
             for (final MapleGuildAlliance g : allGuilds) {
                 Alliance.alliances.put(g.getId(), g);
@@ -1477,7 +1477,7 @@ public class World
         static {
             families = new LinkedHashMap<Integer, MapleFamily>();
             lock = new ReentrantReadWriteLock();
-            System.out.println("\u52a0\u8f7d \u5b66\u9662\u5b8c\u6210 :::");
+            System.out.println("加载 学院完成 :::");
             final Collection<MapleFamily> allGuilds = MapleFamily.loadAll();
             for (final MapleFamily g : allGuilds) {
                 if (g.isProper()) {

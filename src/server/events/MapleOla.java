@@ -51,7 +51,7 @@ public class MapleOla extends MapleEvent
                 }
             }
         }, this.time);
-        this.broadcast(MaplePacketCreator.serverNotice(0, "\u95e8\u5df2\u6253\u5f00\u3002\u6309\u7bad\u5934\u2191\u952e\u8fdb\u5165\u5165\u53e3."));
+        this.broadcast(MaplePacketCreator.serverNotice(0, "门已打开。按箭头↑键进入入口."));
     }
     
     public boolean isTimerStarted() {

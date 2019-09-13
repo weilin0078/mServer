@@ -11,7 +11,7 @@ public class MonsterCarnivalPacket
 {
     public static MaplePacket startMonsterCarnival(final MapleCharacter chr, final int enemyavailable, final int enemytotal) {
         final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-        if (ServerConstants.\u8c03\u8bd5\u8f93\u51fa\u5c01\u5305) {
+        if (ServerConstants.调试输出封包) {
             System.out.println("startMonsterCarnival--------------------");
         }
         mplew.writeShort(SendPacketOpcode.MONSTER_CARNIVAL_START.getValue());
@@ -30,7 +30,7 @@ public class MonsterCarnivalPacket
     
     public static MaplePacket playerDiedMessage(final String name, final int lostCP, final int team) {
         final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-        if (ServerConstants.\u8c03\u8bd5\u8f93\u51fa\u5c01\u5305) {
+        if (ServerConstants.调试输出封包) {
             System.out.println("playerDiedMessage--------------------");
         }
         mplew.writeShort(SendPacketOpcode.MONSTER_CARNIVAL_DIED.getValue());
@@ -42,7 +42,7 @@ public class MonsterCarnivalPacket
     
     public static MaplePacket CPUpdate(final boolean party, final int curCP, final int totalCP, final int team) {
         final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-        if (ServerConstants.\u8c03\u8bd5\u8f93\u51fa\u5c01\u5305) {
+        if (ServerConstants.调试输出封包) {
             System.out.println("CPUpdate--------------------");
         }
         if (!party) {
@@ -59,7 +59,7 @@ public class MonsterCarnivalPacket
     
     public static MaplePacket playerSummoned(final String name, final int tab, final int number) {
         final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-        if (ServerConstants.\u8c03\u8bd5\u8f93\u51fa\u5c01\u5305) {
+        if (ServerConstants.调试输出封包) {
             System.out.println("playerSummoned--------------------");
         }
         mplew.writeShort(SendPacketOpcode.MONSTER_CARNIVAL_SUMMON.getValue());
@@ -71,7 +71,7 @@ public class MonsterCarnivalPacket
     
     public static MaplePacket playerSummoned1(final String name, final int tab, final int number) {
         final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-        if (ServerConstants.\u8c03\u8bd5\u8f93\u51fa\u5c01\u5305) {
+        if (ServerConstants.调试输出封包) {
             System.out.println("playerSummoned--------------------");
         }
         mplew.writeShort(SendPacketOpcode.MONSTER_CARNIVAL_SUMMON1.getValue());

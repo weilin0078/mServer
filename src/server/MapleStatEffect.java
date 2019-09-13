@@ -1011,7 +1011,7 @@ public class MapleStatEffect implements Serializable
                 }
             }
             else {
-                applyto.dropMessage(5, "\u4f60\u53ef\u80fd\u6c92\u8fa6\u6cd5\u4f7f\u7528\u50b3\u9001\u5011\u56e0\u70ba\u6751\u838a\u5167\u7981\u6b62..");
+                applyto.dropMessage(5, "你可能沒辦法使用傳送們因為村莊內禁止..");
             }
         }
         else if (this.isMist()) {
@@ -1053,7 +1053,7 @@ public class MapleStatEffect implements Serializable
                 applyto.changeMap(target, target.getPortal(0));
             }
             catch (Exception ex) {
-                applyto.dropMessage(5, "\u672c\u5730\u56fe\u76ee\u524d\u5c1a\u672a\u5f00\u653e.");
+                applyto.dropMessage(5, "本地图目前尚未开放.");
                 return false;
             }
             return true;
@@ -1220,7 +1220,7 @@ public class MapleStatEffect implements Serializable
     
     public final void applyComboBuff(final MapleCharacter applyto, final short combo) {
         final ArrayList<Pair<MapleBuffStat, Integer>> statups = new ArrayList<Pair<MapleBuffStat, Integer>>();
-        statups.add(new Pair<MapleBuffStat, Integer>(MapleBuffStat.\u77db\u8fde\u51fb\u5f3a\u5316, combo / 5));
+        statups.add(new Pair<MapleBuffStat, Integer>(MapleBuffStat.矛连击强化, combo / 5));
         statups.add(new Pair<MapleBuffStat, Integer>(MapleBuffStat.WDEF, combo / 2));
         statups.add(new Pair<MapleBuffStat, Integer>(MapleBuffStat.MDEF, combo / 2));
         applyto.getClient().getSession().write((Object)MaplePacketCreator.giveBuff(this.sourceid, 29999, statups, this));
@@ -1235,7 +1235,7 @@ public class MapleStatEffect implements Serializable
         final long starttime = System.currentTimeMillis();
         if (infinity) {
             applyto.setBuffedValue(MapleBuffStat.ENERGY_CHARGE, 0);
-            applyto.getClient().getSession().write((Object)MaplePacketCreator.\u80fd\u91cf\u6761(stat, this.duration / 1000));
+            applyto.getClient().getSession().write((Object)MaplePacketCreator.能量条(stat, this.duration / 1000));
             applyto.registerEffect(this, starttime, null);
         }
         else {

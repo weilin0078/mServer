@@ -395,11 +395,11 @@ public class MapleInventoryManipulator
         return true;
     }
     
-    public static boolean \u5546\u5e97\u9632\u6b62\u590d\u5236(final MapleClient c, final IItem item, final boolean show) {
-        return \u5546\u5e97\u9632\u6b62\u590d\u5236(c, item, show, false);
+    public static boolean 商店防止复制(final MapleClient c, final IItem item, final boolean show) {
+        return 商店防止复制(c, item, show, false);
     }
     
-    public static boolean \u5546\u5e97\u9632\u6b62\u590d\u5236(final MapleClient c, IItem item, final boolean show, final boolean enhance) {
+    public static boolean 商店防止复制(final MapleClient c, IItem item, final boolean show, final boolean enhance) {
         final MapleItemInformationProvider ii = MapleItemInformationProvider.getInstance();
         if (ii.isPickupRestricted(item.getItemId()) && c.getPlayer().haveItem(item.getItemId(), 1, true, false)) {
             c.getSession().write((Object)MaplePacketCreator.getInventoryFull());
@@ -750,11 +750,11 @@ public class MapleInventoryManipulator
             source.setUniqueId(1);
             c.getSession().write((Object)MaplePacketCreator.updateSpecialItemUse_(source, GameConstants.getInventoryType(source.getItemId()).getType()));
         }
-        if (dst < -999 && !GameConstants.isEvanDragonItem(source.getItemId()) && !GameConstants.is\u8c46\u8c46\u88c5\u5907(source.getItemId())) {
+        if (dst < -999 && !GameConstants.isEvanDragonItem(source.getItemId()) && !GameConstants.is豆豆装备(source.getItemId())) {
             c.getSession().write((Object)MaplePacketCreator.enableActions());
             return;
         }
-        if (dst >= -999 && dst < -99 && stats.get("cash") == 0 && !GameConstants.is\u8c46\u8c46\u88c5\u5907(source.getItemId())) {
+        if (dst >= -999 && dst < -99 && stats.get("cash") == 0 && !GameConstants.is豆豆装备(source.getItemId())) {
             c.getSession().write((Object)MaplePacketCreator.enableActions());
             return;
         }
@@ -977,7 +977,7 @@ public class MapleInventoryManipulator
         }
         c.getPlayer().setCurrenttime(System.currentTimeMillis());
         if (c.getPlayer().getCurrenttime() - c.getPlayer().getLasttime() < 3000L) {
-            c.getPlayer().dropMessage(1, "<\u6e29\u99a8\u63d0\u9192>\uff1a\u8bf7\u60a8\u6162\u70b9\u4f7f\u7528.");
+            c.getPlayer().dropMessage(1, "<温馨提醒>：请您慢点使用.");
             c.getSession().write((Object)MaplePacketCreator.enableActions());
             return false;
         }

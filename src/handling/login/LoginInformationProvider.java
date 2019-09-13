@@ -19,7 +19,7 @@ public class LoginInformationProvider
     
     protected LoginInformationProvider() {
         this.ForbiddenName = new ArrayList<String>();
-        System.out.println("\u52a0\u8f7d \u5546\u57ce\u5b8c\u6210 :::");
+        System.out.println("加载 商城完成 :::");
         final String WZpath = System.getProperty("net.sf.odinms.wzpath");
         final MapleData nameData = MapleDataProviderFactory.getDataProvider(new File(WZpath + "/Etc.wz")).getData("ForbiddenName.img");
         for (final MapleData data : nameData.getChildren()) {

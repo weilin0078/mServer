@@ -47,7 +47,7 @@ public class AramiaFireWorks
     }
     
     private final void broadcastServer(final MapleCharacter c, final int itemid) {
-        World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, itemid, "<\u983b\u9053 " + c.getClient().getChannel() + "> " + "\u5f13\u7bad\u624b\u6751\u90b1\u6bd4\u7279\u516c\u5712\u5373\u5c07\u958b\u59cb\u767c\u5c04\u7159\u706b!").getBytes());
+        World.Broadcast.broadcastMessage(MaplePacketCreator.serverNotice(6, itemid, "<頻道 " + c.getClient().getChannel() + "> " + "弓箭手村邱比特公園即將開始發射煙火!").getBytes());
     }
     
     public final short getKegsPercentage() {
@@ -64,7 +64,7 @@ public class AramiaFireWorks
     }
     
     private final void startEvent(final MapleMap map) {
-        map.startMapEffect("\u96ea\u4eba\u5927\u5927\u51fa\u73fe\u5566", 5120000);
+        map.startMapEffect("雪人大大出現啦", 5120000);
         Timer.EventTimer.getInstance().schedule(new Runnable() {
             @Override
             public final void run() {

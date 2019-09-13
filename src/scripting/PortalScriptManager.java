@@ -53,7 +53,7 @@ public class PortalScriptManager
         }
         catch (Exception e) {
             System.err.println("Error executing Portalscript: " + scriptName + ":" + e);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Error executing Portal script. (" + scriptName + ") " + e);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Error executing Portal script. (" + scriptName + ") " + e);
             if (fr != null) {
                 try {
                     fr.close();
@@ -81,7 +81,7 @@ public class PortalScriptManager
     public final void executePortalScript(final MaplePortal portal, final MapleClient c) {
         final PortalScript script = this.getPortalScript(c, portal.getScriptName());
         if (c.getPlayer().isGM()) {
-            c.getPlayer().dropMessage("[\u7cfb\u7edf\u63d0\u793a]\u60a8\u5df2\u7ecf\u5efa\u7acb\u4e0ePortalScript:[" + portal.getScriptName() + ".js]\u7684\u5bf9\u8bdd\u3002" + ((script != null) ? "" : "(\u811a\u672c\u4e0d\u5b58\u5728\u6216\u5f02\u5e38)"));
+            c.getPlayer().dropMessage("[系统提示]您已经建立与PortalScript:[" + portal.getScriptName() + ".js]的对话。" + ((script != null) ? "" : "(脚本不存在或异常)"));
         }
         if (script != null) {
             try {
@@ -93,7 +93,7 @@ public class PortalScriptManager
         }
         else {
             System.out.println("Unhandled portal script " + portal.getScriptName() + " on map " + c.getPlayer().getMapId());
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Unhandled portal script " + portal.getScriptName() + " on map " + c.getPlayer().getMapId());
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Unhandled portal script " + portal.getScriptName() + " on map " + c.getPlayer().getMapId());
         }
     }
     

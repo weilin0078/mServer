@@ -90,7 +90,7 @@ public class LoginServer
         ((SocketSessionConfig)LoginServer.acceptor.getSessionConfig()).setTcpNoDelay(true);
         try {
             LoginServer.acceptor.bind((SocketAddress)new InetSocketAddress(LoginServer.PORT));
-            System.out.println("\u670d\u52a1\u5668   \u84dd\u8717\u725b: \u542f\u52a8\u7aef\u53e3 " + LoginServer.PORT);
+            System.out.println("服务器   蓝蜗牛: 启动端口 " + LoginServer.PORT);
         }
         catch (IOException e) {
             System.err.println("Binding to port " + LoginServer.PORT + " failed" + e);
@@ -101,7 +101,7 @@ public class LoginServer
         if (LoginServer.finishedShutdown) {
             return;
         }
-        System.out.println("\u6b63\u5728\u5173\u95ed\u767b\u5f55\u4f3a\u670d\u5668...");
+        System.out.println("正在关闭登录伺服器...");
         LoginServer.finishedShutdown = true;
     }
     

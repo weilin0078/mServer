@@ -120,7 +120,7 @@ public class MapleCoconut extends MapleEvent
     public void startEvent() {
         this.reset();
         this.setHittable(true);
-        this.getMap(0).broadcastMessage(MaplePacketCreator.serverNotice(5, "\u6d3b\u52a8\u5f00\u59cb!!"));
+        this.getMap(0).broadcastMessage(MaplePacketCreator.serverNotice(5, "活动开始!!"));
         this.getMap(0).broadcastMessage(MaplePacketCreator.hitCoconut(true, 0, 0));
         this.getMap(0).broadcastMessage(MaplePacketCreator.getClock(360));
         Timer.EventTimer.getInstance().schedule(new Runnable() {

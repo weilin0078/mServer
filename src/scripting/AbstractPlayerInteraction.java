@@ -487,8 +487,8 @@ public abstract class AbstractPlayerInteraction
         return this.c.getPlayer().getJob();
     }
     
-    public final int getNX(final int \u7c7b\u578b) {
-        return this.c.getPlayer().getCSPoints(\u7c7b\u578b);
+    public final int getNX(final int 类型) {
+        return this.c.getPlayer().getCSPoints(类型);
     }
     
     public final void gainD(final int amount) {
@@ -555,7 +555,7 @@ public abstract class AbstractPlayerInteraction
                 }
                 final String name = ii.getName(id);
                 if (id / 10000 == 114 && name != null && name.length() > 0) {
-                    final String msg = "\u4f60\u5df2\u83b7\u5f97\u79f0\u53f7 <" + name + ">";
+                    final String msg = "你已获得称号 <" + name + ">";
                     cg.getPlayer().dropMessage(5, msg);
                     cg.getPlayer().dropMessage(5, msg);
                 }
@@ -589,7 +589,7 @@ public abstract class AbstractPlayerInteraction
             final Equip item = (Equip)ii.getEquipById(id);
             final String name = ii.getName(id);
             if (id / 10000 == 114 && name != null && name.length() > 0) {
-                final String msg = "\u4f60\u5df2\u83b7\u5f97\u79f0\u53f7 <" + name + ">";
+                final String msg = "你已获得称号 <" + name + ">";
                 cg.getPlayer().dropMessage(5, msg);
                 cg.getPlayer().dropMessage(5, msg);
             }
@@ -648,7 +648,7 @@ public abstract class AbstractPlayerInteraction
                 item.setViciousHammer((byte)2);
                 item.setUpgradeSlots((byte)qh);
                 final byte rareness = GameConstants.gachaponRareItem(item.getItemId());
-                World.Broadcast.broadcastMessage(MaplePacketCreator.getGachaponMega("[\u88c5\u5907\u8fdb\u9636] " + this.c.getPlayer().getName(), " : \u8fdb\u9636\u6210\u529f,\u5927\u5bb6\u4e00\u8d77\u606d\u559c\u4ed6\uff08\u5979\uff09\u5427!!!", item, rareness, this.getPlayer().getClient().getChannel()).getBytes());
+                World.Broadcast.broadcastMessage(MaplePacketCreator.getGachaponMega("[装备进阶] " + this.c.getPlayer().getName(), " : 进阶成功,大家一起恭喜他（她）吧!!!", item, rareness, this.getPlayer().getClient().getChannel()).getBytes());
             }
             MapleInventoryManipulator.addbyItem(cg, item.copy());
         }
@@ -1359,7 +1359,7 @@ public abstract class AbstractPlayerInteraction
             chr.changeMap(mapid);
             this.c.getPlayer().getMap().resetAriantPQ(this.c.getPlayer().getAverageMapLevel());
             chr.getClient().getSession().write((Object)MaplePacketCreator.getClock(480));
-            chr.dropMessage(5, "\u5efa\u8bae\u628a\u4f60\u7684\u5c0f\u5730\u56fe\u5fd8\u4e0b\u79fb\u52a8\uff0c\u6765\u67e5\u770b\u6392\u540d.");
+            chr.dropMessage(5, "建议把你的小地图忘下移动，来查看排名.");
             Timer.MapTimer.getInstance().schedule(new Runnable() {
                 @Override
                 public void run() {

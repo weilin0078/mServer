@@ -52,7 +52,7 @@ public class MapleOxQuizFactory
         if (this.initialized) {
             return;
         }
-        System.out.println("\u52a0\u8f7d OX Quiz  :::");
+        System.out.println("╪сть OX Quiz  :::");
         try {
             final Connection con = DatabaseConnection.getConnection();
             final PreparedStatement ps = con.prepareStatement("SELECT * FROM wz_oxdata");

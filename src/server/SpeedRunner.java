@@ -68,7 +68,7 @@ public class SpeedRunner
     public final Pair<StringBuilder, Map<Integer, String>> addSpeedRunData(final StringBuilder ret, final Map<Integer, String> rett, final String members, final String leader, final int rank, final String timestring) {
         final StringBuilder rettt = new StringBuilder();
         final String[] membrz = members.split(",");
-        rettt.append("#b\u8be5\u8fdc\u5f81\u961f " + leader + "'\u6210\u529f\u6311\u6218\u6392\u540d\u4e3a " + rank + ".#k\r\n\r\n");
+        rettt.append("#b该远征队 " + leader + "'成功挑战排名为 " + rank + ".#k\r\n\r\n");
         for (int i = 0; i < membrz.length; ++i) {
             rettt.append("#r#e");
             rettt.append(i + 1);

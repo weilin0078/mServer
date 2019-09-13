@@ -59,7 +59,7 @@ public class EventManager
         }
         catch (Exception ex) {
             System.out.println("Event name : " + this.name + ", method Name : cancelSchedule:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name : " + this.name + ", method Name : cancelSchedule:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name : " + this.name + ", method Name : cancelSchedule:\n" + ex);
         }
     }
     
@@ -72,7 +72,7 @@ public class EventManager
                 }
                 catch (Exception ex) {
                     System.out.println("Event name : " + EventManager.this.name + ", method Name : " + methodName + ":\n" + ex);
-                    FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name : " + EventManager.this.name + ", method Name : " + methodName + ":\n" + ex);
+                    FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name : " + EventManager.this.name + ", method Name : " + methodName + ":\n" + ex);
                 }
             }
         }, delay);
@@ -87,7 +87,7 @@ public class EventManager
                 }
                 catch (Exception ex) {
                     System.out.println("Event name : " + EventManager.this.name + ", method Name : " + methodName + ":\n" + ex);
-                    FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name : " + EventManager.this.name + ", method Name : " + methodName + ":\n" + ex);
+                    FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name : " + EventManager.this.name + ", method Name : " + methodName + ":\n" + ex);
                 }
             }
         }, delay);
@@ -102,7 +102,7 @@ public class EventManager
                 }
                 catch (Exception ex) {
                     System.out.println("Event name : " + EventManager.this.name + ", method Name : " + methodName + ":\n" + ex);
-                    FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name : " + EventManager.this.name + ", method Name : " + methodName + ":\n" + ex);
+                    FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name : " + EventManager.this.name + ", method Name : " + methodName + ":\n" + ex);
                 }
             }
         }, delay);
@@ -189,7 +189,7 @@ public class EventManager
         }
         catch (Exception ex) {
             ex.printStackTrace();
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name : " + this.name + ", method Name : setup:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name : " + this.name + ", method Name : setup:\n" + ex);
         }
     }
     
@@ -200,7 +200,7 @@ public class EventManager
         }
         catch (Exception ex) {
             ex.printStackTrace();
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name : " + this.name + ", method Name : setup:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name : " + this.name + ", method Name : setup:\n" + ex);
         }
     }
     
@@ -211,7 +211,7 @@ public class EventManager
         }
         catch (Exception ex) {
             ex.printStackTrace();
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name : " + this.name + ", method Name : setup:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name : " + this.name + ", method Name : setup:\n" + ex);
         }
     }
     
@@ -225,7 +225,7 @@ public class EventManager
         }
         catch (Exception ex) {
             System.out.println("Event name : " + this.name + ", method Name : setup-Guild:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name : " + this.name + ", method Name : setup-Guild:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name : " + this.name + ", method Name : setup-Guild:\n" + ex);
         }
     }
     
@@ -236,7 +236,7 @@ public class EventManager
         }
         catch (Exception ex) {
             System.out.println("Event name : " + this.name + ", method Name : setup-CharID:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name : " + this.name + ", method Name : setup-CharID:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name : " + this.name + ", method Name : setup-CharID:\n" + ex);
         }
     }
     
@@ -247,7 +247,7 @@ public class EventManager
         }
         catch (Exception ex) {
             System.out.println("Event name : " + this.name + ", method Name : setup-character:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name : " + this.name + ", method Name : setup-character:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name : " + this.name + ", method Name : setup-character:\n" + ex);
         }
     }
     
@@ -258,7 +258,7 @@ public class EventManager
         }
         catch (ScriptException ex) {
             System.out.println("Event name : " + this.name + ", method Name : setup-partyid:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name : " + this.name + ", method Name : setup-partyid:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name : " + this.name + ", method Name : setup-partyid:\n" + ex);
         }
         catch (Exception ex2) {
             this.startInstance_NoID(party, map, ex2);
@@ -276,7 +276,7 @@ public class EventManager
         }
         catch (Exception ex) {
             System.out.println("Event name : " + this.name + ", method Name : setup-party:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name : " + this.name + ", method Name : setup-party:\n" + ex + "\n" + ((old == null) ? "no old exception" : old));
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name : " + this.name + ", method Name : setup-party:\n" + ex + "\n" + ((old == null) ? "no old exception" : old));
         }
     }
     
@@ -287,7 +287,7 @@ public class EventManager
         }
         catch (Exception ex) {
             System.out.println("Event name : " + this.name + ", method Name : setup-leader:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name : " + this.name + ", method Name : setup-leader:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name : " + this.name + ", method Name : setup-leader:\n" + ex);
         }
     }
     
@@ -301,7 +301,7 @@ public class EventManager
         }
         if (!squad.getLeader().isGM()) {
             if (squad.getMembers().size() < squad.getType().i) {
-                squad.getLeader().dropMessage(5, "\u8fd9\u4e2a\u8fdc\u5f81\u961f\u81f3\u5c11\u8981\u6709 " + squad.getType().i + " \u4eba\u4ee5\u4e0a\u624d\u53ef\u4ee5\u5f00\u6218.");
+                squad.getLeader().dropMessage(5, "这个远征队至少要有 " + squad.getType().i + " 人以上才可以开战.");
                 return;
             }
             if (this.name.equals("CWKPQ") && squad.getJobs().size() < 5) {
@@ -315,7 +315,7 @@ public class EventManager
         }
         catch (Exception ex) {
             System.out.println("Event name : " + this.name + ", method Name : setup-squad:\n" + ex);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Event name : " + this.name + ", method Name : setup-squad:\n" + ex);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Event name : " + this.name + ", method Name : setup-squad:\n" + ex);
         }
     }
     
@@ -333,11 +333,11 @@ public class EventManager
                 }
             }
             if (chrSize < squad.getType().i) {
-                squad.getLeader().dropMessage(5, "\u8fdc\u5f81\u961f\u4e2d\u4eba\u5458\u5c11\u4e8e " + squad.getType().i + " \u4eba\uff0c\u65e0\u6cd5\u5f00\u59cb\u8fdc\u5f81\u4efb\u52a1\u3002\u6ce8\u610f\u5fc5\u987b\u961f\u4f0d\u4e2d\u7684\u89d2\u8272\u5728\u7ebf\u4e14\u5728\u540c\u4e00\u5730\u56fe\u3002\u5f53\u524d\u4eba\u6570: " + chrSize);
+                squad.getLeader().dropMessage(5, "远征队中人员少于 " + squad.getType().i + " 人，无法开始远征任务。注意必须队伍中的角色在线且在同一地图。当前人数: " + chrSize);
                 return;
             }
             if (this.name.equals("CWKPQ") && squad.getJobs().size() < 5) {
-                squad.getLeader().dropMessage(5, "\u8fdc\u5f81\u961f\u4e2d\u6210\u5458\u804c\u4e1a\u7684\u7c7b\u578b\u5c0f\u4e8e5\u79cd\uff0c\u65e0\u6cd5\u5f00\u59cb\u8fdc\u5f81\u4efb\u52a1\u3002");
+                squad.getLeader().dropMessage(5, "远征队中成员职业的类型小于5种，无法开始远征任务。");
                 return;
             }
         }

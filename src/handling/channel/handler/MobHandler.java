@@ -109,10 +109,10 @@ public class MobHandler
                 if (((reduce_x > 200 || reduce_y > GeneallyDistance_y) && reduce_y != 0) || (reduce_x > Check_x && reduce_y == 0)) {
                     chr.addMobVac(1);
                     if (c.getPlayer().getMobVac(1) % 50 == 0) {
-                        c.getPlayer().getCheatTracker().registerOffense(CheatingOffense.\u5438\u602a, "(\ue6c7\u5730\u56fe: " + chr.getMapId() + " \u602a\u7269\u6570\u91cf:" + chr.getMobVac(1) + ")");
-                        FileoutputUtil.logToFile_chr(c.getPlayer(), "Logs/Log_\u5438\u602a.txt", " \u602a\u7269: " + monster.getId() + " \ue04b\u8d77\u59cb\u5750\u6807 " + startPos.x + "," + startPos.y + " \u7ed3\u675f\u5750\u6807 \ue4cd" + endPos.x + "," + endPos.y + " \u76f8\u5deex:" + reduce_x + "\u76f8\u5deey" + reduce_y);
+                        c.getPlayer().getCheatTracker().registerOffense(CheatingOffense.吸怪, "(地图: " + chr.getMapId() + " 怪物数量:" + chr.getMobVac(1) + ")");
+                        FileoutputUtil.logToFile_chr(c.getPlayer(), "Logs/Log_吸怪.txt", " 怪物: " + monster.getId() + " 起始坐标 " + startPos.x + "," + startPos.y + " 结束坐标 " + endPos.x + "," + endPos.y + " 相差x:" + reduce_x + "相差y" + reduce_y);
                         if (chr.hasGmLevel(1)) {
-                            c.getPlayer().dropMessage("\u89e6\u53d1\u5438\u602a");
+                            c.getPlayer().dropMessage("触发吸怪");
                         }
                     }
                 }
@@ -148,7 +148,7 @@ public class MobHandler
                     break;
                 }
             }
-            map.broadcastMessage(MaplePacketCreator.serverNotice(6, "\u672a\u80fd\u4fdd\u62a4\u597d\u8fd9\u4e2a\u602a\u7269."));
+            map.broadcastMessage(MaplePacketCreator.serverNotice(6, "未能保护好这个怪物."));
             final MapleMap mapp = chr.getClient().getChannelServer().getMapFactory().getMap(921120001);
             for (final MapleCharacter chrz2 : map.getCharactersThreadsafe()) {
                 chrz2.changeMap(mapp, mapp.getPortal(0));
@@ -221,7 +221,7 @@ public class MobHandler
                 return;
             }
             if (mni.attr == 2) {
-                chr.getMap().talkMonster("\u8bf7\u5c0f\u5fc3\u5730\u62a4\u9001\u6211.", 5120035, mob_from.getObjectId());
+                chr.getMap().talkMonster("请小心地护送我.", 5120035, mob_from.getObjectId());
             }
             if (mob_from.getLastNode() >= newNode) {
                 return;
@@ -252,7 +252,7 @@ public class MobHandler
                     }
                 }
                 if (newMap > 0) {
-                    chr.getMap().broadcastMessage(MaplePacketCreator.serverNotice(5, "\u8fdb\u5165\u4e0b\u4e00\u9636\u6bb5."));
+                    chr.getMap().broadcastMessage(MaplePacketCreator.serverNotice(5, "进入下一阶段."));
                     chr.getMap().removeMonster(mob_from);
                 }
             }

@@ -126,7 +126,7 @@ public class MapleItemInformationProvider
         this.setItems = new HashMap<Byte, StructSetItem>();
         this.questItems = new HashMap<Integer, Pair<Integer, List<Integer>>>();
         this.inventoryTypeCache = new HashMap<Integer, MapleInventoryType>();
-        System.out.println("\u52a0\u8f7d \u7269\u54c1\u4fe1\u606f :::");
+        System.out.println("加载 物品信息 :::");
     }
     
     public final void load() {

@@ -27,7 +27,7 @@ public class SkillFactory
         if (SkillFactory.skills.size() != 0) {
             return SkillFactory.skills.get(id);
         }
-        System.out.println("\u52a0\u8f7d \u6280\u80fd\u5b8c\u6210 :::");
+        System.out.println("加载 技能完成 :::");
         final MapleDataProvider datasource = MapleDataProviderFactory.getDataProvider(new File(System.getProperty("net.sf.odinms.wzpath") + "/Skill.wz"));
         final MapleDataDirectoryEntry root = datasource.getRoot();
         for (final MapleDataFileEntry topDir : root.getFiles()) {

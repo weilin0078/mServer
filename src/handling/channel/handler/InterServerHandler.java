@@ -70,7 +70,7 @@ public class InterServerHandler
     public static final void EnterMTS(final MapleClient c, final MapleCharacter chr, final boolean mts) {
         final String[] socket = c.getChannelServer().getIP().split(":");
         if (c.getPlayer().getTrade() != null) {
-            c.getPlayer().dropMessage(1, "\u4ea4\u6613\u4e2d\u65e0\u6cd5\u8fdb\u884c\u5176\u4ed6\u64cd\u4f5c\uff01");
+            c.getPlayer().dropMessage(1, "交易中无法进行其他操作！");
             c.getSession().write((Object)MaplePacketCreator.enableActions());
             return;
         }
@@ -105,7 +105,7 @@ public class InterServerHandler
     }
     
     public static void Loggedin(final int playerid, final MapleClient c) {
-        if (!GameConstants.\u7ed1\u5b9aIP.equals(ServerProperties.getProperty("tms.IP"))) {}
+        if (!GameConstants.绑定IP.equals(ServerProperties.getProperty("tms.IP"))) {}
         final ChannelServer channelServer = c.getChannelServer();
         final CharacterTransfer transfer = channelServer.getPlayerStorage().getPendingCharacter(playerid);
         MapleCharacter player;
@@ -125,7 +125,7 @@ public class InterServerHandler
             allowLogin = true;
         }
         if (!allowLogin) {
-            System.out.print("\u81ea\u52a8\u65ad\u5f00\u8fde\u63a52");
+            System.out.print("自动断开连接2");
             c.setPlayer(null);
             c.getSession().close();
             return;
@@ -181,7 +181,7 @@ public class InterServerHandler
             c.getSession().write((Object)FamilyPacket.getFamilyInfo(player));
         }
         catch (Exception e) {
-            FileoutputUtil.outputFileError("Logs/Log_\u767b\u5f55\u9519\u8bef.rtf", e);
+            FileoutputUtil.outputFileError("Logs/Log_登录错误.rtf", e);
         }
         c.getSession().write((Object)FamilyPacket.getFamilyData());
         player.sendMacros();
@@ -208,7 +208,7 @@ public class InterServerHandler
         player.getHyPay(1);
         player.spawnSavedPets();
         c.getSession().write((Object)MaplePacketCreator.showCharCash(c.getPlayer()));
-        System.out.println("[\u5192\u9669\u5c9b][\u540d\u5b57:" + c.getPlayer().getName() + "][\u7b49\u7ea7:" + c.getPlayer().getLevel() + "][IP:" + c.getSessionIPAddress() + "]\u767b\u5f55.");
+        System.out.println("[冒险岛][名字:" + c.getPlayer().getName() + "][等级:" + c.getPlayer().getLevel() + "][IP:" + c.getSessionIPAddress() + "]登录.");
         c.getSession().write((Object)MaplePacketCreator.weirdStatUpdate());
     }
     

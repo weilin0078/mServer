@@ -44,13 +44,13 @@ public abstract class AbstractScriptManager
                 engine.eval(bf);
             }
             else if (c != null && npc) {
-                c.getPlayer().dropMessage(5, "\u4f60\u73b0\u5728\u5df2\u7ecf\u5047\u6b7b\u8bf7\u4f7f\u7528@ea");
+                c.getPlayer().dropMessage(5, "你现在已经假死请使用@ea");
             }
             return (Invocable)engine;
         }
         catch (Exception e) {
             System.err.println("Error executing script. Path: " + path + "\nException " + e);
-            FileoutputUtil.log("Logs/Log_Script_\u811a\u672c\u5f02\u5e38.rtf", "Error executing script. Path: " + path + "\nException " + e);
+            FileoutputUtil.log("Logs/Log_Script_脚本异常.rtf", "Error executing script. Path: " + path + "\nException " + e);
             return null;
         }
         finally {

@@ -43,12 +43,12 @@ public class FamilyHandler
             case 0: {
                 victim = c.getChannelServer().getPlayerStorage().getCharacterByName(slea.readMapleAsciiString());
                 if (FieldLimitType.VipRock.check(c.getPlayer().getMap().getFieldLimit()) || !c.getPlayer().isAlive()) {
-                    c.getPlayer().dropMessage(5, "\u4f20\u5524\u5931\u8d25\u3002\u60a8\u5f53\u524d\u7684\u4f4d\u7f6e\u6216\u72b6\u6001\u4e0d\u5141\u8bb8\u4f20\u5524.");
+                    c.getPlayer().dropMessage(5, "传唤失败。您当前的位置或状态不允许传唤.");
                     success = false;
                     break;
                 }
                 if (victim == null || (victim.isGM() && !c.getPlayer().isGM())) {
-                    c.getPlayer().dropMessage(1, "\u65e0\u6548\u540d\u79f0\u6216\u60a8\u4e0d\u5728\u540c\u4e00\u9891\u9053.");
+                    c.getPlayer().dropMessage(1, "无效名称或您不在同一频道.");
                     success = false;
                     break;
                 }
@@ -56,27 +56,27 @@ public class FamilyHandler
                     c.getPlayer().changeMap(victim.getMap(), victim.getMap().getPortal(0));
                     break;
                 }
-                c.getPlayer().dropMessage(5, "\u4f20\u5524\u5931\u8d25\u3002\u60a8\u5f53\u524d\u7684\u4f4d\u7f6e\u6216\u72b6\u6001\u4e0d\u5141\u8bb8\u4f20\u5524.");
+                c.getPlayer().dropMessage(5, "传唤失败。您当前的位置或状态不允许传唤.");
                 success = false;
                 break;
             }
             case 1: {
                 victim = c.getChannelServer().getPlayerStorage().getCharacterByName(slea.readMapleAsciiString());
                 if (FieldLimitType.VipRock.check(c.getPlayer().getMap().getFieldLimit()) || !c.getPlayer().isAlive()) {
-                    c.getPlayer().dropMessage(5, "\u4f20\u5524\u5931\u8d25\u3002\u60a8\u5f53\u524d\u7684\u4f4d\u7f6e\u6216\u72b6\u6001\u4e0d\u5141\u8bb8\u4f20\u5524.");
+                    c.getPlayer().dropMessage(5, "传唤失败。您当前的位置或状态不允许传唤.");
                 }
                 else if (victim == null || (victim.isGM() && !c.getPlayer().isGM())) {
-                    c.getPlayer().dropMessage(1, "\u65e0\u6548\u540d\u79f0\u6216\u60a8\u4e0d\u5728\u540c\u4e00\u9891\u9053.");
+                    c.getPlayer().dropMessage(1, "无效名称或您不在同一频道.");
                 }
                 else if (victim.getTeleportName().length() > 0) {
-                    c.getPlayer().dropMessage(1, "\u53e6\u4e00\u4e2a\u89d2\u8272\u8981\u6c42\u4f20\u5524\u8fd9\u4e2a\u89d2\u8272\u3002\u8bf7\u7a0d\u540e\u518d\u8bd5.");
+                    c.getPlayer().dropMessage(1, "另一个角色要求传唤这个角色。请稍后再试.");
                 }
                 else if (victim.getFamilyId() == c.getPlayer().getFamilyId() && !FieldLimitType.VipRock.check(victim.getMap().getFieldLimit()) && victim.getId() != c.getPlayer().getId()) {
                     victim.getClient().getSession().write((Object)FamilyPacket.familySummonRequest(c.getPlayer().getName(), c.getPlayer().getMap().getMapName()));
                     victim.setTeleportName(c.getPlayer().getName());
                 }
                 else {
-                    c.getPlayer().dropMessage(5, "\u4f20\u5524\u5931\u8d25\u3002\u60a8\u5f53\u524d\u7684\u4f4d\u7f6e\u6216\u72b6\u6001\u4e0d\u5141\u8bb8\u4f20\u5524.");
+                    c.getPlayer().dropMessage(5, "传唤失败。您当前的位置或状态不允许传唤.");
                 }
                 return;
             }
@@ -130,7 +130,7 @@ public class FamilyHandler
             c.getPlayer().useFamilyBuff(entry);
         }
         else {
-            c.getPlayer().dropMessage(5, "\u53d1\u751f\u9519\u8bef.");
+            c.getPlayer().dropMessage(5, "发生错误.");
         }
     }
     
@@ -140,28 +140,28 @@ public class FamilyHandler
         }
         final MapleCharacter addChr = c.getChannelServer().getPlayerStorage().getCharacterByName(slea.readMapleAsciiString());
         if (addChr == null) {
-            c.getPlayer().dropMessage(1, "\u60a8\u9080\u8bf7\u7684\u73a9\u5bb6\u89d2\u8272\u540d\u5b57\u4e0d\u6b63\u786e\u6216\u8005\u5c1a\u672a\u767b\u5165.");
+            c.getPlayer().dropMessage(1, "您邀请的玩家角色名字不正确或者尚未登入.");
         }
         else if (addChr.getFamilyId() == c.getPlayer().getFamilyId() && addChr.getFamilyId() > 0) {
-            c.getPlayer().dropMessage(1, "\u5df2\u7ecf\u5728\u76f8\u540c\u7684\u5b66\u9662\u91cc.");
+            c.getPlayer().dropMessage(1, "已经在相同的学院里.");
         }
         else if (addChr.getMapId() != c.getPlayer().getMapId()) {
-            c.getPlayer().dropMessage(1, "\u4e0d\u518d\u76f8\u540c\u7684\u5730\u56fe\u91cc.");
+            c.getPlayer().dropMessage(1, "不再相同的地图里.");
         }
         else if (addChr.getSeniorId() != 0) {
-            c.getPlayer().dropMessage(1, "\u60a8\u9080\u8bf7\u7684\u73a9\u5bb6\u89d2\u8272\u5df2\u7ecf\u5728\u5225\u7684\u5b66\u9662\u91cc.");
+            c.getPlayer().dropMessage(1, "您邀请的玩家角色已经在別的学院里.");
         }
         else if (addChr.getLevel() >= c.getPlayer().getLevel()) {
-            c.getPlayer().dropMessage(1, "\u60a8\u9700\u8981\u9080\u8bf7\u6bd4\u60a8\u4f4e\u7b49\u7ea7\u7684\u73a9\u5bb6.");
+            c.getPlayer().dropMessage(1, "您需要邀请比您低等级的玩家.");
         }
         else if (addChr.getLevel() < c.getPlayer().getLevel() - 20) {
-            c.getPlayer().dropMessage(1, "\u60a8\u9080\u8bf7\u7684\u73a9\u5bb6\u7b49\u7ea7\u5fc5\u9808\u76f8\u5dee20\u7b49\u7ea7\u4ee5\u5185.");
+            c.getPlayer().dropMessage(1, "您邀请的玩家等级必須相差20等级以内.");
         }
         else if (addChr.getLevel() < 10) {
-            c.getPlayer().dropMessage(1, "\u60a8\u5fc5\u9808\u9080\u8bf710\u7d1a\u4ee5\u4e0a\u7684\u73a9\u5bb6.");
+            c.getPlayer().dropMessage(1, "您必須邀请10級以上的玩家.");
         }
         else if (c.getPlayer().getJunior1() > 0 && c.getPlayer().getJunior2() > 0) {
-            c.getPlayer().dropMessage(1, "\u60a8\u5b66\u9662\u5df2\u7ecf\u6709\u4e24\u4e2a\u4eba\u4e86\uff0c\u8bf7\u627e\u60a8\u7684\u540e\u4ee3\u7ee7\u7eed\u9080\u8bf7\u5225\u4eba\u5427.");
+            c.getPlayer().dropMessage(1, "您学院已经有两个人了，请找您的后代继续邀请別人吧.");
         }
         else {
             addChr.getClient().getSession().write((Object)FamilyPacket.sendFamilyInvite(c.getPlayer().getId(), c.getPlayer().getLevel(), c.getPlayer().getJob(), c.getPlayer().getName()));
@@ -175,7 +175,7 @@ public class FamilyHandler
             return;
         }
         fam.setNotice(slea.readMapleAsciiString());
-        c.getPlayer().dropMessage(1, "\u91cd\u5f00\u5bb6\u65cf\u89c6\u7a97\u5373\u53ef\u5957\u7528.");
+        c.getPlayer().dropMessage(1, "重开家族视窗即可套用.");
     }
     
     public static final void FamilySummon(final SeekableLittleEndianAccessor slea, final MapleClient c) {
@@ -191,11 +191,11 @@ public class FamilyHandler
                 tt.useFamilyBuff(cost);
             }
             else {
-                tt.dropMessage(5, "\u4f20\u5524\u5931\u8d25\u3002\u60a8\u5f53\u524d\u7684\u4f4d\u7f6e\u6216\u72b6\u6001\u4e0d\u5141\u8bb8\u4f20\u5524.");
+                tt.dropMessage(5, "传唤失败。您当前的位置或状态不允许传唤.");
             }
         }
         else {
-            c.getPlayer().dropMessage(5, "\u4f20\u5524\u5931\u8d25\u3002\u60a8\u5f53\u524d\u7684\u4f4d\u7f6e\u6216\u72b6\u6001\u4e0d\u5141\u8bb8\u4f20\u5524.");
+            c.getPlayer().dropMessage(5, "传唤失败。您当前的位置或状态不允许传唤.");
         }
         c.getPlayer().setTeleportName("");
     }
@@ -221,14 +221,14 @@ public class FamilyHandler
         c.getPlayer().saveFamilyStatus();
         other.setSeniorId(0);
         MapleFamily.setOfflineFamilyStatus(other.getFamilyId(), other.getSeniorId(), other.getJunior1(), other.getJunior2(), other.getCurrentRep(), other.getTotalRep(), other.getId());
-        MapleCharacterUtil.sendNote(other.getName(), c.getPlayer().getName(), c.getPlayer().getName() + " \u6211\u505a\u4eba\u5931\u8d25 \u89e3\u6563\u4e86\u5bb6\u65cf", 0);
+        MapleCharacterUtil.sendNote(other.getName(), c.getPlayer().getName(), c.getPlayer().getName() + " 我做人失败 解散了家族", 0);
         if (!fam.splitFamily(juniorid, other)) {
             if (!junior2) {
                 fam.resetDescendants();
             }
             fam.resetPedigree();
         }
-        c.getPlayer().dropMessage(1, "\u8e22\u51fa\u4e86 (" + other.getName() + ").");
+        c.getPlayer().dropMessage(1, "踢出了 (" + other.getName() + ").");
         c.getSession().write((Object)MaplePacketCreator.enableActions());
     }
     
@@ -249,14 +249,14 @@ public class FamilyHandler
         }
         MapleFamily.setOfflineFamilyStatus(mgc.getFamilyId(), mgc.getSeniorId(), mgc.getJunior1(), mgc.getJunior2(), mgc.getCurrentRep(), mgc.getTotalRep(), mgc.getId());
         c.getPlayer().saveFamilyStatus();
-        MapleCharacterUtil.sendNote(mgc.getName(), c.getPlayer().getName(), c.getPlayer().getName() + " \u6211\u5c55\u7fc5\u9ad8\u98de\u4e86 \u79bb\u5f00\u4f60\u7684\u5bb6\u65cf", 0);
+        MapleCharacterUtil.sendNote(mgc.getName(), c.getPlayer().getName(), c.getPlayer().getName() + " 我展翅高飞了 离开你的家族", 0);
         if (!fam.splitFamily(c.getPlayer().getId(), mgc_)) {
             if (!junior2) {
                 fam.resetDescendants();
             }
             fam.resetPedigree();
         }
-        c.getPlayer().dropMessage(1, "\u9000\u51fa\u4e86 (" + mgc.getName() + ") \u7684\u5bb6\u65cf.");
+        c.getPlayer().dropMessage(1, "退出了 (" + mgc.getName() + ") 的家族.");
         c.getSession().write((Object)MaplePacketCreator.enableActions());
     }
     

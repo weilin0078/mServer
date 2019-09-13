@@ -48,16 +48,16 @@ public class GuildHandler
         switch (slea.readByte()) {
             case 2: {
                 if (c.getPlayer().getGuildId() > 0 || c.getPlayer().getMapId() != 200000301) {
-                    c.getPlayer().dropMessage(1, "\u4f60\u4e0d\u80fd\u5728\u521b\u5efa\u4e00\u4e2a\u65b0\u7684\u5bb6\u65cf.");
+                    c.getPlayer().dropMessage(1, "你不能在创建一个新的家族.");
                     return;
                 }
                 if (c.getPlayer().getMeso() < 15000000) {
-                    c.getPlayer().dropMessage(1, "\u4f60\u7684\u91d1\u5e01\u4e0d\u591f\uff0c\u65e0\u6cd5\u521b\u5efa\u5bb6\u65cf");
+                    c.getPlayer().dropMessage(1, "你的金币不够，无法创建家族");
                     return;
                 }
                 final String guildName = slea.readMapleAsciiString();
                 if (!isGuildNameAcceptable(guildName)) {
-                    c.getPlayer().dropMessage(1, "\u8fd9\u4e2a\u5bb6\u65cf\u7684\u540d\u79f0\u4e0d\u5141\u8bb8\u4f7f\u7528.");
+                    c.getPlayer().dropMessage(1, "这个家族的名称不允许使用.");
                     return;
                 }
                 final int guildId = World.Guild.createGuild(c.getPlayer().getId(), guildName);
@@ -71,7 +71,7 @@ public class GuildHandler
                 c.getPlayer().saveGuildStatus();
                 c.getSession().write((Object)MaplePacketCreator.showGuildInfo(c.getPlayer()));
                 World.Guild.setGuildMemberOnline(c.getPlayer().getMGC(), true, c.getChannel());
-                c.getPlayer().dropMessage(1, "\u606d\u559c\u4f60\u6210\u529f\u521b\u5efa\u4e00\u4e2a\u5bb6\u65cf.");
+                c.getPlayer().dropMessage(1, "恭喜你成功创建一个家族.");
                 respawnPlayer(c.getPlayer());
                 break;
             }
@@ -110,7 +110,7 @@ public class GuildHandler
                         itr2.remove();
                         final int s = World.Guild.addGuildMember(c.getPlayer().getMGC());
                         if (s == 0) {
-                            c.getPlayer().dropMessage(1, "\u4f60\u60f3\u8981\u52a0\u5165\u7684\u5bb6\u65cf\u5df2\u7ecf\u6ee1\u5458\u4e86.");
+                            c.getPlayer().dropMessage(1, "你想要加入的家族已经满员了.");
                             c.getPlayer().setGuildId(0);
                             return;
                         }
@@ -173,7 +173,7 @@ public class GuildHandler
                     return;
                 }
                 if (c.getPlayer().getMeso() < 5000000) {
-                    c.getPlayer().dropMessage(1, "\u4f60\u7684\u91d1\u5e01\u4e0d\u591f\uff0c\u65e0\u6cd5\u521b\u5efa\u5bb6\u65cf\u52cb\u7ae0");
+                    c.getPlayer().dropMessage(1, "你的金币不够，无法创建家族勋章");
                     return;
                 }
                 final short bg = slea.readShort();

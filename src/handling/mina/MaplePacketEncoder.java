@@ -29,7 +29,7 @@ public class MaplePacketEncoder implements ProtocolEncoder
         if (client != null) {
             final MapleAESOFB send_crypto = client.getSendCrypto();
             final byte[] inputInitialPacket = ((MaplePacket)message).getBytes();
-            if (ServerConstants.\u5c01\u5305\u663e\u793a) {
+            if (ServerConstants.封包显示) {
                 final int packetLen = inputInitialPacket.length;
                 final int pHeader = this.readFirstShort(inputInitialPacket);
                 final String pHeaderStr = Integer.toHexString(pHeader).toUpperCase();
@@ -55,11 +55,11 @@ public class MaplePacketEncoder implements ProtocolEncoder
                         break;
                     }
                 }
-                final String Recv = "\u670d\u52a1\u7aef\u53d1\u9001 " + op + " [" + pHeaderStr + "] (" + packetLen + ")\r\n";
+                final String Recv = "服务端发送 " + op + " [" + pHeaderStr + "] (" + packetLen + ")\r\n";
                 if (packetLen <= 50000) {
                     final String RecvTo = Recv + HexTool.toString(inputInitialPacket) + "\r\n" + HexTool.toStringFromAscii(inputInitialPacket);
                     if (show) {
-                        FileoutputUtil.packetLog("log\\\u670d\u52a1\u7aef\u5c01\u5305.log", RecvTo);
+                        FileoutputUtil.packetLog("log\\服务端封包.log", RecvTo);
                         System.out.println(RecvTo);
                     }
                 }

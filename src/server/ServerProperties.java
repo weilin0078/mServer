@@ -41,7 +41,7 @@ public class ServerProperties
                 fr.close();
             }
             catch (IOException ex) {
-                System.out.println("\u52a0\u8f7dSettings\u9519\u8bef\uff1a" + ex);
+                System.out.println("º”‘ÿSettings¥ÌŒÛ£∫" + ex);
             }
         }
         try {

@@ -862,7 +862,7 @@ public class MapleClient implements Serializable
             }
         }
         catch (Throwable e) {
-            FileoutputUtil.outputFileError("Logs/Log_\u5361\u8d26\u53f7.rtf", e);
+            FileoutputUtil.outputFileError("Logs/Log_卡账号.rtf", e);
         }
     }
     
@@ -873,12 +873,12 @@ public class MapleClient implements Serializable
     public final void disconnect(final boolean RemoveInChannelServer, final boolean fromCS, final boolean shutdown) {
         if (this.player != null && this.isLoggedIn()) {
             if (this.player.getMaster() > 0) {
-                this.player.getMster().dropMessage(5, "\u7531\u4e8e\u4f60\u7684\u5f92\u5f1f\u65ad\u5f00\uff0c\u4f60\u7684\u5b66\u5f92\u5df2\u590d\u4f4d.");
+                this.player.getMster().dropMessage(5, "由于你的徒弟断开，你的学徒已复位.");
                 this.player.getMster().setApprentice(0);
                 this.player.setMaster(0);
             }
             if (this.player.getApprentice() > 0) {
-                this.player.getApp().dropMessage(5, "\u7531\u4e8e\u4f60\u7684\u4e3b\u4eba\u65ad\u5f00\uff0c\u4f60\u7684\u4e3b\u4eba\u5df2\u7ecf\u590d\u4f4d.");
+                this.player.getApp().dropMessage(5, "由于你的主人断开，你的主人已经复位.");
                 this.player.getApp().setMaster(0);
                 this.player.setApprentice(0);
             }
@@ -943,7 +943,7 @@ public class MapleClient implements Serializable
                 }
                 catch (Exception e) {
                     e.printStackTrace();
-                    FileoutputUtil.outputFileError("Logs/Log_\u5361\u8d26\u53f7.rtf", e);
+                    FileoutputUtil.outputFileError("Logs/Log_卡账号.rtf", e);
                     System.err.println(getLogMessage(this, "ERROR") + e);
                 }
                 finally {
@@ -979,7 +979,7 @@ public class MapleClient implements Serializable
                 }
                 catch (Exception e) {
                     e.printStackTrace();
-                    FileoutputUtil.outputFileError("Logs/Log_\u5361\u8d26\u53f7.rtf", e);
+                    FileoutputUtil.outputFileError("Logs/Log_卡账号.rtf", e);
                     System.err.println(getLogMessage(this, "ERROR") + e);
                 }
                 finally {
@@ -1092,7 +1092,7 @@ public class MapleClient implements Serializable
             return 0;
         }
         catch (Exception e) {
-            FileoutputUtil.outputFileError("Logs/Log_Packet_\u5c01\u5305\u5f02\u5e38.rtf", e);
+            FileoutputUtil.outputFileError("Logs/Log_Packet_封包异常.rtf", e);
             e.printStackTrace();
             return 1;
         }

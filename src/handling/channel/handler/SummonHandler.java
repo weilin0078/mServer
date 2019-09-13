@@ -134,7 +134,7 @@ public class SummonHandler
         slea.skip(8);
         final byte numAttacked = slea.readByte();
         if (numAttacked > sse.mobCount) {
-            chr.getCheatTracker().registerOffense(CheatingOffense.\u53ec\u5524\u517d\u653b\u51fb\u602a\u7269\u6570\u91cf\u5f02\u5e38);
+            chr.getCheatTracker().registerOffense(CheatingOffense.ÕÙ»½ÊŞ¹¥»÷¹ÖÎïÊıÁ¿Òì³£);
             return;
         }
         final List<SummonAttackEntry> allDamage = new ArrayList<SummonAttackEntry>();
@@ -143,7 +143,7 @@ public class SummonHandler
             final MapleMonster mob = map.getMonsterByOid(slea.readInt());
             if (mob != null) {
                 if (chr.getPosition().distanceSq(mob.getPosition()) > 400000.0) {
-                    chr.getCheatTracker().registerOffense(CheatingOffense.\u53ec\u5524\u517d\u653b\u51fb\u8303\u56f4\u8fc7\u5927);
+                    chr.getCheatTracker().registerOffense(CheatingOffense.ÕÙ»½ÊŞ¹¥»÷·¶Î§¹ı´ó);
                 }
                 slea.skip(14);
                 final int damage = slea.readInt();

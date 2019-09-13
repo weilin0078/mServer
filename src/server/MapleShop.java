@@ -42,11 +42,11 @@ public class MapleShop
     public void sendShop(final MapleClient c) {
         final MapleNPC npc = MapleLifeFactory.getNPC(this.getNpcId());
         if (npc == null || npc.getName().equals("MISSINGNO")) {
-            c.getPlayer().dropMessage(1, "\u5546\u5e97" + this.id + "\u627e\u4e0d\u5230\u6b64\u4ee3\u7801\u4e3a" + this.getNpcId() + "\u7684Npc");
+            c.getPlayer().dropMessage(1, "商店" + this.id + "找不到此代码为" + this.getNpcId() + "的Npc");
             return;
         }
         if (c.getPlayer().isAdmin()) {
-            c.getPlayer().dropMessage("\u60a8\u5df2\u5efa\u7acb\u4e0e\u5546\u5e97" + this.id + "\u7684\u8fde\u63a5");
+            c.getPlayer().dropMessage("您已建立与商店" + this.id + "的连接");
         }
         c.getPlayer().setShop(this);
         c.getSession().write((Object)MaplePacketCreator.getNPCShop(c, this.getNpcId(), this.items));

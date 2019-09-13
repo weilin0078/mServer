@@ -47,10 +47,10 @@ public class PlayersHandler
             case 1: {
                 final byte num = slea.readByte();
                 slea.readByte();
-                final byte \u4eba\u6c14 = slea.readByte();
+                final byte 人气 = slea.readByte();
                 for (int i = 0; i < num; ++i) {
                     final int id = slea.readInt();
-                    chr.deleteNote(id, (\u4eba\u6c14 > 0) ? \u4eba\u6c14 : 0);
+                    chr.deleteNote(id, (人气 > 0) ? 人气 : 0);
                 }
                 break;
             }
@@ -67,11 +67,11 @@ public class PlayersHandler
         final int famechange = (mode == 0) ? -1 : 1;
         final MapleCharacter target = (MapleCharacter)chr.getMap().getMapObject(who, MapleMapObjectType.PLAYER);
         if (target == chr) {
-            chr.getCheatTracker().registerOffense(CheatingOffense.\u6dfb\u52a0\u81ea\u5df1\u58f0\u671b);
+            chr.getCheatTracker().registerOffense(CheatingOffense.添加自己声望);
             return;
         }
         if (chr.getLevel() < 15) {
-            chr.getCheatTracker().registerOffense(CheatingOffense.\u58f0\u671b\u5341\u4e94\u7ea7\u4ee5\u4e0b\u6dfb\u52a0);
+            chr.getCheatTracker().registerOffense(CheatingOffense.声望十五级以下添加);
             return;
         }
         switch (chr.canGiveFame(target)) {
@@ -101,9 +101,9 @@ public class PlayersHandler
     public static void ChatRoomHandler(final SeekableLittleEndianAccessor slea, final MapleClient c) {
         NPCScriptManager.getInstance().dispose(c);
         c.getSession().write((Object)MaplePacketCreator.enableActions());
-        c.getPlayer().dropMessage(1, "\u89e3\u5361\u5b8c\u6bd5.");
-        c.getPlayer().dropMessage(6, "\u5f53\u524d\u65f6\u95f4\u662f" + FileoutputUtil.CurrentReadable_Time() + " GMT+8 | \u7ecf\u9a8c\u500d\u7387 " + Math.round((float)c.getPlayer().getEXPMod()) * 100 * Math.round(c.getPlayer().getStat().expBuff / 100.0) + "%, \u7206\u7387 " + Math.round((float)c.getPlayer().getDropMod()) * 100 * Math.round(c.getPlayer().getStat().dropBuff / 100.0) + "%, \u91d1\u5e01\u500d\u7387 " + Math.round(c.getPlayer().getStat().mesoBuff / 100.0) * 100L + "%");
-        c.getPlayer().dropMessage(6, "\u5f53\u524d\u5ef6\u8fdf " + c.getPlayer().getClient().getLatency() + " \u6beb\u79d2");
+        c.getPlayer().dropMessage(1, "解卡完毕.");
+        c.getPlayer().dropMessage(6, "当前时间是" + FileoutputUtil.CurrentReadable_Time() + " GMT+8 | 经验倍率 " + Math.round((float)c.getPlayer().getEXPMod()) * 100 * Math.round(c.getPlayer().getStat().expBuff / 100.0) + "%, 爆率 " + Math.round((float)c.getPlayer().getDropMod()) * 100 * Math.round(c.getPlayer().getStat().dropBuff / 100.0) + "%, 金币倍率 " + Math.round(c.getPlayer().getStat().mesoBuff / 100.0) * 100L + "%");
+        c.getPlayer().dropMessage(6, "当前延迟 " + c.getPlayer().getClient().getLatency() + " 毫秒");
     }
     
     public static void UseDoor(final SeekableLittleEndianAccessor slea, final MapleCharacter chr) {
@@ -151,7 +151,7 @@ public class PlayersHandler
             return;
         }
         if (c.getPlayer().isGM()) {
-            c.getPlayer().dropMessage("[\u7cfb\u7edf\u63d0\u793a]\u4f60\u5df2\u653b\u51fb\u53cd\u5e94\u7269" + reactor.getReactorId());
+            c.getPlayer().dropMessage("[系统提示]你已攻击反应物" + reactor.getReactorId());
         }
         reactor.hitReactor(charPos, stance, c);
     }
@@ -164,7 +164,7 @@ public class PlayersHandler
             return;
         }
         if (c.getPlayer().isAdmin()) {
-            c.getPlayer().dropMessage(5, "\u53cd\u5e94\u5806\u4fe1\u606f - oid: " + oid + " Touch: " + reactor.getTouch() + " isTimerActive: " + reactor.isTimerActive() + " ReactorType: " + reactor.getReactorType());
+            c.getPlayer().dropMessage(5, "反应堆信息 - oid: " + oid + " Touch: " + reactor.getTouch() + " isTimerActive: " + reactor.isTimerActive() + " ReactorType: " + reactor.getReactorType());
         }
         if (reactor.getTouch() == 2) {
             ReactorScriptManager.getInstance().act(c, reactor);
@@ -178,11 +178,11 @@ public class PlayersHandler
                         reactor.hitReactor(c);
                     }
                     else {
-                        c.getPlayer().dropMessage(5, "\u8ddd\u79bb\u592a\u8fdc\u3002\u8bf7\u9760\u8fd1\u540e\u91cd\u65b0\u5c1d\u8bd5\u3002");
+                        c.getPlayer().dropMessage(5, "距离太远。请靠近后重新尝试。");
                     }
                 }
                 else {
-                    c.getPlayer().dropMessage(5, "\u4f60\u6ca1\u6709\u6240\u9700\u7684\u7269\u54c1.");
+                    c.getPlayer().dropMessage(5, "你没有所需的物品.");
                 }
             }
             else {
@@ -193,11 +193,11 @@ public class PlayersHandler
     
     public static void hitCoconut(final SeekableLittleEndianAccessor slea, final MapleClient c) {
         final int id = slea.readShort();
-        String co = "\u6930\u5b50";
-        MapleCoconut map = (MapleCoconut)c.getChannelServer().getEvent(MapleEventType.\u6253\u6930\u5b50\u6bd4\u8d5b);
+        String co = "椰子";
+        MapleCoconut map = (MapleCoconut)c.getChannelServer().getEvent(MapleEventType.打椰子比赛);
         if (map == null || !map.isRunning()) {
-            map = (MapleCoconut)c.getChannelServer().getEvent(MapleEventType.\u6253\u74f6\u76d6\u6bd4\u8d5b);
-            co = "\u74f6\u76d6";
+            map = (MapleCoconut)c.getChannelServer().getEvent(MapleEventType.打瓶盖比赛);
+            co = "瓶盖";
             if (map == null || !map.isRunning()) {
                 return;
             }
@@ -227,11 +227,11 @@ public class PlayersHandler
                 map.fallCoconut();
                 if (c.getPlayer().getTeam() == 0) {
                     map.addMapleScore();
-                    c.getPlayer().getMap().broadcastMessage(MaplePacketCreator.serverNotice(5, c.getPlayer().getName() + " \u5f69\u8679\u961f\u6210\u529f\u6253\u6389\u4e86\u4e00\u4e2a " + co + "."));
+                    c.getPlayer().getMap().broadcastMessage(MaplePacketCreator.serverNotice(5, c.getPlayer().getName() + " 彩虹队成功打掉了一个 " + co + "."));
                 }
                 else {
                     map.addStoryScore();
-                    c.getPlayer().getMap().broadcastMessage(MaplePacketCreator.serverNotice(5, c.getPlayer().getName() + " \u795e\u79d8\u961f\u6210\u529f\u6253\u6389\u4e00\u4e2a " + co + "."));
+                    c.getPlayer().getMap().broadcastMessage(MaplePacketCreator.serverNotice(5, c.getPlayer().getName() + " 神秘队成功打掉一个 " + co + "."));
                 }
                 c.getPlayer().getMap().broadcastMessage(MaplePacketCreator.coconutScore(map.getCoconutScore()));
             }
@@ -270,7 +270,7 @@ public class PlayersHandler
             c.getPlayer().setFollowInitiator(false);
         }
         else {
-            c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "\u8ddd\u79bb\u592a\u8fdc\u4e86."));
+            c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "距离太远了."));
         }
     }
     
@@ -297,7 +297,7 @@ public class PlayersHandler
                     tt.setFollowId(0);
                     c.getPlayer().setFollowId(0);
                 }
-                c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "\u8ddd\u79bb\u592a\u8fdc\u4e86."));
+                c.getSession().write((Object)MaplePacketCreator.serverNotice(1, "距离太远了."));
             }
         }
         else {

@@ -43,7 +43,7 @@ public class CashItemFactory
     }
     
     public void initialize() {
-        System.out.println("\u5546\u57ce :::");
+        System.out.println("илЁг :::");
         final List<Integer> itemids = new ArrayList<Integer>();
         for (final MapleData field : this.data.getData("Commodity.img").getChildren()) {
             final int SN = MapleDataTool.getIntConvert("SN", field, 0);

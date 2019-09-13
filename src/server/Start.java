@@ -34,7 +34,7 @@ public class Start {
 			System.out.println("[!!! Admin Only Mode Active !!!]");
 		}
 		if (Boolean.parseBoolean(ServerProperties.getProperty("tms.AutoRegister"))) {
-			System.out.println("\u52a0\u8f7d \u81ea\u52a8\u6ce8\u518c\u5b8c\u6210 :::");
+			System.out.println("¼ÓÔØ ×Ô¶¯×¢²áÍê³É :::");
 		}
 		try (final PreparedStatement ps = DatabaseConnection.getConnection()
 				.prepareStatement("UPDATE accounts SET loggedin = 0")) {
@@ -66,7 +66,7 @@ public class Start {
 		ChannelServer.startChannel_Main();
 		CashShopServer.run_startup_configurations();
 		Timer.CheatTimer.getInstance().register(AutobanManager.getInstance(), 60000L);
-		\u5728\u7ebf\u65f6\u95f4(1);
+		ÔÚÏßÊ±¼ä(1);
 		if (Boolean.parseBoolean(ServerProperties.getProperty("tms.RandDrop"))) {
 			ChannelServer.getInstance(1).getMapFactory().getMap(910000000).spawnRandDrop();
 		}
@@ -74,14 +74,14 @@ public class Start {
 		try {
 			SpeedRunner.getInstance().loadSpeedRuns();
 		} catch (SQLException e) {
-			System.out.println("SpeedRunner\u9519\u8bef:" + e);
+			System.out.println("SpeedRunner´íÎó:" + e);
 		}
 		World.registerRespawn();
 		LoginServer.setOn();
-		System.out.println("\r\n\u7ecf\u9a8c\u500d\u7387:" + Integer.parseInt(ServerProperties.getProperty("tms.Exp"))
-				+ "  \u7269\u54c1\u500d\u7387\uff1a" + Integer.parseInt(ServerProperties.getProperty("tms.Drop"))
-				+ "  \u91d1\u5e01\u500d\u7387" + Integer.parseInt(ServerProperties.getProperty("tms.Meso")));
-		System.out.println("\r\n\u52a0\u8f7d\u5b8c\u6210!\u5f00\u7aef\u6210\u529f! :::");
+		System.out.println("\r\n¾­Ñé±¶ÂÊ:" + Integer.parseInt(ServerProperties.getProperty("tms.Exp"))
+				+ "  ÎïÆ·±¶ÂÊ£º" + Integer.parseInt(ServerProperties.getProperty("tms.Drop"))
+				+ "  ½ð±Ò±¶ÂÊ" + Integer.parseInt(ServerProperties.getProperty("tms.Meso")));
+		System.out.println("\r\n¼ÓÔØÍê³É!¿ª¶Ë³É¹¦! :::");
 	}
 
 	public void startServer() throws InterruptedException {
@@ -90,9 +90,9 @@ public class Start {
 			System.out.println("[!!! Admin Only Mode Active !!!]");
 		}
 		if (Boolean.parseBoolean(ServerProperties.getProperty("tms.AutoRegister", "true"))) {
-			ServerConstants.\u81ea\u52a8\u6ce8\u518c = Boolean
+			ServerConstants.×Ô¶¯×¢²á = Boolean
 					.parseBoolean(ServerProperties.getProperty("tms.AutoRegister", "true"));
-			System.out.println("\u52a0\u8f7d \u81ea\u52a8\u6ce8\u518c\u5b8c\u6210 :::");
+			System.out.println("¼ÓÔØ ×Ô¶¯×¢²áÍê³É :::");
 		}
 		try {
 			try (final PreparedStatement ps = DatabaseConnection.getConnection()
@@ -131,7 +131,7 @@ public class Start {
 		ChannelServer.startChannel_Main();
 		CashShopServer.run_startup_configurations();
 		Timer.CheatTimer.getInstance().register(AutobanManager.getInstance(), 60000L);
-		\u81ea\u52a8\u5b58\u6863(5);
+		×Ô¶¯´æµµ(5);
 		if (Boolean.parseBoolean(ServerProperties.getProperty("tms.RandDrop"))) {
 			ChannelServer.getInstance(1).getMapFactory().getMap(910000000).spawnRandDrop();
 		}
@@ -139,19 +139,19 @@ public class Start {
 		try {
 			SpeedRunner.getInstance().loadSpeedRuns();
 		} catch (SQLException e) {
-			System.out.println("SpeedRunner\u9519\u8bef:" + e);
+			System.out.println("SpeedRunner´íÎó:" + e);
 		}
 		World.registerRespawn();
 		LoginServer.setOn();
 		MapleMapFactory.loadCustomLife();
 		Timer.WorldTimer.getInstance().register(DatabaseConnection.CloseSQLConnections, 1080000L);
-		System.out.println("\r\n\u7ecf\u9a8c\u500d\u7387:" + Integer.parseInt(ServerProperties.getProperty("tms.Exp"))
-				+ "  \u7269\u54c1\u500d\u7387\uff1a" + Integer.parseInt(ServerProperties.getProperty("tms.Drop"))
-				+ "  \u91d1\u5e01\u500d\u7387" + Integer.parseInt(ServerProperties.getProperty("tms.Meso")));
-		System.out.println("\r\n\u52a0\u8f7d\u5b8c\u6210!\u5f00\u7aef\u6210\u529f! :::");
+		System.out.println("\r\n¾­Ñé±¶ÂÊ:" + Integer.parseInt(ServerProperties.getProperty("tms.Exp"))
+				+ "  ÎïÆ·±¶ÂÊ£º" + Integer.parseInt(ServerProperties.getProperty("tms.Drop"))
+				+ "  ½ð±Ò±¶ÂÊ" + Integer.parseInt(ServerProperties.getProperty("tms.Meso")));
+		System.out.println("\r\n¼ÓÔØÍê³É!¿ª¶Ë³É¹¦! :::");
 	}
 
-	public static void \u81ea\u52a8\u5b58\u6863(final int time) {
+	public static void ×Ô¶¯´æµµ(final int time) {
 		Timer.WorldTimer.getInstance().register(new Runnable() {
 			@Override
 			public void run() {
@@ -172,15 +172,15 @@ public class Start {
 		}, 60000 * time);
 	}
 
-	public static void \u5728\u7ebf\u7edf\u8ba1(final int time) {
-		System.out.println("\u670d\u52a1\u7aef\u542f\u7528\u5728\u7ebf\u7edf\u8ba1." + time
-				+ "\u5206\u949f\u7edf\u8ba1\u4e00\u6b21\u5728\u7ebf\u7684\u4eba\u6570\u4fe1\u606f.");
+	public static void ÔÚÏßÍ³¼Æ(final int time) {
+		System.out.println("·þÎñ¶ËÆôÓÃÔÚÏßÍ³¼Æ." + time
+				+ "·ÖÖÓÍ³¼ÆÒ»´ÎÔÚÏßµÄÈËÊýÐÅÏ¢.");
 		Timer.WorldTimer.getInstance().register(new Runnable() {
 			@Override
 			public void run() {
 				final Map connected = World.getConnected();
 				final StringBuilder conStr = new StringBuilder(
-						FileoutputUtil.CurrentReadable_Time() + " \u5728\u7ebf\u4eba\u6570: ");
+						FileoutputUtil.CurrentReadable_Time() + " ÔÚÏßÈËÊý: ");
 				for (Iterator i$ = connected.keySet().iterator(); i$.hasNext();) {
 					int i = ((Integer) i$.next()).intValue();
 					if (i == 0) {
@@ -189,20 +189,20 @@ public class Start {
 						if (users > Start.maxUsers) {
 							Start.maxUsers = users;
 						}
-						conStr.append(" æœ€é«˜åœ¨çº¿: ");
+						conStr.append(" ×î¸ßÔÚÏß: ");
 						conStr.append(Start.maxUsers);
 						break;
 					}
 				}
 				System.out.println(conStr.toString());
 				if (Start.maxUsers > 0) {
-					FileoutputUtil.log("\u5728\u7ebf\u7edf\u8ba1.txt", conStr.toString() + "\r\n");
+					FileoutputUtil.log("ÔÚÏßÍ³¼Æ.txt", conStr.toString() + "\r\n");
 				}
 			}
 		}, 60000 * time);
 	}
 
-	public static void \u5728\u7ebf\u65f6\u95f4(final int time) {
+	public static void ÔÚÏßÊ±¼ä(final int time) {
 		Timer.WorldTimer.getInstance().register(new Runnable() {
 			@Override
 			public void run() {
